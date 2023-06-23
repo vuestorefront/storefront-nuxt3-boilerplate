@@ -1,13 +1,10 @@
 <template>
-  <div>Home Page</div>
+  <div class=m-10>
+    <h1 class="typography-headline-1">Hey hey hello</h1>
+    <SfButton type="button" variant="tertiary">🚀</SfButton>
+  </div>
 </template>
 
-<script setup lang="ts">
-defineOptions({
-  name: 'PageIndex',
-  inheritAttrs: false,
-});
-definePageMeta({
-  title: 'Home Page',
-});
+<script lang="ts" setup>
+import { SfButton } from '@storefront-ui/vue';
 </script>

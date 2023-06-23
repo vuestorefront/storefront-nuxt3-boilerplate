@@ -7,7 +7,4 @@ defineOptions({
   name: 'PageIndex',
   inheritAttrs: false,
 });
-definePageMeta({
-  title: 'Home Page',
-});
 </script>

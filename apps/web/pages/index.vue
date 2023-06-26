@@ -1,13 +1,12 @@
 <template>
   <div>Home Page</div>
+  <pre>
+    <code>{{ JSON.stringify(data, null, 2) }}</code>
+  </pre>
 </template>
 
 <script setup lang="ts">
-defineOptions({
-  name: 'PageIndex',
-  inheritAttrs: false,
-});
-definePageMeta({
-  title: 'Home Page',
-});
+import { sdk } from '~/sdk';
+
+const { data } = await useAsyncData('cms-content', () => sdk.commerce.getContent());
 </script>

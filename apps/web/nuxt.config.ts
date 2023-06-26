@@ -5,7 +5,6 @@ export default defineNuxtConfig({
     head: {
       charset: 'utf-8',
       viewport: 'minimum-scale=1, initial-scale=1, width=device-width',
-      title: 'Vue Storefront Nuxt3 Boilerplate',
       htmlAttrs: {
         lang: 'en',
       },
@@ -14,5 +13,8 @@ export default defineNuxtConfig({
         { name: 'theme-color', content: '#018937' },
       ]
     },
-  }
+  },
+  appConfig: {
+    titleSuffix: 'Vue Storefront Nuxt3 Boilerplate',
+  },
 })

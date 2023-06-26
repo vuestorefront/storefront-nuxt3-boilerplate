@@ -3,7 +3,6 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   app: {
     head: {
-      charset: 'utf-8',
       viewport: 'minimum-scale=1, initial-scale=1, width=device-width',
       htmlAttrs: {
         lang: 'en',

@@ -10,7 +10,7 @@ export default defineNuxtConfig({
       meta: [
         { name: 'description', content: 'VSF x Nuxt3 (Boilerplate)' },
         { name: 'theme-color', content: '#018937' },
-      ]
+      ],
     },
   },
   appConfig: {
@@ -18,11 +18,14 @@ export default defineNuxtConfig({
   },
   modules: [
     '@nuxtjs/tailwindcss',
-    ['@nuxtjs/google-fonts', {
-      families: {
-        'Red Hat Display': [400, 500, 700],
-        'Red Hat Text': [300, 400, 500, 700]
-      }
-    }]
+    [
+      '@nuxtjs/google-fonts',
+      {
+        families: {
+          'Red Hat Display': [400, 500, 700],
+          'Red Hat Text': [300, 400, 500, 700],
+        },
+      },
+    ],
   ],
-})
+});

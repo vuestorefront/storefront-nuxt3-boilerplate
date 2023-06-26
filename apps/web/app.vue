@@ -8,6 +8,6 @@ const { titleSuffix } = useAppConfig();
 useHead({
   titleTemplate: (titleChunk) => {
     return titleChunk ? `${titleChunk} | ${titleSuffix}` : titleSuffix;
-  }
-})
+  },
+});
 </script>

@@ -1,7 +1,7 @@
 <template>
   <main>
     <NarrowContainer>
-      <h2>Default layout</h2>
+      <h2>Order layout</h2>
       <slot />
     </NarrowContainer>
   </main>

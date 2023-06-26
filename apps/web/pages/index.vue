@@ -1,6 +1,6 @@
 <template>
-  <div class=m-10>
-    <h1 class="typography-headline-1">Hey hey hello</h1>
+  <div class="m-10">
+    <h1 class="typography-headline-1">Home page</h1>
     <SfButton type="button" variant="tertiary">🚀</SfButton>
   </div>
 </template>

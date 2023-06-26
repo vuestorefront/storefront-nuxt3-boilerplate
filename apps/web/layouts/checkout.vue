@@ -11,7 +11,7 @@
 const { titleSuffix } = useAppConfig();
 
 useHead({
-  titleTemplate: (titleChunk): string => {
+  titleTemplate: (titleChunk) => {
     return titleChunk ? `${titleChunk} | ${titleSuffix}` : (titleSuffix as string);
   },
 });

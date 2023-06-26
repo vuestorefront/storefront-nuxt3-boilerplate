@@ -1,4 +1,22 @@
 {
-  // https://nuxt.com/docs/guide/concepts/typescript
-  "extends": "./.nuxt/tsconfig.json"
+  "extends": "./.nuxt/tsconfig.json",
+  "compilerOptions": {
+    "target": "ES2019",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "incremental": true,
+    "types": ["jest", "@vsf-enterprise/sdk"]
+  },
+  "include": [".nuxt/nuxt.d.ts", "**/*.ts", "**/*.vue"],
+  "exclude": ["node_modules", "mocks", "cypress.config.ts", "__tests__"],
+  "files": ["globals.d.ts"]
 }

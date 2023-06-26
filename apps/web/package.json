@@ -1,11 +1,13 @@
 {
-  "name": "nuxt-app",
+  "name": "web",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
+    "lint": "eslint --ext .vue,.js,.ts .",
+    "lint:fix": "eslint --ext .vue,.js,.ts . --fix",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },

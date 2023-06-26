@@ -8,6 +8,8 @@
   "printWidth": 120,
   "jsxSingleQuote": false,
   "importOrder": [
+    "^vue",
+    "^(nuxt/(.*)$)|^(nuxt$)",
     "<THIRD_PARTY_MODULES>",
     "^[./]"
   ]

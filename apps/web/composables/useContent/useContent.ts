@@ -1,5 +1,5 @@
-import type { UseContent } from '~/composables';
 import { sdk } from '~/sdk';
+import type { UseContent } from './types';
 
 /**
  * Method fetching content.
@@ -11,8 +11,8 @@ import { sdk } from '~/sdk';
  * @returns
  * Returns the content data, pending state and error.
  */
-export const useContent: UseContent = (url) => {
-  const { data, pending, error } = useAsyncData(url, () => sdk.commerce.getContent());
+export const useContent = <TFields>(url: string): UseContent<TFields> => {
+  const { data, pending, error } = useAsyncData(url, () => sdk.commerce.getContent<TFields>({ url }));
 
   return {
     data,

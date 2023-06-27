@@ -9,8 +9,7 @@
 </template>
 
 <script lang="ts" setup>
-import { useContent } from '~/composables';
-
 const contentUrl = 'home-page';
+
 const { data: content } = useContent(contentUrl);
 </script>

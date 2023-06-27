@@ -1,6 +1,6 @@
 <template>
   <div class="m-10">
-    <h1 class="typography-headline-1">Hey hey hello</h1>
+    <h1 class="typography-headline-1">Home page</h1>
     <NuxtLink to="/product/1">Go to Product Page</NuxtLink>
   </div>
   <pre>

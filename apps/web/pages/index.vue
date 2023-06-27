@@ -1,6 +1,8 @@
 <template>
   <div class="m-10">
-    <h1 class="typography-headline-1">Home page</h1>
+    <h1 class="typography-headline-1">
+      {{ $t('vsfHomepage') }}
+    </h1>
     <SfButton type="button" variant="tertiary">🚀</SfButton>
   </div>
   <pre>

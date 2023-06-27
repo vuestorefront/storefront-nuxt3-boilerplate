@@ -33,5 +33,19 @@ export default defineNuxtConfig({
         },
       },
     ],
+    [
+      '@nuxtjs/i18n',
+      {
+        locales: [
+          {
+            code: 'en',
+            file: 'en.json',
+          },
+        ],
+        lazy: true,
+        langDir: 'lang',
+        defaultLocale: 'en',
+      },
+    ],
   ],
 });

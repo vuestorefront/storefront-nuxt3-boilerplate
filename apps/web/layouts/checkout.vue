@@ -8,11 +8,5 @@
 </template>
 
 <script lang="ts" setup>
-const { titleSuffix } = useAppConfig();
-
-useHead({
-  titleTemplate: (titleChunk) => {
-    return titleChunk ? `${titleChunk} | ${titleSuffix}` : (titleSuffix as string);
-  },
-});
+usePageTitle();
 </script>

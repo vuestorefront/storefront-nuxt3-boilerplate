@@ -20,5 +20,6 @@ module.exports = {
         order: ['template', 'script', 'style'],
       },
     ],
+    'vue/no-multiple-template-root': 'off',
   },
 };

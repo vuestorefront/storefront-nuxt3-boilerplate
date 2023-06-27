@@ -1,8 +1,8 @@
 <template>
-  <div>Product Page</div>
+  <h1>Product Page</h1>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
 // example of title override
 const title = ref('Mocked product title');
 

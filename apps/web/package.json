@@ -12,6 +12,10 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
+  "dependencies": {
+    "@vsf-enterprise/storefront-boilerplate-sdk": "0.1.0-rc.2",
+    "@vue-storefront/sdk": "^1.0.1"
+  },
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@nuxtjs/google-fonts": "^3.0.1",
@@ -20,6 +24,7 @@
     "@storefront-ui/typography": "^2.3.1",
     "@storefront-ui/vue": "^2.4.1",
     "@types/node": "^18",
-    "nuxt": "^3.6.0"
+    "nuxt": "^3.6.0",
+    "sass": "^1.63.6"
   }
 }

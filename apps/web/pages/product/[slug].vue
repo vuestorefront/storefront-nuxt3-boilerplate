@@ -1,12 +1,8 @@
 <template>
-<<<<<<< HEAD:apps/web/pages/product.vue
   <div>Product Page</div>
   <pre v-if="content">
     <code>{{ JSON.stringify(content, null, 2) }}</code>
   </pre>
-=======
-  <h1>Product Page</h1>
->>>>>>> develop:apps/web/pages/product/[slug].vue
 </template>
 
 <script lang="ts" setup>

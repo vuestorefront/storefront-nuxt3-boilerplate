@@ -58,8 +58,7 @@
     "priceDown": "Price from high to low",
     "relevance": "Relevance"
   },
-  "numberOfProducts_one": "{count} Product",
-  "numberOfProducts_other": "{count} Products",
+  "numberOfProducts": "1 Product | {count} Products",
   "prev": "Previous",
   "next": "Next",
   "emptyStateText": "We no longer have products in this category.",

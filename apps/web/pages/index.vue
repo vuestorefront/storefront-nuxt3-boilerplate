@@ -10,6 +10,7 @@
 
 <script lang="ts" setup>
 const contentUrl = 'home-page';
+const { getContent, data: content } = useContent(contentUrl);
 
-const { data: content } = useContent(contentUrl);
+getContent();
 </script>

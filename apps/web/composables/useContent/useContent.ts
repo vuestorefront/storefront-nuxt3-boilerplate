@@ -1,22 +1,39 @@
 import { sdk } from '~/sdk';
-import type { UseContent } from './types';
+import type { UseContent, UseContentState, GetContent } from './types';
 
 /**
- * Method fetching content.
- * You can use it to fetch any content from the CMS.
- *
  * @param url
- * Parameter of the content to fetch, also using it as a key for the cache.
- *
+ * Parameter of the content to fetch.
  * @returns
- * Returns the content data, pending state and error.
+ * {@link UseContent}
+ * @example
+ * const { data, loading, getContent } = useContent<ContentFieldsType>('url');
  */
 export const useContent = <TFields>(url: string): UseContent<TFields> => {
-  const { data, pending, error } = useAsyncData(url, () => sdk.commerce.getContent<TFields>({ url }));
+  const state = useState<UseContentState<TFields>>(`useContent-${url}`, () => ({
+    data: ref(null),
+    loading: false,
+  }));
+
+  /**
+   * Function to fetch the content.
+   * @example
+   * getContent();
+   */
+  const getContent = async (): Promise<GetContent<TFields>> => {
+    try {
+      state.value.loading = true;
+      const { data, error } = await useAsyncData(() => sdk.commerce.getContent<TFields>({ url }));
+      useHandleError(error.value);
+      state.value.data = data;
+      return data;
+    } finally {
+      state.value.loading = false;
+    }
+  };
 
   return {
-    data,
-    pending,
-    error,
+    getContent,
+    ...toRefs(state.value),
   };
 };

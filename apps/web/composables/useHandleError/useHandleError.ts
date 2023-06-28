@@ -1,5 +1,11 @@
 import type { UseHandleError } from './types';
 
+const defaultError = {
+  status: 500,
+  message: 'An error occurred',
+  statusMessage: 'An error occurred',
+};
+
 /**
  * Method handling errors.
  * @param error
@@ -11,6 +17,11 @@ import type { UseHandleError } from './types';
  */
 export const useHandleError: UseHandleError = (error) => {
   if (error) {
-    throw createError({ statusCode: error.status, message: error.message, statusMessage: error.message, fatal: true });
+    throw createError({
+      statusCode: error.status || defaultError.status,
+      message: error.message || defaultError.message,
+      statusMessage: error.message || defaultError.statusMessage,
+      fatal: true,
+    });
   }
 };

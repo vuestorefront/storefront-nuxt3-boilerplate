@@ -1,5 +1,5 @@
 import { sdk } from '~/sdk';
-import type { UseContent, UseContentState, GetContent } from './types';
+import type { UseContentReturn, UseContentState, GetContent } from './types';
 
 /**
  * @param url
@@ -9,9 +9,9 @@ import type { UseContent, UseContentState, GetContent } from './types';
  * @example
  * const { data, loading, getContent } = useContent<ContentFieldsType>('url');
  */
-export const useContent = <TFields>(url: string): UseContent<TFields> => {
-  const state = useState<UseContentState<TFields>>(`useContent-${url}`, () => ({
-    data: ref(null),
+export const useContent: UseContentReturn = (url) => {
+  const state = useState<UseContentState>(`useContent-${url}`, () => ({
+    data: null,
     loading: false,
   }));
 
@@ -20,16 +20,13 @@ export const useContent = <TFields>(url: string): UseContent<TFields> => {
    * @example
    * getContent();
    */
-  const getContent = async (): Promise<GetContent<TFields>> => {
-    try {
-      state.value.loading = true;
-      const { data, error } = await useAsyncData(() => sdk.commerce.getContent<TFields>({ url }));
-      useHandleError(error.value);
-      state.value.data = data;
-      return data;
-    } finally {
-      state.value.loading = false;
-    }
+  const getContent: GetContent = async () => {
+    state.value.loading = true;
+    const { data, error } = await useAsyncData(() => sdk.commerce.getContent({ url }));
+    useHandleError(error.value);
+    state.value.data = data.value;
+    state.value.loading = false;
+    return data;
   };
 
   return {

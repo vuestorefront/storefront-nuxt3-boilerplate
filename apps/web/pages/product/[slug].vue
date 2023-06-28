@@ -10,7 +10,7 @@
 const title = ref('Mocked product title');
 
 // example of using cached data from Home Page
-const content = useState('useContent-home-page');
+const { data: content } = useContent('home-page');
 
 useHead({
   title,

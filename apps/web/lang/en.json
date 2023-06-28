@@ -75,7 +75,9 @@
   "backToCart": "Back to My Cart",
   "back": "Back",
   "placeOrder": "Place order and pay",
-  "termsInfo": "By placing my order, you agree to our <1>Terms and Conditions</1> and our <3>Privacy Policy</3>",
+  "termsInfo": "By placing my order, you agree to our {terms} and our {privacyPolicy}",
+  "termsAndConditions": "Terms and Conditions",
+  "privacyPolicy": "Privacy Policy",
   "tomorrow": "Tomorrow",
   "contactInfo": {
     "heading": "Contact Information",
@@ -206,8 +208,10 @@
     "privacyPolicy": "Privacy policy"
   },
   "socialLabel": "Go to {label} page",
-  "failedInfo": "<0>We are really sorry.</0> <1>Your order has not been completed.</1>",
-  "successInfo": "<0>Thank you!</0> <1>Your order was completed successfully.</1>",
+  "failedInfoHeader": "We are really sorry.",
+  "failedInfoMessage": "Your order has not been completed.",
+  "successInfoHeader": "Thank you!",
+  "successInfoMessage": "Your order was completed successfully.",
   "etaDelivery": "Estimated delivery time",
   "shippingAddress": "Shipping address",
   "somethingWentWrongImageAlt": "something went wrong image",
@@ -221,12 +225,14 @@
   "loadingReviews": "Loading Reviews...",
   "reviewsCount": "{count} reviews",
   "recommendedProducts": "Recommended with this product",
-  "numberInStock": "<0>{count}</0> in stock",
   "outOfStock": "Out of stock",
   "additionalInfo": {
-    "shipping": "Free shipping, arrives by Thu, Apr 7. Want it faster? <1>Add an address</1> to see options",
-    "pickup": "Pickup not available at Super center. <1>Check availability nearby</1>",
-    "returns": "Free 30-Day returns. <1>Details</1>"
+    "shipping": "Free shipping, arrives by Thu, Apr 7. Want it faster? {addAddress} to see options",
+    "addAddress": "Add an address",
+    "pickup": "Pickup not available at Super center. {checkAvailability}",
+    "checkAvailability": "Check availability nearby",
+    "returns": "Free 30-Day returns. {details}",
+    "details": "Details"
   },
   "sale": "Sale",
   "readMore": "Read more",

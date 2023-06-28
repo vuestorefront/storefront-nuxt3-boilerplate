@@ -1,5 +1,6 @@
 <template>
-  <h1>Order failed page</h1>
+  <h1>{{ $t('failedInfoHeader') }}</h1>
+  <span>{{ $t('failedInfoMessage') }}</span>
 </template>
 
 <script lang="ts" setup>

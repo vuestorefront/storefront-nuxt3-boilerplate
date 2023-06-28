@@ -11,7 +11,6 @@
 </template>
 
 <script lang="ts" setup>
-import { SfButton } from '@storefront-ui/vue';
 import { sdk } from '~/sdk';
 
 const { data } = await useAsyncData('cms-content', () => sdk.commerce.getContent());

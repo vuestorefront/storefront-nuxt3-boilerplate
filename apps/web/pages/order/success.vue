@@ -1,5 +1,6 @@
 <template>
-  <h1>Order success page</h1>
+  <h1>{{ $t('successInfoHeader') }}</h1>
+  <span>{{ $t('successInfoMessage') }}</span>
 </template>
 
 <script lang="ts" setup>

@@ -1,5 +1,6 @@
 {
   "name": "web",
+  "type": "module",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -19,6 +20,7 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@nuxtjs/google-fonts": "^3.0.1",
+    "@nuxtjs/i18n": "npm:@nuxtjs/i18n-edge",
     "@nuxtjs/tailwindcss": "^6.8.0",
     "@savvywombat/tailwindcss-grid-areas": "^3.1.0",
     "@storefront-ui/typography": "^2.3.1",

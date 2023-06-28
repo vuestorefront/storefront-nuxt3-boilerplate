@@ -1,0 +1,252 @@
+{
+  "billing": {
+    "heading": "Billing Address",
+    "description": "Add a billing address. You will receive the invoice to the email address provided above.",
+    "addButton": "Add billing address"
+  },
+  "shipping": {
+    "heading": "Shipping Address",
+    "description": "Add a shipping address to view shipping details.",
+    "addButton": "Add shipping address"
+  },
+  "form": {
+    "firstNameLabel": "First Name",
+    "lastNameLabel": "Last Name",
+    "phoneLabel": "Phone",
+    "countryLabel": "Country",
+    "streetNameLabel": "Street",
+    "streetNameHelp": "Street address or P.O. Box",
+    "streetNumberLabel": "Apt#, Suite, etc",
+    "streetNumberHelp": "Optional",
+    "cityLabel": "City",
+    "stateLabel": "State",
+    "postalCodeLabel": "ZIP Code",
+    "useAsShippingLabel": "Use as shipping address",
+    "selectPlaceholder": "-- Select --"
+  },
+  "myCart": "My Cart",
+  "orderSummary": "Order Summary",
+  "itemsInCart": "(Items: {count})",
+  "itemsSubtotal": "Items subtotal",
+  "originalPrice": "Original price",
+  "savings": "Savings",
+  "estimatedTax": "Estimated Sales Tax",
+  "apply": "Apply",
+  "total": "Total",
+  "goToCheckout": "Go to checkout",
+  "savingsTag": "You are saving {amount} on your order today!",
+  "promoCodePlaceholder": "Enter promo code",
+  "delivery": "Delivery",
+  "promoCode": "Promo Code",
+  "remove": "Remove",
+  "emptyCart": "Your cart is empty",
+  "emptyCartImgAlt": "empty cart image",
+  "backToShopping": "Back To Shopping",
+  "allFromCategory": "All {name}",
+  "listSettings": "List settings",
+  "closeListSettings": "Close list settings",
+  "clearFilters": "Clear all filters",
+  "showProducts": "Show products",
+  "showMore": "Show more",
+  "showLess": "Show less",
+  "filters": "Filters",
+  "allProducts": "All products",
+  "sortBy": "Sort by",
+  "sortType": {
+    "latest": "Latest",
+    "priceUp": "Price from low to high",
+    "priceDown": "Price from high to low",
+    "relevance": "Relevance"
+  },
+  "numberOfProducts": "1 Product | {count} Products",
+  "prev": "Previous",
+  "next": "Next",
+  "emptyStateText": "We no longer have products in this category.",
+  "emptyStateText2": "Have not found what you are looking for?",
+  "emptyStateAltText": "Image for no products found",
+  "resultsFor": "Results for \"{phrase}\"",
+  "prevAriaLabel": "Go to previous page",
+  "nextAriaLabel": "Go to next page",
+  "secondPageAriaLabel": "Second page",
+  "lastPageAriaLabel": "Last page",
+  "currentPage": "Page {page} of {totalPages}",
+  "checkout": "Checkout",
+  "backToCart": "Back to My Cart",
+  "back": "Back",
+  "placeOrder": "Place order and pay",
+  "termsInfo": "By placing my order, you agree to our {terms} and our {privacyPolicy}",
+  "termsAndConditions": "Terms and Conditions",
+  "privacyPolicy": "Privacy Policy",
+  "tomorrow": "Tomorrow",
+  "contactInfo": {
+    "heading": "Contact Information",
+    "description": "Add your email and phone number to communicate with the store.",
+    "add": "Add contact information",
+    "email": "Email",
+    "phone": "Phone number",
+    "phonePlaceholder": "eg. 123 456 7890",
+    "clearAll": "Clear all",
+    "save": "Save",
+    "edit": "Edit"
+  },
+  "checkoutPayment": {
+    "heading": "Payment method",
+    "comingSoon": "Coming soon",
+    "cash": "Cash on delivery",
+    "creditCard": "Credit Card",
+    "paypalIconAlt": "Paypal Icon",
+    "applePayIconAlt": "Apple Pay Icon",
+    "googlePayIconAlt": "Google Pay icon"
+  },
+  "shippingMethod": {
+    "heading": "Shipping details",
+    "description": "Not available until a shipping address is provided."
+  },
+  "validation": {
+    "heading": "To complete order:",
+    "missingBillingAddress": "add billing address",
+    "missingShippingAddress": "add shipping address",
+    "missingEmail": "add customer email",
+    "missingShippingDetails": "add shipping details",
+    "missingPaymentMethod": "choose payment method"
+  },
+  "size": "Size",
+  "color": "Color",
+  "addToCart": "Add to cart",
+  "addToCartShort": "Add",
+  "search": "Search",
+  "vsfHomepage": "VSF Homepage",
+  "home": "Home",
+  "products": "Products",
+  "cart": "Cart",
+  "wishlist": "Wishlist",
+  "addProductToWishlist": "Add {label} to wishlist",
+  "quantitySelector": "Quantity Selector",
+  "quantitySelectorDecrease": "Decrease value",
+  "quantitySelectorIncrease": "Increase value",
+  "of": "of",
+  "scrollTop": "Scroll to top",
+  "numberInCart_one": "{count} product in cart",
+  "numberInCart_other": "{count} products in cart",
+  "cardImagePlaceholder": "Card image placeholder",
+  "displayImage": "Display image",
+  "allProductsLinkText": "Browse products",
+  "breadcrumbsDropdownText": "Show more breadcrumbs",
+  "youAreOfflineText": "It seems you are currently offline, check your internet connection",
+  "viewCart": "View Cart",
+  "compare": "Compare",
+  "addToList": "Add to list",
+  "category": "Category",
+  "categories": {
+    "howToBuy": {
+      "label": "How to buy",
+      "subcategories": {
+        "paymentMethods": "Payment methods",
+        "orderPickup": "Order pickup",
+        "purchaseStatus": "Purchase status",
+        "trackOrders": "Track orders",
+        "returns": "Returns"
+      }
+    },
+    "help": {
+      "label": "Help",
+      "subcategories": {
+        "helpCenter": "Help center",
+        "securityFraud": "Security & fraud",
+        "feedback": "Feedback",
+        "contact": "Contact"
+      }
+    },
+    "services": {
+      "label": "Services",
+      "subcategories": {
+        "giftCards": "Gift cards",
+        "storeLocator": "Store Locator",
+        "clickCollect": "Click & Collect",
+        "sameDayDelivery": "Same Day Delivery",
+        "shippingDelivery": "Shipping & Delivery",
+        "couponsDiscounts": "Coupons & Discounts",
+        "newsletter": "Newsletter"
+      }
+    },
+    "about": {
+      "label": "About",
+      "subcategories": {
+        "aboutUs": "About us",
+        "jobs": "Jobs",
+        "pressCenter": "Press Center",
+        "affiliateProgram": "Affiliate program",
+        "suppliers": "Suppliers"
+      }
+    }
+  },
+  "contactOptions": {
+    "helpCenter": {
+      "label": "Help center",
+      "details": {
+        "description": "Find answers online anytime"
+      }
+    },
+    "liveChat": {
+      "label": "Live chat",
+      "details": {
+        "openingHours-1": "Mon–Fri, 5am–10pm PT",
+        "openingHours-2": "Sat–Sun, 6am–9pm PT"
+      }
+    },
+    "phone": {
+      "label": "1 234 567 8901",
+      "details": {
+        "openingHours-1": "Mon–Fri, 5am–10pm PT",
+        "openingHours-2": "Sat–Sun, 6am–9pm PT"
+      }
+    }
+  },
+  "bottomLinks": {
+    "terms": "Terms",
+    "privacyPolicy": "Privacy policy"
+  },
+  "socialLabel": "Go to {label} page",
+  "failedInfoHeader": "We are really sorry.",
+  "failedInfoMessage": "Your order has not been completed.",
+  "successInfoHeader": "Thank you!",
+  "successInfoMessage": "Your order was completed successfully.",
+  "etaDelivery": "Estimated delivery time",
+  "shippingAddress": "Shipping address",
+  "somethingWentWrongImageAlt": "something went wrong image",
+  "orderSuccessfulImageAlt": "order successful image",
+  "backToCheckout": "Back to Checkout",
+  "continueShopping": "Continue shopping",
+  "orderErrorMessage": "Something went wrong. Try again later.",
+  "orderNumber": "Order number",
+  "productDetails": "Product Details",
+  "customerReviews": "Customer Reviews",
+  "loadingReviews": "Loading Reviews...",
+  "reviewsCount": "{count} reviews",
+  "recommendedProducts": "Recommended with this product",
+  "outOfStock": "Out of stock",
+  "additionalInfo": {
+    "shipping": "Free shipping, arrives by Thu, Apr 7. Want it faster? {addAddress} to see options",
+    "addAddress": "Add an address",
+    "pickup": "Pickup not available at Super center. {checkAvailability}",
+    "checkAvailability": "Check availability nearby",
+    "returns": "Free 30-Day returns. {details}",
+    "details": "Details"
+  },
+  "sale": "Sale",
+  "readMore": "Read more",
+  "readLess": "Read less",
+  "noReviews": "No reviews",
+  "loading": "Loading",
+  "gallery": {
+    "count": "{current} of {total}",
+    "thumb": "Go to slide {index}",
+    "prev": "Previous",
+    "next": "Next",
+    "image": "Slide {index}"
+  },
+  "review": {
+    "reportAbuse": "Report Abuse",
+    "verifiedPurchase": "Verified purchase"
+  }
+}

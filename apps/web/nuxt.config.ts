@@ -22,6 +22,19 @@ export default defineNuxtConfig({
     titleSuffix: 'Vue Storefront Nuxt3 Boilerplate',
   },
   css: ['~/assets/style.scss'],
+  image: {
+    screens: {
+      '4xl': '1920px',
+      '3xl': '1536px',
+      '2xl': '1366px',
+      xl: '1280px',
+      lg: '1024px',
+      md: '768px',
+      sm: '640px',
+      xs: '376px',
+      '2xs': '360px',
+    },
+  },
   modules: [
     '@nuxtjs/tailwindcss',
     [
@@ -47,5 +60,6 @@ export default defineNuxtConfig({
         defaultLocale: 'en',
       },
     ],
+    '@nuxt/image',
   ],
 });

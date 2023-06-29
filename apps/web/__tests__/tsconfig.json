@@ -1,0 +1,10 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "isolatedModules": false,
+    "types": ["cypress"]
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "../cypress.config.ts"],
+  "exclude": ["node_modules", "mocks"],
+  //  "files": ["globals.d.ts"]
+}

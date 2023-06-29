@@ -3,5 +3,7 @@
   "compilerOptions": {
     "typeRoots": ["./node_modules/"],
     "types": []
-  }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules", "mocks", "cypress.config.ts", "__tests__"]
 }

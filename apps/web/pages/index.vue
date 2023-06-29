@@ -11,8 +11,7 @@
 </template>
 
 <script lang="ts" setup>
-const contentUrl = 'home-page';
-const { getContent, data: content } = useContent(contentUrl);
+const { getContent, data: content } = useContent('home-page');
 
 getContent();
 </script>

@@ -8,7 +8,7 @@ const defaultError: ErrorParams = {
 
 /**
  * @description Composable for handling errors.
- * @param error {@link Maybe≤ErrorParams>}
+ * @param error {@link ErrorParams}
  * @returns Throws an error if there is one.
  * @example
  * const { data, error } = await fetch(data);

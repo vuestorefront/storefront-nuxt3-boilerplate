@@ -2,10 +2,9 @@ import { sdk } from '~/sdk';
 import type { UseContentReturn, UseContentState, GetContent } from './types';
 
 /**
- * @param url
- * Parameter of the content to fetch.
- * @returns
- * {@link UseContent}
+ * @description Composable for managing content from CMS.
+ * @param url Parameter of the content to fetch.
+ * @returns {@link UseContent}
  * @example
  * const { data, loading, getContent } = useContent<ContentFieldsType>('url');
  */
@@ -16,7 +15,7 @@ export const useContent: UseContentReturn = (url) => {
   }));
 
   /**
-   * Function to fetch the content.
+   * @description Function for fetching the content.
    * @example
    * getContent();
    */

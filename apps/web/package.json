@@ -8,7 +8,6 @@
     "dev": "nuxt dev",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "typecheck": "nuxt typecheck",
     "lint": "nuxt typecheck && eslint --ext .vue,.js,.ts .",
     "lint:fix": "eslint --ext .vue,.js,.ts . --fix",
     "preview": "nuxt preview",

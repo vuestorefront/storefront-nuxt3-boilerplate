@@ -1,6 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  typescript: {
+    typeCheck: true,
+  },
   app: {
     head: {
       viewport: 'minimum-scale=1, initial-scale=1, width=device-width',

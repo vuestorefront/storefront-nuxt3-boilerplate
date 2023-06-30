@@ -40,8 +40,7 @@
     "prettier": "^2.8.8",
     "rollup": "^2.79.0",
     "turbo": "1.5.5",
-    "typescript": "5.0.4",
-    "vue-tsc": "^1.8.3"
+    "typescript": "5.0.4"
   },
   "engines": {
     "npm": ">=8.0.0",

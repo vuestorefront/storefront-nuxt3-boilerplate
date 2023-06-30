@@ -11,6 +11,6 @@ Cypress.Commands.add('getByTestId', (testid: string) =>
 
 Cypress.Commands.add('getFixture', (fixtureName: string) => {
     return cy.fixture(`../fixtures/${fixtureName}.json`).then((fixture) => {
-      return fixture;
+        return fixture;
     });
-  });
+});

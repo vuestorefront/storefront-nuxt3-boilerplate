@@ -11,7 +11,10 @@
     "lint": "eslint --ext .vue,.js,.ts .",
     "lint:fix": "eslint --ext .vue,.js,.ts . --fix",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "@vsf-enterprise/storefront-boilerplate-sdk": "0.1.0-rc.2",
@@ -26,8 +29,12 @@
     "@savvywombat/tailwindcss-grid-areas": "^3.1.0",
     "@storefront-ui/typography": "^2.3.1",
     "@storefront-ui/vue": "^2.4.1",
+    "@testing-library/vue": "^7.0.0",
     "@types/node": "^18",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "happy-dom": "^9.20.3",
     "nuxt": "^3.6.0",
-    "sass": "^1.63.6"
+    "sass": "^1.63.6",
+    "vitest": "^0.32.2"
   }
 }

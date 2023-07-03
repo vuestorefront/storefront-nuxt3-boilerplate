@@ -4,6 +4,7 @@
       <h2>Order layout</h2>
       <slot />
     </NarrowContainer>
+    <UiFooter />
   </main>
 </template>
 

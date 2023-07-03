@@ -1,4 +1,3 @@
-
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
@@ -75,7 +74,7 @@ export default defineNuxtConfig({
     registerType: 'autoUpdate',
     workbox: {
       navigateFallback: null,
-      globPatterns: ['**/*.{js,css,html,ico}', 'images/card-placeholder.png', 'icons/*'],
+      globPatterns: ['**/*.{js,css,html,ico}', 'icons/*'],
       cleanupOutdatedCaches: true,
     },
     manifest: {

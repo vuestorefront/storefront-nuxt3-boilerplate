@@ -1,8 +1,8 @@
 <template>
   <div class="m-10">
-    <NuxtLink href="/checkout">checkout</NuxtLink><br/>
-    <NuxtLink href="/cart">cart</NuxtLink><br/>
-    <NuxtLink href="/search">search</NuxtLink><br/>
+    <NuxtLink href="/checkout">checkout</NuxtLink>
+    <NuxtLink href="/cart">cart</NuxtLink>
+    <NuxtLink href="/search">search</NuxtLink>
 
     <h1 class="typography-headline-1">
       {{ $t('vsfHomepage') }}

@@ -10,8 +10,8 @@
     </template>
   </i18n-t>
 
-  <NuxtLink href="/order/success">order success</NuxtLink><br/>
-  <NuxtLink href="/order/failed">order failed</NuxtLink><br/>
+  <NuxtLink href="/order/success">order success</NuxtLink>
+  <NuxtLink href="/order/failed">order failed</NuxtLink>
 </template>
 
 <script lang="ts" setup>

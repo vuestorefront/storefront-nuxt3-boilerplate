@@ -53,7 +53,7 @@ export default defineNuxtConfig({
       },
     ],
     [
-      '@nuxtjs/i18n',
+      '@nuxtjs/i18n-edge',
       {
         locales: [
           {

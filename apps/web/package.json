@@ -21,7 +21,7 @@
     "@nuxt/devtools": "latest",
     "@nuxt/image": "^1.0.0-rc.1",
     "@nuxtjs/google-fonts": "^3.0.1",
-    "@nuxtjs/i18n": "npm:@nuxtjs/i18n-edge",
+    "@nuxtjs/i18n-edge": "latest",
     "@nuxtjs/tailwindcss": "^6.8.0",
     "@savvywombat/tailwindcss-grid-areas": "^3.1.0",
     "@storefront-ui/typography": "^2.3.1",

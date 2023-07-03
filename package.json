@@ -23,8 +23,8 @@
   },
   "dependencies": {
     "cross-env": "^7.0.3",
-    "rimraf": "^3.0.2",
-    "dotenv": "^16.0.3"
+    "dotenv": "^16.0.3",
+    "rimraf": "^3.0.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^13.2.1",
@@ -43,10 +43,10 @@
     "typescript": "5.0.4"
   },
   "engines": {
-    "npm": ">=8.0.0",
+    "yarn": ">=3.6.1",
     "node": ">=16.0.0"
   },
-  "packageManager": "yarn@1.22.10",
+  "packageManager": "yarn@3.6.1",
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog",

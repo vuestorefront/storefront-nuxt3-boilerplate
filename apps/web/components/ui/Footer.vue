@@ -79,6 +79,7 @@
     </div>
   </footer>
 </template>
+
 <script lang="ts" setup>
 import { resolveComponent } from 'vue';
 import { SfButton, SfLink, SfListItem } from '@storefront-ui/vue';

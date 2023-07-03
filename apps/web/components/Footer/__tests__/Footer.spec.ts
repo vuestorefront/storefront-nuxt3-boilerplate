@@ -1,53 +1,54 @@
-import { render, within } from '@testing-library/vue';
+import { mount } from '@vue/test-utils';
+import { expect } from 'vitest';
 import { bottomLinks, categories, companyName, contactOptions, socialMedia } from '../../../mocks/footerData';
 import Footer from '../Footer.vue';
 
 describe('<Footer />', () => {
   it('should render component', () => {
-    const { getByTestId } = render(Footer);
+    const wrapper = mount(Footer);
 
-    expect(getByTestId('footer')).toBeTruthy();
+    expect(wrapper.get('[data-testid="footer"]'));
   });
 
   it('should render categories', () => {
-    const { getByTestId } = render(Footer);
-    const section = getByTestId('section-top');
+    const wrapper = mount(Footer);
+    const section = wrapper.find('[data-testid="section-top"]');
 
-    categories.forEach(({ label }) => within(section as HTMLElement).getByText(label));
+    categories.forEach(({ label }) => expect(section.html()).toContain(label));
   });
 
   it('should render subcategories', () => {
-    const { getByTestId } = render(Footer);
-    const section = getByTestId('section-top');
+    const wrapper = mount(Footer);
+    const section = wrapper.find('[data-testid="section-top"]');
 
     categories.forEach(({ label, subcategories }) =>
-      subcategories.forEach(({ subcategoryLabel }) => within(section as HTMLElement).getAllByText(subcategoryLabel)),
+      subcategories.forEach(({ subcategoryLabel }) => expect(section.html()).toContain(subcategoryLabel)),
     );
   });
 
   it('should render contact options', () => {
-    const { getByTestId } = render(Footer);
-    const section = getByTestId('section-middle');
+    const wrapper = mount(Footer);
+    const section = wrapper.find('[data-testid="section-middle"]');
 
-    contactOptions.forEach(({ label }) => within(section as HTMLElement).getByText(label));
+    contactOptions.forEach(({ label }) => expect(section.html()).toContain(label));
   });
 
   it('should render bottom links', () => {
-    const { getByTestId } = render(Footer);
-    const section = getByTestId('section-bottom');
+    const wrapper = mount(Footer);
+    const section = wrapper.find('[data-testid="section-bottom"]');
 
-    bottomLinks.forEach(({ label }) => within(section as HTMLElement).getByText(label));
+    bottomLinks.forEach(({ label }) => expect(section.html()).toContain(label));
   });
 
   it('should render social media', () => {
-    const { getByTestId } = render(Footer);
+    const wrapper = mount(Footer);
 
-    socialMedia.forEach(({ label }) => getByTestId(label));
+    socialMedia.forEach(({ label }) => wrapper.get(`[data-testid="${label}"]`));
   });
 
   it('should render company name', () => {
-    const { getByText } = render(Footer);
+    const wrapper = mount(Footer);
 
-    getByText(companyName);
+    expect(wrapper.html()).toContain(companyName);
   });
 });

@@ -1,4 +1,4 @@
-import { fireEvent, render } from '@testing-library/vue';
+import { mount } from '@vue/test-utils';
 import Breadcrumbs from '../Breadcrumbs.vue';
 
 const breadcrumbs = [
@@ -9,24 +9,24 @@ const breadcrumbs = [
 ];
 describe('<Breadcrumbs />', () => {
   it('should render component', () => {
-    const { getByTestId } = render(Breadcrumbs);
+    const wrapper = mount(Breadcrumbs);
 
-    expect(getByTestId('breadcrumbs')).toBeTruthy();
+    expect(wrapper.get('[data-testid="breadcrumbs"]'));
   });
 
   it('should toggle dropdown', async () => {
-    const { getByTestId, queryByTestId } = render(Breadcrumbs, {
+    const wrapper = mount(Breadcrumbs, {
       props: {
         breadcrumbs,
       },
     });
 
-    expect(queryByTestId('breadcrumbsDropdown')).toBeFalsy();
+    expect(wrapper.find('[data-testid="breadcrumbs-dropdown"]').exists()).toBeFalsy();
 
-    const dropdownButton = getByTestId('breadcrumbs-dropdown-button');
+    const dropdownButton = wrapper.get('[data-testid="breadcrumbs-dropdown-button"]');
 
-    await fireEvent.click(dropdownButton);
+    await dropdownButton.trigger('click');
 
-    expect(queryByTestId('breadcrumbs-dropdown')).toBeTruthy();
+    expect(wrapper.get('[data-testid="breadcrumbs-dropdown"]'));
   });
 });

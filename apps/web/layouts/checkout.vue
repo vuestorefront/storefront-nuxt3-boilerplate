@@ -1,6 +1,5 @@
 <template>
   <main>
-    <VitePwaManifest />
     <NarrowContainer>
       <h2>Checkout layout</h2>
       <slot />

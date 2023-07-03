@@ -1,6 +1,5 @@
 <template>
   <main>
-    <VitePwaManifest />
     <NarrowContainer>
       <h2>Order layout</h2>
       <slot />

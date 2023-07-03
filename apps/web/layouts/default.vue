@@ -5,8 +5,11 @@
       <slot />
     </NarrowContainer>
   </main>
+  <Footer />
 </template>
 
 <script lang="ts" setup>
+import Footer from '~/components/Footer/Footer.vue';
+
 usePageTitle();
 </script>

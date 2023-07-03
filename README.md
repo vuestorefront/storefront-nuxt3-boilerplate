@@ -11,7 +11,11 @@
 $ git clone https://github.com/vuestorefront/storefront-nuxt3-boilerplate.git
 ```
 
-2. Set `npmAuthToken` value in the `.yarnrc.yml` ([How to get npmAuthToken?](#How-to-get-npmAuthToken))
+2. Copy `.yarnrc.yml.example` to `.yarnrc.yml` file and set `npmAuthToken` value ([How to get npmAuthToken?](#How-to-get-npmAuthToken))
+
+```bash
+cp .yarnrc.yml.example .yarnrc.yml
+```
 
 3. Install all dependencies
 

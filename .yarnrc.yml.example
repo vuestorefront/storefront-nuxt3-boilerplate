@@ -3,5 +3,5 @@ nodeLinker: node-modules
 npmScopes:
   vsf-enterprise:
     npmRegistryServer: https://registrynpm.storefrontcloud.io
-    npmAuthToken: ${NPM_AUTH_TOKEN-}
+    npmAuthToken: ${NPM_AUTH_TOKEN}
     npmAlwaysAuth: true

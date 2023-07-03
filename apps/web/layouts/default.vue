@@ -1,5 +1,6 @@
 <template>
   <main>
+    <VitePwaManifest />
     <NarrowContainer>
       <h2>Default layout</h2>
       <slot />

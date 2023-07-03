@@ -1,3 +1,4 @@
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
@@ -14,7 +15,6 @@ export default defineNuxtConfig({
       link: [
         { rel: 'icon', href: '/favicon.ico' },
         { rel: 'apple-touch-icon', href: '/icons/apple-touch-icon-180x180.png' },
-        { rel: 'manifest', href: '/manifest.json' },
       ],
     },
   },
@@ -64,5 +64,48 @@ export default defineNuxtConfig({
       },
     ],
     '@nuxt/image',
+    '@vite-pwa/nuxt',
   ],
+  nitro: {
+    prerender: {
+      routes: ['/'],
+    },
+  },
+  pwa: {
+    registerType: 'autoUpdate',
+    workbox: {
+      navigateFallback: null,
+      globPatterns: ['**/*.{js,css,html,ico}', 'images/card-placeholder.png', 'icons/*'],
+      cleanupOutdatedCaches: true,
+    },
+    manifest: {
+      name: 'VSF x Nuxt3 (Boilerplate)',
+      short_name: 'VSFNuxt3Boilerplate',
+      theme_color: '#018937',
+      icons: [
+        {
+          src: 'icons/icon-192x192.png',
+          sizes: '192x192',
+          type: 'image/png',
+        },
+        {
+          src: 'icons/icon-512x512.png',
+          sizes: '512x512',
+          type: 'image/png',
+        },
+        {
+          src: 'icons/icon-512x512.maskable.png',
+          sizes: '512x512',
+          type: 'image/png',
+          purpose: 'maskable',
+        },
+      ],
+    },
+    registerWebManifestInRouteRules: true,
+    devOptions: {
+      enabled: process.env.NODE_ENV === 'development',
+      suppressWarnings: true,
+      navigateFallback: '/',
+    },
+  },
 });

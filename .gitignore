@@ -10,7 +10,6 @@ node_modules
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
-.yarnrc.yml
 
 # nuxt dev/build outputs
 .output

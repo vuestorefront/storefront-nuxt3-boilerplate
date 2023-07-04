@@ -23,7 +23,7 @@ cp .yarnrc.yml.example .yarnrc.yml
 $ yarn install
 ```
 
-4. Run development server. App will be served with hot reload at [localhost:3000](http://localhost:3000/)
+4. Run the development server. The app will be served with hot reload at [localhost:3000](http://localhost:3000/).
 
 ```bash
 $ yarn dev

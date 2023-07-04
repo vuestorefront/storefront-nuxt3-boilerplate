@@ -23,6 +23,7 @@
 import { ref, watch } from 'vue';
 import { SfIconCancel, SfIconSearch, SfInput, useDisclosure } from '@storefront-ui/vue';
 import { unrefElement } from '@vueuse/core';
+import { paths } from '~/helpers/paths';
 
 const props = defineProps<{
   close?: () => boolean;
@@ -43,7 +44,7 @@ const handleReset = () => {
 };
 const handleSubmit = () => {
   props.close && props.close();
-  router.push({ path: '/search', query: { search: inputModel.value } });
+  router.push({ path: paths.search, query: { search: inputModel.value } });
   handleReset();
 };
 

@@ -54,6 +54,7 @@ import {
   SfIconClose,
   useDisclosure,
 } from '@storefront-ui/vue';
+import { paths } from '~/helpers/paths';
 
 const router = useRouter();
 const { isOpen, open, close } = useDisclosure({ initialValue: false });
@@ -62,27 +63,27 @@ const items = [
   {
     label: 'home',
     icon: SfIconHome,
-    path: '/',
+    path: paths.home,
   },
   {
     label: 'products',
     icon: SfIconMenu,
-    path: '/category',
+    path: paths.category,
   },
   {
     label: 'search',
     icon: SfIconSearch,
-    path: '/search',
+    path: paths.search,
   },
   {
     label: 'cart',
     icon: SfIconShoppingCart,
-    path: '/cart',
+    path: paths.cart,
   },
 ];
 const cartLineItemsCount = computed(() => 1);
 const handleClick = (path: string) => {
-  if (path === '/search') {
+  if (path === paths.search) {
     open();
   } else {
     router.push(path);

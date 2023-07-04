@@ -5,7 +5,7 @@
       type="button"
       variant="tertiary"
       :tag="NuxtLink"
-      to="/category"
+      :to="paths.category"
     >
       <template #suffix>
         <SfIconExpandMore class="hidden lg:block" />
@@ -17,7 +17,7 @@
       <SfButton
         class="relative text-white hover:text-white active:text-white hover:bg-primary-800 active:bg-primary-900 mr-2 -ml-0.5 rounded-md"
         :tag="NuxtLink"
-        to="/cart"
+        :to="paths.cart"
         :aria-label="$t('numberInCart', cartLineItemsCount)"
         variant="tertiary"
         square
@@ -43,6 +43,7 @@
 <script lang="ts" setup>
 import { resolveComponent } from 'vue';
 import { SfBadge, SfButton, SfIconExpandMore, SfIconShoppingCart } from '@storefront-ui/vue';
+import { paths } from '~/helpers/paths';
 
 usePageTitle();
 

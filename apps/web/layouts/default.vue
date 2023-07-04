@@ -1,9 +1,6 @@
 <template>
   <main>
-    <NarrowContainer>
-      <h2>Default layout</h2>
-      <slot />
-    </NarrowContainer>
+    <slot />
   </main>
 </template>
 

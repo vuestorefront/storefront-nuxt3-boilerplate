@@ -41,7 +41,6 @@
 </template>
 
 <script lang="ts" setup>
-import { resolveComponent } from 'vue';
 import { SfBadge, SfButton, SfIconExpandMore, SfIconShoppingCart } from '@storefront-ui/vue';
 import { paths } from '~/helpers/paths';
 

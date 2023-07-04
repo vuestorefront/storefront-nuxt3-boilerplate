@@ -81,7 +81,6 @@
 </template>
 
 <script lang="ts" setup>
-import { resolveComponent } from 'vue';
 import { SfButton, SfLink, SfListItem } from '@storefront-ui/vue';
 import { bottomLinks, categories, companyName, contactOptions, socialMedia } from '~/mocks';
 

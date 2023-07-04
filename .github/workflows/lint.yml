@@ -1,0 +1,37 @@
+name: Lint
+
+on:
+  push:
+    branches:
+      - chore/storefront-1460-yarn3
+  pull_request:
+    branches:
+      - develop
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          cache: 'yarn'
+
+      - name: Build packages
+        run: cp .yarnrc.yml.example .yarnrc.yml
+
+      - name: Install dependencies
+        run: yarn install
+        env:
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+
+      - name: Build packages
+        run: yarn build
+
+      - name: Run linter
+        run: yarn lint

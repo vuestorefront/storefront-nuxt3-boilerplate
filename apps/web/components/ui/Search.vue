@@ -1,7 +1,9 @@
 <template>
   <form ref="referenceRef" role="search" class="relative" @submit.prevent="submit">
     <SfInput ref="inputRef" v-model="inputModel" aria-label="Search" placeholder="Search" @focus="open">
-      <template #prefix><SfIconSearch /></template>
+      <template #prefix>
+          <SfIconSearch />
+      </template>
       <template #suffix>
         <button
           v-if="inputModel"

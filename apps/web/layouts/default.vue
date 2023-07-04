@@ -15,7 +15,7 @@
     <UiSearch class="hidden md:block flex-1" />
     <nav class="hidden md:flex md:flex-row md:flex-nowrap">
       <SfButton
-        class="relative text-white hover:text-white active:text-white hover:bg-primary-800 active:bg-primary-900 mr-2 -ml-0.5 rounded-md"
+        class="group relative text-white hover:text-white active:text-white hover:bg-primary-800 active:bg-primary-900 mr-2 -ml-0.5 rounded-md"
         :tag="NuxtLink"
         :to="paths.cart"
         :aria-label="$t('numberInCart', cartLineItemsCount)"

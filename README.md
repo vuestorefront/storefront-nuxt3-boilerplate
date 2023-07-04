@@ -17,7 +17,7 @@ $ git clone https://github.com/vuestorefront/storefront-nuxt3-boilerplate.git
 cp .yarnrc.yml.example .yarnrc.yml
 ```
 
-3. Install all dependencies
+3. Install all dependencies.
 
 ```bash
 $ yarn install

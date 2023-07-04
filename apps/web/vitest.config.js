@@ -1,4 +1,5 @@
 import vue from '@vitejs/plugin-vue';
+import { resolve } from 'node:path';
 import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
@@ -6,5 +7,8 @@ export default defineConfig({
   test: {
     environment: 'happy-dom',
     globals: true,
+  },
+  resolve: {
+    alias: [{ find: '~', replacement: resolve(__dirname, './') }],
   },
 });

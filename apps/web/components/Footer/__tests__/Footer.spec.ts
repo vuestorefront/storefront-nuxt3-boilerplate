@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils';
 import { expect } from 'vitest';
-import { bottomLinks, categories, companyName, contactOptions, socialMedia } from '../../../mocks/footerData';
+import { bottomLinks, categories, companyName, contactOptions, socialMedia } from '~/mocks/footerData';
 import Footer from '../Footer.vue';
 
 describe('<Footer />', () => {

@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import Breadcrumbs from '../Breadcrumbs.vue';
+import Breadcrumbs from '~/components/ui/Breadcrumbs/Breadcrumbs.vue';
 
 const breadcrumbs = [
   {

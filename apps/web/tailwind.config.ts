@@ -28,6 +28,9 @@ export default {
         '2xs': '360px',
       },
     },
+    fontFamily: {
+      sans: 'Red Hat Text, sans-serif',
+    },
   },
   plugins: [sfTypography, require('@savvywombat/tailwindcss-grid-areas')],
 } as Config;

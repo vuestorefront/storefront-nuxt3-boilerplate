@@ -8,7 +8,7 @@
         'py-1 flex flex-col w-full rounded-none bg-primary-700 text-white hover:text-white hover:bg-primary-800 active:text-white active:bg-primary-900',
         { 'text-white bg-primary-900': $route.path === path },
       ]"
-      @click="onClickHandler(path)"
+      @click="handleClick(path)"
     >
       <template v-if="label !== 'cart'">
         <component :is="icon" />
@@ -80,12 +80,12 @@ const items = [
     path: '/cart',
   },
 ];
-const cartLineItemsCount = 1;
-function onClickHandler(path: string) {
+const cartLineItemsCount = computed(() => 1);
+const handleClick = (path: string) => {
   if (path === '/search') {
     open();
   } else {
     router.push(path);
   }
-}
+};
 </script>

@@ -8,6 +8,9 @@ on:
     branches:
       - develop
 
+env:
+  NPM_AUTH_TOKEN: ${{ secrets.NPM_DEFAULT_ENTERPRISE_TOKEN }}
+
 jobs:
   lint:
     name: Lint
@@ -27,8 +30,6 @@ jobs:
 
       - name: Install dependencies
         run: yarn install
-        env:
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_DEFAULT_ENTERPRISE_TOKEN }}
 
       - name: Build packages
         run: yarn build

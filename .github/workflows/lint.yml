@@ -3,7 +3,7 @@ name: Lint
 on:
   push:
     branches:
-      - chore/storefront-1460-yarn3
+      - develop
   pull_request:
     branches:
       - develop

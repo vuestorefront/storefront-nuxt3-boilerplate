@@ -5,3 +5,5 @@ npmScopes:
     npmRegistryServer: https://registrynpm.storefrontcloud.io
     npmAuthToken: ${NPM_AUTH_TOKEN}
     npmAlwaysAuth: true
+
+yarnPath: .yarn/releases/yarn-3.6.1.cjs

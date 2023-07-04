@@ -9,7 +9,7 @@
 
 <script setup lang="ts">
 import Heading from '~/components/Heading/Heading.vue';
-import ProductSliderContent from '~/components/ProductSliderContent/ProductSliderContent.vue';
+import ProductSlider from '~/components/ProductSlider/ProductSlider.vue';
 import type { RenderContentProps } from '~/components/RenderContent/types';
 import CategoryCard from '~/components/ui/CategoryCard/CategoryCard.vue';
 import Display from '~/components/ui/Display/Display.vue';
@@ -20,7 +20,7 @@ const componentsMap = {
   Card: CategoryCard,
   Heading,
   Display,
-  ProductSlider: ProductSliderContent,
+  ProductSlider,
 };
 
 defineProps<RenderContentProps>();

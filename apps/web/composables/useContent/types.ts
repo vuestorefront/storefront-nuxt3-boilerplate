@@ -1,6 +1,6 @@
 import type { Ref } from 'vue';
 import type { HeadingProps } from '~/components/Heading/types';
-import type { ProductSliderProps } from '~/components/ProductSliderContent/types';
+import type { ProductSliderProps } from '~/components/ProductSlider/types';
 import type { CategoryCardProps } from '~/components/ui/CategoryCard/types';
 import type { DisplayProps } from '~/components/ui/Display/types';
 import type { HeroProps } from '~/components/ui/Hero/types';

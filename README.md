@@ -32,7 +32,7 @@ $ yarn dev
 
 ### How to get npmAuthToken?
 
-If you're already logged in, you can find the token in the `~/.npmrc`file. Otherwise, generate new token using the following command:
+If you're already logged in, you can find the token in the `~/.npmrc` file. Otherwise, generate a new token using the following command:
 
 ```bash
 $ npm login --registry https://registrynpm.storefrontcloud.io --scope @vsf-enterprise

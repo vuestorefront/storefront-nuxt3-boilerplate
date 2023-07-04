@@ -27,7 +27,7 @@
     <hr />
     <div class="py-10 md:flex md:mx-auto max-w-screen-3xl" data-testid="section-middle">
       <div v-for="{ key, icon, link, details } in contactOptions" :key="key" class="mx-auto my-4 text-center">
-        <component :is="icon" />
+        <component :is="icon" size="lg" />
         <p class="py-1 my-2 font-medium typography-text-lg font-body">
           <SfLink
             :tag="NuxtLink"

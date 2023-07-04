@@ -119,27 +119,27 @@ export const socialMedia = [
   {
     label: 'Facebook',
     link: '/',
-    icon: <SfIconFacebook />,
+    icon: SfIconFacebook,
   },
   {
     label: 'Twitter',
     link: '/',
-    icon: <SfIconTwitter />,
+    icon: SfIconTwitter,
   },
   {
     label: 'Instagram',
     link: '/',
-    icon: <SfIconInstagram />,
+    icon: SfIconInstagram,
   },
   {
     label: 'Pinterest',
     link: '/',
-    icon: <SfIconPinterest />,
+    icon: SfIconPinterest,
   },
   {
     label: 'Youtube',
     link: '/',
-    icon: <SfIconYoutube />,
+    icon: SfIconYoutube,
   },
 ];
 export const contactOptions = [
@@ -147,19 +147,19 @@ export const contactOptions = [
     key: 'helpCenter',
     link: '/',
     details: ['description'],
-    icon: <SfIconHelp size="lg" />,
+    icon: SfIconHelp,
   },
   {
     key: 'liveChat',
     link: '/',
     details: ['openingHours-1', 'openingHours-2'],
-    icon: <SfIconContactSupport size="lg" />,
+    icon: SfIconContactSupport,
   },
   {
     key: 'phone',
     link: '/',
     details: ['openingHours-1', 'openingHours-2'],
-    icon: <SfIconCall size="lg" />,
+    icon: SfIconCall,
   },
 ];
 export const bottomLinks = [

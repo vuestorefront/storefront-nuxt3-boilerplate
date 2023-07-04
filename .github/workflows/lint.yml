@@ -22,7 +22,7 @@ jobs:
           node-version: '20'
           cache: 'yarn'
 
-      - name: Build packages
+      - name: Set yarn config
         run: cp .yarnrc.yml.example .yarnrc.yml
 
       - name: Install dependencies

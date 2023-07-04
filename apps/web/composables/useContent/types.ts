@@ -1,6 +1,7 @@
 import type { Ref } from 'vue';
 import type { HeadingProps } from '~/components/Heading/types';
 import type { CategoryCardProps } from '~/components/ui/CategoryCard/types';
+import type { DisplayProps } from '~/components/ui/Display/types';
 import type { HeroProps } from '~/components/ui/Hero/types';
 import type { Maybe } from '~/types';
 
@@ -15,7 +16,8 @@ type WithComponentField<TProps, TComponent> = TProps & {
 export type DynamicContentFields =
   | WithComponentField<HeroProps, 'Hero'>
   | WithComponentField<CategoryCardProps, 'Card'>
-  | WithComponentField<HeadingProps, 'Heading'>;
+  | WithComponentField<HeadingProps, 'Heading'>
+  | WithComponentField<DisplayProps, 'Display'>;
 
 export interface ContentDynamicPage {
   component: 'Page';

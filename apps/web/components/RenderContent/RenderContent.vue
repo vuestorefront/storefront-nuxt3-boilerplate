@@ -11,12 +11,14 @@
 import Heading from '~/components/Heading/Heading.vue';
 import type { RenderContentProps } from '~/components/RenderContent/types';
 import CategoryCard from '~/components/ui/CategoryCard/CategoryCard.vue';
+import Display from '~/components/ui/Display/Display.vue';
 import Hero from '~/components/ui/Hero/Hero.vue';
 
 const componentsMap = {
   Hero,
   Card: CategoryCard,
   Heading,
+  Display,
 };
 
 defineProps<RenderContentProps>();

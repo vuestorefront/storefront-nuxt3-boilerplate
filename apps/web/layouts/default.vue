@@ -36,7 +36,7 @@
   <main>
     <slot />
   </main>
-  <UiBottomNav />
+  <UiNavbarBottom />
   <UiFooter />
 </template>
 

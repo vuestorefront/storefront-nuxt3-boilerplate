@@ -7,6 +7,7 @@ export default defineConfig({
   test: {
     environment: 'happy-dom',
     globals: true,
+    setupFiles: './vue-test-utils.extend.js',
   },
   resolve: {
     alias: [{ find: '~', replacement: resolve(__dirname, './') }],

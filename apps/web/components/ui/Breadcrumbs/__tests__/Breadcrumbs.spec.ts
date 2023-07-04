@@ -11,7 +11,7 @@ describe('<Breadcrumbs />', () => {
   it('should render component', () => {
     const wrapper = mount(Breadcrumbs);
 
-    expect(wrapper.get('[data-testid="breadcrumbs"]'));
+    expect(wrapper.getByTestId('breadcrumbs'));
   });
 
   it('should toggle dropdown', async () => {
@@ -21,12 +21,12 @@ describe('<Breadcrumbs />', () => {
       },
     });
 
-    expect(wrapper.find('[data-testid="breadcrumbs-dropdown"]').exists()).toBeFalsy();
+    expect(wrapper.findByTestId('breadcrumbs-dropdown').exists()).toBeFalsy();
 
-    const dropdownButton = wrapper.get('[data-testid="breadcrumbs-dropdown-button"]');
+    const dropdownButton = wrapper.findByTestId('breadcrumbs-dropdown-button');
 
     await dropdownButton.trigger('click');
 
-    expect(wrapper.get('[data-testid="breadcrumbs-dropdown"]'));
+    expect(wrapper.getByTestId('breadcrumbs-dropdown'));
   });
 });

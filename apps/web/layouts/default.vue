@@ -47,5 +47,5 @@ import { SfBadge, SfButton, SfIconExpandMore, SfIconShoppingCart } from '@storef
 usePageTitle();
 
 const NuxtLink = resolveComponent('NuxtLink');
-const cartLineItemsCount = 1;
+const cartLineItemsCount = computed(() => 1);
 </script>

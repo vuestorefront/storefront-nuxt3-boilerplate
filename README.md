@@ -5,7 +5,7 @@
 
 ### Local dev setup
 
-1. Clone the repo
+1. Clone the repository.
 
 ```bash
 $ git clone https://github.com/vuestorefront/storefront-nuxt3-boilerplate.git

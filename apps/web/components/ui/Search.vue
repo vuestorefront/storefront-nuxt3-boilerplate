@@ -29,6 +29,7 @@ const props = defineProps<{
 }>();
 
 const router = useRouter();
+
 const inputModel = ref('');
 const inputRef = ref();
 const { open } = useDisclosure();

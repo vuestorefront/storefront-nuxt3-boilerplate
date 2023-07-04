@@ -8,7 +8,7 @@
     "dev": "nuxt dev",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "lint": "eslint --ext .vue,.js,.ts .",
+    "lint": "nuxt typecheck && eslint --ext .vue,.js,.ts .",
     "lint:fix": "eslint --ext .vue,.js,.ts . --fix",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
@@ -28,6 +28,7 @@
     "@storefront-ui/vue": "^2.4.1",
     "@types/node": "^18",
     "nuxt": "^3.6.0",
-    "sass": "^1.63.6"
+    "sass": "^1.63.6",
+    "vue-tsc": "^1.8.3"
   }
 }

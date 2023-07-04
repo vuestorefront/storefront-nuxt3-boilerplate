@@ -8,11 +8,15 @@
 </template>
 
 <script setup lang="ts">
-import Hero from '~/components/Hero.vue';
+import Heading from '~/components/Heading/Heading.vue';
 import type { RenderContentProps } from '~/components/RenderContent/types';
+import CategoryCard from '~/components/ui/CategoryCard/CategoryCard.vue';
+import Hero from '~/components/ui/Hero/Hero.vue';
 
 const componentsMap = {
   Hero,
+  Card: CategoryCard,
+  Heading,
 };
 
 defineProps<RenderContentProps>();

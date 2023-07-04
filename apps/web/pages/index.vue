@@ -5,9 +5,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { ContentDynamicPage } from '~/composables/useContent/types';
-
-const { getContent, data: content } = useContent<ContentDynamicPage>('home-page');
+const { getContent, data: content } = useContent('home-page');
 
 getContent();
 </script>

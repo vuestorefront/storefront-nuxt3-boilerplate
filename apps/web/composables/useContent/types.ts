@@ -1,4 +1,7 @@
 import type { Ref } from 'vue';
+import type { HeadingProps } from '~/components/Heading/types';
+import type { CategoryCardProps } from '~/components/ui/CategoryCard/types';
+import type { HeroProps } from '~/components/ui/Hero/types';
 import type { Maybe } from '~/types';
 
 type EntryFields<TFields> = Array<{
@@ -9,7 +12,10 @@ type WithComponentField<TProps, TComponent> = TProps & {
   component: TComponent;
 };
 
-export type DynamicContentFields = WithComponentField<unknown, 'Hero'>;
+export type DynamicContentFields =
+  | WithComponentField<HeroProps, 'Hero'>
+  | WithComponentField<CategoryCardProps, 'Card'>
+  | WithComponentField<HeadingProps, 'Heading'>;
 
 export interface ContentDynamicPage {
   component: 'Page';
@@ -25,10 +31,10 @@ export interface UseContentState {
 
 export type GetContent = <TFields>() => Promise<Ref<Maybe<EntryFields<TFields>>>>;
 
-export interface UseContent<TFields> {
+export interface UseContent {
   data: Readonly<Ref<UseContentState['data']>>;
   loading: Readonly<Ref<boolean>>;
   getContent: () => Promise<Ref<Maybe<EntryFields<ContentDynamicPage>>>>;
 }
 
-export type UseContentReturn = <TFields>(url: string) => UseContent<TFields>;
+export type UseContentReturn = (url: string) => UseContent;

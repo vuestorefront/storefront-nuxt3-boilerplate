@@ -1,5 +1,5 @@
 <template>
-  <form ref="referenceRef" role="search" class="relative" @submit.prevent="submit">
+  <form ref="referenceRef" role="search" class="relative" @submit.prevent="handleSubmit">
     <SfInput ref="inputRef" v-model="inputModel" aria-label="Search" placeholder="Search" @focus="open">
       <template #prefix>
         <SfIconSearch />
@@ -29,19 +29,19 @@ const props = defineProps<{
 }>();
 
 const router = useRouter();
+const { open } = useDisclosure();
 
 const inputModel = ref('');
 const inputRef = ref();
-const { open } = useDisclosure();
-const focusInput = () => {
+const handleInputFocus = () => {
   const inputEl = unrefElement(inputRef)?.querySelector('input');
   inputEl?.focus();
 };
 const handleReset = () => {
   inputModel.value = '';
-  focusInput();
+  handleInputFocus();
 };
-const submit = () => {
+const handleSubmit = () => {
   props.close && props.close();
   router.push({ path: '/search', query: { search: inputModel.value } });
   handleReset();

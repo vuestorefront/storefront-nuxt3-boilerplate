@@ -26,7 +26,6 @@
 </template>
 
 <script setup lang="ts">
-import { resolveComponent } from 'vue';
 import { SfButton } from '@storefront-ui/vue';
 import type { HeroProps } from '~/components/ui/Hero/types';
 

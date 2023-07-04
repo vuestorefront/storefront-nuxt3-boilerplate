@@ -27,7 +27,6 @@
 </template>
 
 <script setup lang="ts">
-import { resolveComponent } from 'vue';
 import type { CategoryCardProps } from '~/components/ui/CategoryCard/types';
 
 defineProps<CategoryCardProps>();

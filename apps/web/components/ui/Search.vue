@@ -2,7 +2,7 @@
   <form ref="referenceRef" role="search" class="relative" @submit.prevent="submit">
     <SfInput ref="inputRef" v-model="inputModel" aria-label="Search" placeholder="Search" @focus="open">
       <template #prefix>
-          <SfIconSearch />
+        <SfIconSearch />
       </template>
       <template #suffix>
         <button
@@ -10,7 +10,7 @@
           type="button"
           aria-label="Reset search"
           class="flex rounded-md focus-visible:outline focus-visible:outline-offset"
-          @click="reset"
+          @click="handleReset"
         >
           <SfIconCancel />
         </button>
@@ -36,19 +36,19 @@ const focusInput = () => {
   const inputEl = unrefElement(inputRef)?.querySelector('input');
   inputEl?.focus();
 };
-const reset = () => {
+const handleReset = () => {
   inputModel.value = '';
   focusInput();
 };
 const submit = () => {
   props.close && props.close();
   router.push({ path: '/search', query: { search: inputModel.value } });
-  reset();
+  handleReset();
 };
 
 watch(inputModel, () => {
   if (inputModel.value === '') {
-    reset();
+    handleReset();
   }
 });
 </script>

@@ -54,7 +54,6 @@ import {
   SfIconClose,
   useDisclosure,
 } from '@storefront-ui/vue';
-import { paths } from '~/helpers/paths';
 
 const router = useRouter();
 const { isOpen, open, close } = useDisclosure({ initialValue: false });

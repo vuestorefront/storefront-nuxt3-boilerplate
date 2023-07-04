@@ -25,7 +25,7 @@ export default defineNuxtConfig({
     titleSuffix: 'Vue Storefront Nuxt3 Boilerplate',
   },
   imports: {
-    dirs: ['composables/**'],
+    dirs: ['composables/**', 'utils/**'],
   },
   css: ['~/assets/style.scss'],
   image: {

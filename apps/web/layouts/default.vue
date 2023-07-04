@@ -42,7 +42,6 @@
 
 <script lang="ts" setup>
 import { SfBadge, SfButton, SfIconExpandMore, SfIconShoppingCart } from '@storefront-ui/vue';
-import { paths } from '~/helpers/paths';
 
 usePageTitle();
 

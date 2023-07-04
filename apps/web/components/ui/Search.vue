@@ -23,7 +23,6 @@
 import { ref, watch } from 'vue';
 import { SfIconCancel, SfIconSearch, SfInput, useDisclosure } from '@storefront-ui/vue';
 import { unrefElement } from '@vueuse/core';
-import { paths } from '~/helpers/paths';
 
 const props = defineProps<{
   close?: () => boolean;

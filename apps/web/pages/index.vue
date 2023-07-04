@@ -12,8 +12,6 @@
 </template>
 
 <script lang="ts" setup>
-import { paths } from '~/helpers/paths';
-
 const { getContent, data: content } = useContent('home-page');
 
 getContent();

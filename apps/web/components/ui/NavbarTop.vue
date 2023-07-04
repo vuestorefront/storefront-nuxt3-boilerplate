@@ -19,8 +19,6 @@
 </template>
 
 <script setup lang="ts">
-import { paths } from '~/helpers/paths';
-
 defineProps<{
   filled?: boolean;
 }>();

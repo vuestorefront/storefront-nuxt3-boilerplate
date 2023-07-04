@@ -37,7 +37,7 @@
     <slot />
   </main>
   <UiNavbarBottom />
-  <UiFooter />
+  <UiFooter class="mb-[58px] md:mb-0" />
 </template>
 
 <script lang="ts" setup>

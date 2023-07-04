@@ -23,8 +23,7 @@
   },
   "dependencies": {
     "cross-env": "^7.0.3",
-    "dotenv": "^16.0.3",
-    "rimraf": "^3.0.2"
+    "dotenv": "^16.0.3"
   },
   "devDependencies": {
     "@commitlint/cli": "^13.2.1",
@@ -38,6 +37,7 @@
     "is-ci": "^1.0.0",
     "lint-staged": "^13.2.1",
     "prettier": "^2.8.8",
+    "rimraf": "^3.0.2",
     "rollup": "^2.79.0",
     "turbo": "1.5.5",
     "typescript": "5.0.4"

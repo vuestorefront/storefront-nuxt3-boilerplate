@@ -2,8 +2,8 @@
   "extends": "./.nuxt/tsconfig.json",
   "compilerOptions": {
     "typeRoots": ["./node_modules/"],
-    "types": []
+    "types": ["cypress"]
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules", "mocks", "cypress.config.ts", "__tests__"]
+  "exclude": ["node_modules", "mocks"]
 }

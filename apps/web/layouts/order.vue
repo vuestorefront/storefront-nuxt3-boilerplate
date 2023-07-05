@@ -6,7 +6,3 @@
     </NarrowContainer>
   </main>
 </template>
-
-<script lang="ts" setup>
-usePageTitle();
-</script>

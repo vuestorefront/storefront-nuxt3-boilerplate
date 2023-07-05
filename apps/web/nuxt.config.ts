@@ -101,10 +101,5 @@ export default defineNuxtConfig({
       ],
     },
     registerWebManifestInRouteRules: true,
-    devOptions: {
-      enabled: process.env.NODE_ENV === 'development',
-      suppressWarnings: true,
-      navigateFallback: '/',
-    },
   },
 });

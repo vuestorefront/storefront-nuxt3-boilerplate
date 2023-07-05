@@ -15,13 +15,13 @@ import CategoryCard from '~/components/ui/CategoryCard/CategoryCard.vue';
 import Display from '~/components/ui/Display/Display.vue';
 import Hero from '~/components/ui/Hero/Hero.vue';
 
-const componentsMap = {
+const componentsMap = computed(() => ({
   Hero,
   Card: CategoryCard,
   Heading,
   Display,
   ProductSlider,
-};
+}));
 
 defineProps<RenderContentProps>();
 </script>

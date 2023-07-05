@@ -27,7 +27,7 @@
           <SfIconShoppingCart />
           <SfBadge
             :content="cartLineItemsCount"
-            class="outline outline-primary-700 bg-white !text-neutral-900 group-hover:outline-primary-800 group-active:outline-primary-900"
+            class="outline outline-primary-700 bg-white !text-neutral-900 group-hover:outline-primary-800 group-active:outline-primary-900 flex justify-center"
             data-testid="cart-badge"
           />
         </template>

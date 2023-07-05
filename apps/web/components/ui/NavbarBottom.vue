@@ -5,28 +5,22 @@
       :key="label"
       variant="tertiary"
       :class="[
-        'py-1 flex flex-col w-full rounded-none bg-primary-700 text-white hover:text-white hover:bg-primary-800 active:text-white active:bg-primary-900',
+        'py-1 flex flex-col h-full w-full rounded-none bg-primary-700 text-white hover:text-white hover:bg-primary-800 active:text-white active:bg-primary-900',
         { 'text-white bg-primary-900': $route.path === path },
       ]"
       @click="handleClick(path)"
     >
-      <template v-if="label !== 'cart'">
-        <component :is="icon" />
-        {{ $t(label) }}
-      </template>
-      <template v-else>
+      <template #prefix>
         <div class="relative">
-          <div>
-            <SfIconShoppingCart />
-            <SfBadge
-              :content="cartLineItemsCount"
-              class="outline outline-primary-700 bg-white !text-neutral-900 group-hover:outline-primary-800 group-active:outline-primary-900"
-              data-testid="cart-badge"
-            />
-          </div>
-          {{ $t(label) }}
+          <component :is="icon" />
+          <SfBadge
+            v-if="label === 'cart'"
+            :content="cartLineItemsCount"
+            class="outline-white bg-white !text-neutral-900 translate-x-[5px] translate-y-[-3px]"
+          />
         </div>
       </template>
+      {{ $t(label) }}
     </SfButton>
   </nav>
   <SfModal v-model="isOpen" class="w-full h-full z-50" as="section" role="dialog" aria-labelledby="search-modal-title">

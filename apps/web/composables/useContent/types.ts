@@ -33,12 +33,12 @@ export interface UseContentState {
   loading: boolean;
 }
 
-export type GetContent = <TFields>() => Promise<Ref<Maybe<EntryFields<TFields>>>>;
+export type GetContent = () => Promise<Ref<Maybe<EntryFields<ContentDynamicPage>>>>;
 
 export interface UseContent {
   data: Readonly<Ref<UseContentState['data']>>;
   loading: Readonly<Ref<boolean>>;
-  getContent: () => Promise<Ref<Maybe<EntryFields<ContentDynamicPage>>>>;
+  getContent: GetContent;
 }
 
 export type UseContentReturn = (url: string) => UseContent;

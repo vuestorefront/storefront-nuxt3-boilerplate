@@ -5,7 +5,8 @@ export interface ContentEntry<TFields> {
   fields: TFields;
 }
 // eslint-disable-next-line unicorn/expiring-todo-comments
-// TODO: Replace TFields with the actual content field type when CMS components are ready..
+// TODO: Replace TFields with the actual content field type when CMS components are ready.
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export interface UseContentState<TFields = any> {
   data: Maybe<ContentEntry<TFields>[]>;
   loading: boolean;

@@ -11,25 +11,14 @@
 $ git clone https://github.com/vuestorefront/storefront-nuxt3-boilerplate.git
 ```
 
-2. Set `NPM_AUTH_TOKEN` env variable (read here [how to get NPM_AUTH_TOKEN?](#How-to-get-NPM_AUTH_TOKEN)).
-
-3. Install all dependencies.
+2. Install all dependencies (read here [How to install Yarn 3?](https://yarnpkg.com/getting-started/install)).
 
 ```bash
 $ yarn install
 ```
 
-4. Run the development server. The app will be served with hot reload at [localhost:3000](http://localhost:3000/).
+3. Run the development server. The app will be served with hot reload at [localhost:3000](http://localhost:3000/).
 
 ```bash
 $ yarn dev
-```
-
-
-### How to get NPM_AUTH_TOKEN?
-
-If you're already logged in, you can find the token in the `~/.npmrc` file. Otherwise, generate a new token using the following command:
-
-```bash
-$ npm login --registry https://registrynpm.storefrontcloud.io --scope @vsf-enterprise
 ```

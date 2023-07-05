@@ -21,5 +21,6 @@ module.exports = {
       },
     ],
     'vue/no-multiple-template-root': 'off',
+    'unicorn/filename-case': 'off',
   },
 };

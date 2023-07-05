@@ -1,4 +1,4 @@
-import { Maybe } from '@vsf-enterprise/unified-data-model';
+import { Maybe } from '@vue-storefront/unified-data-model';
 
 export type ProductCardProps = {
   name: Maybe<string>;

@@ -1,12 +1,11 @@
 <template>
-  <main>
-    <NarrowContainer>
-      <h2>Order layout</h2>
-      <slot />
-    </NarrowContainer>
-  </main>
+  <div>
+    <NavbarTop />
+    <main>
+      <NarrowContainer>
+        <slot />
+      </NarrowContainer>
+    </main>
+    <Footer />
+  </div>
 </template>
-
-<script lang="ts" setup>
-usePageTitle();
-</script>

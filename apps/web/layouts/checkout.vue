@@ -1,12 +1,56 @@
 <template>
-  <main>
-    <NarrowContainer>
-      <h2>Checkout layout</h2>
-      <slot />
-    </NarrowContainer>
-  </main>
+  <div>
+    <NavbarTop />
+    <main data-testid="checkout-layout">
+      <NarrowContainer>
+        <div class="px-4 md:px-0 mb-20">
+          <div class="flex justify-between mt-8 mb-10">
+            <h1 class="font-bold typography-headline-3 md:typography-headline-2">{{ heading }}</h1>
+            <SfButton
+              :tag="NuxtLink"
+              :href="backHref"
+              class="flex md:hidden whitespace-nowrap"
+              size="sm"
+              variant="tertiary"
+            >
+              <template #prefix>
+                <SfIconArrowBack />
+              </template>
+
+              {{ backLabel }}
+            </SfButton>
+            <SfButton :tag="NuxtLink" :href="backHref" class="hidden md:flex" variant="tertiary">
+              <template #prefix>
+                <SfIconArrowBack />
+              </template>
+
+              {{ backLabel }}
+            </SfButton>
+          </div>
+
+          <span class="!flex justify-center my-40 h-24" v-if="isLoading && !cart">
+            <SfLoaderCircular size="3xl" />
+          </span>
+          <slot v-else />
+        </div>
+      </NarrowContainer>
+    </main>
+    <Footer />
+  </div>
 </template>
 
 <script lang="ts" setup>
-usePageTitle();
+import { resolveComponent } from 'vue';
+import { SfButton, SfIconArrowBack, SfLoaderCircular } from '@storefront-ui/vue';
+
+const cart = null;
+const isLoading = false;
+
+defineProps<{
+  backLabel: string;
+  backHref: string;
+  heading: string;
+}>();
+
+const NuxtLink = resolveComponent('NuxtLink');
 </script>

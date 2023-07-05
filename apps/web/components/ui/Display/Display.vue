@@ -25,7 +25,7 @@
             {{ item.title }}
           </h2>
           <p class="typography-text-base block text-center md:text-left mb-4">{{ item.description }}</p>
-          <SfButton class="!bg-black" :tag="NuxtLink" to="/category">
+          <SfButton class="!bg-black" :tag="NuxtLink" :to="paths.category">
             {{ item.buttonText }}
           </SfButton>
         </div>

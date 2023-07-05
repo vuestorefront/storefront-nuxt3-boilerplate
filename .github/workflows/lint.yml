@@ -8,9 +8,6 @@ on:
     branches:
       - develop
 
-env:
-  NPM_AUTH_TOKEN: ${{ secrets.NPM_DEFAULT_ENTERPRISE_TOKEN }}
-
 jobs:
   lint:
     name: Lint

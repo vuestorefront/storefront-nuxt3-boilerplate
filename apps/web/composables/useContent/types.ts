@@ -19,7 +19,7 @@ export type DynamicContentFields =
   | WithComponentField<CategoryCardProps, 'Card'>
   | WithComponentField<HeadingProps, 'Heading'>
   | WithComponentField<DisplayProps, 'Display'>
-  | WithComponentField<Omit<ProductSliderProps, 'products'>, 'ProductSlider'>;
+  | WithComponentField<ProductSliderProps, 'ProductSlider'>;
 
 export interface ContentDynamicPage {
   component: 'Page';

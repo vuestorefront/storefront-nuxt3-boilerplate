@@ -1,6 +1,7 @@
 <template>
   <div>
-    <NavbarTop />
+    <Body class="font-body" />
+    <UiNavbarTop />
     <main data-testid="checkout-layout">
       <NarrowContainer>
         <div class="px-4 md:px-0 mb-20">
@@ -35,7 +36,7 @@
         </div>
       </NarrowContainer>
     </main>
-    <Footer />
+    <UiFooter />
   </div>
 </template>
 

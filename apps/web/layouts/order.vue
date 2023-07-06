@@ -1,11 +1,12 @@
 <template>
   <div>
-    <NavbarTop />
+    <Body class="font-body" />
+    <UiNavbarTop />
     <main>
       <NarrowContainer>
         <slot />
       </NarrowContainer>
     </main>
-    <Footer />
+    <UiFooter />
   </div>
 </template>

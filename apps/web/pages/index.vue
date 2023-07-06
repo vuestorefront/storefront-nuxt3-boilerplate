@@ -3,7 +3,7 @@
     <h1 class="typography-headline-1">
       {{ $t('vsfHomepage') }}
     </h1>
-    <NuxtLink to="/product/1">Go to Product Page</NuxtLink>
+    <NuxtLink :to="paths.product">Go to Product Page</NuxtLink>
     <NuxtImg src="images/hero.png" alt="Vue Storefront" sizes="md:90vw lg:45vw" />
   </div>
   <pre>

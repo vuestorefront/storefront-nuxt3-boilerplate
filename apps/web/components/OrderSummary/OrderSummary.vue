@@ -1,6 +1,6 @@
 <template>
-  <div class="md:shadow-lg md:rounded-md md:border md:border-neutral-100" data-testid="order-summary">
-    <div class="flex justify-between items-end bg-neutral-100 md:bg-transparent py-2 px-4 md:px-6 md:pt-6 md:pb-4">
+  <div class="shadow-lg md:rounded-md md:border md:border-neutral-100" data-testid="order-summary">
+    <div class="flex justify-between items-end py-2 px-4 md:px-6 md:pt-6 md:pb-4">
       <p class="typography-headline-4 font-bold md:typography-headline-3">{{ $t('orderSummary') }}</p>
       <p class="typography-text-base font-medium" data-testid="total-in-cart">
         {{ $t('itemsInCart', cart.lineItems.length) }}
@@ -10,8 +10,8 @@
       <div class="flex justify-between typography-text-base pb-4">
         <div class="flex flex-col grow pr-2">
           <p>{{ $t('itemsSubtotal') }}</p>
-          <p class="ml-auto typography-text-xs text-neutral-500">{{ $t('originalPrice') }}</p>
-          <p class="ml-auto typography-text-xs text-neutral-700">{{ $t('savings') }}</p>
+          <p class="typography-text-xs text-neutral-500">{{ $t('originalPrice') }}</p>
+          <p class="typography-text-xs text-secondary-700">{{ $t('savings') }}</p>
           <p class="my-2">{{ $t('delivery') }}</p>
           <p>{{ $t('estimatedTax') }}</p>
         </div>
@@ -43,9 +43,8 @@
         <p>{{ $t('total') }}</p>
         <p data-testid="total">${{ cart.totalPrice.amount }}</p>
       </div>
-      <UiDivider class="my-4 max-md:-mx-4 max-md:w-auto" />
+      <UiDivider class="my-4 w-auto" />
       <slot />
-      <UiDivider class="my-10 md:hidden -mx-4 w-auto" />
     </div>
   </div>
 </template>

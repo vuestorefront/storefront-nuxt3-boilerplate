@@ -3035,19 +3035,6 @@
   dependencies:
     "@volar/language-core" "1.7.10"
 
-"@vsf-enterprise/sdk@1.0.0":
-  version "1.0.0"
-  resolved "https://registrynpm.storefrontcloud.io/@vsf-enterprise%2fsdk/-/sdk-1.0.0.tgz#4f2ee1149fbfc613a9f5c646d5eb783a8669fd77"
-  integrity sha512-RjDQIYa/vAR90nZtzj5OOMHxQIaQ/2XhIBOVmx/NqF+Yq1iOqE2TzfQPUgN6zP+Y+WlMzHG0C4NOMku1kYU92w==
-
-"@vsf-enterprise/storefront-boilerplate-sdk@0.1.0-rc.2":
-  version "0.1.0-rc.2"
-  resolved "https://registrynpm.storefrontcloud.io/@vsf-enterprise%2fstorefront-boilerplate-sdk/-/storefront-boilerplate-sdk-0.1.0-rc.2.tgz#cb1bd02db044adc186c34bf7d9a85bfedfe1cdac"
-  integrity sha512-RGG2YHn3jr6ZaNdiKCbPSF6qaQevLUZo2Nex0ZmYTXZpz7aO5nvdr+dSbQbK7Je6Zrm+q1FfaGFWzPS5lCCA4A==
-  dependencies:
-    "@vsf-enterprise/sdk" "1.0.0"
-    axios "^0.27.2"
-
 "@vue-macros/common@^1.3.1":
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@vue-macros/common/-/common-1.4.0.tgz#9b3cde2d868b1037f17769edd33ddf3b01aeb419"
@@ -3096,10 +3083,18 @@
     helmet "^5.1.1"
     rimraf "^4.1.2"
 
-"@vue-storefront/sdk@^1.0.1":
+"@vue-storefront/sdk@^1.0.1", "@vue-storefront/sdk@~1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@vue-storefront/sdk/-/sdk-1.0.1.tgz#ed42e5ad76a0b17132edb515a484b10ab2dc1395"
   integrity sha512-97lIVHroM/zno/1hdTBTsqNH+2r7kAQWqrbObZto9GO30HiS3mco7dn0uiZNzhQC+ET0FdwKp/UNgUXX3E7hsw==
+
+"@vue-storefront/storefront-boilerplate-sdk@~0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@vue-storefront/storefront-boilerplate-sdk/-/storefront-boilerplate-sdk-0.1.0.tgz#79b71d14342aa2abf43fe43078b8f75c8d888b9d"
+  integrity sha512-fnxBYQDDvFlnf72PXe9xrYc4ClvcBtPHzBcm0Uz9sNi7Y3tbsJMk9wYFobv8tV5X3lluKUocIJJynpctuYclDA==
+  dependencies:
+    "@vue-storefront/sdk" "~1.0.1"
+    axios "^0.27.2"
 
 "@vue-storefront/unified-data-model@~0.1.0":
   version "0.1.0"

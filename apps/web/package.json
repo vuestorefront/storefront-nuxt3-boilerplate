@@ -17,7 +17,7 @@
     "test:watch": "vitest"
   },
   "dependencies": {
-    "@vsf-enterprise/storefront-boilerplate-sdk": "0.1.0-rc.2",
+    "@vue-storefront/storefront-boilerplate-sdk": "~0.1.0",
     "@vue-storefront/sdk": "^1.0.1"
   },
   "devDependencies": {

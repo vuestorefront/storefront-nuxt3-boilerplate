@@ -1,6 +1,5 @@
 import type { Ref } from 'vue';
-import type { SfCart } from '@vue-storefront/unified-data-model';
-import type { Maybe } from '~/types';
+import type { SfCart, Maybe } from '@vue-storefront/unified-data-model';
 
 export interface UseCartState {
   data: Maybe<SfCart>;

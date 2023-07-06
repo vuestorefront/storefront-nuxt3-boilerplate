@@ -1,5 +1,17 @@
 <template>
-  <h1>Cart page</h1>
-
-  <NuxtLink href="/product/test">test product</NuxtLink>
+  <NuxtLayout
+    name="checkout"
+    :back-href="paths.category"
+    :back-label-desktop="$t('backToShopping')"
+    :back-label-mobile="$t('back')"
+    :heading="$t('myCart')"
+  >
+    This is the cart page.
+  </NuxtLayout>
 </template>
+
+<script lang="ts" setup>
+definePageMeta({
+  layout: false,
+});
+</script>

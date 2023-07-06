@@ -1,5 +1,5 @@
-import type { SfProduct } from '~/types';
+import { SfProduct } from '@vue-storefront/unified-data-model';
 
 export type ProductSliderProps = {
-  items: SfProduct[];
+  items?: SfProduct[];
 };

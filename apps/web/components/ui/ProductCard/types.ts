@@ -1,8 +1,8 @@
 export type ProductCardProps = {
-  name: string;
+  name?: string | null;
   description?: string;
-  imageUrl?: string;
-  imageAlt?: string;
+  imageUrl?: string | null;
+  imageAlt?: string | null;
   rating?: number;
   ratingCount?: number;
   price?: number;

@@ -2,6 +2,6 @@
   "extends": "./.nuxt/tsconfig.json",
   "compilerOptions": {
     "typeRoots": ["./node_modules/"],
-    "types": ["vitest/globals"]
+    "types": ["vitest/globals", "@vite-pwa/nuxt"]
   },
 }

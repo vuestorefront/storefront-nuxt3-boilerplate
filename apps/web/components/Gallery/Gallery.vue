@@ -87,7 +87,7 @@ import {
   SfIconChevronRight,
   type SfScrollableOnDragEndData,
 } from '@storefront-ui/vue';
-import { SfImage } from '@vsf-enterprise/unified-data-model';
+import { SfImage } from '@vue-storefront/unified-data-model';
 import { unrefElement, useIntersectionObserver } from '@vueuse/core';
 
 const props = defineProps<{

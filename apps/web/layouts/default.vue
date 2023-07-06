@@ -1,5 +1,4 @@
 <template>
-  <Body class="font-body" />
   <UiNavbarTop filled>
     <SfButton
       class="hidden lg:flex text-white hover:text-white active:text-white hover:bg-primary-800 active:bg-primary-900 lg:mr-4"

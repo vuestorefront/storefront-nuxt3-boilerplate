@@ -11,5 +11,8 @@
 </template>
 
 <script lang="ts" setup>
+const { getCart } = useCart();
+
+getCart();
 usePageTitle();
 </script>

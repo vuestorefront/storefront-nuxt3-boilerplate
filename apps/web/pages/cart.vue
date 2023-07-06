@@ -1,3 +1,5 @@
 <template>
-  <h1>Cart page</h1>
+  <CartPageContent />
 </template>
+
+<script lang="ts" setup></script>

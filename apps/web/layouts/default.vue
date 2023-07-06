@@ -44,6 +44,9 @@
 <script lang="ts" setup>
 import { SfBadge, SfButton, SfIconExpandMore, SfIconShoppingCart } from '@storefront-ui/vue';
 
+const { getCart } = useCart();
+
+getCart();
 usePageTitle();
 
 const NuxtLink = resolveComponent('NuxtLink');

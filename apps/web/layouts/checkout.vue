@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Body class="font-body" />
     <UiNavbarTop />
     <main data-testid="checkout-layout">
       <NarrowContainer>

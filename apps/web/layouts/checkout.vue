@@ -16,15 +16,13 @@
               <template #prefix>
                 <SfIconArrowBack />
               </template>
-
-              {{ backLabel }}
+              {{ backLabelMobile }}
             </SfButton>
             <SfButton :tag="NuxtLink" :href="backHref" class="hidden md:flex" variant="tertiary">
               <template #prefix>
                 <SfIconArrowBack />
               </template>
-
-              {{ backLabel }}
+              {{ backLabelDesktop }}
             </SfButton>
           </div>
 
@@ -46,7 +44,8 @@ const cart = null;
 const isLoading = false;
 
 defineProps<{
-  backLabel: string;
+  backLabelDesktop: string;
+  backLabelMobile: string;
   backHref: string;
   heading: string;
 }>();

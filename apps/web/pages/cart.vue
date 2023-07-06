@@ -1,5 +1,11 @@
 <template>
-  <NuxtLayout name="checkout" :back-href="paths.category" :back-label="$t('backToShopping')" :heading="$t('myCart')">
+  <NuxtLayout
+    name="checkout"
+    :back-href="paths.category"
+    :back-label-desktop="$t('backToShopping')"
+    :back-label-mobile="$t('back')"
+    :heading="$t('myCart')"
+  >
     This is the cart page.
   </NuxtLayout>
 </template>

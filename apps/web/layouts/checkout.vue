@@ -41,7 +41,6 @@
 </template>
 
 <script lang="ts" setup>
-import { resolveComponent } from 'vue';
 import { SfButton, SfIconArrowBack, SfLoaderCircular } from '@storefront-ui/vue';
 
 const cart = null;

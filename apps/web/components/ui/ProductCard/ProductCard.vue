@@ -3,8 +3,8 @@
     <div class="relative w-[190px] h-[190px]">
       <SfLink :tag="NuxtLink" :href="`/product/${slug}`">
         <NuxtImg
-          :src="imageUrl ?? ''"
-          :alt="imageAlt || 'primary image'"
+          :src="imageUrl"
+          :alt="imageAlt"
           class="object-cover rounded-md aspect-square w-full h-full"
           data-testid="image-slot"
           height="190"

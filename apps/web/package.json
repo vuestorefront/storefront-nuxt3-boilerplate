@@ -31,6 +31,7 @@
     "@storefront-ui/vue": "^2.4.1",
     "@types/node": "^18",
     "@vitejs/plugin-vue": "^4.2.3",
+    "@vsf-enterprise/unified-data-model": "^0.4.0",
     "@vue/test-utils": "^2.4.0",
     "happy-dom": "^9.20.3",
     "nuxt": "^3.6.0",

@@ -1,11 +1,9 @@
 <template>
-  <div>
-    <UiNavbarTop />
-    <main>
-      <NarrowContainer>
-        <slot />
-      </NarrowContainer>
-    </main>
-    <UiFooter />
-  </div>
+  <UiNavbarTop />
+  <main>
+    <NarrowContainer>
+      <slot />
+    </NarrowContainer>
+  </main>
+  <UiFooter />
 </template>

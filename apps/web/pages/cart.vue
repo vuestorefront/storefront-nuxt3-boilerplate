@@ -1,5 +1,11 @@
 <template>
-  <CartPageContent />
+  <NuxtLayout name="checkout">
+    <CartPageContent />
+  </NuxtLayout>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+definePageMeta({
+  layout: false,
+});
+</script>

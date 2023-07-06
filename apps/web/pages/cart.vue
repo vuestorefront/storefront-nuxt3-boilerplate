@@ -1,6 +1,6 @@
 <template>
   <div>
-    <NuxtLayout name="checkout" back-href="/category" :back-label="$t('backToShopping')" :heading="$t('myCart')">
+    <NuxtLayout name="checkout" :back-href="paths.category" :back-label="$t('backToShopping')" :heading="$t('myCart')">
       This is the cart page.
     </NuxtLayout>
   </div>

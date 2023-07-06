@@ -2195,6 +2195,11 @@
     "@vsf-enterprise/sdk" "1.0.0"
     axios "^0.27.2"
 
+"@vsf-enterprise/unified-data-model@0.0.1-rc.1":
+  version "0.0.1-rc.1"
+  resolved "https://registrynpm.storefrontcloud.io/@vsf-enterprise%2funified-data-model/-/unified-data-model-0.0.1-rc.1.tgz#28695b8b8f89e5b99ca0b6b1df7721d42161a3ab"
+  integrity sha512-3mIdV45eJhnzbdR51Jbq1xsnBP/SJT/tUFNx2xJXTJ5hDmBwftValNX0QwTF89T0n6dxXj95w0JAN+vqSLC3GA==
+
 "@vue-macros/common@^1.3.1":
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@vue-macros/common/-/common-1.4.0.tgz#9b3cde2d868b1037f17769edd33ddf3b01aeb419"

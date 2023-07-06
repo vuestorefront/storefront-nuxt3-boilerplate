@@ -34,8 +34,8 @@ const { open } = useDisclosure();
 const inputModel = ref('');
 const inputRef = ref();
 const handleInputFocus = () => {
-  const inputEl = unrefElement(inputRef)?.querySelector('input');
-  inputEl?.focus();
+  const inputElement = unrefElement(inputRef)?.querySelector('input');
+  inputElement?.focus();
 };
 const handleReset = () => {
   inputModel.value = '';

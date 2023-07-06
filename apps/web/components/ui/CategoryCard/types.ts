@@ -1,4 +1,4 @@
-import type { SfCategory } from '@vue-storefront/unified-data-model';
+import type { SfCategory } from '~/types';
 
 interface CategoryWithImage extends SfCategory {
   image: string;

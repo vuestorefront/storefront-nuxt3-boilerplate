@@ -3096,11 +3096,6 @@
     "@vue-storefront/sdk" "~1.0.1"
     axios "^0.27.2"
 
-"@vue-storefront/unified-data-model@~0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@vue-storefront/unified-data-model/-/unified-data-model-0.1.0.tgz#d0d323236a87c35634c4302e9a9e14d3778824df"
-  integrity sha512-braFJmiZMcAvryaOc8k6Nk8vfFaeD9njYTFgXSh7LeUj3rr9L0SbHRF42yOqEa/I4fqGpmx6NisWOkr2FLdW2w==
-
 "@vue/babel-helper-vue-transform-on@^1.0.2":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@vue/babel-helper-vue-transform-on/-/babel-helper-vue-transform-on-1.0.2.tgz#9b9c691cd06fc855221a2475c3cc831d774bc7dc"

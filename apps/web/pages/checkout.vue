@@ -9,6 +9,9 @@
       <SfLink href="#">{{ $t('privacyPolicy') }}</SfLink>
     </template>
   </i18n-t>
+
+  <NuxtLink href="/order/success">order success</NuxtLink>
+  <NuxtLink href="/order/failed">order failed</NuxtLink>
 </template>
 
 <script lang="ts" setup>

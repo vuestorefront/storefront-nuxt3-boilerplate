@@ -9,7 +9,3 @@
   </main>
   <UiFooter />
 </template>
-
-<script lang="ts" setup>
-usePageTitle();
-</script>

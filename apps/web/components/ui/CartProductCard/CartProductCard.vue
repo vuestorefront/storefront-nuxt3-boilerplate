@@ -8,7 +8,7 @@
         <NuxtImg
           class="w-full h-auto border rounded-md border-neutral-200"
           :src="imageUrl"
-          :alt="imageAlt || ''"
+          :alt="imageAlt"
           width="300"
           height="300"
         />

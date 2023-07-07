@@ -1,5 +1,3 @@
-import { Maybe } from '@vue-storefront/unified-data-model';
-
 export interface Attribute {
   label: string;
   name: string;
@@ -8,12 +6,11 @@ export interface Attribute {
 
 export type CartProductCardProps = {
   attributes: Attribute[];
-  className?: string;
-  imageUrl?: Maybe<string>;
-  imageAlt?: Maybe<string>;
+  imageUrl: string;
+  imageAlt: string;
   maxValue: number;
   minValue: number;
-  name?: Maybe<string>;
+  name: string;
   price: number;
   specialPrice: number;
   value: number;

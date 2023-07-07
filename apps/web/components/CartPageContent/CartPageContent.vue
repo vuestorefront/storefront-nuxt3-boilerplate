@@ -5,7 +5,7 @@
         <UiCartProductCard
           :attributes="item.attributes"
           :image-url="item.image?.url ?? ''"
-          :image-alt="item.image?.alt ?? ''"
+          :image-alt="item.image?.alt ?? 'product cart image'"
           :name="item.name ?? ''"
           :price="item.totalPrice?.amount || 0"
           :special-price="item.unitPrice?.value?.amount || 0"

@@ -78,8 +78,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue';
-import { watch, type ComponentPublicInstance } from 'vue';
+import { type ComponentPublicInstance } from 'vue';
 import {
   SfScrollable,
   SfButton,

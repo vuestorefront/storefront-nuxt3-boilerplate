@@ -3047,10 +3047,10 @@
     local-pkg "^0.4.3"
     magic-string-ast "^0.1.2"
 
-"@vue-storefront/eslint-config@^2.0.0-rc.5":
-  version "2.0.0-rc.5"
-  resolved "https://registry.yarnpkg.com/@vue-storefront/eslint-config/-/eslint-config-2.0.0-rc.5.tgz#3d02b9d71fc48486a70f93cc5f02b63d7df2e131"
-  integrity sha512-YajQsPs66PCS3RlhQEfw4p5f/T+706vLCghmHJ7CqGwGPE1e0CpXGh6R2k0Gn4YsqUcwf1Ht+mdP33ehD3P/Yg==
+"@vue-storefront/eslint-config@^2.0.0-rc.7":
+  version "2.0.0-rc.7"
+  resolved "https://registry.yarnpkg.com/@vue-storefront/eslint-config/-/eslint-config-2.0.0-rc.7.tgz#bb66c24f4cdd575d6fa93703b54b476999990e46"
+  integrity sha512-zKMLbjGzk9u/p5LjLEW5EffAvmvaVHVrqL0lgFdhGLO3yNnRshD5T0g/d6NG0I9iYRJStubleiQ5TbDyjr1ZKw==
   dependencies:
     "@microsoft/eslint-plugin-sdl" "^0.2.0"
     "@typescript-eslint/eslint-plugin" "^5.57.1"

@@ -30,7 +30,7 @@
     "@commitlint/cli": "^13.2.1",
     "@commitlint/config-conventional": "^13.2.0",
     "@trivago/prettier-plugin-sort-imports": "^4.1.1",
-    "@vue-storefront/eslint-config": "^2.0.0-rc.5",
+    "@vue-storefront/eslint-config": "~2.0.0-rc.7",
     "babel-preset-node": "^5.1.1",
     "commitizen": "^4.2.5",
     "eslint": "^8.38.0",

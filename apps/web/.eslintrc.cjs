@@ -1,8 +1,9 @@
 module.exports = {
-  extends: ['@vue-storefront/eslint-config', '@vue-storefront/eslint-config/vue', 'prettier'],
+  extends: ['@vue-storefront/eslint-config', '@vue-storefront/eslint-config/vue3', 'prettier'],
   parserOptions: {
     project: './tsconfig.json',
     tsconfigRootDir: __dirname,
+    extraFileExtensions: ['.vue'],
   },
   rules: {
     'max-len': ['warn', { code: 120, ignoreStrings: true, ignoreUrls: true, ignoreTemplateLiterals: true }],
@@ -20,7 +21,8 @@ module.exports = {
         order: ['template', 'script', 'style'],
       },
     ],
-    'vue/no-multiple-template-root': 'off',
+    'vue/multi-word-component-names': 'off',
     'unicorn/filename-case': 'off',
+    'no-undef': 'off',
   },
 };

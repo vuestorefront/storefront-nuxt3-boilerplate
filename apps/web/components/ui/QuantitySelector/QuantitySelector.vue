@@ -18,7 +18,7 @@
         v-model="count"
         type="number"
         role="spinbutton"
-        class="appearance-none mx-2 w-8 text-center bg-transparent font-medium [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-inner-spin-button]:display-none [&::-webkit-inner-spin-button]:m-0 [&::-webkit-outer-spin-button]:display-none [&::-webkit-outer-spin-button]:m-0 [-moz-appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none disabled:placeholder-disabled-900 focus-visible:outline focus-visible:outline-offset focus-visible:rounded-sm"
+        :class="inputClasses"
         :min="minValue"
         :max="maxValue"
         @input="handleOnChange"
@@ -45,18 +45,20 @@ import { SfButton, SfIconAdd, SfIconRemove, useId } from '@storefront-ui/vue';
 import { useCounter } from '@vueuse/core';
 import type { QuantitySelectorProps } from '~/components/ui/QuantitySelector/types';
 
-const props = withDefaults(defineProps<QuantitySelectorProps>(), {
+const { value, minValue, maxValue } = withDefaults(defineProps<QuantitySelectorProps>(), {
   value: 1,
   minValue: 1,
   maxValue: 10,
 });
 
 const inputId = useId();
-const { count, inc, dec, set } = useCounter(props.value);
+const { count, inc, dec, set } = useCounter(value);
+const inputClasses =
+  'appearance-none mx-2 w-8 text-center bg-transparent font-medium [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-inner-spin-button]:display-none [&::-webkit-inner-spin-button]:m-0 [&::-webkit-outer-spin-button]:display-none [&::-webkit-outer-spin-button]:m-0 [-moz-appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none disabled:placeholder-disabled-900 focus-visible:outline focus-visible:outline-offset focus-visible:rounded-sm';
 
-function handleOnChange(event: Event) {
+const handleOnChange = (event: Event) => {
   const currentValue = (event.target as HTMLInputElement)?.value;
   const nextValue = Number.parseFloat(currentValue);
-  set(clamp(nextValue, props.minValue, props.maxValue));
-}
+  set(clamp(nextValue, minValue, maxValue));
+};
 </script>

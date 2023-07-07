@@ -24,5 +24,6 @@ module.exports = {
     'vue/multi-word-component-names': 'off',
     'unicorn/filename-case': 'off',
     'no-undef': 'off',
+    'vue/no-setup-props-destructure': 'off',
   },
 };

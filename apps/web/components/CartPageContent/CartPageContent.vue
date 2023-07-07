@@ -1,18 +1,18 @@
 <template>
   <div v-if="cart?.lineItems.length" class="md:grid md:grid-cols-12 md:gap-x-6" data-testid="cart-page-content">
     <div class="col-span-7 mb-10 md:mb-0">
-      <div v-for="item in cart.lineItems" :key="item.id">
+      <div v-for="{ id, attributes, image, name, totalPrice, unitPrice, quantity, slug } in cart.lineItems" :key="id">
         <UiCartProductCard
-          :attributes="item.attributes"
-          :image-url="item.image?.url ?? ''"
-          :image-alt="item.image?.alt ?? 'product cart image'"
-          :name="item.name ?? ''"
-          :price="item.totalPrice?.amount || 0"
-          :special-price="item.unitPrice?.value?.amount || 0"
+          :attributes="attributes"
+          :image-url="image?.url ?? ''"
+          :image-alt="image?.alt ?? 'product cart image'"
+          :name="name ?? ''"
+          :price="totalPrice?.amount || 0"
+          :special-price="unitPrice?.value?.amount || 0"
           :max-value="10"
           :min-value="1"
-          :value="item.quantity"
-          :slug="item.slug"
+          :value="quantity"
+          :slug="slug"
         />
       </div>
     </div>

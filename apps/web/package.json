@@ -8,13 +8,16 @@
     "dev": "nuxt dev",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "lint": "eslint --ext .vue,.js,.ts .",
+    "lint": "nuxt typecheck && eslint --ext .vue,.js,.ts .",
     "lint:fix": "eslint --ext .vue,.js,.ts . --fix",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:watch": "vitest"
   },
   "dependencies": {
-    "@vsf-enterprise/storefront-boilerplate-sdk": "0.1.0-rc.2",
+    "@vue-storefront/storefront-boilerplate-sdk": "~0.1.0",
     "@vue-storefront/sdk": "^1.0.1"
   },
   "devDependencies": {
@@ -27,7 +30,14 @@
     "@storefront-ui/typography": "^2.3.1",
     "@storefront-ui/vue": "^2.4.1",
     "@types/node": "^18",
+    "@vite-pwa/nuxt": "^0.1.0",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "@vue/test-utils": "^2.4.0",
+    "happy-dom": "^9.20.3",
     "nuxt": "^3.6.0",
-    "sass": "^1.63.6"
+    "sass": "^1.63.6",
+    "vitest": "^0.32.2",
+    "vue-tsc": "^1.8.3",
+    "@vue-storefront/unified-data-model": "~0.1.0"
   }
 }

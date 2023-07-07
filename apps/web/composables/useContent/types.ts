@@ -1,19 +1,44 @@
 import type { Ref } from 'vue';
-import type { Maybe } from '~/types';
+import type { Maybe } from '@vue-storefront/unified-data-model';
+import type { HeadingProps } from '~/components/Heading/types';
+import type { ProductSliderProps } from '~/components/ProductSlider/types';
+import type { CategoryCardProps } from '~/components/ui/CategoryCard/types';
+import type { DisplayProps } from '~/components/ui/Display/types';
+import type { HeroProps } from '~/components/ui/Hero/types';
 
-export interface ContentEntry<TFields> {
+type EntryFields<TFields> = Array<{
   fields: TFields;
+}>;
+
+type WithComponentField<TProps, TComponent> = TProps & {
+  component: TComponent;
+};
+
+export type DynamicContentFields =
+  | WithComponentField<HeroProps, 'Hero'>
+  | WithComponentField<CategoryCardProps, 'Card'>
+  | WithComponentField<HeadingProps, 'Heading'>
+  | WithComponentField<DisplayProps, 'Display'>
+  | WithComponentField<ProductSliderProps, 'ProductSlider'>;
+
+export interface ContentDynamicPage {
+  component: 'Page';
+  content: EntryFields<DynamicContentFields>;
+  name: string;
+  url: string;
 }
-// eslint-disable-next-line unicorn/expiring-todo-comments
-// TODO: Replace TFields with the actual content field type when CMS components are ready..
-export interface UseContentState<TFields = any> {
-  data: Maybe<ContentEntry<TFields>[]>;
+
+export interface UseContentState {
+  data: Maybe<EntryFields<ContentDynamicPage>>;
   loading: boolean;
 }
-export type GetContent = <TFields>() => Promise<Ref<Maybe<ContentEntry<TFields>[]>>>;
-export interface UseContent<TFields> {
-  data: Readonly<Ref<UseContentState<TFields>['data']>>;
+
+export type GetContent = () => Promise<Ref<Maybe<EntryFields<ContentDynamicPage>>>>;
+
+export interface UseContent {
+  data: Readonly<Ref<UseContentState['data']>>;
   loading: Readonly<Ref<boolean>>;
-  getContent: () => Promise<Ref<Maybe<ContentEntry<TFields>[]>>>;
+  getContent: GetContent;
 }
-export type UseContentReturn = <TFields>(url: string) => UseContent<TFields>;
+
+export type UseContentReturn = (url: string) => UseContent;

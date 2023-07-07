@@ -2,8 +2,7 @@
   "extends": "./.nuxt/tsconfig.json",
   "compilerOptions": {
     "typeRoots": ["./node_modules/"],
-    "types": ["cypress"]
+    "types": ["vitest/globals", "@vite-pwa/nuxt", "@vue-storefront/sdk"]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules", "mocks"]
+  "exclude": ["node_modules", "mocks", "__tests__", "cypress.config.ts"],
 }

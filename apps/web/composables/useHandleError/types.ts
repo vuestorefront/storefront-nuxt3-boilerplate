@@ -1,5 +1,5 @@
+import type { Maybe } from '@vue-storefront/unified-data-model';
 import { H3Error } from 'h3';
-import type { Maybe } from '~/types';
 
 export type ErrorParams = Maybe<
   Partial<H3Error> & {

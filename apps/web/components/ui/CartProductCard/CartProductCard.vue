@@ -8,7 +8,7 @@
         <NuxtImg
           class="w-full h-auto border rounded-md border-neutral-200"
           :src="imageUrl ?? '/images/product.webp'"
-          :alt="imageAlt ?? 'product cart image'"
+          :alt="imageAlt ?? ''"
           width="300"
           height="300"
         />

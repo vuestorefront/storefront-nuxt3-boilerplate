@@ -1,6 +1,6 @@
 import { Ref } from 'vue';
-import type { GetProducts } from '@vsf-enterprise/storefront-boilerplate-sdk';
-import { Maybe } from '~/types';
+import type { GetProducts } from '@vue-storefront/storefront-boilerplate-sdk';
+import type { Maybe } from '@vue-storefront/unified-data-model';
 
 export interface UseProductsState {
   data: GetProducts | null;

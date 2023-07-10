@@ -6,8 +6,8 @@ export interface Attribute {
 
 export type CartProductCardProps = {
   attributes: Attribute[];
-  imageUrl: string;
-  imageAlt: string;
+  imageUrl?: string | null;
+  imageAlt?: string | null;
   maxValue: number;
   minValue: number;
   name: string;

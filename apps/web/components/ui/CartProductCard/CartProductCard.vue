@@ -4,11 +4,11 @@
     data-testid="cart-product-card"
   >
     <div class="relative overflow-hidden rounded-md w-[100px] sm:w-[176px]">
-      <SfLink v-if="!!imageUrl" :tag="NuxtLink" :href="paths.product">
+      <SfLink :tag="NuxtLink" :href="paths.product">
         <NuxtImg
           class="w-full h-auto border rounded-md border-neutral-200"
-          :src="imageUrl"
-          :alt="imageAlt"
+          :src="imageUrl ?? '/images/product.webp'"
+          :alt="imageAlt ?? 'product cart image'"
           width="300"
           height="300"
         />

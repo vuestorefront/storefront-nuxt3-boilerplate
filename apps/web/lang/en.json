@@ -34,7 +34,7 @@
   "apply": "Apply",
   "total": "Total",
   "goToCheckout": "Go to checkout",
-  "savingsTag": "You are saving {curr}{count} on your order today!",
+  "savingsTag": "You are saving {amount} on your order today!",
   "promoCodePlaceholder": "Enter promo code",
   "delivery": "Delivery",
   "promoCode": "Promo Code",

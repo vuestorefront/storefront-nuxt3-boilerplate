@@ -4,8 +4,8 @@
       <div v-for="{ id, attributes, image, name, totalPrice, unitPrice, quantity, slug } in cart.lineItems" :key="id">
         <UiCartProductCard
           :attributes="attributes"
-          :image-url="image?.url ?? ''"
-          :image-alt="image?.alt ?? 'product cart image'"
+          :image-url="image?.url"
+          :image-alt="image?.alt"
           :name="name ?? ''"
           :price="totalPrice?.amount || 0"
           :special-price="unitPrice?.value?.amount || 0"

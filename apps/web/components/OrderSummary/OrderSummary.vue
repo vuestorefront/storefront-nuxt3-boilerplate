@@ -36,7 +36,7 @@
       </div>
       <div class="px-3 py-1.5 bg-secondary-100 text-secondary-700 typography-text-sm rounded-md text-center mb-4">
         <UiAlert class="w-full" variant="secondary">
-          {{ $t('savingsTag', { curr: '$', count: cart.totalCouponDiscounts.amount }) }}
+          {{ $t('savingsTag', { amount: `$${cart.totalCouponDiscounts.amount}` }) }}
         </UiAlert>
       </div>
       <div class="flex justify-between typography-headline-4 md:typography-headline-3 font-bold pb-4 mb-4">

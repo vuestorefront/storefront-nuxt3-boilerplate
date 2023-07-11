@@ -51,6 +51,9 @@ jobs:
         with:
           name: ${{ needs.configure.outputs.env-name }}/vue-storefront:${{
             github.sha }}
+          registry: ${{ secrets.DOCKER_REGISTRY_URL || 'registry.vuestorefront.cloud' }}
+          username: ${{ secrets.CLOUD_USERNAME }}
+          password: ${{ secrets.CLOUD_PASSWORD }}
           dockerfile: .vuestorefrontcloud/docker/frontend/Dockerfile
           buildoptions: --compress
 

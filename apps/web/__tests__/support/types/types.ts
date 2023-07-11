@@ -15,7 +15,7 @@ type CardType =
   | 'Visa'
   | 'Mastercard'
   | 'Mastercard/Eurocard'
-  | 'Diner\'s Club';
+  | "Diner's Club";
 
 export type Card = {
   type?: CardType;
@@ -29,7 +29,7 @@ export type Card = {
 type Title = 'Mrs.' | 'Dr.' | 'Rev.' | 'Ms.' | 'Mr.' | 'Miss';
 
 export type Customer = {
-  isRegistered?: boolean,
+  isRegistered?: boolean;
   title?: Title;
   titleCode?: string;
   email?: string;
@@ -56,4 +56,4 @@ export type Product = {
     name: string;
   };
   description?: string;
- };
+};

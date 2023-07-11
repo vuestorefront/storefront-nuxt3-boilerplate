@@ -1,0 +1,89 @@
+{
+  "ci": {
+    "collect": {
+      "startServerCommand": "yarn start",
+      "url": [
+        "http://localhost:3000/",
+        "http://localhost:3000/category",
+        "http://localhost:3000/product/athletic-mens-walking-sneakers"
+      ],
+      "numberOfRuns": 3,
+      "assert": {
+        "includePassedAssertions": false,
+        "assertMatrix": [
+          {
+            "matchingUrlPattern": ".*",
+            "assertions": {
+              "categories:performance": ["warn", { "aggregationMethod": "median-run", "minScore": 0.9 }],
+              "categories:accessibility": ["warn", { "aggregationMethod": "pessimistic", "minScore": 1 }],
+              "categories:best-practices": ["warn", { "aggregationMethod": "pessimistic", "minScore": 1 }],
+              "categories:pwa": ["warn", { "aggregationMethod": "pessimistic", "minScore": 1 }],
+              "categories:seo": ["warn", { "aggregationMethod": "pessimistic", "minScore": 1 }],
+
+              "largest-contentful-paint": ["warn", { "aggregationMethod": "median-run", "maxNumericValue": 2500 }],
+              "total-blocking-time": ["warn", { "aggregationMethod": "median-run", "maxNumericValue": 200 }],
+              "interactive": ["warn", { "aggregationMethod": "median-run", "maxNumericValue": 3800 }],
+              "first-contentful-paint": ["warn", { "aggregationMethod": "median-run", "maxNumericValue": 1800 }],
+              "cumulative-layout-shift": ["warn", { "aggregationMethod": "median-run", "maxNumericValue": 0.1 }],
+              "speed-index": ["warn", { "aggregationMethod": "median-run", "maxNumericValue": 3400 }],
+
+              "dom-size": ["warn", { "maxNumericValue": 800 }]
+            }
+          },
+          {
+            "matchingUrlPattern": ".*",
+            "assertions": {
+              "categories:performance": ["error", { "aggregationMethod": "median-run", "minScore": 0.8 }],
+              "categories:accessibility": ["error", { "aggregationMethod": "pessimistic", "minScore": 0.9 }],
+              "categories:best-practices": ["error", { "aggregationMethod": "pessimistic", "minScore": 0.9 }],
+              "categories:pwa": ["error", { "aggregationMethod": "pessimistic", "minScore": 0.9 }],
+              "categories:seo": ["error", { "aggregationMethod": "pessimistic", "minScore": 0.9 }],
+
+              "total-blocking-time": ["error", { "aggregationMethod": "median-run", "maxNumericValue": 600 }],
+              "largest-contentful-paint": ["error", { "aggregationMethod": "median-run", "maxNumericValue": 5200 }],
+              "interactive": ["error", { "aggregationMethod": "median-run", "maxNumericValue": 7300 }],
+              "first-contentful-paint": ["error", { "aggregationMethod": "median-run", "maxNumericValue": 3000 }],
+              "cumulative-layout-shift": ["error", { "aggregationMethod": "median-run", "maxNumericValue": 0.25 }],
+              "speed-index": ["error", { "aggregationMethod": "median-run", "maxNumericValue": 5800 }],
+
+              "dom-size": ["error", { "maxNumericValue": 1400 }],
+
+              "resource-summary:media:size": ["error", { "maxNumericValue": 1 }],
+              "resource-summary:stylesheet:size": ["error", { "maxNumericValue": 21000 }]
+            }
+          },
+          {
+            "matchingUrlPattern": "http://localhost:3000/$",
+            "assertions": {
+              "resource-summary:image:size": ["error", { "maxNumericValue": 210000 }],
+              "resource-summary:script:size": ["error", { "maxNumericValue": 310000 }],
+              "resource-summary:document:size": ["error", { "maxNumericValue": 21000 }],
+              "resource-summary:font:size": ["error", { "maxNumericValue": 65000 }]
+            }
+          },
+          {
+            "matchingUrlPattern": "http://localhost:3000/category$",
+            "assertions": {
+              "resource-summary:image:size": ["error", { "maxNumericValue": 32000 }],
+              "resource-summary:script:size": ["error", { "maxNumericValue": 310000 }],
+              "resource-summary:document:size": ["error", { "maxNumericValue": 28000 }],
+              "resource-summary:font:size": ["error", { "maxNumericValue": 85000 }]
+            }
+          },
+          {
+            "matchingUrlPattern": "http://localhost:3000/product/athletic-mens-walking-sneakers",
+            "assertions": {
+              "resource-summary:image:size": ["error", { "maxNumericValue": 20000 }],
+              "resource-summary:script:size": ["error", { "maxNumericValue": 310000 }],
+              "resource-summary:document:size": ["error", { "maxNumericValue": 21000 }],
+              "resource-summary:font:size": ["error", { "maxNumericValue": 85000 }]
+            }
+          }
+        ]
+      }
+    },
+    "upload": {
+      "target": "temporary-public-storage"
+    }
+  }
+}

@@ -20,8 +20,7 @@
     "test": "turbo run test",
     "test:watch": "turbo run test:watch",
     "test:coverage": "npx turbo run test:coverage",
-    "test:e2e:open": "cd apps/web && npx cypress open",
-    "test:e2e:run": "cd apps/web && cypress run --browser chrome"
+    "test:cypress": "turbo run test:cypress"
   },
   "dependencies": {
     "cross-env": "^7.0.3",

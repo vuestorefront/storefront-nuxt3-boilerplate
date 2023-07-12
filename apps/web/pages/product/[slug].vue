@@ -1,7 +1,7 @@
 <template>
   <NarrowContainer>
     <div class="md:grid gap-x-6 grid-areas-product-page grid-cols-product-page">
-      <section className="grid-in-left-top md:h-full xl:max-h-[700px]">
+      <section class="grid-in-left-top md:h-full xl:max-h-[700px]">
         <!-- Gallery -->
       </section>
       <section class="mb-10 grid-in-right md:mb-0">

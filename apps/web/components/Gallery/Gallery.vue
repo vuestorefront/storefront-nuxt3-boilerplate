@@ -120,45 +120,33 @@ const firstVisibleThumbnailIntersected = ref(true);
 const lastVisibleThumbnailIntersected = ref(true);
 const activeIndex = ref(0);
 
-watch(
-  thumbsRef,
-  (thumbsReference) => {
-    if (thumbsReference) {
-      useIntersectionObserver(
-        firstThumbReference,
-        ([{ isIntersecting }]) => {
-          firstVisibleThumbnailIntersected.value = isIntersecting;
-        },
-        {
-          root: unrefElement(thumbsReference),
-          rootMargin: '0px',
-          threshold: 1,
-        },
-      );
-    }
-  },
-  { immediate: true },
-);
+const registerThumbsWatch = (
+  singleThumbReference: Ref<HTMLButtonElement | undefined>,
+  thumbnailIntersected: Ref<boolean>,
+) => {
+  watch(
+    thumbsRef,
+    (thumbsReference) => {
+      if (thumbsReference) {
+        useIntersectionObserver(
+          singleThumbReference,
+          ([{ isIntersecting }]) => {
+            thumbnailIntersected.value = isIntersecting;
+          },
+          {
+            root: unrefElement(thumbsReference),
+            rootMargin: '0px',
+            threshold: 1,
+          },
+        );
+      }
+    },
+    { immediate: true },
+  );
+};
 
-watch(
-  thumbsRef,
-  (thumbsReference) => {
-    if (thumbsReference) {
-      useIntersectionObserver(
-        lastThumbReference,
-        ([{ isIntersecting }]) => {
-          lastVisibleThumbnailIntersected.value = isIntersecting;
-        },
-        {
-          root: unrefElement(thumbsReference),
-          rootMargin: '0px',
-          threshold: 1,
-        },
-      );
-    }
-  },
-  { immediate: true },
-);
+registerThumbsWatch(firstThumbReference, firstVisibleThumbnailIntersected);
+registerThumbsWatch(lastThumbReference, lastVisibleThumbnailIntersected);
 
 const onChangeIndex = (index: number) => {
   stop();

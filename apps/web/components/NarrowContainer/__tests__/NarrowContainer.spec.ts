@@ -5,6 +5,6 @@ describe('<NarrowContainer />', () => {
   it('should render component', () => {
     const wrapper = mount(NarrowContainer);
 
-    expect(wrapper.getByTestId('narrow-container').exists()).toBeTruthy();
+    expect(wrapper.findByTestId('narrow-container').exists()).toBeTruthy();
   });
 });

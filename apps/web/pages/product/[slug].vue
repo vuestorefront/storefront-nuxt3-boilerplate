@@ -1,6 +1,10 @@
 <template>
-  <NarrowContainer v-if="product" class="md:grid gap-x-6 grid-areas-product-page grid-cols-product-page">
-    <Gallery :images="product.gallery" class="grid-in-left-top md:h-full xl:max-h-[700px]" />
+  <NarrowContainer v-if="product">
+    <div class="md:grid gap-x-6 grid-areas-product-page grid-cols-product-page">
+      <section class="grid-in-left-top md:h-full xl:max-h-[700px]">
+        <Gallery :images="product.gallery" />
+      </section>
+    </div>
   </NarrowContainer>
 </template>
 

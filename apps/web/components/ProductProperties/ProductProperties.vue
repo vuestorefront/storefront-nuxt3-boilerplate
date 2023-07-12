@@ -5,7 +5,7 @@
       <SfChip class="min-w-[48px]" size="sm"> Label </SfChip>
     </div>
     <span class="block mb-2 mt-2 text-base font-medium leading-6 text-neutral-900">Color</span>
-    <div key="{value}" class="mr-2 mb-2 inline-block">
+    <div class="mr-2 mb-2 inline-block">
       <SfChip size="sm">
         <template #prefix>
           <SfThumbnail size="sm" />

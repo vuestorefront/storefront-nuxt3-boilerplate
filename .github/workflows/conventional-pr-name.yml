@@ -19,8 +19,6 @@ jobs:
 
       - name: Install dependencies
         run: yarn --frozen-lockfile
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
 
       - name: Validate PR title
         run: echo "${{ github.event.pull_request.title }}" | npx commitlint

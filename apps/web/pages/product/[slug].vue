@@ -22,10 +22,12 @@
 </template>
 
 <script lang="ts" setup>
+// example of title override
+const title = ref('Mocked product title');
 // example of using cached data from Home Page
 // const { data } = useContent('home-page');
 
 useHead({
-  title: 'Vue Storefront Demo',
+  title,
 });
 </script>

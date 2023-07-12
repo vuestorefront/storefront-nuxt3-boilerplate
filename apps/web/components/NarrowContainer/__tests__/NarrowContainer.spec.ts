@@ -1,4 +1,4 @@
-import { VueWrapper, mount } from '@vue/test-utils';
+import { mount } from '@vue/test-utils';
 import NarrowContainer from '~/components/NarrowContainer/NarrowContainer.vue';
 
 describe('<NarrowContainer />', () => {

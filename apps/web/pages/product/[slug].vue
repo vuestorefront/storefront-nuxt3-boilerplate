@@ -9,12 +9,12 @@
           <!-- PurchaseCard -->
         </section>
         <section class="grid-in-left-bottom md:mt-8">
-          <Divider class="mb-6" />
-          <ProductProperties />
-          <Divider class="mt-4 mb-2 md:mt-8" />
+          <UiDivider class="mb-6" />
+          <ProductProperties v-if="product" :product="product" />
+          <UiDivider class="mt-4 mb-2 md:mt-8" />
           <!-- ProductAccordion -->
         </section>
-        <Divider class="mt-4 mb-2" />
+        <UiDivider class="mt-4 mb-2" />
       </div>
       <section class="mx-4 mt-28 mb-20">
         <!-- RecommendedProducts -->

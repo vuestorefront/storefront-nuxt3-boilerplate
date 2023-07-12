@@ -1,6 +1,6 @@
 import vue from '@vitejs/plugin-vue';
 import { resolve } from 'node:path';
-import { defineConfig } from 'vitest/config';
+import { configDefaults, defineConfig } from 'vitest/config';
 
 export default defineConfig({
   plugins: [vue()],
@@ -8,6 +8,7 @@ export default defineConfig({
     environment: 'happy-dom',
     globals: true,
     setupFiles: './vue-test-utils.extend.js',
+    exclude: [...configDefaults.exclude, '__tests__/**'],
   },
   resolve: {
     alias: [{ find: '~', replacement: resolve(__dirname, './') }],

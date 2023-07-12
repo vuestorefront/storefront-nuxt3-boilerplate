@@ -1,3 +1,4 @@
+import { toRefs } from '@vueuse/shared';
 import { sdk } from '~/sdk';
 import type { UseProductReturn, UseProductState, FetchProduct } from './types';
 

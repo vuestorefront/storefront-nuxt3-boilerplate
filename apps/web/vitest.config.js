@@ -1,16 +1,10 @@
-import vue from '@vitejs/plugin-vue';
-import { resolve } from 'node:path';
-import { configDefaults, defineConfig } from 'vitest/config';
+import { defineVitestConfig } from 'nuxt-vitest/config';
 
-export default defineConfig({
-  plugins: [vue()],
+export default defineVitestConfig({
   test: {
-    environment: 'happy-dom',
+    environment: 'nuxt',
     globals: true,
     setupFiles: './vue-test-utils.extend.js',
-    exclude: [...configDefaults.exclude, '__tests__/**'],
-  },
-  resolve: {
-    alias: [{ find: '~', replacement: resolve(__dirname, './') }],
+    exclude: ['__tests__/**'],
   },
 });

@@ -18229,7 +18229,6 @@ __metadata:
     "@storefront-ui/vue": ^2.4.1
     "@types/node": ^18
     "@vite-pwa/nuxt": ^0.1.0
-    "@vitejs/plugin-vue": ^4.2.3
     "@vue-storefront/sdk": ^1.0.1
     "@vue-storefront/storefront-boilerplate-sdk": ~0.1.0
     "@vue-storefront/unified-data-model": ^0.1.0

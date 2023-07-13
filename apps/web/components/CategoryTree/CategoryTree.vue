@@ -24,10 +24,7 @@
 
 <script lang="ts" setup>
 import { SfIconArrowBack } from '@storefront-ui/vue';
-import type { CategoryTreeItem as CategoryTreeItemType } from '~/components/CategoryTree/types';
+import type { CategoryTreeProps } from '~/components/CategoryTree/types';
 
-defineProps<{
-  parent?: CategoryTreeItemType;
-  categories: CategoryTreeItemType[];
-}>();
+defineProps<CategoryTreeProps>();
 </script>

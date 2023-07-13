@@ -8,13 +8,16 @@
     leave-to-class="-translate-x-full"
   >
     <SfDrawer
-      v-model="open"
-      class="w-full shadow-none md:translate-x-0 z-[100] md:z-0 md:static -translate-x-full shrink-0 md:w-[303px] bg-white"
+      v-show="isOpen"
+      :model-value="true"
+      :disable-click-away="true"
+      :disable-esc="true"
+      class="w-full shadow-none md:translate-x-0 z-[100] md:z-0 md:static md:!block -translate-x-full shrink-0 md:w-[303px] bg-white"
     >
       <div class="grid grid-rows-category-sidebar h-full md:block">
         <div class="p-4 flex justify-between items-center md:hidden">
           <span class="font-bold text-lg">{{ $t('listSettings') }}</span>
-          <SfButton variant="tertiary" @click="open = false" :aria-label="$t('closeListSettings')">
+          <SfButton variant="tertiary" @click="emit('close')" :aria-label="$t('closeListSettings')">
             <template #prefix>
               <SfIconClose class="text-neutral-500" />
             </template>
@@ -24,7 +27,7 @@
           <slot />
         </div>
         <div class="p-4 md:mt-2 flex flex-wrap justify-between border-t border-t-neutral-200 md:border-0 gap-3">
-          <SfButton class="md:hidden whitespace-nowrap flex flex-1" variant="primary" @click="open = false">
+          <SfButton class="md:hidden whitespace-nowrap flex flex-1" variant="primary" @click="emit('close')">
             {{ $t('showProducts') }}
           </SfButton>
         </div>
@@ -35,6 +38,9 @@
 
 <script setup lang="ts">
 import { SfDrawer, SfButton, SfIconClose } from '@storefront-ui/vue';
+import { CategorySidebarEmits, CategorySidebarProps } from '~/components/CategorySidebar/types';
 
-const open = ref(true);
+defineProps<CategorySidebarProps>();
+
+const emit = defineEmits<CategorySidebarEmits>();
 </script>

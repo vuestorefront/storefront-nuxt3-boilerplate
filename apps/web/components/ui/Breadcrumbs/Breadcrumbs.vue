@@ -57,11 +57,9 @@
 
 <script lang="ts" setup>
 import { SfDropdown, SfButton, SfLink, SfIconMoreHoriz } from '@storefront-ui/vue';
-import { Breadcrumb } from '~/components/ui/Breadcrumbs/types';
+import { BreadcrumbsProps } from '~/components/ui/Breadcrumbs/types';
 
-defineProps<{
-  breadcrumbs: Breadcrumb[];
-}>();
+defineProps<BreadcrumbsProps>();
 
 const dropdownOpened = ref(false);
 const close = () => {

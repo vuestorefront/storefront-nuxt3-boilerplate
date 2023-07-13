@@ -1,3 +1,39 @@
-<template></template>
+<template>
+  <span
+    class="block py-2 px-4 mt-6 mb-4 bg-neutral-100 typography-headline-6 font-bold text-neutral-900 uppercase tracking-widest md:rounded-md"
+    data-testid="category-filters"
+  >
+    {{ $t('filters') }}
+  </span>
+  <div class="flex flex-col gap-2">
+    <CategoryFiltersFilter
+      v-if="sizeFacets"
+      :facet="sizeFacets"
+      :selected="selectedFilters"
+      @update:selected="handleFilterSelection"
+      type="size"
+    />
+    <CategoryFiltersFilter
+      v-if="colorFacets"
+      :facet="colorFacets"
+      :selected="selectedFilters"
+      @update:selected="handleFilterSelection"
+      type="color"
+    />
+  </div>
+</template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { CategoryFiltersProps } from '~/components/CategoryFilters/types';
+
+const props = defineProps<CategoryFiltersProps>();
+const { facets } = toRefs(props);
+const selectedFilters = ref<string[]>([]);
+const colorFacets = computed(() => facets.value.find(({ name }) => name === 'color'));
+const sizeFacets = computed(() => facets.value.find(({ name }) => name === 'size'));
+
+const handleFilterSelection = (currentValue: string) =>
+  selectedFilters.value.includes(currentValue)
+    ? (selectedFilters.value = selectedFilters.value.filter((value) => value !== currentValue))
+    : (selectedFilters.value = [...selectedFilters.value, currentValue]);
+</script>

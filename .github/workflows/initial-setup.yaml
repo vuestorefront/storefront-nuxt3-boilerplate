@@ -1,0 +1,41 @@
+name: Initial Setup of Repository
+
+on:
+  create:
+
+concurrency:
+  group: init-setup
+  cancel-in-progress: true
+
+permissions:
+  actions: write
+  checks: write
+  contents: write
+
+jobs:
+  init-setup:
+    if: github.run_number == 1 && github.event.repository.name != 'storefront-nuxt3-boilerplate'
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Remove unused files
+        run: |
+          rm -f .github/workflows/build-and-deploy.yaml
+          rm -f .github/workflows/initial-setup.yaml
+          rm -f .github/CODEOWNERS
+          rm -f .dockerignore
+          rm -rf .vuestorefrontcloud
+
+      - name: Commit changed files
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "chore: initial setup of repository"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+

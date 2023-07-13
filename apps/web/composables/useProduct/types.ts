@@ -1,5 +1,5 @@
 import type { Ref } from 'vue';
-import { SfProduct, Maybe } from '@vue-storefront/unified-data-model';
+import type { SfProduct, Maybe } from '@vue-storefront/unified-data-model';
 
 export interface UseProductState {
   data: Maybe<SfProduct>;

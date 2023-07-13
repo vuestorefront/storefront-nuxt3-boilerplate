@@ -33,6 +33,11 @@
       </SfButton>
     </nav>
   </UiNavbarTop>
+  <NarrowContainer v-if="breadcrumbs?.length > 0">
+    <div class="p-4 md:px-0">
+      <UiBreadcrumbs :breadcrumbs="breadcrumbs" />
+    </div>
+  </NarrowContainer>
   <main>
     <slot />
   </main>
@@ -42,6 +47,11 @@
 
 <script lang="ts" setup>
 import { SfBadge, SfButton, SfIconExpandMore, SfIconShoppingCart } from '@storefront-ui/vue';
+import { Breadcrumb } from '~/components/ui/Breadcrumbs/types';
+
+defineProps<{
+  breadcrumbs: Breadcrumb[];
+}>();
 
 usePageTitle();
 

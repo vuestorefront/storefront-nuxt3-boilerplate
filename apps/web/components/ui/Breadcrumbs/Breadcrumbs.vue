@@ -6,7 +6,7 @@
           <template #trigger>
             <SfButton
               class="relative w-5 h-5 !p-0 rounded-sm outline-secondary-600 hover:bg-transparent active:bg-transparent"
-              aria-label="More breadcrumbs"
+              :aria-label="$t('breadcrumbsDropdownText')"
               type="button"
               variant="tertiary"
               square
@@ -56,19 +56,10 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue';
 import { SfDropdown, SfButton, SfLink, SfIconMoreHoriz } from '@storefront-ui/vue';
+import type { BreadcrumbsProps } from '~/components/ui/Breadcrumbs/types';
 
-const breadcrumbs = [
-  {
-    name: 'Home',
-    link: '#',
-  },
-  { name: 'Page 2', link: '#' },
-  { name: 'Page 3', link: '#' },
-  { name: 'Page 4', link: '#' },
-  { name: 'Page 5', link: '#' },
-];
+defineProps<BreadcrumbsProps>();
 
 const dropdownOpened = ref(false);
 const close = () => {

@@ -18,14 +18,14 @@
     "test:cypress": "cypress run"
   },
   "dependencies": {
-    "@vue-storefront/storefront-boilerplate-sdk": "~0.1.0",
-    "@vue-storefront/sdk": "^1.0.1"
+    "@vue-storefront/sdk": "^1.0.1",
+    "@vue-storefront/storefront-boilerplate-sdk": "~0.1.0"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@nuxt/image": "^1.0.0-rc.1",
     "@nuxtjs/google-fonts": "^3.0.1",
-    "@nuxtjs/i18n": "npm:@nuxtjs/i18n-edge",
+    "@nuxtjs/i18n": "npm:@nuxtjs/i18n-edge@8.0.0-beta.12-28139269.7c20648",
     "@nuxtjs/tailwindcss": "^6.8.0",
     "@savvywombat/tailwindcss-grid-areas": "^3.1.0",
     "@storefront-ui/typography": "^2.3.1",
@@ -33,13 +33,12 @@
     "@types/node": "^18",
     "@vite-pwa/nuxt": "^0.1.0",
     "@vitejs/plugin-vue": "^4.2.3",
-    "@vsf-enterprise/unified-data-model": "^0.4.0",
+    "@vue-storefront/unified-data-model": "^0.1.0",
     "@vue/test-utils": "^2.4.0",
     "happy-dom": "^9.20.3",
     "nuxt": "^3.6.0",
     "sass": "^1.63.6",
     "vitest": "^0.32.2",
-    "vue-tsc": "^1.8.3",
-    "@vue-storefront/unified-data-model": "~0.1.0"
+    "vue-tsc": "^1.8.3"
   }
 }

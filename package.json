@@ -25,7 +25,6 @@
   },
   "dependencies": {
     "cross-env": "^7.0.3",
-    "rimraf": "^3.0.2",
     "dotenv": "^16.0.3"
   },
   "devDependencies": {
@@ -36,21 +35,22 @@
     "@vue-storefront/eslint-config": "~2.0.0-rc.7",
     "babel-preset-node": "^5.1.1",
     "commitizen": "^4.2.5",
+    "cypress": "^12.12.0",
     "eslint": "^8.38.0",
     "husky": "^7.0.4",
     "is-ci": "^1.0.0",
     "lint-staged": "^13.2.1",
     "prettier": "^2.8.8",
+    "rimraf": "^3.0.2",
     "rollup": "^2.79.0",
     "turbo": "1.5.5",
-    "typescript": "5.0.4",
-    "cypress": "^12.12.0"
+    "typescript": "5.0.4"
   },
   "engines": {
-    "npm": ">=8.0.0",
+    "yarn": ">=3.6.1",
     "node": ">=16.0.0"
   },
-  "packageManager": "yarn@1.22.10",
+  "packageManager": "yarn@3.6.1",
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog",

@@ -27,6 +27,4 @@ import { SfCounter, SfIconCheck, SfListItem } from '@storefront-ui/vue';
 import { CategoryTreeItemType } from '~/components/CategoryTree/types';
 
 defineProps<CategoryTreeItemType>();
-
-const NuxtLink = resolveComponent('NuxtLink');
 </script>

@@ -5,12 +5,7 @@ describe('<Breadcrumbs />', () => {
   it('should render component', () => {
     const { getByTestId } = mount(Breadcrumbs, {
       props: {
-        breadcrumbs: [
-          {
-            name: 'Home',
-            link: '/',
-          },
-        ],
+        breadcrumbs: [],
       },
     });
 

@@ -33,7 +33,7 @@
       </SfButton>
     </nav>
   </UiNavbarTop>
-  <NarrowContainer v-if="breadcrumbs">
+  <NarrowContainer v-if="breadcrumbs > 0">
     <div class="p-4 md:px-0">
       <LazyUiBreadcrumbs :breadcrumbs="breadcrumbs" />
     </div>
@@ -47,13 +47,11 @@
 
 <script lang="ts" setup>
 import { SfBadge, SfButton, SfIconExpandMore, SfIconShoppingCart } from '@storefront-ui/vue';
-import type { Breadcrumb } from '~/components/ui/Breadcrumbs/types';
+import type { BreadcrumbsProps } from '~/components/ui/Breadcrumbs/types';
+
+defineProps<BreadcrumbsProps>();
 
 usePageTitle();
-
-defineProps<{
-  breadcrumbs?: Breadcrumb[];
-}>();
 
 const NuxtLink = resolveComponent('NuxtLink');
 const cartLineItemsCount = computed(() => 1);

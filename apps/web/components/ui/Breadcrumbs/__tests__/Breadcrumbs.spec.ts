@@ -9,7 +9,11 @@ const breadcrumbs = [
 ];
 describe('<Breadcrumbs />', () => {
   it('should render component', () => {
-    const wrapper = mount(Breadcrumbs);
+    const wrapper = mount(Breadcrumbs, {
+      props: {
+        breadcrumbs: [],
+      }
+    });
 
     expect(wrapper.getByTestId('breadcrumbs'));
   });

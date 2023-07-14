@@ -1,9 +1,17 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+.gitattributes
 
 # dependencies
 node_modules
 .pnp
-.pnp.js
+.pnp.*
+.yarn/*
+.yarn/**/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
 
 # nuxt dev/build outputs
 .output

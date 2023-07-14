@@ -1,0 +1,116 @@
+name: Deploy
+on:
+  push:
+    branches:
+      - develop
+      - force/*
+
+jobs:
+  configure:
+    if: github.event.repository.name == 'storefront-nuxt3-boilerplate'
+    name: Configure
+    runs-on: ubuntu-latest
+    outputs:
+      env: ${{ steps.resolve-env.outputs.env }}
+      env-name: ${{ steps.resolve-env.outputs.env-name }}
+      target-url: ${{ steps.resolve-env.outputs.target-url }}
+      project-name: ${{ steps.resolve-env.outputs.project-name }}
+      region: ${{ steps.resolve-env.outputs.region }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Determine environment-specific variables
+        id: resolve-env
+        run: |
+          ENV=Develop
+          TARGET_URL=https://boilerplate-nuxt.europe-west1.gcp.storefrontcloud.io/
+          ENV_NAME=boilerplate-nuxt-storefrontcloud-io
+          PROJECT_NAME=boilerplate-nuxt
+          REGION=europe-west1
+          echo "env=$ENV" >> $GITHUB_OUTPUT
+          echo "env-name=$ENV_NAME" >> $GITHUB_OUTPUT
+          echo "target-url=$TARGET_URL" >> $GITHUB_OUTPUT
+          echo "project-name=$PROJECT_NAME" >> $GITHUB_OUTPUT
+          echo "region=$REGION" >> $GITHUB_OUTPUT
+
+  build:
+    name: Build
+    needs: configure
+    environment: ${{ needs.configure.outputs.env }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: './.github/.node-version'
+          cache: 'yarn'
+
+      - name: Build and publish docker image
+        uses: elgohr/Publish-Docker-Github-Action@v5
+        with:
+          name: ${{ needs.configure.outputs.env-name }}/vue-storefront:${{
+            github.sha }}
+          registry: ${{ secrets.DOCKER_REGISTRY_URL || 'registry.vuestorefront.cloud' }}
+          username: ${{ secrets.CLOUD_USERNAME }}
+          password: ${{ secrets.CLOUD_PASSWORD }}
+          dockerfile: .vuestorefrontcloud/docker/frontend/Dockerfile
+          buildoptions: --compress
+
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    permissions:
+      deployments: write
+    needs:
+      - configure
+      - build
+    environment: ${{ needs.configure.outputs.env }}
+    steps:
+      - uses: chrnorm/deployment-action@v2
+        name: Create GitHub deployment
+        id: deployment
+        with:
+          token: ${{ github.token }}
+          environment-url: ${{ needs.configure.outputs.target-url }}
+          environment: production
+          initial-status: in_progress
+
+      - name: Deploy on ${{ needs.configure.outputs.target-url }}
+        run: >
+          if curl -f -s -H 'X-User-Id: ${{ secrets.cloud_username }}' -H 'X-Api-Key:
+          ${{ secrets.cloud_password }}' -H 'Content-Type: application/json' -X
+          PATCH -d '{
+              "front_version":"${{ github.sha }}",
+              "additional_apps": {
+                "apps": [],
+                "enabled":false
+              }
+            }' https://farmer.storefrontcloud.io/instance/${{ needs.configure.outputs.project-name }}-${{ needs.configure.outputs.region }}-gcp-storefrontcloud-io; then
+            echo "Instance updated"
+          else
+            echo "Something went wrong during the update process..."
+            exit 1
+          fi
+
+      - name: Update deployment status (success)
+        if: success()
+        uses: chrnorm/deployment-status@v2
+        with:
+          token: ${{ github.token }}
+          environment-url: ${{ needs.configure.outputs.target-url }}
+          state: success
+          description: Congratulations! The deploy is done.
+          deployment-id: ${{ steps.deployment.outputs.deployment_id }}
+
+      - name: Update deployment status (failure)
+        if: failure()
+        uses: chrnorm/deployment-status@v2
+        with:
+          token: ${{ github.token }}
+          environment-url: ${{ needs.configure.outputs.target-url }}
+          state: failure
+          description: Unfortunately, the instance hasn't been updated.
+          deployment-id: ${{ steps.deployment.outputs.deployment_id }}

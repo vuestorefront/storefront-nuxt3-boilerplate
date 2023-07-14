@@ -1,11 +1,11 @@
-import { UseProductsReturn, UseProductsState } from '~/composables/useProducts/types';
+import { FetchProducts, UseProductsReturn, UseProductsState } from '~/composables/useProducts/types';
 import { sdk } from '~/sdk';
 
 /**
  * @description Composable for managing products.
  * @returns {@link UseProducts}
  * @example
- * const { data, loading, getProducts } = useProducts();
+ * const { data, loading, fetchProducts } = useProducts();
  */
 export const useProducts: UseProductsReturn = () => {
   const state = useState<UseProductsState>('products', () => ({
@@ -18,7 +18,7 @@ export const useProducts: UseProductsReturn = () => {
    * @example
    * getProducts();
    */
-  const getProducts = async () => {
+  const fetchProducts: FetchProducts = async () => {
     state.value.loading = true;
     const { data, error } = await useAsyncData(sdk.commerce.getProducts);
     useHandleError(error.value);
@@ -28,7 +28,7 @@ export const useProducts: UseProductsReturn = () => {
   };
 
   return {
-    getProducts,
+    fetchProducts,
     ...toRefs(state.value),
   };
 };

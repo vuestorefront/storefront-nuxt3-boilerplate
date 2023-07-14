@@ -22,10 +22,10 @@ definePageMeta({
   layout: false,
 });
 
-const { getProducts, data: productsCatalog } = useProducts();
+const { fetchProducts, data: productsCatalog } = useProducts();
 const { t } = useI18n();
 
-await getProducts();
+await fetchProducts();
 
 const breadcrumbs: Breadcrumb[] = [
   { name: t('home'), link: '/' },

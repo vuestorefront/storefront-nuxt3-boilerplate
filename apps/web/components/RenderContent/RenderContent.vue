@@ -4,6 +4,7 @@
     :is="componentsMap[component.fields.component]"
     v-bind="component.fields"
     :key="`${component.fields.component}-${index}`"
+    data-testid="render-content"
   />
 </template>
 

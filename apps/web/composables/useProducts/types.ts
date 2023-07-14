@@ -6,10 +6,12 @@ export interface UseProductsState {
   data: GetProducts | null;
   loading: boolean;
 }
+
+export type FetchProducts = () => Promise<Ref<Maybe<GetProducts>>>;
 export interface UseProducts {
   data: Readonly<Ref<UseProductsState['data']>>;
   loading: Readonly<Ref<boolean>>;
-  getProducts: () => Promise<Ref<Maybe<GetProducts>>>;
+  fetchProducts: FetchProducts;
 }
 
 export type UseProductsReturn = () => UseProducts;

@@ -3,7 +3,7 @@ import CategoryPageContent from '~/components/CategoryPageContent/CategoryPageCo
 
 describe('<CategoryPageContent />', () => {
   it('should render component', () => {
-    const wrapper = mount(CategoryPageContent, {
+    const { getByTestId } = mount(CategoryPageContent, {
       props: {
         title: 'title',
         totalProducts: 0,
@@ -12,6 +12,6 @@ describe('<CategoryPageContent />', () => {
       },
     });
 
-    expect(wrapper.getByTestId('category-page-content'));
+    expect(getByTestId('category-page-content'));
   });
 });

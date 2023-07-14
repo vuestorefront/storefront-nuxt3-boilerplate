@@ -3,8 +3,8 @@ import CategoryEmptyState from '~/components/CategoryEmptyState/CategoryEmptySta
 
 describe('<CategoryEmptyState />', () => {
   it('should render component', () => {
-    const wrapper = mount(CategoryEmptyState);
+    const { getByTestId } = mount(CategoryEmptyState);
 
-    expect(wrapper.getByTestId('category-empty-state'));
+    expect(getByTestId('category-empty-state'));
   });
 });

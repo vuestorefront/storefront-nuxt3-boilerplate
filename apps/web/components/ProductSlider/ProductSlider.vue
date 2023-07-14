@@ -11,7 +11,7 @@
       :name="product.name ?? ''"
       :slug="product.slug"
       :image-url="product.primaryImage?.url ?? ''"
-      :image-alt="product.primaryImage?.alt ?? 'primary image'"
+      :image-alt="product.primaryImage?.alt ?? ''"
       :price="product.price?.value.amount"
       :rating-count="product.rating?.count"
       :rating="product.rating?.average"

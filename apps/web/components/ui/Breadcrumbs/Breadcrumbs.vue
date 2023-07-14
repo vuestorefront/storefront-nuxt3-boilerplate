@@ -24,6 +24,7 @@
           <ol class="px-4 py-2 rounded-md shadow-md border-neutral-100" data-testid="breadcrumbs-dropdown">
             <li v-for="item in breadcrumbs" :key="item.name" class="py-2 last-of-type:hidden">
               <SfLink
+                :tag="NuxtLink"
                 :href="item.link"
                 variant="secondary"
                 class="leading-5 no-underline text-inherit hover:underline active:underline whitespace-nowrap outline-secondary-600"
@@ -41,6 +42,7 @@
       >
         <SfLink
           v-if="index < breadcrumbs.length - 1"
+          :tag="NuxtLink"
           :href="item.link"
           variant="secondary"
           class="leading-5 no-underline hover:underline active:underline whitespace-nowrap outline-secondary-600 text-inherit"
@@ -68,4 +70,6 @@ const close = () => {
 const toggle = () => {
   dropdownOpened.value = !dropdownOpened.value;
 };
+
+const NuxtLink = resolveComponent('NuxtLink');
 </script>

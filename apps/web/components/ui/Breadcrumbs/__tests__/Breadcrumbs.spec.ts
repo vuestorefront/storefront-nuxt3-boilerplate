@@ -3,7 +3,7 @@ import Breadcrumbs from '~/components/ui/Breadcrumbs/Breadcrumbs.vue';
 
 describe('<Breadcrumbs />', () => {
   it('should render component', () => {
-    const wrapper = mount(Breadcrumbs, {
+    const { getByTestId } = mount(Breadcrumbs, {
       props: {
         breadcrumbs: [
           {
@@ -14,6 +14,6 @@ describe('<Breadcrumbs />', () => {
       },
     });
 
-    expect(wrapper.getByTestId('breadcrumbs'));
+    expect(getByTestId('breadcrumbs'));
   });
 });

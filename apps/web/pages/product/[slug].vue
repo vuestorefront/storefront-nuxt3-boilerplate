@@ -5,7 +5,7 @@
         <Gallery :images="product?.gallery ?? []" />
       </section>
       <section class="mb-10 grid-in-right md:mb-0">
-        <!-- PurchaseCard -->
+        <UiPurchaseCard :product="(product as SfProduct)" />
       </section>
       <section class="grid-in-left-bottom md:mt-8">
         <Divider class="mb-6" />
@@ -22,6 +22,8 @@
 </template>
 
 <script lang="ts" setup>
+import { SfProduct } from '@vue-storefront/unified-data-model';
+
 const route = useRoute();
 const slug = route.params.slug as string;
 const { data: product, fetchProduct } = useProduct(slug);

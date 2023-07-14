@@ -1,0 +1,67 @@
+<template>
+  <div class="inline-flex flex-col items-center" data-testid="quantity-selector">
+    <div class="flex justify-between border border-neutral-300 rounded-md h-full w-full">
+      <SfButton
+        type="button"
+        variant="tertiary"
+        :disabled="count <= minValue"
+        square
+        class="rounded-r-none"
+        :aria-controls="inputId"
+        aria-label="Decrease value"
+        data-testid="quantitySelectorDecreaseButton"
+        @click="dec()"
+      >
+        <SfIconRemove />
+      </SfButton>
+      <input
+        :id="inputId"
+        v-model="count"
+        type="number"
+        role="spinbutton"
+        class="appearance-none mx-2 w-8 flex-1 text-center bg-transparent font-medium [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-inner-spin-button]:display-none [&::-webkit-inner-spin-button]:m-0 [&::-webkit-outer-spin-button]:display-none [&::-webkit-outer-spin-button]:m-0 [-moz-appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none disabled:placeholder-disabled-900 focus-visible:outline focus-visible:outline-offset focus-visible:rounded-sm"
+        :min="minValue"
+        :max="maxValue"
+        data-testid="quantitySelectorInput"
+        @input="handleOnChange"
+      />
+      <SfButton
+        type="button"
+        variant="tertiary"
+        :disabled="count >= maxValue"
+        square
+        class="rounded-l-none"
+        :aria-controls="inputId"
+        aria-label="Increase value"
+        data-testid="quantitySelectorIncreaseButton"
+        @click="inc()"
+      >
+        <SfIconAdd />
+      </SfButton>
+    </div>
+  </div>
+</template>
+
+<script lang="ts" setup>
+import { toRefs } from 'vue';
+import { clamp } from '@storefront-ui/shared';
+import { SfButton, SfIconAdd, SfIconRemove, useId } from '@storefront-ui/vue';
+import { useCounter } from '@vueuse/core';
+import { QuantitySelectorProps } from './types';
+
+const props = withDefaults(defineProps<QuantitySelectorProps>(), {
+  minValue: 1,
+  maxValue: 999,
+});
+
+const { minValue, maxValue } = toRefs(props);
+
+const inputId = useId();
+const { count, inc, dec, set } = useCounter(1, { min: minValue?.value, max: maxValue?.value });
+
+function handleOnChange(event: Event) {
+  const currentValue = (event.target as HTMLInputElement)?.value;
+  const nextValue = Number.parseFloat(currentValue);
+  set(clamp(nextValue, minValue?.value, maxValue?.value));
+}
+</script>

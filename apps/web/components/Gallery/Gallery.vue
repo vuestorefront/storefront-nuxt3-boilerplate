@@ -19,10 +19,10 @@
             :alt="alt ?? ''"
             :aria-hidden="activeIndex !== index"
             fit="fill"
-            class="object-contain"
+            class="object-contain h-full"
             :quality="80"
             :src="url"
-            sizes="md:100vw 700px"
+            sizes="2xs:100vw, xs:100vw, sm:100vw, md:700px"
             draggable="false"
           />
         </div>

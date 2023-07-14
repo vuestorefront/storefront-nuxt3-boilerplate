@@ -4,8 +4,7 @@ import { SfProduct } from '@vue-storefront/unified-data-model';
 
 describe('<QuantitySelector />', () => {
   it('should render component', () => {
-    const wrapper = mount(QuantitySelector, {
-    });
+    const wrapper = mount(QuantitySelector);
 
     expect(wrapper.getByTestId('quantity-selector'));
   });

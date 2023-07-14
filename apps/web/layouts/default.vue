@@ -47,11 +47,9 @@
 
 <script lang="ts" setup>
 import { SfBadge, SfButton, SfIconExpandMore, SfIconShoppingCart } from '@storefront-ui/vue';
-import { Breadcrumb } from '~/components/ui/Breadcrumbs/types';
+import type { BreadcrumbsProps } from '~/components/ui/Breadcrumbs/types';
 
-defineProps<{
-  breadcrumbs: Breadcrumb[];
-}>();
+defineProps<BreadcrumbsProps>();
 
 usePageTitle();
 

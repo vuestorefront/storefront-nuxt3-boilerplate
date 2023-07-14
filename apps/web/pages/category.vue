@@ -1,6 +1,6 @@
 <template>
   <NuxtLayout name="default" :breadcrumbs="breadcrumbs">
-    <h1>Category page</h1>
+    <h1>{{ $t('allProducts') }}</h1>
 
     {{ $t('numberOfProducts', 1) }}<br />
     {{ $t('numberOfProducts', 10) }}

@@ -48,13 +48,7 @@
         <span v-else class="font-bold sm:ml-auto sm:order-1 typography-text-sm sm:typography-text-lg">
           ${{ price }}
         </span>
-        <UiQuantitySelector
-          :value="value"
-          :min-value="minValue"
-          :max-value="maxValue"
-          :on-change="() => {}"
-          class="mt-4 sm:mt-0"
-        />
+        <UiQuantitySelector :min-value="minValue" :max-value="maxValue" class="mt-4 sm:mt-0" />
       </div>
     </div>
   </div>

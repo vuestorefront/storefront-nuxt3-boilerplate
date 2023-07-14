@@ -1,4 +1,5 @@
 import type { SfCart } from '@vue-storefront/unified-data-model';
+import { toRefs } from '@vueuse/shared';
 import { sdk } from '~/sdk';
 import type { UseCartReturn, UseCartState, GetCart } from './types';
 

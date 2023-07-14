@@ -67,6 +67,7 @@ export default defineNuxtConfig({
     ],
     '@nuxt/image',
     '@vite-pwa/nuxt',
+    'nuxt-vitest',
   ],
   nitro: {
     prerender: {

@@ -6,7 +6,7 @@
     :back-label-mobile="$t('back')"
     :heading="$t('myCart')"
   >
-    This is the cart page.
+    <CartPageContent />
   </NuxtLayout>
 </template>
 

@@ -21,11 +21,16 @@ export const useContent: UseContentReturn = (url) => {
    */
   const getContent: GetContent = async () => {
     state.value.loading = true;
-    const { data, error } = await useAsyncData(() => sdk.commerce.getContent({ url }));
-    useHandleError(error.value);
-    state.value.data = data.value;
-    state.value.loading = false;
-    return data;
+    try {
+      const { data, error } = await useAsyncData(() => sdk.commerce.getContent({ url }));
+      useHandleError(error.value);
+      state.value.data = data.value;
+      return data;
+    } catch (error) {
+      throw new Error(error as string);
+    } finally {
+      state.value.loading = false;
+    }
   };
 
   return {

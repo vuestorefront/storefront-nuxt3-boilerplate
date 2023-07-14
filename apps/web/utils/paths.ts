@@ -3,6 +3,7 @@ export const paths = {
   category: '/category',
   product: '/product/athletic-mens-walking-sneakers',
   cart: '/cart',
+  checkout: '/checkout',
   search: '/search',
   orderSuccess: '/order/success',
   orderFailed: '/order/failed',

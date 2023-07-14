@@ -64,7 +64,7 @@ const isWideScreen = useMediaQuery('(min-width: 1024px)');
 const isTabletScreen = useMediaQuery('(min-width: 768px)');
 const maxVisiblePages = ref(1);
 
-const setMaxVisiblePages = (value: number) => (maxVisiblePages.value = value ? 5 : 1);
+const setMaxVisiblePages = (isWide: boolean) => (maxVisiblePages.value = isWide ? 5 : 1);
 
 watch(isWideScreen, (value) => setMaxVisiblePages(value));
 onMounted(() => setMaxVisiblePages(isWideScreen.value));

@@ -35,7 +35,7 @@
   <UiFooter />
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 import { SfButton, SfIconArrowBack, SfLoaderCircular } from '@storefront-ui/vue';
 
 const cart = null;

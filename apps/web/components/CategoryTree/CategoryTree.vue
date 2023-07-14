@@ -22,7 +22,7 @@
   </ul>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 import { SfIconArrowBack } from '@storefront-ui/vue';
 import type { CategoryTreeProps } from '~/components/CategoryTree/types';
 

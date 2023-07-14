@@ -45,7 +45,7 @@
   <UiFooter />
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 import { SfBadge, SfButton, SfIconExpandMore, SfIconShoppingCart } from '@storefront-ui/vue';
 import { DefaultLayoutProps } from '~/layouts/types';
 

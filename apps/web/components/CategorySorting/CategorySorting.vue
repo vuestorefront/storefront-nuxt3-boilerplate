@@ -13,7 +13,7 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 import { SfSelect } from '@storefront-ui/vue';
 
 const options = ref([

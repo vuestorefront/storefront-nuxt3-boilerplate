@@ -81,7 +81,7 @@
   </footer>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 import { SfButton, SfLink, SfListItem } from '@storefront-ui/vue';
 import { bottomLinks, categories, companyName, contactOptions, socialMedia } from '~/mocks';
 

@@ -33,7 +33,7 @@
       </SfButton>
     </nav>
   </UiNavbarTop>
-  <NarrowContainer v-if="breadcrumbs > 0">
+  <NarrowContainer v-if="breadcrumbs">
     <div class="p-4 md:px-0">
       <LazyUiBreadcrumbs :breadcrumbs="breadcrumbs" />
     </div>
@@ -47,9 +47,9 @@
 
 <script lang="ts" setup>
 import { SfBadge, SfButton, SfIconExpandMore, SfIconShoppingCart } from '@storefront-ui/vue';
-import type { BreadcrumbsProps } from '~/components/ui/Breadcrumbs/types';
+import { DefaultLayoutProps } from '~/layouts/types';
 
-defineProps<BreadcrumbsProps>();
+defineProps<DefaultLayoutProps>();
 
 usePageTitle();
 

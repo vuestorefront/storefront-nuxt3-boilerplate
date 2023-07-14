@@ -3,6 +3,7 @@
     buttons-placement="floating"
     class="items-center pb-4"
     wrapper-class="max-w-screen-3xl mx-auto px-4 md:px-10 mb-20"
+    data-testid="product-slider"
   >
     <UiProductCard
       v-for="product in items"

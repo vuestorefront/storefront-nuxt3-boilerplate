@@ -6,6 +6,6 @@ export default defineVitestConfig({
     globals: true,
     setupFiles: './vue-test-utils.extend.js',
     exclude: ['**/node_modules/**', '__tests__/**'],
-    include: ['**/*.spec.ts'],
+    include: ['**/*/?(*.)+(spec|test).[jt]s'],
   },
 });

@@ -26,3 +26,6 @@ config.plugins.VueWrapper.install(GetTestIdPlugin);
 config.global.mocks = {
   $t: (key) => key,
 };
+config.global.stubs = {
+  RouterLink: true,
+};

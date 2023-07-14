@@ -22,3 +22,7 @@ const GetTestIdPlugin = (wrapper) => {
 
 config.plugins.VueWrapper.install(FindTestIdPlugin);
 config.plugins.VueWrapper.install(GetTestIdPlugin);
+
+config.global.mocks = {
+  $t: (key) => key,
+};

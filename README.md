@@ -1,6 +1,6 @@
 ## Prerequisites:
 
-- `Node.js` 16+
+- `Node.js` 20+
 - `Yarn` 3
 
 ### Local dev setup

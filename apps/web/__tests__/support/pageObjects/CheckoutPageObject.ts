@@ -14,6 +14,7 @@ export class CheckoutPageObject {
   get addShippingAddressButton() {
     return cy.getByTestId('button').contains('Add shipping address');
   }
+
   get contactInformationForm() {
     return cy.getByTestId('contact-information-form').find('input');
   }
@@ -81,54 +82,65 @@ export class CheckoutPageObject {
   get postalCodeInput() {
     return cy.getByTestId('input').find('input[name="postalCode"]');
   }
-  goToCheckout(): void {
+  
+  goToCheckout() {
     this.goToCheckoutButton.click();
+    return this;
   }
 
-  addContactInformation(): void {
+  addContactInformation() {
     this.addContactInformationButton.eq(0).should('have.text', 'Add contact information').click();
     this.modal.should('be.visible');
+    return this;
   }
 
-  addBillingAddress(): void {
+  addBillingAddress() {
     this.addBillingAddressButton.eq(0).should('have.text', 'Add billing address').click();
     this.modal.should('be.visible');
+    return this;
   }
 
-  addShippingAddress(): void {
+  addShippingAddress() {
     this.addShippingAddressButton.eq(0).should('have.text', 'Add shipping address').click();
     this.modal.should('be.visible');
+    return this;
   }
 
-  placeOrderButton(): void {
+  placeOrderButton() {
     this.placeOrderButtons.click();
+    return this;
   }
 
-  displaySuccessPage(): void {
+  displaySuccessPage() {
     this.displaySuccessPages.should('be.visible');
     this.thankYouBanner;
+    return this;
   }
-  fillContactInformationForm(): void {
+
+  fillContactInformationForm() {
     cy.contains('Product has been added to the cart.').should('not.exist');
     cy.getFixture('addressForm').then((fixture) => {
       this.contactInformationForm.type(fixture.email);
       this.contactInformationFormSaveButton.click().should('not.exist');
     });
+    return this;
   }
 
-  fillBillingAddressForm(): void {
+  fillBillingAddressForm() {
     cy.getFixture('addressForm').then((fixture) => {
       this.fillForm(fixture);
     });
+    return this;
   }
 
-  fillShippingAddressForm(): void {
+  fillShippingAddressForm() {
     cy.getFixture('addressForm').then((fixture) => {
       this.fillForm(fixture);
     });
+    return this;
   }
 
-  fillForm(fixture: any): void {
+  fillForm(fixture: any) {
     this.firstNameInput.type(fixture.name);
     this.lastNameInput.type(fixture.lastName);
     this.phoneInput.type(fixture.phone);
@@ -139,5 +151,6 @@ export class CheckoutPageObject {
     this.stateSelect.select(fixture.region);
     this.postalCodeInput.type(fixture.zipCode);
     this.modalSaveButton.click();
+    return this;
   }
 }

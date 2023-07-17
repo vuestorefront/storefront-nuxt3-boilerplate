@@ -5,6 +5,7 @@ const productListPage = new ProductListPageObject();
 beforeEach(() => {
   cy.visit('/category');
 });
+
 describe('Smoke: Product List Page', function () {
   context('Displaying products and categories', () => {
     it.skip('[smoke] User should be able to see the products as list and grid', () => {

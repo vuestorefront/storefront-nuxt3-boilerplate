@@ -21,31 +21,49 @@ export class HomePageObject {
     return cy.getByTestId('button').contains('Browse products');
   }
 
+  get baseUrl() {
+    return Cypress.config('baseUrl');
+  }
+
   assertHeader(): void {
     this.header.should('be.visible');
   }
-  visit(): void {
+  
+  visit() {
     cy.visit('/');
+    return this;
   }
-  checkPrimaryButton(): void {
+
+  checkPrimaryButton() {
     this.primaryButton.should('have.text', 'Order now').click();
-    cy.url().should('eq', `${Cypress.config('baseUrl')}/product/athletic-mens-walking-sneakers`);
+    cy.url().should('eq', `${this.baseUrl}/product/athletic-mens-walking-sneakers`);
+    return this;
   }
-  checkSecondaryButton(): void {
+
+  checkSecondaryButton() {
     this.secondaryButton.should('have.text', 'Show more').click();
-    cy.url().should('eq', `${Cypress.config('baseUrl')}/category`);
+    cy.url().should('eq', `${this.baseUrl}/category`);
+    return this;
   }
-  checkCategoryCard(): void {
+
+  checkCategoryCard() {
     this.categoryCard.should('be.visible');
+    return this;
   }
-  checkBanners(): void {
+
+  checkBanners() {
     this.banners.should('be.visible');
+    return this;
   }
-  checkProductCard(): void {
+
+  checkProductCard() {
     this.productCard.should('be.visible');
+    return this;
   }
-  checkHeaderCategory(): void {
+
+  checkHeaderCategory() {
     this.headerButton.should('have.text', 'Browse products').click();
-    cy.url().should('eq', `${Cypress.config('baseUrl')}/category`);
+    cy.url().should('eq', `${this.baseUrl}/category`);
+    return this;
   }
 }

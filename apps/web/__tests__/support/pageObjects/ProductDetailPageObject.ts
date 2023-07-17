@@ -25,11 +25,12 @@ export class ProductDetailPageObject {
     return cy.getByTestId('price');
   }
 
-  displayCheck(): void {
+  displayCheck() {
     cy.getFixture('products').then((fixture) => {
       cy.visit(fixture.url);
       this.assertProductDetailPageElements(fixture);
     });
+    return this;
   }
 
   assertProductDetailPageElements(data: Product) {
@@ -39,5 +40,6 @@ export class ProductDetailPageObject {
     this.productPriceValue.should('have.text', data.currency + data.price.toFixed(2));
     this.quantitySelector.should('be.visible');
     this.addToCartButton.should('be.visible');
+    return this;
   }
 }

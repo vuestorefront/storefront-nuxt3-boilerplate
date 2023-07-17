@@ -21,7 +21,7 @@ export class ProductListPageObject {
     return cy.getByTestId('category-layout').find('h1');
   }
 
-  assertProductListElements(): void {
+  assertProductListElements() {
     this.products.each((product) => {
       cy.wrap(product).as('product');
       cy.get('@product').find(`[data-testid="image-slot"]`).should('be.visible');
@@ -29,37 +29,39 @@ export class ProductListPageObject {
       cy.get('@product').find(`[data-testid="product-card-vertical-price"]`).should('be.visible');
       cy.get('@product').find(`[data-testid="button"]`).should('be.visible');
     });
+    return this;
   }
 
-  assertFirstProduct(): void {
+  assertFirstProduct() {
     this.products.first().then((product) => {
-      let name;
-      let price;
       cy.wrap(product).as('product');
 
       cy.get('@product')
         .find(`[data-testid="link"]`)
         .then((productLink) => {
-          name = productLink.text().trim().replace(/\\n/g, ' ');
+          productLink.text().trim().replace(/\\n/g, ' ');
         })
         .then(() => {
           cy.get('@product')
             .find(`[data-testid="product-card-vertical-price"]`)
             .then((productPrice) => {
-              price = productPrice.text().trim().replace(/\\n/g, ' ');
+             productPrice.text().trim().replace(/\\n/g, ' ');
             })
             .then(() => {
               cy.get('@product').click();
             });
         });
     });
+    return this;
   }
 
-  assertGridView(): void {
+  assertGridView() {
     this.categoryGrid.should('be.visible');
     this.categoryGrid.find(`[data-testid="product-card"]`).should('have.length', productsAmount);
+    return this;
   }
-  openFirstCategory(): void {
+
+  openFirstCategory() {
     this.categories.first().then((firstCategory) => {
       cy.wrap(firstCategory).as('category');
       cy.get('@category')
@@ -70,5 +72,7 @@ export class ProductListPageObject {
           this.categoryHeader.should('have.text', 'All products');
         });
     });
+    return this;
   }
+  
 }

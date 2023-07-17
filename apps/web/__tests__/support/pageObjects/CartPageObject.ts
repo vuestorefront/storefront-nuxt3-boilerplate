@@ -40,14 +40,18 @@ export class CartPageObject {
   get cartItem() {
     return cy.getByTestId('link');
   }
+  
   get cartIcon() {
     return cy.getByTestId('navbar-top').find('[data-testid="shopping-cart"]');
   }
-  checkCart(): void {
+
+  checkCart() {
     cy.getFixture('products').then((fixture) => {
       this.assertCartPreviewElements(fixture, 1);
       this.cartItem.should('have.text', fixture.name);
+      return this;
     });
+    
   }
 
   assertCartPreviewElements(data: Product, expectedElements: number) {
@@ -56,9 +60,12 @@ export class CartPageObject {
     this.subtotalPrice.should('have.text', `${data.currency}${data.price.toFixed(2)}`);
     this.totalPrice.should('have.text', `${data.currency}${data.price.toFixed(2)}`);
     this.promoCodeInput.should('be.visible');
+    return this;
   }
 
-  openCart(): void {
+  openCart() {
     this.cartIcon.click();
+    return this;
+    
   }
 }

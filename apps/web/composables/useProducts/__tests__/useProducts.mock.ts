@@ -1,4 +1,4 @@
-import { GetProducts } from '@vue-storefront/storefront-boilerplate-sdk';
+import type { GetProducts } from '@vue-storefront/storefront-boilerplate-sdk';
 
 export const mockProducts: GetProducts = {
   products: [

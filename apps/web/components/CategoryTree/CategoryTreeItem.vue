@@ -24,7 +24,7 @@
 
 <script setup lang="ts">
 import { SfCounter, SfIconCheck, SfListItem } from '@storefront-ui/vue';
-import { CategoryTreeItemType } from '~/components/CategoryTree/types';
+import type { CategoryTreeItemType } from '~/components/CategoryTree/types';
 
 defineProps<CategoryTreeItemType>();
 </script>

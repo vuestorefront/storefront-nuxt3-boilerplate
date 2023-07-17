@@ -24,7 +24,7 @@
 </template>
 
 <script setup lang="ts">
-import { CategoryFiltersProps } from '~/components/CategoryFilters/types';
+import type { CategoryFiltersProps } from '~/components/CategoryFilters/types';
 
 const props = defineProps<CategoryFiltersProps>();
 const { facets } = toRefs(props);

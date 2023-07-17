@@ -65,7 +65,7 @@
     </div>
     <div class="flex mt-4">
       <SfIconWarehouse size="sm" class="flex-shrink-0 mr-1 text-neutral-500" />
-      <p className="text-sm">
+      <p class="text-sm">
         <i18n-t keypath="additionalInfo.pickup">
           <template #checkAvailability>
             <SfLink href="#" variant="secondary">{{ $t('additionalInfo.checkAvailability') }}</SfLink>
@@ -74,7 +74,7 @@
       </p>
     </div>
     <div class="flex mt-4">
-      <p className="text-sm">
+      <p class="text-sm">
         <SfIconSafetyCheck size="sm" class="flex-shrink-0 mr-1 text-neutral-500" />
         <i18n-t keypath="additionalInfo.returns">
           <template #details>

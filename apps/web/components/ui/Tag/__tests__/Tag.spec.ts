@@ -5,6 +5,6 @@ describe('<Tag />', () => {
   it('should render component', () => {
     const wrapper = mount(Tag);
 
-    expect(wrapper.findByTestId('tag').exists()).toBeTruthy();
+    expect(wrapper.getByTestId('tag'));
   });
 });

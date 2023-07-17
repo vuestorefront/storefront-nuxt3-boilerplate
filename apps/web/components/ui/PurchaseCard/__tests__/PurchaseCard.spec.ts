@@ -10,6 +10,6 @@ describe('<PurchaseCard />', () => {
       },
     });
 
-    expect(wrapper.findByTestId('purchase-card').exists()).toBeTruthy();
+    expect(wrapper.getByTestId('purchase-card'));    
   });
 });

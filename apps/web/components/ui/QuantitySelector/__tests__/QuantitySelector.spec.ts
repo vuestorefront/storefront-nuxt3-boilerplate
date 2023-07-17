@@ -10,6 +10,6 @@ describe('<QuantitySelector />', () => {
         value,
       },
     });
-    expect(wrapper.findByTestId('quantity-selector').exists()).toBeTruthy();
+    expect(wrapper.getByTestId('quantity-selector'));
   });
 });

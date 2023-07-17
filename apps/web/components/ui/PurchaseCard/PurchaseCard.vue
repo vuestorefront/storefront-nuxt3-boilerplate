@@ -63,9 +63,9 @@
         </i18n-t>
       </p>
     </div>
-    <div class="mt-4">
+    <div class="flex mt-4">
+      <SfIconWarehouse size="sm" class="flex-shrink-0 mr-1 text-neutral-500" />
       <p className="text-sm">
-        <SfIconWarehouse size="sm" class="flex-shrink-0 mr-1 text-neutral-500" />
         <i18n-t keypath="additionalInfo.pickup">
           <template #checkAvailability>
             <SfLink href="#" variant="secondary">{{ $t('additionalInfo.checkAvailability') }}</SfLink>

@@ -8,14 +8,14 @@ describe('Smoke: Checkout Page', () => {
   it.skip('[smoke] Display checkout and place order', () => {
     cy.visit('/');
     cart.openCart();
-    checkout.goToCheckout();
-    checkout.addContactInformation();
-    checkout.fillContactInformationForm();
-    checkout.addBillingAddress();
-    checkout.fillBillingAddressForm();
-    checkout.addShippingAddress();
-    checkout.fillShippingAddressForm();
-    checkout.placeOrderButton();
-    checkout.displaySuccessPage();
+    checkout.goToCheckout()
+            .addContactInformation()
+            .fillContactInformationForm()
+            .addBillingAddress()
+            .fillBillingAddressForm()
+            .addShippingAddress()
+            .fillShippingAddressForm()
+            .placeOrderButton()
+            .displaySuccessPage();
   });
 });

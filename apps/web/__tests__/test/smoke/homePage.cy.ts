@@ -15,9 +15,9 @@ describe('Smoke: Homepage', () => {
       homePage.checkSecondaryButton();
     });
     it('[smoke] Check if elements display properly', () => {
-      homePage.checkCategoryCard();
-      homePage.checkBanners();
-      homePage.checkProductCard();
+      homePage.checkCategoryCard()
+              .checkBanners()
+              .checkProductCard();
     });
     it('[smoke] Check if Categories button is working ', () => {
       homePage.checkHeaderCategory();

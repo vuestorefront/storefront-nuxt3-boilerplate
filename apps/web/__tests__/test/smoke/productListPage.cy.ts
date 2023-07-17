@@ -22,8 +22,8 @@ describe('Smoke: Product List Page', function () {
   context('Product details and actions', () => {
       it.skip('[smoke] User should see the product information', () => {
         // ASSERT - product details are displayed
-        productListPage.assertProductListElements();
-        productListPage.assertFirstProduct();
+        productListPage.assertProductListElements()
+                       .assertFirstProduct();
       });
     });
 });

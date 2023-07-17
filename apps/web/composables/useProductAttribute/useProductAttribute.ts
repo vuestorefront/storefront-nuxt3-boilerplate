@@ -5,6 +5,7 @@ import { groupBy, uniqBy } from 'lodash-es';
 /**
  * composable for getting product attributes data
  * @param {SfProduct} product Product object
+ * @param {TAttribute} attributesNames get specific product attributes
  */
 export function useProductAttribute<TAttribute extends string>(product: SfProduct, attributesNames: TAttribute[] = []) {
   const attributes = groupBy(

@@ -1,6 +1,6 @@
 <template>
   <div class="px-4" data-testid="product-properties">
-    <fieldset v-if="sizes?.length" class="pb-2">
+    <fieldset v-if="sizes?.length" class="pb-4">
       <legend class="block mb-2 text-base font-medium leading-6 text-neutral-900">{{ $t('size') }}</legend>
       <span v-for="{ label, value } in sizes" class="mr-2 mb-2 uppercase" :key="value">
         <SfChip

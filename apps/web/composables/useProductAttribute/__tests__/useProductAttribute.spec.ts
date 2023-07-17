@@ -1,5 +1,5 @@
 import { useProductAttribute } from '../useProductAttribute';
-import { mockProduct } from './useProduct';
+import { mockProduct } from './useProduct.mock';
 
 describe('useProductAttribute', () => {
   it('should return product attributes', () => {

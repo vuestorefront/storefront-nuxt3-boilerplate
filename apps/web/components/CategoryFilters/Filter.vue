@@ -12,7 +12,7 @@
           size="sm"
           :input-props="{ value: value }"
           :model-value="isItemActive(value)"
-          @update:model-value="emit('update:selected', value)"
+          @update:model-value="$emit('update:selected', value)"
         >
           <span class="leading-4">{{ value }}</span>
         </SfChip>
@@ -26,7 +26,7 @@
         size="sm"
         :class="['px-1.5 bg-transparent hover:bg-transparent', { 'font-medium': isItemActive(value) }]"
         :selected="isItemActive(value)"
-        @click="emit('update:selected', value)"
+        @click="$emit('update:selected', value)"
       >
         <template #prefix>
           <input :checked="isItemActive(value)" :value="value" class="appearance-none peer" type="checkbox" />
@@ -50,7 +50,7 @@ import { SfAccordionItem, SfChip, SfCounter, SfIconChevronLeft, SfListItem, SfTh
 import type { FilterEmits, FilterProps } from '~/components/CategoryFilters/types';
 
 const props = defineProps<FilterProps>();
-const emit = defineEmits<FilterEmits>();
+defineEmits<FilterEmits>();
 
 const open = ref(true);
 

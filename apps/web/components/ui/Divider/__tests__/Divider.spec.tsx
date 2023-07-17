@@ -3,8 +3,8 @@ import Divider from '~/components/ui/Divider/Divider.vue';
 
 describe('<Divider />', () => {
   it('should render component', () => {
-    const wrapper = mount(Divider);
+    const { getByTestId } = mount(Divider);
 
-    expect(wrapper.findByTestId('divider').exists()).toBeTruthy();
+    expect(getByTestId('divider'));
   });
 });

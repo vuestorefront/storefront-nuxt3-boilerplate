@@ -5,7 +5,6 @@ export default defineVitestConfig({
     environment: 'nuxt',
     globals: true,
     setupFiles: './vue-test-utils.extend.js',
-    exclude: ['**/node_modules/**', '__tests__/**'],
     include: ['**/*/?(*.)+(spec|test).[jt]s'],
   },
 });

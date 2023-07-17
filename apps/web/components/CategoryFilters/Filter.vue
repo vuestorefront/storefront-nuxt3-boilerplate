@@ -47,7 +47,7 @@
 
 <script setup lang="ts">
 import { SfAccordionItem, SfChip, SfCounter, SfIconChevronLeft, SfListItem, SfThumbnail } from '@storefront-ui/vue';
-import { FilterEmits, FilterProps } from '~/components/CategoryFilters/types';
+import type { FilterEmits, FilterProps } from '~/components/CategoryFilters/types';
 
 const props = defineProps<FilterProps>();
 const emit = defineEmits<FilterEmits>();

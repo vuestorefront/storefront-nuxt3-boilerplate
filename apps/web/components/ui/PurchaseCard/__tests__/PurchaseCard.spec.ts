@@ -8,13 +8,8 @@ describe('<PurchaseCard />', () => {
       props: {
         product: {} as SfProduct,
       },
-      global: {
-        mocks: {
-          $t: (translation: string) => translation
-        }
-      }
     });
 
-    expect(wrapper.getByTestId('purchase-card'));
+    expect(wrapper.findByTestId('purchase-card').exists()).toBeTruthy();
   });
 });

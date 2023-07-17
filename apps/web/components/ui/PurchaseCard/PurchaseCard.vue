@@ -32,7 +32,7 @@
         {{ $t('numberInCart', { count: 1 }) }}
       </UiTag>
       <div class="flex flex-col md:flex-row flex-wrap gap-4">
-        <UiQuantitySelector class="min-w-[145px] flex-grow flex-shrink-0 basis-0" />
+        <UiQuantitySelector :value="quantitySelectorValue" class="min-w-[145px] flex-grow flex-shrink-0 basis-0" />
         <SfButton type="button" size="lg" class="flex-grow-[2] flex-shrink basis-auto whitespace-nowrap">
           <template #prefix>
             <SfIconShoppingCart size="sm" />
@@ -99,8 +99,11 @@ import {
   SfIconFavorite,
   SfIconSell,
   SfIconShoppingCartCheckout,
+  SfIconShoppingCart,
 } from '@storefront-ui/vue';
 import type { PurchaseCardProps } from '~/components/ui/PurchaseCard/types';
 
 defineProps<PurchaseCardProps>();
+
+const quantitySelectorValue = ref(1);
 </script>

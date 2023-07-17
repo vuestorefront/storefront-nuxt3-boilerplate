@@ -1,11 +1,15 @@
 import { mount } from '@vue/test-utils';
 import QuantitySelector from '~/components/ui/QuantitySelector/QuantitySelector.vue';
-import { SfProduct } from '@vue-storefront/unified-data-model';
+
+const value = 1;
 
 describe('<QuantitySelector />', () => {
   it('should render component', () => {
-    const wrapper = mount(QuantitySelector);
-
-    expect(wrapper.getByTestId('quantity-selector'));
+    const wrapper = mount(QuantitySelector, {
+      props: {
+        value,
+      },
+    });
+    expect(wrapper.findByTestId('quantity-selector').exists()).toBeTruthy();
   });
 });

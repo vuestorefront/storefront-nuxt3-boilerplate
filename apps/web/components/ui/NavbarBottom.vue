@@ -51,6 +51,7 @@ import {
 
 const router = useRouter();
 const { isOpen, open, close } = useDisclosure({ initialValue: false });
+const { data: cart } = useCart();
 
 const items = [
   {
@@ -74,7 +75,9 @@ const items = [
     path: paths.cart,
   },
 ];
-const cartLineItemsCount = computed(() => 1);
+const cartLineItemsCount = computed(
+  () => cart.value?.lineItems.reduce((total, { quantity }) => total + quantity, 0) ?? 0,
+);
 const handleClick = (path: string) => {
   if (path === paths.search) {
     open();

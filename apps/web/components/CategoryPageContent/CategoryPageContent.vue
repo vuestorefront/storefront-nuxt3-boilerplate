@@ -53,7 +53,7 @@
 <script setup lang="ts">
 import { SfButton, SfIconTune, useDisclosure } from '@storefront-ui/vue';
 import { useMediaQuery } from '@vueuse/core';
-import { CategoryPageContentProps } from '~/components/CategoryPageContent/types';
+import type { CategoryPageContentProps } from '~/components/CategoryPageContent/types';
 
 withDefaults(defineProps<CategoryPageContentProps>(), {
   itemsPerPage: 24,

@@ -17,7 +17,7 @@
         <UiDivider class="mt-4 mb-2" />
       </div>
       <section class="mx-4 mt-28 mb-20">
-        <!-- RecommendedProducts -->
+        <RecommendedProducts v-if="recommendedProducts" :products="recommendedProducts" />
       </section>
     </NarrowContainer>
   </NuxtLayout>
@@ -29,8 +29,10 @@ import { useI18n } from 'vue-i18n';
 const route = useRoute();
 const slug = route.params.slug as string;
 const { data: product, fetchProduct } = useProduct(slug);
+const { data: recommendedProducts, fetchProductRecommended } = useProductRecommended(slug);
 
 fetchProduct(slug);
+fetchProductRecommended(slug);
 
 const { t } = useI18n();
 

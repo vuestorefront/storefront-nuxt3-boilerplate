@@ -60,8 +60,8 @@ withDefaults(defineProps<CategoryPageContentProps>(), {
 });
 
 const { isOpen, open, close } = useDisclosure();
-const isWideScreen = useMediaQuery('(min-width: 1024px)');
-const isTabletScreen = useMediaQuery('(min-width: 768px)');
+const isTabletScreen = useMediaQuery(mediaQueries.tablet);
+const isWideScreen = useMediaQuery(mediaQueries.desktop);
 const maxVisiblePages = ref(1);
 
 const setMaxVisiblePages = (isWide: boolean) => (maxVisiblePages.value = isWide ? 5 : 1);

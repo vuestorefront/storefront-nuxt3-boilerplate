@@ -40,9 +40,8 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, ref, toRefs } from 'vue';
 import { SfRating, SfIconCheck, SfIconThumbUp, SfIconThumbDown, SfCounter } from '@storefront-ui/vue';
-import { SfProductReview } from '@vue-storefront/unified-data-model';
+import type { SfProductReview } from '@vue-storefront/unified-data-model';
 
 const props = defineProps<{
   review: SfProductReview;

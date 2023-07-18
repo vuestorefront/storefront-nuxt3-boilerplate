@@ -1,10 +1,10 @@
 <template>
-  <span
-    class="block py-2 px-4 mb-4 bg-neutral-100 typography-headline-6 font-bold text-neutral-900 uppercase tracking-widest md:rounded-md"
+  <div
+    class="py-2 px-4 mb-4 bg-neutral-100 typography-headline-6 font-bold text-neutral-900 uppercase tracking-widest md:rounded-md"
     data-testid="category-tree"
   >
     {{ $t('category') }}
-  </span>
+  </div>
   <template v-if="parent">
     <CategoryTreeItem :name="parent.name" :href="parent.href" :count="parent.count">
       <SfIconArrowBack size="sm" class="text-neutral-500 mr-2" />

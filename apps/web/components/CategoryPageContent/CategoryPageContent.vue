@@ -59,7 +59,7 @@ withDefaults(defineProps<CategoryPageContentProps>(), {
   itemsPerPage: 24,
 });
 
-const { isOpen, open, close } = useDisclosure({ initialValue: false });
+const { isOpen, open, close } = useDisclosure();
 const isWideScreen = useMediaQuery('(min-width: 1024px)');
 const isTabletScreen = useMediaQuery('(min-width: 768px)');
 const maxVisiblePages = ref(1);

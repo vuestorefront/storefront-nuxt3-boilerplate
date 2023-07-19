@@ -5,7 +5,7 @@
       <SfInput name="email" type="email" v-model="cart.customerEmail" required />
     </label>
     <div class="mt-4 flex md:justify-end">
-      <SfButton type="reset" class="max-md:w-1/2 mr-4" variant="secondary" @click="setDefaultEmail">
+      <SfButton type="reset" class="max-md:w-1/2 mr-4" variant="secondary" @click="$emit('on-cancel')">
         {{ $t('contactInfo.cancel') }}
       </SfButton>
       <SfButton type="submit" class="max-md:w-1/2"> {{ $t('contactInfo.save') }} </SfButton>
@@ -16,9 +16,8 @@
 import { SfButton, SfInput } from '@storefront-ui/vue';
 import FormLabel from '../ui/Form/FormLabel.vue';
 
-defineEmits(['on-save']);
+defineEmits(['on-save', 'on-cancel']);
 const cart = ref({
   customerEmail: '',
 });
-const setDefaultEmail = () => (cart.customerEmail = '');
 </script>

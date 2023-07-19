@@ -31,7 +31,7 @@
             {{ $t('contactInfo.heading') }}
           </h3>
         </header>
-        <ContactInformationForm @on-save="close" />
+        <ContactInformationForm @on-save="close" @on-cancel="close" />
       </SfModal>
     </Overlay>
   </div>

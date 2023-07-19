@@ -6,7 +6,7 @@
     </label>
     <div class="mt-4 flex md:justify-end">
       <SfButton type="reset" class="max-md:w-1/2 mr-4" variant="secondary" @click="setDefaultEmail">
-        {{ $t('contactInfo.clearAll') }}
+        {{ $t('contactInfo.cancel') }}
       </SfButton>
       <SfButton type="submit" class="max-md:w-1/2"> {{ $t('contactInfo.save') }} </SfButton>
     </div>

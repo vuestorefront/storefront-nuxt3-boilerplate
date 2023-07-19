@@ -31,8 +31,8 @@ const slug = route.params.slug as string;
 const { data: product, fetchProduct } = useProduct(slug);
 const { data: recommendedProducts, fetchProductRecommended } = useProductRecommended(slug);
 
-fetchProduct(slug);
-fetchProductRecommended(slug);
+await fetchProduct(slug);
+await fetchProductRecommended(slug);
 
 const { t } = useI18n();
 

@@ -1,5 +1,5 @@
 <template>
-  <p data-testid="recommended-products" class="my-4 typography-text-lg font-body">
+  <p data-testid="recommended-products" class="my-4 typography-text-lg">
     {{ $t('recommendedProducts') }}
   </p>
   <ProductSlider :items="products" />

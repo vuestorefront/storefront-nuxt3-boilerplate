@@ -2,7 +2,7 @@
   <SfScrollable
     buttons-placement="floating"
     class="items-center pb-4"
-    :wrapper-class="$attrs.class || []"
+    :wrapper-class="wrapperClass"
     data-testid="product-slider"
   >
     <UiProductCard

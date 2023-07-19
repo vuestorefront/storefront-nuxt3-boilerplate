@@ -15,7 +15,7 @@
         {{ $t('contactInfo.add') }}
       </SfButton>
     </div>
-    <Overlay :visible="isOpen">
+    <UiOverlay :visible="isOpen">
       <SfModal
         v-model="isOpen"
         as="section"
@@ -33,12 +33,11 @@
         </header>
         <ContactInformationForm @on-save="close" @on-cancel="close" />
       </SfModal>
-    </Overlay>
+    </UiOverlay>
   </div>
 </template>
 <script lang="ts" setup>
 import { SfButton, SfIconClose, SfModal, useDisclosure } from '@storefront-ui/vue';
-import Overlay from '../ui/Overlay/Overlay.vue';
 
 const { isOpen, open, close } = useDisclosure();
 

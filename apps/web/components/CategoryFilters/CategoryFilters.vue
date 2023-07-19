@@ -6,20 +6,8 @@
     {{ $t('filters') }}
   </div>
   <div class="flex flex-col gap-2">
-    <CategoryFiltersFilter
-      v-if="sizeFacets"
-      :facet="sizeFacets"
-      :selected="selectedFilters"
-      @update:selected="handleFilterSelection"
-      type="size"
-    />
-    <CategoryFiltersFilter
-      v-if="colorFacets"
-      :facet="colorFacets"
-      :selected="selectedFilters"
-      @update:selected="handleFilterSelection"
-      type="color"
-    />
+    <CategoryFiltersFilter v-if="sizeFacets" :facet="sizeFacets" v-model:selected="selectedFilters" type="size" />
+    <CategoryFiltersFilter v-if="colorFacets" :facet="colorFacets" v-model:selected="selectedFilters" type="color" />
   </div>
 </template>
 
@@ -31,9 +19,4 @@ const { facets } = toRefs(props);
 const selectedFilters = ref<string[]>([]);
 const colorFacets = computed(() => facets.value.find(({ name }) => name === 'color'));
 const sizeFacets = computed(() => facets.value.find(({ name }) => name === 'size'));
-
-const handleFilterSelection = (currentValue: string) =>
-  selectedFilters.value.includes(currentValue)
-    ? (selectedFilters.value = selectedFilters.value.filter((value) => value !== currentValue))
-    : (selectedFilters.value = [...selectedFilters.value, currentValue]);
 </script>

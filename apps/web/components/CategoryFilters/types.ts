@@ -11,5 +11,5 @@ export type FilterProps = {
 };
 
 export type FilterEmits = {
-  (event: 'update:selected', parameter: string): void;
+  (event: 'update:selected', parameter: FilterProps['selected']): void;
 };

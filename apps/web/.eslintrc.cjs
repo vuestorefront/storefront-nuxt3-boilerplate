@@ -7,7 +7,13 @@ module.exports = {
   },
   rules: {
     complexity: 0,
-    'max-len': ['warn', { code: 120, ignoreStrings: true, ignoreUrls: true, ignoreTemplateLiterals: true }],
+    'vue/max-len': ['warn', {
+      code: 120,
+      ignoreStrings: true,
+      ignoreUrls: true,
+      ignoreTemplateLiterals: true,
+      ignoreHTMLAttributeValues: true
+    }],
     'max-lines-per-function': 'off',
     'unicorn/no-keyword-prefix': ['error', { disallowedPrefixes: ['new', 'for'] }],
     'no-secrets/no-secrets': 'off',

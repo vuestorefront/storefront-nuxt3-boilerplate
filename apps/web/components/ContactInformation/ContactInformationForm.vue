@@ -1,7 +1,7 @@
 <template>
   <form data-testid="contact-information-form" @submit.prevent="$emit('on-save')">
     <label>
-      <FormLabel>{{ $t('contactInfo.email') }}</FormLabel>
+      <UiFormLabel>{{ $t('contactInfo.email') }}</UiFormLabel>
       <SfInput name="email" type="email" v-model="cart.customerEmail" required />
     </label>
     <div class="mt-4 flex md:justify-end">
@@ -14,7 +14,6 @@
 </template>
 <script setup>
 import { SfButton, SfInput } from '@storefront-ui/vue';
-import FormLabel from '../ui/Form/FormLabel.vue';
 
 defineEmits(['on-save', 'on-cancel']);
 const cart = ref({

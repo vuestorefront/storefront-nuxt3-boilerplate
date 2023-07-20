@@ -3,8 +3,9 @@ import ContactInformationForm from '~/components/ContactInformation/ContactInfor
 
 describe('<ContactInformationForm />', () => {
   it('should render component', () => {
-    const wrapper = mount(ContactInformationForm);
 
-    expect(wrapper.getByTestId('contact-information-form'));    
+    const { getByTestId } = mount(ContactInformationForm);
+
+    expect(getByTestId('contact-information-form'));   
   });
 });

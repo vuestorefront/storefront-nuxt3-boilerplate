@@ -3,8 +3,8 @@ import FormLabel from '~/components/ui/Form/FormLabel.vue';
 
 describe('<FormLabel />', () => {
   it('should render component', () => {
-    const wrapper = mount(FormLabel);
+    const { getByTestId } = mount(FormLabel);
 
-    expect(wrapper.getByTestId('form-label'));
+    expect(getByTestId('form-label')); 
   });
 });

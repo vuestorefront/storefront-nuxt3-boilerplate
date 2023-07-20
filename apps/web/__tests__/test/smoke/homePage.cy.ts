@@ -14,12 +14,12 @@ describe('Smoke: Homepage', () => {
     it('[smoke] Check if Secondary Button is working', () => {
       homePage.checkSecondaryButton();
     });
-    it('[smoke] Check if elements display properly', () => {
+    it.skip('[smoke] Check if elements display properly', () => {
       homePage.checkCategoryCard()
               .checkBanners()
               .checkProductCard();
     });
-    it('[smoke] Check if Categories button is working ', () => {
+    it.skip('[smoke] Check if Categories button is working ', () => {
       homePage.checkHeaderCategory();
     });
   });

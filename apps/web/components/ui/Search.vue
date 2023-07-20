@@ -1,6 +1,6 @@
 <template>
   <form ref="referenceRef" role="search" class="relative" @submit.prevent="handleSubmit">
-    <SfInput ref="inputRef" v-model="inputModel" aria-label="Search" placeholder="Search" @focus="open">
+    <SfInput ref="inputReference" v-model="inputModel" aria-label="Search" placeholder="Search" @focus="open">
       <template #prefix>
         <SfIconSearch />
       </template>
@@ -32,9 +32,9 @@ const router = useRouter();
 const { open } = useDisclosure();
 
 const inputModel = ref('');
-const inputRef = ref();
+const inputReference = ref();
 const handleInputFocus = () => {
-  const inputElement = unrefElement(inputRef)?.querySelector('input');
+  const inputElement = unrefElement(inputReference)?.querySelector('input');
   inputElement?.focus();
 };
 const handleReset = () => {

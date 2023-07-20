@@ -8,7 +8,7 @@
         :active-index="activeIndex"
         is-active-index-centered
         :drag="{ containerWidth: true }"
-        @onScroll="onScroll"
+        @on-scroll="onScroll"
       >
         <div
           v-for="({ url, alt }, index) in images"
@@ -31,7 +31,7 @@
 
     <div class="md:-order-1 overflow-hidden flex-shrink-0 basis-auto">
       <SfScrollable
-        ref="thumbsRef"
+        ref="thumbsReference"
         wrapper-class="hidden md:inline-flex"
         direction="vertical"
         class="flex-row w-full items-center md:flex-col md:h-full md:px-0 md:scroll-pl-4 snap-y snap-mandatory flex gap-0.5 md:gap-2 overflow-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']"
@@ -57,7 +57,7 @@
         <button
           v-for="({ url, alt }, index) in images"
           :key="`${alt}-${index}-thumbnail`"
-          :ref="(el) => assignRef(el, index)"
+          :ref="(el) => assignReference(el, index)"
           type="button"
           :aria-current="activeIndex === index"
           :aria-label="$t('gallery.thumb', index)"
@@ -113,7 +113,7 @@ const props = defineProps<{
   images: SfImage[];
 }>();
 
-const thumbsRef = ref<HTMLElement>();
+const thumbsReference = ref<HTMLElement>();
 const firstThumbReference = ref<HTMLButtonElement>();
 const lastThumbReference = ref<HTMLButtonElement>();
 const firstVisibleThumbnailIntersected = ref(true);
@@ -125,16 +125,16 @@ const registerThumbsWatch = (
   thumbnailIntersected: Ref<boolean>,
 ) => {
   watch(
-    thumbsRef,
-    (thumbsReference) => {
-      if (thumbsReference) {
+    thumbsReference,
+    (reference) => {
+      if (reference) {
         useIntersectionObserver(
           singleThumbReference,
           ([{ isIntersecting }]) => {
             thumbnailIntersected.value = isIntersecting;
           },
           {
-            root: unrefElement(thumbsReference),
+            root: unrefElement(reference),
             rootMargin: '0px',
             threshold: 1,
           },
@@ -160,7 +160,7 @@ const onScroll = ({ left, scrollWidth }: SfScrollableOnScrollData) => {
   }
 };
 
-const assignRef = (element: Element | ComponentPublicInstance | null, index: number) => {
+const assignReference = (element: Element | ComponentPublicInstance | null, index: number) => {
   if (!element) return;
   if (index === props.images.length - 1) {
     lastThumbReference.value = element as HTMLButtonElement;

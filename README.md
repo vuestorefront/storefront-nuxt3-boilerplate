@@ -1,4 +1,4 @@
-> ⚠️ This repository si still work in progress. We don't recommend using it before talking to the VSF Team.
+> ⚠️ This repository is still work in progress. We don't recommend using it before talking to the VSF Team.
 
 ## Prerequisites:
 

@@ -16,7 +16,7 @@
 </template>
 
 <script setup lang="ts">
-import { Breadcrumb } from '~/components/ui/Breadcrumbs/types';
+import type { Breadcrumb } from '~/components/ui/Breadcrumbs/types';
 
 definePageMeta({
   layout: false,

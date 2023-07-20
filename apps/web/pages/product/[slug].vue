@@ -25,7 +25,7 @@
 
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
-import { Breadcrumb } from '~/components/ui/Breadcrumbs/types';
+import type { Breadcrumb } from '~/components/ui/Breadcrumbs/types';
 
 const route = useRoute();
 const slug = route.params.slug as string;

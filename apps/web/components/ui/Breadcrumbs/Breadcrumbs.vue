@@ -1,7 +1,7 @@
 <template>
   <nav data-testid="breadcrumbs" class="inline-flex items-center text-sm font-normal font-body">
     <ol class="flex w-auto leading-none group md:flex-wrap">
-      <li class="flex items-center sm:hidden text-neutral-500">
+      <li class="flex items-center sm:hidden text-neutral-500 z-10">
         <SfDropdown v-model="dropdownOpened" strategy="absolute" placement="bottom-start" @update:model-value="close">
           <template #trigger>
             <SfButton

@@ -25,6 +25,7 @@
 
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
+import { Breadcrumb } from '~/components/ui/Breadcrumbs/types';
 
 const route = useRoute();
 const slug = route.params.slug as string;
@@ -36,7 +37,7 @@ await fetchProductRecommended(slug);
 
 const { t } = useI18n();
 
-const breadcrumbs = [
+const breadcrumbs: Breadcrumb[] = [
   { name: t('home'), link: '/' },
   { name: t('category'), link: '/category' },
   { name: product.value?.name as string, link: `#` },

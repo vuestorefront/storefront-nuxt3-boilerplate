@@ -1,7 +1,7 @@
 <template>
   <UiNavbarTop filled>
     <SfButton
-      class="hidden lg:flex text-white hover:text-white active:text-white hover:bg-primary-800 active:bg-primary-900 lg:mr-4"
+      class="!px-2 mr-auto hidden lg:flex text-white hover:text-white active:text-white hover:bg-primary-800 active:bg-primary-900"
       type="button"
       variant="tertiary"
       :tag="NuxtLink"

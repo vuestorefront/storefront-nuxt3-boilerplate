@@ -32,7 +32,7 @@ const router = useRouter();
 const { open } = useDisclosure();
 
 const inputModel = ref('');
-const inputReference = ref();
+const inputReference = ref<HTMLSpanElement>();
 const handleInputFocus = () => {
   const inputElement = unrefElement(inputReference)?.querySelector('input');
   inputElement?.focus();

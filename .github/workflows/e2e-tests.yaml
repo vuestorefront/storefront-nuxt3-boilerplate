@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
       - name: Setup node
         uses: actions/setup-node@v3
         with:
@@ -27,3 +30,4 @@ jobs:
 
       - name: Run cypress tests
         run: yarn test:cypress
+

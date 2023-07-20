@@ -63,6 +63,7 @@
           <SfLink
             v-for="{ key, link } in bottomLinks"
             :key="key"
+            :tag="NuxtLink"
             class="text-white no-underline typography-text-sm active:text-white active:underline hover:text-white hover:underline"
             variant="secondary"
             :href="link"
@@ -80,7 +81,7 @@
   </footer>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 import { SfButton, SfLink, SfListItem } from '@storefront-ui/vue';
 import { bottomLinks, categories, companyName, contactOptions, socialMedia } from '~/mocks';
 

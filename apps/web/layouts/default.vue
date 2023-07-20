@@ -33,9 +33,9 @@
       </SfButton>
     </nav>
   </UiNavbarTop>
-  <NarrowContainer v-if="breadcrumbs?.length > 0">
+  <NarrowContainer v-if="breadcrumbs">
     <div class="p-4 md:px-0">
-      <UiBreadcrumbs :breadcrumbs="breadcrumbs" />
+      <LazyUiBreadcrumbs :breadcrumbs="breadcrumbs" />
     </div>
   </NarrowContainer>
   <main>
@@ -45,11 +45,11 @@
   <UiFooter />
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 import { SfBadge, SfButton, SfIconExpandMore, SfIconShoppingCart } from '@storefront-ui/vue';
-import type { BreadcrumbsProps } from '~/components/ui/Breadcrumbs/types';
+import { DefaultLayoutProps } from '~/layouts/types';
 
-defineProps<BreadcrumbsProps>();
+defineProps<DefaultLayoutProps>();
 
 const { getCart, data: cart } = useCart();
 

@@ -1,5 +1,5 @@
 <template>
-  <component :is="tag" :class="className">
+  <component :is="tag" :class="className" data-testid="heading">
     {{ title }}
   </component>
 </template>

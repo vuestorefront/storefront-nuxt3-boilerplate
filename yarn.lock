@@ -3880,6 +3880,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/lodash-es@npm:^4.17.7":
+  version: 4.17.7
+  resolution: "@types/lodash-es@npm:4.17.7"
+  dependencies:
+    "@types/lodash": "*"
+  checksum: 4b1f39fd1d921311c37a846c0e0df9d1fa23e27448a6ad1efd7574e703abd2b2fa5e8f3b5037146000f167ba231d0d01e52747d902654151b4ceeff9f2a9b380
+  languageName: node
+  linkType: hard
+
+"@types/lodash@npm:*":
+  version: 4.14.195
+  resolution: "@types/lodash@npm:4.14.195"
+  checksum: 39b75ca635b3fa943d17d3d3aabc750babe4c8212485a4df166fe0516e39288e14b0c60afc6e21913cc0e5a84734633c71e617e2bd14eaa1cf51b8d7799c432e
+  languageName: node
+  linkType: hard
+
 "@types/mime@npm:*":
   version: 3.0.1
   resolution: "@types/mime@npm:3.0.1"
@@ -11844,6 +11860,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lodash-es@npm:^4.17.21":
+  version: 4.17.21
+  resolution: "lodash-es@npm:4.17.21"
+  checksum: 05cbffad6e2adbb331a4e16fbd826e7faee403a1a04873b82b42c0f22090f280839f85b95393f487c1303c8a3d2a010048bf06151a6cbe03eee4d388fb0a12d2
+  languageName: node
+  linkType: hard
+
 "lodash.debounce@npm:^4.0.8":
   version: 4.0.8
   resolution: "lodash.debounce@npm:4.0.8"
@@ -18247,6 +18270,7 @@ __metadata:
     "@savvywombat/tailwindcss-grid-areas": ^3.1.0
     "@storefront-ui/typography": ^2.3.1
     "@storefront-ui/vue": ^2.4.1
+    "@types/lodash-es": ^4.17.7
     "@types/node": ^18
     "@vite-pwa/nuxt": ^0.1.0
     "@vue-storefront/sdk": ^1.0.1
@@ -18254,6 +18278,7 @@ __metadata:
     "@vue-storefront/unified-data-model": ^0.1.0
     "@vue/test-utils": ^2.4.0
     happy-dom: ^9.20.3
+    lodash-es: ^4.17.21
     nuxt: ^3.6.0
     nuxt-vitest: ^0.9.0
     sass: ^1.63.6

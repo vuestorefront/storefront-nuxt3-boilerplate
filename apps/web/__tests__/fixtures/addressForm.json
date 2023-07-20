@@ -1,0 +1,14 @@
+{
+    "email": "test@vuestorefront.io",
+    "name": "Test",
+    "lastName": "Testerson",
+    "phone": 700880880,
+    "country": "US",
+    "street": "Testevej",
+    "streetNumber": 2,
+    "city": "Testcity",
+    "region": "California",
+    "zipCode": 45678
+  }
+  
+  

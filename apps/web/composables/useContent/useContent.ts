@@ -9,7 +9,7 @@ import type { UseContentReturn, UseContentState, GetContent } from './types';
  * const { data, loading, getContent } = useContent<ContentFieldsType>('url');
  */
 export const useContent: UseContentReturn = (url) => {
-  const state = useState<UseContentState>(`useContent-${url}`, () => ({
+  const state = useState<UseContentState>(`content-${url}`, () => ({
     data: null,
     loading: false,
   }));

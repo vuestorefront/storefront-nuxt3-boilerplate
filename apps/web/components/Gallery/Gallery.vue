@@ -100,7 +100,7 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 import { type ComponentPublicInstance } from 'vue';
 import { clamp, type SfScrollableOnScrollData } from '@storefront-ui/shared';
 import { SfScrollable, SfButton, SfIconChevronLeft, SfIconChevronRight } from '@storefront-ui/vue';

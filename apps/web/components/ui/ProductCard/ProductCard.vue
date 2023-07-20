@@ -1,10 +1,10 @@
 <template>
   <div class="border border-neutral-200 rounded-md hover:shadow-lg flex-auto flex-shrink-0" data-testid="product-card">
-    <div class="relative w-[190px] h-[190px]">
+    <div class="relative">
       <SfLink :tag="NuxtLink" :href="`/product/${slug}`">
         <NuxtImg
           :src="imageUrl"
-          :alt="imageAlt"
+          :alt="imageAlt || ''"
           class="object-cover rounded-md aspect-square w-full h-full"
           data-testid="image-slot"
           height="190"

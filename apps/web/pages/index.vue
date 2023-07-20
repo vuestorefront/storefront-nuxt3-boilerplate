@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 const { getContent, data: content } = useContent('home-page');
 
 getContent();

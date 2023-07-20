@@ -30,6 +30,4 @@
 import type { CategoryCardProps } from '~/components/ui/CategoryCard/types';
 
 defineProps<CategoryCardProps>();
-
-const NuxtLink = resolveComponent('NuxtLink');
 </script>

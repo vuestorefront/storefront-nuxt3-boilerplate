@@ -9,28 +9,30 @@
           <UiPurchaseCard v-if="product" :product="product" />
         </section>
         <section class="grid-in-left-bottom md:mt-8">
-          <Divider class="mb-6" />
-          <ProductProperties />
-          <Divider class="mt-4 mb-2 md:mt-8" />
+          <UiDivider class="mb-6" />
+          <ProductProperties v-if="product" :product="product" />
+          <UiDivider class="mt-4 mb-2 md:mt-8" />
           <!-- ProductAccordion -->
         </section>
-        <Divider class="mt-4 mb-2" />
+        <UiDivider class="mt-4 mb-2" />
       </div>
       <section class="mx-4 mt-28 mb-20">
-        <!-- RecommendedProducts -->
+        <RecommendedProducts v-if="recommendedProducts" :products="recommendedProducts" />
       </section>
     </NarrowContainer>
   </NuxtLayout>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 import { useI18n } from 'vue-i18n';
 
 const route = useRoute();
 const slug = route.params.slug as string;
 const { data: product, fetchProduct } = useProduct(slug);
+const { data: recommendedProducts, fetchProductRecommended } = useProductRecommended(slug);
 
-fetchProduct(slug);
+await fetchProduct(slug);
+await fetchProductRecommended(slug);
 
 const { t } = useI18n();
 

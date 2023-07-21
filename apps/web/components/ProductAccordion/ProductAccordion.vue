@@ -2,6 +2,7 @@
   <div>
     <UiAccordionItem
       summary-class="md:rounded-md w-full hover:bg-neutral-100 py-2 pl-4 pr-3 flex justify-between items-center"
+      v-model="productDetailsOpen"
     >
       <template #summary>
         <h2 class="font-bold font-headings text-lg leading-6 md:text-2xl">
@@ -33,4 +34,6 @@ const { product } = toRefs(props);
 
 const { data: productReviews, fetchProductReviews } = useProductReviews(product.value.slug);
 fetchProductReviews(product.value.slug);
+
+const productDetailsOpen = ref(true);
 </script>

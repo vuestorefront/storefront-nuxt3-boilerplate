@@ -15,15 +15,9 @@
 <script lang="ts" setup>
 import { SfAccordionItem, SfIconChevronLeft } from '@storefront-ui/vue';
 import { useVModel } from '@vueuse/core';
+import type { AccordionItemProps } from '~/components/ui/AccordionItem/types';
 
-const props = withDefaults(
-  defineProps<{
-    modelValue?: boolean;
-    summary?: string;
-    summaryClass?: string;
-  }>(),
-  { modelValue: false, summary: '', summaryClass: '' },
-);
+const props = withDefaults(defineProps<AccordionItemProps>(), { modelValue: false, summary: '', summaryClass: '' });
 const emit = defineEmits(['update:modelValue']);
 
 const internalModelValue = useVModel(props, 'modelValue', emit, { passive: true });

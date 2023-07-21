@@ -20,24 +20,24 @@ To get started, see the following guides:
 
 ## Prerequisites:
 
-- `Node.js` 18+
+- `Node.js` 20+
 - `Yarn`
 
 ### Local dev setup
 
-1. Clone the repo
+1. Clone the repository.
 
 ```bash
 $ git clone git@github.com:vuestorefront/storefront-nuxt3-boilerplate.git
 ```
 
-2. Install all dependencies
+2. Install all dependencies (read here [How to install Yarn 3](https://yarnpkg.com/getting-started/install)).
 
 ```bash
 $ yarn install
 ```
 
-3. Run development server. App will be served with hot reload at [localhost:3000](http://localhost:3000/)
+3. Run development server. App will be served with hot reload at [localhost:3000](http://localhost:3000/).
 
 ```bash
 $ yarn dev

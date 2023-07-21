@@ -25,6 +25,7 @@ config.plugins.VueWrapper.install(GetTestIdPlugin);
 
 config.global.mocks = {
   $t: (key) => key,
+  $d: (date) => date.toLocaleDateString(),
 };
 config.global.stubs = {
   RouterLink: true,

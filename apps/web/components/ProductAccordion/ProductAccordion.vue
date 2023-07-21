@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div data-testid="product-accordion">
     <UiAccordionItem
       summary-class="md:rounded-md w-full hover:bg-neutral-100 py-2 pl-4 pr-3 flex justify-between items-center"
       v-model="productDetailsOpen"

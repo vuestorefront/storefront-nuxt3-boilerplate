@@ -1,5 +1,5 @@
 <template>
-  <SfAccordionItem v-model="internalModelValue" :summary-class="summaryClass">
+  <SfAccordionItem v-model="internalModelValue" :summary-class="summaryClass" data-testid="accordion-item">
     <template #summary>
       <slot name="summary">
         <p>{{ summary }}</p>

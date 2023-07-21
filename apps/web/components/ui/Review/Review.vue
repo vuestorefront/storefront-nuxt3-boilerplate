@@ -41,11 +41,9 @@
 
 <script lang="ts" setup>
 import { SfRating, SfIconCheck, SfIconThumbUp, SfIconThumbDown, SfCounter } from '@storefront-ui/vue';
-import type { SfProductReview } from '@vue-storefront/unified-data-model';
+import type { ReviewProps } from '~/components/ui/Review/types';
 
-const props = defineProps<{
-  review: SfProductReview;
-}>();
+const props = defineProps<ReviewProps>();
 
 const { review } = toRefs(props);
 

@@ -1,5 +1,5 @@
 <template>
-  <article class="w-full p-4 border rounded-md">
+  <article class="w-full p-4 border rounded-md" data-testid="review">
     <p class="pb-2 font-medium">{{ review.title }}</p>
     <header class="flex flex-col pb-2 md:flex-row md:justify-between">
       <span class="flex items-center pr-2 text-xs text-neutral-500">

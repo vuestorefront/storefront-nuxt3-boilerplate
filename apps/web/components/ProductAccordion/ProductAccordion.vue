@@ -25,11 +25,9 @@
 </template>
 
 <script lang="ts" setup>
-import type { SfProduct } from '@vue-storefront/unified-data-model';
+import type { ProductAccordionPropsType } from '~/components/ProductAccordion/types';
 
-const props = defineProps<{
-  product: SfProduct;
-}>();
+const props = defineProps<ProductAccordionPropsType>();
 
 const { product } = toRefs(props);
 

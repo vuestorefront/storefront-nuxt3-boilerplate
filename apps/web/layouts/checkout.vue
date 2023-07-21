@@ -2,7 +2,7 @@
   <UiNavbarTop />
   <main data-testid="checkout-layout">
     <NarrowContainer>
-      <div class="mb-20">
+      <div class="px-4 md:px-0 mb-20">
         <div class="flex justify-between mt-8 mb-10 px-4 md:px-0">
           <h1 class="font-bold typography-headline-3 md:typography-headline-2">{{ heading }}</h1>
           <SfButton

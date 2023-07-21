@@ -4,7 +4,7 @@
       summary-class="md:rounded-md w-full hover:bg-neutral-100 py-2 pl-4 pr-3 flex justify-between items-center"
     >
       <template #summary>
-        <h2 className="font-bold font-headings text-lg leading-6 md:text-2xl">
+        <h2 class="font-bold font-headings text-lg leading-6 md:text-2xl">
           {{ $t('productDetails') }}
         </h2>
       </template>
@@ -15,7 +15,7 @@
       summary-class="md:rounded-md w-full hover:bg-neutral-100 py-2 pl-4 pr-3 flex justify-between items-center"
     >
       <template #summary>
-        <h2 className="font-bold font-headings text-lg leading-6 md:text-2xl">
+        <h2 class="font-bold font-headings text-lg leading-6 md:text-2xl">
           {{ $t('customerReviews') }}
         </h2>
       </template>

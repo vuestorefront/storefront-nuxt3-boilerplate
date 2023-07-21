@@ -44,6 +44,8 @@
 </template>
 
 <script lang="ts" setup>
+import { SfButton, SfLink } from '@storefront-ui/vue';
+
 definePageMeta({
   layout: false,
 });

@@ -6,7 +6,7 @@
         {{ $t('contactInfo.edit') }}
       </SfButton>
     </div>
-    <div v-if="cart?.customerEmail" class="mt-2 md:w-[520px]">
+    <div v-if="cart.customerEmail" class="mt-2 md:w-[520px]">
       <p>{{ cart.customerEmail }}</p>
     </div>
     <div v-else class="w-full md:max-w-[520px]">

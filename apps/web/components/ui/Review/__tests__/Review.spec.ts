@@ -6,7 +6,7 @@ describe('<Review />', () => {
   it('should render component', () => {
     const { getByTestId } = mount(Review, {
       props: {
-        review: mockProductReviews
+        review: mockProductReviews[0],
       },
     });
 

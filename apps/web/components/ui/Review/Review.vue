@@ -3,7 +3,7 @@
     <p class="pb-2 font-medium">{{ review.title }}</p>
     <header class="flex flex-col pb-2 md:flex-row md:justify-between">
       <span class="flex items-center pr-2 text-xs text-neutral-500">
-        <SfRating :value="(review.rating as number)" :max="5" size="xs" class="mr-2" />
+        <SfRating :value="review.rating ?? undefined" :max="5" size="xs" class="mr-2" />
         {{ $d(new Date(review.createdAt)) }}
       </span>
       <p class="flex items-center text-xs truncate text-primary-700">

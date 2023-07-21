@@ -71,7 +71,7 @@ apps/
      ├── layouts/                 # Layouts
      ├── mocks/                   # Static data
      ├── pages/                   # Pages
-     │   ├── index.tsx            # App index page component
+     │   ├── index.vue            # App index page component
      │   └── ...
      ├── public/                  # Public assets
      ├── sdk/                     # Vue Storefront SDK configuration
@@ -114,9 +114,9 @@ Expected file/folder structure:
  └── Function/
      ├─ index.ts
      ├─ types.ts
-     ├─ Function.tsx
+     ├─ Function.ts
      └─ __tests__/
-         └─ Function.spec.tsx
+         └─ Function.spec.ts
 ```
 
 ### Composables
@@ -157,9 +157,9 @@ components/
  └── Footer/
      ├─ index.ts
      ├─ types.ts
-     ├─ Footer.tsx
+     ├─ Footer.vue
      └─ __tests__/
-         └─ Footer.spec.tsx
+         └─ Footer.spec.ts
 ```
 
 - Storefront UI 2 Block components
@@ -175,9 +175,9 @@ components/
      └── Display/
          ├─ index.ts
          ├─ types.ts
-         ├─ Display.tsx
+         ├─ Display.Vue
          └─ __tests__/
-            └─ Display.spec.tsx
+            └─ Display.spec.ts
 ```
 
 For more information about available StorefrontUI 2 Block components for Vue (Nuxt), check out [documentation](https://docs.storefrontui.io/v2/vue/blocks.html).

@@ -51,6 +51,7 @@
             :key="label"
             :tag="NuxtLink"
             :href="link"
+            :title="$t('socialLabel', { label })"
             square
             variant="tertiary"
             class="text-white active:text-white hover:text-white hover:!bg-neutral-500 active:!bg-transparent"

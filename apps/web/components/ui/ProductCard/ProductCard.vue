@@ -7,8 +7,8 @@
           :alt="imageAlt || ''"
           class="object-cover rounded-md aspect-square w-full h-full"
           data-testid="image-slot"
-          height="190"
           width="190"
+          height="190"
         />
       </SfLink>
     </div>

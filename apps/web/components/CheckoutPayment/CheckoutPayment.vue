@@ -3,16 +3,16 @@
     <h3 class="text-neutral-900 text-lg font-bold mb-4">{{ $t('checkoutPayment.heading') }}</h3>
     <div class="grid gap-4 grid-cols-2">
       <CheckoutPaymentMethod
-        @click="activePayment = PaymentMethods.CreditCard"
-        :active="activePayment === PaymentMethods.CreditCard"
+        @click="activePayment = PaymentMethod.CreditCard"
+        :active="activePayment === PaymentMethod.CreditCard"
       >
         <SfIconCreditCard class="mr-2" />
         <span class="font-medium">{{ $t('checkoutPayment.creditCard') }}</span>
       </CheckoutPaymentMethod>
 
       <CheckoutPaymentMethod
-        @click="activePayment = PaymentMethods.PayPal"
-        :active="activePayment === PaymentMethods.PayPal"
+        @click="activePayment = PaymentMethod.PayPal"
+        :active="activePayment === PaymentMethod.PayPal"
         disabled
       >
         <div class="flex flex-col items-center justify-center">
@@ -22,8 +22,8 @@
       </CheckoutPaymentMethod>
 
       <CheckoutPaymentMethod
-        @click="activePayment = PaymentMethods.ApplePay"
-        :active="activePayment === PaymentMethods.ApplePay"
+        @click="activePayment = PaymentMethod.ApplePay"
+        :active="activePayment === PaymentMethod.ApplePay"
         disabled
       >
         <div class="flex flex-col items-center justify-center">
@@ -33,8 +33,8 @@
       </CheckoutPaymentMethod>
 
       <CheckoutPaymentMethod
-        @click="activePayment = PaymentMethods.GooglePay"
-        :active="activePayment === PaymentMethods.GooglePay"
+        @click="activePayment = PaymentMethod.GooglePay"
+        :active="activePayment === PaymentMethod.GooglePay"
         disabled
       >
         <div class="flex flex-col items-center justify-center">
@@ -48,7 +48,7 @@
 
 <script setup lang="ts">
 import { SfIconCreditCard } from '@storefront-ui/vue';
-import { PaymentMethods } from '~/components/CheckoutPayment/types';
+import { PaymentMethod } from '~/components/CheckoutPayment/types';
 
-const activePayment = ref<PaymentMethods>(PaymentMethods.CreditCard);
+const activePayment = ref<PaymentMethod>(PaymentMethod.CreditCard);
 </script>

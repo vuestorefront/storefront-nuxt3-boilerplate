@@ -1,4 +1,4 @@
-export enum PaymentMethods {
+export enum PaymentMethod {
   CreditCard = 'credit-card',
   PayPal = 'pay-pal',
   ApplePay = 'apple-pay',

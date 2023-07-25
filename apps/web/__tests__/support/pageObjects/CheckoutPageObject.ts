@@ -1,5 +1,3 @@
-import { TIMEOUT } from 'dns';
-
 export class CheckoutPageObject {
   get goToCheckoutButton() {
     return cy.getByTestId('button').contains('Go to checkout');

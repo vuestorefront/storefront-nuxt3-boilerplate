@@ -3,11 +3,11 @@ import AddressForm from '~/components/AddressForm/AddressForm.vue';
 
 describe('<AddressForm />', () => {
   it('should render component', () => {
-    const wrapper = mount(AddressForm, {
+    const { getByTestId } = mount(AddressForm, {
       props: {
         type: 'billingAddress',
       },
     });
-    expect(wrapper.getByTestId('address-form'));
+    expect(getByTestId('address-form'));
   });
 });

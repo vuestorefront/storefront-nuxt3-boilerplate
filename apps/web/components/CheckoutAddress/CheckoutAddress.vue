@@ -2,7 +2,7 @@
   <div data-testid="checkout-address" class="md:px-4 py-6">
     <div class="flex justify-between items-center">
       <h2 class="text-neutral-900 text-lg font-bold mb-4">{{ heading }}</h2>
-      <SfButton v-if="cart && cart[type]" on-click="{open}" size="sm" variant="tertiary">
+      <SfButton v-if="savedAddress" size="sm" variant="tertiary" @on-click="open">
         {{ $t('contactInfo.edit') }}
       </SfButton>
     </div>

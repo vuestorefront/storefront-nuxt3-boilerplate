@@ -85,7 +85,7 @@ const props = defineProps<AddressFormProps>();
 
 const isCartUpdateLoading = false;
 
-const defaultValues = {
+const defaultValues = ref({
   firstName: props.savedAddress?.firstName || '',
   lastName: props.savedAddress?.lastName || '',
   phone: props.savedAddress?.phone || '',
@@ -95,7 +95,7 @@ const defaultValues = {
   city: props.savedAddress?.city || '',
   state: props.savedAddress?.state || '',
   postalCode: props.savedAddress?.postalCode || '',
-};
+});
 const countries = ['US'];
 const states = ['California'];
 defineEmits(['on-save', 'on-close']);

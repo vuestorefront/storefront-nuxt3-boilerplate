@@ -3,7 +3,7 @@ import CheckoutAddress from '~/components/CheckoutAddress/CheckoutAddress.vue';
 
 describe('<CheckoutAddress />', () => {
   it('should render component', () => {
-    const wrapper = mount(CheckoutAddress, {
+    const { getByTestId } = mount(CheckoutAddress, {
       props: {
         type: 'billingAddress',
         heading: '',
@@ -11,6 +11,6 @@ describe('<CheckoutAddress />', () => {
         buttonText: '',
       },
     });
-    expect(wrapper.getByTestId('checkout-address'));
+    expect(getByTestId('checkout-address'));
   });
 });

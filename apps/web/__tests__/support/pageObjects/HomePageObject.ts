@@ -9,10 +9,10 @@ export class HomePageObject {
     return cy.getByTestId('button').contains('Show more');
   }
   get categoryCard() {
-    return cy.getByTestId('category-card');
+    return cy.getByTestId('render-content');
   }
   get banners() {
-    return cy.getByTestId('display');
+    return cy.getByComponent('Display');
   }
   get productCard() {
     return cy.getByTestId('product-card');
@@ -53,7 +53,7 @@ export class HomePageObject {
 
   checkBanners() {
     this.banners.should('be.visible');
-    return this;
+  
   }
 
   checkProductCard() {

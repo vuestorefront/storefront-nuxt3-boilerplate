@@ -1,3 +1,5 @@
+import { TIMEOUT } from 'dns';
+
 export class CheckoutPageObject {
   get goToCheckoutButton() {
     return cy.getByTestId('button').contains('Go to checkout');
@@ -82,14 +84,18 @@ export class CheckoutPageObject {
   get postalCodeInput() {
     return cy.getByTestId('input').find('input[name="postalCode"]');
   }
-  
+
   goToCheckout() {
     this.goToCheckoutButton.click();
     return this;
   }
 
   addContactInformation() {
-    this.addContactInformationButton.eq(0).should('have.text', 'Add contact information').click();
+    this.addContactInformationButton.eq(0).should('have.text', 'Add contact information');
+    cy.waitUntilElementInDOM(() => {
+      this.addContactInformationButton.click();
+      return this.modal;
+    });
     this.modal.should('be.visible');
     return this;
   }
@@ -97,13 +103,11 @@ export class CheckoutPageObject {
   addBillingAddress() {
     this.addBillingAddressButton.eq(0).should('have.text', 'Add billing address').click();
     this.modal.should('be.visible');
-    return this;
   }
 
   addShippingAddress() {
     this.addShippingAddressButton.eq(0).should('have.text', 'Add shipping address').click();
     this.modal.should('be.visible');
-    return this;
   }
 
   placeOrderButton() {

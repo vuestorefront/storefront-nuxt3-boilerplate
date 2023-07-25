@@ -18,7 +18,7 @@ export class ProductDetailPageObject {
   }
 
   get quantitySelector() {
-    return cy.getByTestId('quantitySelectorInput');
+    return cy.getByTestId('quantity-selector-input');
   }
 
   get productPriceValue() {

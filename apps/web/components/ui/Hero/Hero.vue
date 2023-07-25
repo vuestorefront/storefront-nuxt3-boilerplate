@@ -2,7 +2,7 @@
   <div class="relative min-h-[600px] mb-10">
     <div class="md:flex md:flex-row-reverse md:justify-center min-h-[600px] max-w-screen-3xl mx-auto">
       <div class="flex flex-col justify-center md:basis-2/4 md:items-stretch md:overflow-hidden">
-        <NuxtImg :src="image" alt="Hero" class="h-auto w-full object-cover object-left" height="600" width="764" />
+        <NuxtImg :src="image" alt="Hero" class="h-auto w-full object-cover object-left" width="764" height="600" />
       </div>
       <div class="p-4 md:p-10 md:flex md:flex-col md:justify-center md:items-start md:basis-2/4">
         <p class="typography-text-xs md:typography-text-sm font-bold tracking-widest text-neutral-500 uppercase">

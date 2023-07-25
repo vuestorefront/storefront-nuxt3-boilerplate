@@ -8,8 +8,8 @@
         square
         class="rounded-r-none"
         :aria-controls="inputId"
-        aria-label="Decrease value"
-        data-testid="quantitySelectorDecreaseButton"
+        :aria-label="$t('quantitySelectorDecrease')"
+        data-testid="quantity-selector-decrease-button"
         @click="dec()"
       >
         <SfIconRemove />
@@ -22,7 +22,8 @@
         :class="inputClasses"
         :min="minValue"
         :max="maxValue"
-        data-testid="quantitySelectorInput"
+        data-testid="quantity-selector-input"
+        :aria-label="$t('quantitySelector')"
         @input="handleOnChange"
       />
       <SfButton
@@ -32,8 +33,8 @@
         square
         class="rounded-l-none"
         :aria-controls="inputId"
-        aria-label="Increase value"
-        data-testid="quantitySelectorIncreaseButton"
+        :aria-label="$t('quantitySelectorIncrease')"
+        data-testid="quantity-selector-increase-button"
         @click="inc()"
       >
         <SfIconAdd />

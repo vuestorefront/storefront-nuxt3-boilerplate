@@ -1,5 +1,4 @@
 import { createI18n } from 'vue-i18n';
-import messages from '@intlify/unplugin-vue-i18n/messages';
 import { config } from '@vue/test-utils';
 
 const FindTestIdPlugin = (wrapper) => {
@@ -26,8 +25,9 @@ config.plugins.VueWrapper.install(FindTestIdPlugin);
 config.plugins.VueWrapper.install(GetTestIdPlugin);
 
 const i18n = createI18n({
-  locale: 'en',
-  messages,
+  legacy: false,
+  fallbackWarn: false,
+  missing: (_locale, key) => key,
 });
 config.global.plugins = [i18n];
 config.global.mocks = {

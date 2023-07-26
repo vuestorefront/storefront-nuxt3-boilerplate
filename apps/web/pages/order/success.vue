@@ -7,9 +7,9 @@
       <h1 class="mt-6 mb-1 text-2xl">{{ $t('successInfoHeader') }}</h1>
       <span class="font-medium">{{ $t('successInfoMessage') }}</span>
       <div class="border border-1 border-neutral-200 rounded bg-neutral-100 p-4 w-full my-4 text-sm">
-        <h5 class="font-medium text-base">{{ $t('etaDelivery') }}</h5>
+        <h2 class="font-medium text-base">{{ $t('etaDelivery') }}</h2>
         <p class="capitalize">{{ $t('tomorrow') }}</p>
-        <h5 class="font-medium text-base mt-4">{{ $t('orderNumber') }}</h5>
+        <h2 class="font-medium text-base mt-4">{{ $t('orderNumber') }}</h2>
         <p>123456789</p>
       </div>
       <SfButton :tag="NuxtLink" href="/" class="max-md:w-full" variant="secondary">

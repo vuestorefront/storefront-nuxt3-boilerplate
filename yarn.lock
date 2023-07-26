@@ -3711,10 +3711,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storefront-ui/shared@npm:2.4.1":
-  version: 2.4.1
-  resolution: "@storefront-ui/shared@npm:2.4.1"
-  checksum: e119b4d96056f8ce8b9552b7a48422837cb7bc2e3960e9d6822a3f6caebe1f520ad349568344cb84366216d643f713d9c3d2dabb64de57218d81450485c7aacf
+"@storefront-ui/shared@npm:2.5.0":
+  version: 2.5.0
+  resolution: "@storefront-ui/shared@npm:2.5.0"
+  checksum: 360e500c222a61e5a08f5d1bec7dc5de3eb38a7cba368fb7bdae7a230e1f11e24ee18853d1ea5ae870dcc8badaa7f340a6a04f0f2165dc2cf13986793d2ece0e
   languageName: node
   linkType: hard
 
@@ -3746,19 +3746,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storefront-ui/vue@npm:^2.4.1":
-  version: 2.4.1
-  resolution: "@storefront-ui/vue@npm:2.4.1"
+"@storefront-ui/vue@npm:canary":
+  version: 2.6.0-b227ddd
+  resolution: "@storefront-ui/vue@npm:2.6.0-b227ddd"
   dependencies:
     "@floating-ui/vue": ^0.2.1
-    "@storefront-ui/shared": 2.4.1
+    "@storefront-ui/shared": 2.5.0
     "@storefront-ui/tailwind-config": 2.3.1
     "@vueuse/core": ^9.12.0
     jw-paginate: ^1.0.4
     tabbable: ^6.1.1
   peerDependencies:
     vue: ^3.2.47
-  checksum: d04014b417da8f9499f3688515eaad74b8fff82b3c2976647d562242c8f61570d865c4f640a68b308d33b3218182d2229ffdf0755638c66e1ed68feb850e527d
+  checksum: 289110c9ab703cd74ee6c2f64ebe9c75e2205c7d5ab16bdbfc19463457cfe8dd46d46ce3c4956743c2e627097a1f8791736703a2d12c19e3ce7a4ea54644b28c
   languageName: node
   linkType: hard
 
@@ -18367,7 +18367,7 @@ __metadata:
     "@nuxtjs/tailwindcss": ^6.8.0
     "@savvywombat/tailwindcss-grid-areas": ^3.1.0
     "@storefront-ui/typography": ^2.3.1
-    "@storefront-ui/vue": ^2.4.1
+    "@storefront-ui/vue": canary
     "@types/lodash-es": ^4.17.7
     "@types/node": ^18
     "@vite-pwa/nuxt": ^0.1.0

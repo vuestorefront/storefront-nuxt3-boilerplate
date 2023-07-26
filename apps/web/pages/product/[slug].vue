@@ -12,7 +12,7 @@
           <UiDivider class="mb-6" />
           <ProductProperties v-if="product" :product="product" />
           <UiDivider class="mt-4 mb-2 md:mt-8" />
-          <!-- ProductAccordion -->
+          <ProductAccordion v-if="product" :product="product" />
         </section>
         <UiDivider class="mt-4 mb-2" />
       </div>

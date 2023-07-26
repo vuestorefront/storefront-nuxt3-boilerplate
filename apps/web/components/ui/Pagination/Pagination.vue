@@ -11,7 +11,7 @@
       :aria-label="$t('prevAriaLabel')"
       :disabled="pagination.selectedPage <= 1"
       variant="tertiary"
-      class="gap-3 !px-3 sm:px-6"
+      class="gap-3"
       @click="pagination.prev"
     >
       <template #prefix>
@@ -29,7 +29,7 @@
         >
           <button
             type="button"
-            class="px-3 sm:px-4 py-3 md:w-12 rounded-md text-neutral-500 hover:bg-primary-100 hover:text-primary-800 active:bg-primary-200 active:text-primary-900"
+            class="px-4 py-3 md:w-12 rounded-md text-neutral-500 hover:bg-primary-100 hover:text-primary-800 active:bg-primary-200 active:text-primary-900"
             :aria-current="pagination.selectedPage === 1"
             @click="pagination.setPage(1)"
           >
@@ -48,7 +48,7 @@
         <div class="flex pt-1 border-t-4 border-transparent">
           <button
             type="button"
-            class="px-3 sm:px-4 py-3 md:w-12 rounded-md text-neutral-500 hover:bg-primary-100 hover:text-primary-800 active:bg-primary-200 active:text-primary-900"
+            class="px-4 py-3 md:w-12 rounded-md text-neutral-500 hover:bg-primary-100 hover:text-primary-800 active:bg-primary-200 active:text-primary-900"
             :aria-current="pagination.endPage - 1 === pagination.selectedPage"
             @click="pagination.setPage(pagination.endPage - 1)"
           >
@@ -66,7 +66,7 @@
           <button
             type="button"
             :class="[
-              'px-3 sm:px-4 py-3 md:w-12 text-neutral-500 rounded-md hover:bg-primary-100 hover:text-primary-800 active:bg-primary-200 active:text-primary-900',
+              'px-4 py-3 md:w-12 text-neutral-500 rounded-md hover:bg-primary-100 hover:text-primary-800 active:bg-primary-200 active:text-primary-900',
               {
                 '!text-neutral-900 hover:!text-primary-800 active:!text-primary-900': pagination.selectedPage === page,
               },
@@ -83,7 +83,7 @@
         <div class="flex pt-1 border-t-4 border-transparent">
           <button
             type="button"
-            class="px-3 sm:px-4 py-3 md:w-12 rounded-md text-neutral-500 hover:bg-primary-100 hover:text-primary-800 active:bg-primary-200 active:text-primary-900"
+            class="px-4 py-3 md:w-12 rounded-md text-neutral-500 hover:bg-primary-100 hover:text-primary-800 active:bg-primary-200 active:text-primary-900"
             :aria-label="$t('secondPageAriaLabel')"
             @click="pagination.setPage(2)"
           >
@@ -107,7 +107,7 @@
         >
           <button
             type="button"
-            class="px-3 sm:px-4 py-3 md:w-12 rounded-md text-neutral-500 hover:bg-primary-100 hover:text-primary-800 active:bg-primary-200 active:text-primary-900"
+            class="px-4 py-3 md:w-12 rounded-md text-neutral-500 hover:bg-primary-100 hover:text-primary-800 active:bg-primary-200 active:text-primary-900"
             :aria-current="pagination.totalPages === pagination.selectedPage"
             @click="pagination.setPage(pagination.totalPages)"
           >
@@ -122,7 +122,7 @@
       :aria-label="$t('nextAriaLabel')"
       :disabled="pagination.selectedPage >= pagination.totalPages"
       variant="tertiary"
-      class="gap-3 !px-3 sm:px-6"
+      class="gap-3"
       @click="pagination.next"
     >
       <span class="hidden sm:inline-flex">{{ $t('next') }}</span>

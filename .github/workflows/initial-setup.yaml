@@ -26,6 +26,9 @@ jobs:
 
       - name: Remove unused files
         run: |
+          rm -f .github/workflows/code-quality.yaml
+          rm -f apps/server/sonar-project.properties
+          rm -f apps/web/sonar-project.properties
           rm -f .github/workflows/build-and-deploy.yaml
           rm -f .github/workflows/initial-setup.yaml
           rm -f .github/CODEOWNERS

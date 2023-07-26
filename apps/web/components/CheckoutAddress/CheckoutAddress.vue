@@ -2,7 +2,7 @@
   <div data-testid="checkout-address" class="md:px-4 py-6">
     <div class="flex justify-between items-center">
       <h2 class="text-neutral-900 text-lg font-bold mb-4">{{ heading }}</h2>
-      <SfButton v-if="savedAddress" size="sm" variant="tertiary" @on-click="open">
+      <SfButton v-if="savedAddress" size="sm" variant="tertiary" @click="open">
         {{ $t('contactInfo.edit') }}
       </SfButton>
     </div>
@@ -44,14 +44,9 @@
 </template>
 <script lang="ts" setup>
 import { SfButton, SfIconClose, SfModal, useDisclosure } from '@storefront-ui/vue';
-import type { AddressFormFields } from '../AddressForm/types';
 import type { CheckoutAddressProps } from './types';
 
-const props = defineProps<CheckoutAddressProps>();
-
-const { data: cart } = useCart();
+defineProps<CheckoutAddressProps>();
 
 const { isOpen, open, close } = useDisclosure();
-
-const savedAddress = cart[props.type as keyof typeof cart] as unknown as AddressFormFields;
 </script>

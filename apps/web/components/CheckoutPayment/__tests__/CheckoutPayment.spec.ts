@@ -3,7 +3,11 @@ import CheckoutPayment from '~/components/CheckoutPayment/CheckoutPayment.vue';
 
 describe('<CheckoutPayment />', () => {
   it('should render component', () => {
-    const { getByTestId } = mount(CheckoutPayment);
+    const { getByTestId } = mount(CheckoutPayment, {
+      props: {
+        activePayment: 'credit-card',
+      },
+    });
 
     expect(getByTestId('checkout-payment'));
   });

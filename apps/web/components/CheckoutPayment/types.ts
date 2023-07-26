@@ -9,7 +9,6 @@ export type CheckoutPaymentProps = {
   activePayment: string;
 };
 
-export type PaymentMethodProps = {
-  active?: boolean;
-  disabled?: boolean;
+export type CheckoutPaymentEmits = {
+  (event: 'update:activePayment', parameter: PaymentMethod): void;
 };

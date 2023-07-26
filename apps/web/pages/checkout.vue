@@ -11,7 +11,8 @@
         <UiDivider class="w-screen md:w-auto -mx-4 md:mx-0" />
         <ContactInformation />
         <UiDivider class="w-screen md:w-auto -mx-4 md:mx-0" />
-        <CheckoutPayment />
+        <CheckoutPayment :active-payment="activePayment" @update:active-payment="(value) => (activePayment = value)" />
+        <UiDivider class="w-screen md:w-auto -mx-4 md:mx-0 mb-10" />
       </div>
       <OrderSummary v-if="cart" :cart="cart" class="col-span-5 md:sticky md:top-20 h-fit">
         <SfButton :tag="NuxtLink" to="/order/success" size="lg" class="w-full mb-4 md:mb-0">
@@ -46,10 +47,13 @@
 
 <script lang="ts" setup>
 import { SfButton, SfLink } from '@storefront-ui/vue';
+import { PaymentMethod } from '~/components/CheckoutPayment/types';
 
 definePageMeta({
   layout: false,
 });
+
 const NuxtLink = resolveComponent('NuxtLink');
 const { data: cart } = useCart();
+const activePayment = ref<PaymentMethod>(PaymentMethod.CreditCard);
 </script>

@@ -1,54 +1,61 @@
 <template>
   <div data-testid="checkout-payment" class="md:px-4 py-6">
     <h3 class="text-neutral-900 text-lg font-bold mb-4">{{ $t('checkoutPayment.heading') }}</h3>
-    <div class="grid gap-4 grid-cols-2">
-      <CheckoutPaymentMethod
-        @click="activePayment = PaymentMethod.CreditCard"
-        :active="activePayment === PaymentMethod.CreditCard"
-      >
-        <SfIconCreditCard class="mr-2" />
-        <span class="font-medium">{{ $t('checkoutPayment.creditCard') }}</span>
-      </CheckoutPaymentMethod>
-
-      <CheckoutPaymentMethod
-        @click="activePayment = PaymentMethod.PayPal"
-        :active="activePayment === PaymentMethod.PayPal"
-        disabled
-      >
-        <div class="flex flex-col items-center justify-center">
-          <NuxtImg src="/images/paypal.svg" :alt="$t('checkoutPayment.paypalIconAlt')" width="104" height="32" />
-          <span class="text-xs text-neutral-500">{{ $t('checkoutPayment.comingSoon') }}</span>
-        </div>
-      </CheckoutPaymentMethod>
-
-      <CheckoutPaymentMethod
-        @click="activePayment = PaymentMethod.ApplePay"
-        :active="activePayment === PaymentMethod.ApplePay"
-        disabled
-      >
-        <div class="flex flex-col items-center justify-center">
-          <NuxtImg src="/images/apple-pay.svg" :alt="$t('checkoutPayment.applePayIconAlt')" width="104" height="32" />
-          <span class="text-xs text-neutral-500">{{ $t('checkoutPayment.comingSoon') }}</span>
-        </div>
-      </CheckoutPaymentMethod>
-
-      <CheckoutPaymentMethod
-        @click="activePayment = PaymentMethod.GooglePay"
-        :active="activePayment === PaymentMethod.GooglePay"
-        disabled
-      >
-        <div class="flex flex-col items-center justify-center">
-          <NuxtImg src="/images/google-pay.svg" :alt="$t('checkoutPayment.googlePayIconAlt')" width="104" height="32" />
-          <span class="text-xs text-neutral-500">{{ $t('checkoutPayment.comingSoon') }}</span>
-        </div>
-      </CheckoutPaymentMethod>
-    </div>
+    <fieldset class="grid gap-4 grid-cols-2">
+      <label v-for="{ value, disabled, imgSrc, imgAlt } in paymentMethods" :key="value" class="relative">
+        <input
+          type="radio"
+          name="payment_method"
+          class="peer sr-only"
+          :value="value"
+          :checked="value === activePayment"
+          :disabled="disabled"
+          @change="$emit('update:activePayment', value)"
+        />
+        <span
+          class="h-20 flex flex-col items-center justify-center py-4 px-4 cursor-pointer rounded-md border border-neutral-200 -outline-offset-2 hover:border-primary-200 hover:bg-primary-100 peer-focus:border-primary-200 peer-focus:bg-primary-100 active:border-primary-300 active:bg-primary-200 peer-checked:outline peer-checked:outline-2 peer-checked:outline-primary-700 peer-disabled:opacity-50 peer-disabled:bg-neutral-100 peer-disabled:border-neutral-200 peer-disabled:cursor-not-allowed peer-disabled:[&_img]:grayscale"
+        >
+          <span v-if="value === PaymentMethod.CreditCard">
+            <SfIconCreditCard class="mr-2" />
+            <span class="font-medium">{{ $t('checkoutPayment.creditCard') }}</span>
+          </span>
+          <NuxtImg v-else :src="imgSrc" :alt="imgAlt" width="104" height="32" />
+          <span v-if="disabled" class="text-xs text-neutral-500">{{ $t('checkoutPayment.comingSoon') }}</span>
+        </span>
+      </label>
+    </fieldset>
   </div>
 </template>
 
 <script setup lang="ts">
 import { SfIconCreditCard } from '@storefront-ui/vue';
-import { PaymentMethod } from '~/components/CheckoutPayment/types';
+import { CheckoutPaymentEmits, CheckoutPaymentProps, PaymentMethod } from '~/components/CheckoutPayment/types';
 
-const activePayment = ref<PaymentMethod>(PaymentMethod.CreditCard);
+defineProps<CheckoutPaymentProps>();
+defineEmits<CheckoutPaymentEmits>();
+
+const { t } = useI18n();
+const paymentMethods = [
+  {
+    value: PaymentMethod.CreditCard,
+  },
+  {
+    value: PaymentMethod.PayPal,
+    imgSrc: '/images/paypal.svg',
+    imgAlt: t('checkoutPayment.paypalIconAlt'),
+    disabled: true,
+  },
+  {
+    value: PaymentMethod.ApplePay,
+    imgSrc: '/images/apple-pay.svg',
+    imgAlt: t('checkoutPayment.applePayIconAlt'),
+    disabled: true,
+  },
+  {
+    value: PaymentMethod.GooglePay,
+    imgSrc: '/images/google-pay.svg',
+    imgAlt: t('checkoutPayment.googlePayIconAlt'),
+    disabled: true,
+  },
+];
 </script>

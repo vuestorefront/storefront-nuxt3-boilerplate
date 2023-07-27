@@ -29,15 +29,14 @@
         <UiDivider class-name="w-screen md:w-auto -mx-4 md:mx-0" />
       </div>
       <OrderSummary v-if="cart" :cart="cart" class="col-span-5 md:sticky md:top-20 h-fit">
-        <SfButton :tag="NuxtLink" to="/order/success" size="lg" class="w-full mb-4 md:mb-0">
+        <SfButton :tag="NuxtLink" :to="paths.orderSuccess" size="lg" class="w-full mb-4 md:mb-0">
           {{ $t('placeOrder') }}
         </SfButton>
         <p class="text-sm text-center mt-4 pb-4 md:pb-0">
           <i18n-t keypath="termsInfo">
             <template #terms>
               <SfLink
-                :tag="NuxtLink"
-                to="#"
+                href="#"
                 class="focus:outline focus:outline-offset-2 focus:outline-2 outline-secondary-600 rounded"
               >
                 {{ $t('termsAndConditions') }}
@@ -45,8 +44,7 @@
             </template>
             <template #privacyPolicy>
               <SfLink
-                :tag="NuxtLink"
-                to="#"
+                href="#"
                 class="focus:outline focus:outline-offset-2 focus:outline-2 outline-secondary-600 rounded"
               >
                 {{ $t('privacyPolicy') }}

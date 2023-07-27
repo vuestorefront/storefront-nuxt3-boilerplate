@@ -4,7 +4,7 @@
     data-testid="cart-product-card"
   >
     <div class="relative overflow-hidden rounded-md w-[100px] sm:w-[176px]">
-      <SfLink :tag="NuxtLink" :href="`${paths.product}${slug}`">
+      <SfLink :tag="NuxtLink" :to="`${paths.product}${slug}`">
         <NuxtImg
           class="w-full h-auto border rounded-md border-neutral-200"
           :src="imageUrl ?? '/images/product.webp'"
@@ -22,7 +22,7 @@
     <div class="flex flex-col pl-4 min-w-[180px] flex-1">
       <SfLink
         :tag="NuxtLink"
-        :href="`${paths.product}${slug}`"
+        :to="`${paths.product}${slug}`"
         variant="secondary"
         class="no-underline typography-text-sm sm:typography-text-lg"
       >

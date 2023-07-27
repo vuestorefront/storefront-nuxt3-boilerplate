@@ -1,7 +1,7 @@
 <template>
   <div class="border border-neutral-200 rounded-md hover:shadow-lg flex-auto flex-shrink-0" data-testid="product-card">
     <div class="relative">
-      <SfLink :tag="NuxtLink" :href="`${paths.product}${slug}`">
+      <SfLink :tag="NuxtLink" :to="`${paths.product}${slug}`">
         <NuxtImg
           :src="imageUrl"
           :alt="imageAlt"
@@ -15,7 +15,7 @@
       </SfLink>
     </div>
     <div class="p-2 border-t border-neutral-200 typography-text-sm">
-      <SfLink :tag="NuxtLink" :href="`/product/${slug}`" class="no-underline" variant="secondary">
+      <SfLink :tag="NuxtLink" :to="`${paths.product}${slug}`" class="no-underline" variant="secondary">
         {{ name }}
       </SfLink>
       <div class="flex items-center pt-1">

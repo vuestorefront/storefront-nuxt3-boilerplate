@@ -11,5 +11,5 @@ export type CheckoutAddressProps = {
   heading: string;
   description: string;
   buttonText: string;
-  savedAddress?: Maybe<Address>;
+  savedAddress?: Maybe<SfAddress>;
 };

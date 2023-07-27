@@ -9,8 +9,8 @@
 
     <div v-if="savedAddress" class="mt-2 md:w-[520px]">
       <p>{{ `${savedAddress.firstName} ${savedAddress.lastName}` }}</p>
-      <p>{{ savedAddress.phone }}</p>
-      <p>{{ `${savedAddress.streetName} ${savedAddress.streetNumber}` }}</p>
+      <p>{{ savedAddress.phoneNumber }}</p>
+      <p>{{ `${savedAddress.address1} ${savedAddress.address2}` }}</p>
       <p>{{ `${savedAddress.state}, ${savedAddress.postalCode}` }}</p>
     </div>
 

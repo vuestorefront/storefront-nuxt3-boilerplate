@@ -88,10 +88,10 @@ const isCartUpdateLoading = false;
 const defaultValues = ref({
   firstName: props.savedAddress?.firstName || '',
   lastName: props.savedAddress?.lastName || '',
-  phone: props.savedAddress?.phone || '',
+  phone: props.savedAddress?.phoneNumber || '',
   country: props.savedAddress?.country || '',
-  streetName: props.savedAddress?.streetName || '',
-  streetNumber: props.savedAddress?.streetNumber || '',
+  streetName: props.savedAddress?.address1 || '',
+  streetNumber: props.savedAddress?.address2 || '',
   city: props.savedAddress?.city || '',
   state: props.savedAddress?.state || '',
   postalCode: props.savedAddress?.postalCode || '',

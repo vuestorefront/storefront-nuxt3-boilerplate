@@ -93,14 +93,9 @@ const sections = [
 ];
 const currentPath = computed(() => router.currentRoute.value.path);
 const isRoot = computed(() => /^\/my-account\/?$/.test(currentPath.value));
-const findCurrentPage = computed(() => {
-  for (const section in sections) {
-    const subsections = sections[section].subsections;
-    const foundPage = subsections.find(({ link }) => link === currentPath.value);
-    if (foundPage) return foundPage;
-    else continue;
-  }
-});
+const findCurrentPage = computed(() =>
+  sections.flatMap(({ subsections }) => subsections).find(({ link }) => link === currentPath.value),
+);
 
 const breadcrumbs = computed(() => [
   { name: t('home'), link: '/' },

@@ -11,9 +11,8 @@
                 {{ title }}
               </SfListItem>
               <li v-for="{ label, link } in subsections" :key="label">
-                <!-- TODO: sfui typing issue -->
                 <SfListItem
-                  :tag="(NuxtLink as string)"
+                  :tag="NuxtLink"
                   :href="link"
                   :class="[
                     'first-of-type:mt-2 rounded-md active:bg-primary-100 !text-neutral-900',
@@ -30,7 +29,7 @@
             <UiDivider />
             <ul>
               <SfListItem
-                :tag="NuxtLink as string"
+                :tag="NuxtLink"
                 href="/logout"
                 class="mt-4 rounded-md active:bg-primary-100 !text-neutral-900"
               >

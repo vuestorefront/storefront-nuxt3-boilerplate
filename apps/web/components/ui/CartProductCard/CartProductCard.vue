@@ -12,6 +12,7 @@
           width="300"
           height="300"
           loading="lazy"
+          format="webp"
         />
       </SfLink>
       <div class="absolute top-0 left-0 text-white bg-secondary-600 py-1 pl-1.5 pr-2 text-xs font-medium">

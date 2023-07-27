@@ -29,6 +29,7 @@
             draggable="false"
             :loading="index !== 0 ? 'lazy' : undefined"
             :fetchpriority="index === 0 ? 'high' : undefined"
+            format="webp"
           />
         </div>
       </SfScrollable>
@@ -71,7 +72,16 @@
           @mouseover="onChangeIndex(index)"
           @focus="onChangeIndex(index)"
         >
-          <NuxtImg alt="" class="object-contain" width="80" height="80" :src="url" :quality="80" loading="lazy" />
+          <NuxtImg
+            alt=""
+            class="object-contain"
+            width="80"
+            height="80"
+            :src="url"
+            :quality="80"
+            loading="lazy"
+            format="webp"
+          />
         </button>
 
         <template #nextButton>

@@ -88,15 +88,15 @@ const isCartUpdateLoading = false;
 const { savedAddress } = toRefs(props);
 
 const defaultValues = {
-  firstName: savedAddress?.value?.firstName || '',
-  lastName: savedAddress?.value?.lastName || '',
-  phone: savedAddress?.value?.phoneNumber || '',
-  country: savedAddress?.value?.country || '',
-  streetName: savedAddress?.value?.address1 || '',
-  streetNumber: savedAddress?.value?.address2 || '',
-  city: savedAddress?.value?.city || '',
-  state: savedAddress?.value?.state || '',
-  postalCode: savedAddress?.value?.postalCode || '',
+  firstName: savedAddress?.value?.firstName ?? '',
+  lastName: savedAddress?.value?.lastName ?? '',
+  phone: savedAddress?.value?.phoneNumber ?? '',
+  country: savedAddress?.value?.country ?? '',
+  streetName: savedAddress?.value?.address1 ?? '',
+  streetNumber: savedAddress?.value?.address2 ?? '',
+  city: savedAddress?.value?.city ?? '',
+  state: savedAddress?.value?.state ?? '',
+  postalCode: savedAddress?.value?.postalCode ?? '',
 };
 const countries = ['US'];
 const states = ['California'];

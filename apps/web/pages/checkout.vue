@@ -6,11 +6,27 @@
     :back-label-mobile="$t('back')"
     :heading="$t('checkout')"
   >
-    <div class="md:grid md:grid-cols-12 md:gap-x-6">
+    <div v-if="cart" class="md:grid md:grid-cols-12 md:gap-x-6">
       <div class="col-span-7 mb-10 md:mb-0">
         <UiDivider class="w-screen md:w-auto -mx-4 md:mx-0" />
         <ContactInformation />
         <UiDivider class="w-screen md:w-auto -mx-4 md:mx-0" />
+        <CheckoutAddress
+          :heading="$t('billing.heading')"
+          :description="$t('billing.description')"
+          :button-text="$t('billing.addButton')"
+          :saved-address="cart.billingAddress"
+          type="billingAddress"
+        />
+        <UiDivider class-name="w-screen md:w-auto -mx-4 md:mx-0" />
+        <CheckoutAddress
+          :heading="$t('shipping.heading')"
+          :description="$t('shipping.description')"
+          :button-text="$t('shipping.addButton')"
+          :saved-address="cart.shippingAddress"
+          type="shippingAddress"
+        />
+        <UiDivider class-name="w-screen md:w-auto -mx-4 md:mx-0" />
         <ShippingMethod :shipping-methods="shippingMethods" />
         <UiDivider class="w-screen md:w-auto -mx-4 md:mx-0" />
       </div>

@@ -1,12 +1,6 @@
 <template>
   <section data-testid="category-empty-state" class="flex flex-col items-center md:mt-16">
-    <NuxtImg
-      src="/images/something-went-wrong.svg"
-      :alt="$t('emptyStateAltText')"
-      width="192"
-      height="192"
-      loading="eager"
-    />
+    <NuxtImg src="/images/something-went-wrong.svg" :alt="$t('emptyStateAltText')" width="192" height="192" />
     <p class="mt-8 font-medium">{{ $t('emptyStateText') }}</p>
     <p class="mt-4">{{ $t('emptyStateText2') }}</p>
     <SfButton :tag="NuxtLink" :href="paths.category" variant="secondary" class="mt-4">

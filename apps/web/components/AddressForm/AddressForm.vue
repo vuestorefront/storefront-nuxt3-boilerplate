@@ -85,17 +85,19 @@ const props = defineProps<AddressFormProps>();
 
 const isCartUpdateLoading = false;
 
-const defaultValues = ref({
-  firstName: props.savedAddress?.firstName || '',
-  lastName: props.savedAddress?.lastName || '',
-  phone: props.savedAddress?.phoneNumber || '',
-  country: props.savedAddress?.country || '',
-  streetName: props.savedAddress?.address1 || '',
-  streetNumber: props.savedAddress?.address2 || '',
-  city: props.savedAddress?.city || '',
-  state: props.savedAddress?.state || '',
-  postalCode: props.savedAddress?.postalCode || '',
-});
+const { savedAddress } = toRefs(props);
+
+const defaultValues = {
+  firstName: savedAddress?.value?.firstName || '',
+  lastName: savedAddress?.value?.lastName || '',
+  phone: savedAddress?.value?.phoneNumber || '',
+  country: savedAddress?.value?.country || '',
+  streetName: savedAddress?.value?.address1 || '',
+  streetNumber: savedAddress?.value?.address2 || '',
+  city: savedAddress?.value?.city || '',
+  state: savedAddress?.value?.state || '',
+  postalCode: savedAddress?.value?.postalCode || '',
+};
 const countries = ['US'];
 const states = ['California'];
 defineEmits(['on-save', 'on-close']);

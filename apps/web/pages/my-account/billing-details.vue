@@ -1,4 +1,4 @@
-<template>{{ $t('account.accountSettings.section.billgingDetails') }}</template>
+<template>{{ $t('account.accountSettings.section.billingDetails') }}</template>
 
 <script setup lang="ts">
 definePageMeta({

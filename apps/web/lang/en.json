@@ -254,7 +254,7 @@
       "heading": "Account Settings",
       "section": {
         "personalData": "Personal Data",
-        "billgingDetails": "Billing Details",
+        "billingDetails": "Billing Details",
         "shippingDetails": "Shipping Details"
       }
     },

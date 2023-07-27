@@ -64,15 +64,15 @@ const sections = [
     subsections: [
       {
         label: t('account.accountSettings.section.personalData'),
-        link: '/my-account/personal-data',
+        link: paths.accountPersonalData,
       },
       {
-        label: t('account.accountSettings.section.billgingDetails'),
-        link: '/my-account/billing-details',
+        label: t('account.accountSettings.section.billingDetails'),
+        link: paths.accountBillingDetails,
       },
       {
         label: t('account.accountSettings.section.shippingDetails'),
-        link: '/my-account/shipping-details',
+        link: paths.accountShippingDetails,
       },
     ],
   },
@@ -82,24 +82,26 @@ const sections = [
     subsections: [
       {
         label: t('account.ordersAndReturns.section.myOrders'),
-        link: '/my-account/my-orders',
+        link: paths.accountMyOrders,
       },
       {
         label: t('account.ordersAndReturns.section.returns'),
-        link: '/my-account/returns',
+        link: paths.accountReturns,
       },
     ],
   },
 ];
+
 const currentPath = computed(() => router.currentRoute.value.path);
-const isRoot = computed(() => /^\/my-account\/?$/.test(currentPath.value));
+const rootPathRegex = new RegExp('^' + paths.account + '/?$');
+const isRoot = computed(() => rootPathRegex.test(currentPath.value));
 const findCurrentPage = computed(() =>
   sections.flatMap(({ subsections }) => subsections).find(({ link }) => link === currentPath.value),
 );
 
 const breadcrumbs = computed(() => [
-  { name: t('home'), link: '/' },
-  { name: t('account.heading'), link: '/my-account' },
+  { name: t('home'), link: paths.home },
+  { name: t('account.heading'), link: paths.account },
   ...(isRoot.value ? [] : [{ name: findCurrentPage.value?.label, link: currentPath.value }]),
 ]);
 

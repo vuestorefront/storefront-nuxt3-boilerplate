@@ -5,6 +5,12 @@ export const paths = {
   cart: '/cart',
   checkout: '/checkout',
   search: '/search',
+  account: '/my-account',
   orderSuccess: '/order/success',
   orderFailed: '/order/failed',
+  accountPersonalData: '/my-account/personal-data',
+  accountBillingDetails: '/my-account/billing-details',
+  accountShippingDetails: '/my-account/shipping-details',
+  accountMyOrders: '/my-account/my-orders',
+  accountReturns: '/my-account/returns',
 };

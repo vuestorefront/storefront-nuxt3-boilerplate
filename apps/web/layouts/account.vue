@@ -55,6 +55,7 @@
 <script setup lang="ts">
 import { SfIconBase, SfIconPerson, SfIconShoppingCart, SfListItem } from '@storefront-ui/vue';
 
+
 const { t } = useI18n();
 const router = useRouter();
 const sections = [
@@ -93,7 +94,8 @@ const sections = [
 ];
 
 const currentPath = computed(() => router.currentRoute.value.path);
-const rootPathRegex = new RegExp('^' + paths.account + '/?$');
+// eslint-disable-next-line prettier/prettier
+const rootPathRegex = new RegExp(`^${paths.account}/?$`);
 const isRoot = computed(() => rootPathRegex.test(currentPath.value));
 const findCurrentPage = computed(() =>
   sections.flatMap(({ subsections }) => subsections).find(({ link }) => link === currentPath.value),

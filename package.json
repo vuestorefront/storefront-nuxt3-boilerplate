@@ -20,7 +20,7 @@
     "test": "turbo run test",
     "test:watch": "turbo run test:watch",
     "test:coverage": "npx turbo run test:coverage",
-    "test:cypress": "turbo run test:cypress",
+    "test:cypress": "concurrently -k -s=first \"yarn wait-on http://localhost:3000 && turbo run test:cypress\" \"yarn start\"",
     "lhci:mobile": "lhci autorun"
   },
   "dependencies": {
@@ -35,6 +35,7 @@
     "@vue-storefront/eslint-config": "~2.0.0-rc.7",
     "babel-preset-node": "^5.1.1",
     "commitizen": "^4.2.5",
+    "concurrently": "^8.2.0",
     "cypress": "^12.12.0",
     "cypress-wait-until": "^2.0.0",
     "eslint": "^8.38.0",
@@ -45,7 +46,8 @@
     "rimraf": "^3.0.2",
     "rollup": "^2.79.0",
     "turbo": "1.5.5",
-    "typescript": "5.0.4"
+    "typescript": "5.0.4",
+    "wait-on": "^7.0.1"
   },
   "engines": {
     "yarn": ">=3.6.1",

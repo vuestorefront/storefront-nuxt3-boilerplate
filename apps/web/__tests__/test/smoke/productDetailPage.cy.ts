@@ -4,6 +4,6 @@ const productDetailPage = new ProductDetailPageObject();
 
 describe('Smoke: Product Detail Page', () => {
   it('[smoke] Open product page and check displayed data', () => {
-   productDetailPage.displayCheck();
+    productDetailPage.displayCheck();
   });
 });

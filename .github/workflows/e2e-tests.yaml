@@ -27,15 +27,10 @@ jobs:
 
       - uses: cypress-io/github-action@v5
         with:
-          command: yarn start & yarn test:cypress
+          command: yarn test:cypress
       - uses: actions/upload-artifact@v3
         if: failure()
         with:
           name: cypress-screenshots
-          path: cypress/screenshots
-          if-no-files-found: ignore
-      - uses: actions/upload-artifact@v3
-        with:
-          name: cypress-videos
-          path: cypress/videos
+          path: apps/web/__tests__/report/screenshots
           if-no-files-found: ignore

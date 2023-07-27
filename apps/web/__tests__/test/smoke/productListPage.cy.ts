@@ -20,10 +20,11 @@ describe('Smoke: Product List Page', function () {
   });
 
   context('Product details and actions', () => {
-      it('[smoke] User should see the product information', () => {
-        // ASSERT - product details are displayed
-        productListPage.assertProductListElements()
-                       .assertFirstProduct();
+    it('[smoke] User should see the product information', () => {
+      // ASSERT - product details are displayed
+      productListPage
+        .assertProductListElements()
+        .assertFirstProduct();
       });
     });
 });

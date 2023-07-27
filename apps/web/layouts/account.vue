@@ -34,7 +34,7 @@
                 class="mt-4 rounded-md active:bg-primary-100 !text-neutral-900"
               >
                 <template #prefix><SfIconBase /></template>
-                Log Out
+                {{ $t('account.logout') }}
               </SfListItem>
             </ul>
           </div>

@@ -34,7 +34,7 @@ export default defineNuxtConfig({
       '2xl': 1366,
       xl: 1280,
       lg: 1024,
-      md: 767,
+      md: 768,
       sm: 640,
       xs: 376,
       '2xs': 360,

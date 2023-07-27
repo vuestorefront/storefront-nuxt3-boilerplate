@@ -22,7 +22,7 @@ export class CartPageObject {
   }
 
   get quanityDecreaseButton() {
-    return cy.getByTestId('quantitySelectorDecreaseButton');
+    return cy.getByTestId('quantity-selector-decrease-button');
   }
 
   get productCards() {
@@ -30,7 +30,7 @@ export class CartPageObject {
   }
 
   get quantitySelectorInput() {
-    return cy.getByTestId('quantitySelectorInput');
+    return cy.getByTestId('quantity-selector-input');
   }
 
   get cartBadgeIndicator() {
@@ -40,7 +40,7 @@ export class CartPageObject {
   get cartItem() {
     return cy.getByTestId('link');
   }
-  
+
   get cartIcon() {
     return cy.getByTestId('navbar-top').find('[data-testid="shopping-cart"]');
   }
@@ -51,7 +51,6 @@ export class CartPageObject {
       this.cartItem.should('have.text', fixture.name);
       return this;
     });
-    
   }
 
   assertCartPreviewElements(data: Product, expectedElements: number) {
@@ -66,6 +65,5 @@ export class CartPageObject {
   openCart() {
     this.cartIcon.click();
     return this;
-    
   }
 }

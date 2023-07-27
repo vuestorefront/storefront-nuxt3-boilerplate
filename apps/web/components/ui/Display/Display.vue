@@ -33,8 +33,8 @@
           :src="item.image"
           :alt="item.title"
           class="w-full md:w-1/2 self-end object-contain flex-1"
-          height="auto"
-          width="100%"
+          width="300"
+          height="300"
         />
       </div>
     </div>

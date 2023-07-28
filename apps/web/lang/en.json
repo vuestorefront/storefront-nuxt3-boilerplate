@@ -247,5 +247,24 @@
   "review": {
     "reportAbuse": "Report Abuse",
     "verifiedPurchase": "Verified purchase"
+  },
+  "account": {
+    "heading": "My Account",
+    "logout": "Log out",
+    "accountSettings": {
+      "heading": "Account Settings",
+      "section": {
+        "personalData": "Personal Data",
+        "billingDetails": "Billing Details",
+        "shippingDetails": "Shipping Details"
+      }
+    },
+    "ordersAndReturns": {
+      "heading": "Orders & Returns",
+      "section": {
+        "myOrders": "My Orders",
+        "returns": "Returns"
+      }
+    }
   }
 }

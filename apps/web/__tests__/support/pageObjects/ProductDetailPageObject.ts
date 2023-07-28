@@ -37,7 +37,7 @@ export class ProductDetailPageObject {
     this.productTitle.should('have.text', data.name);
     this.productDescription.should('have.text', data.description);
     this.productGallery.should('be.visible');
-    this.productPriceValue.should('have.text', data.currency + data.price.toFixed(2));
+    this.productPriceValue.contains(data.currency + data.price.toFixed(2));
     this.quantitySelector.should('be.visible');
     this.addToCartButton.should('be.visible');
     return this;

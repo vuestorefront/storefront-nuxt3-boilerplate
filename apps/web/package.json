@@ -30,7 +30,7 @@
     "@nuxtjs/tailwindcss": "^6.8.0",
     "@savvywombat/tailwindcss-grid-areas": "^3.1.0",
     "@storefront-ui/typography": "^2.3.1",
-    "@storefront-ui/vue": "^2.4.1",
+    "@storefront-ui/vue": "canary",
     "@types/lodash-es": "^4.17.7",
     "@types/node": "^18",
     "@vite-pwa/nuxt": "^0.1.0",

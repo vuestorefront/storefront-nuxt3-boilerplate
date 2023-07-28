@@ -17,7 +17,7 @@
             :tag="NuxtLink"
             class="no-underline text-neutral-600 hover:underline hover:!text-neutral-900 active:underline active:!text-neutral-900"
             variant="secondary"
-            :href="link"
+            :to="link"
           >
             {{ $t(`categories.${key}.subcategories.${subcategoryKey}`) }}
           </SfLink>
@@ -33,7 +33,7 @@
             :tag="NuxtLink"
             class="no-underline text-neutral-600 hover:underline hover:!text-neutral-900 active:underline active:!text-neutral-900"
             variant="secondary"
-            :href="link"
+            :to="link"
           >
             {{ $t(`contactOptions.${key}.label`) }}
           </SfLink>
@@ -67,7 +67,7 @@
             :tag="NuxtLink"
             class="text-white no-underline typography-text-sm active:text-white active:underline hover:text-white hover:underline"
             variant="secondary"
-            :href="link"
+            :to="link"
           >
             {{ $t(`bottomLinks.${key}`) }}
           </SfLink>

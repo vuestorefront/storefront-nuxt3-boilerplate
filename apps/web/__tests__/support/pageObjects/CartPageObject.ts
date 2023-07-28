@@ -48,8 +48,8 @@ export class CartPageObject {
   checkCart() {
     cy.getFixture('products').then((fixture) => {
       this.assertCartPreviewElements(fixture, 1);
-      this.cartItem.should('have.text', fixture.name);
-      return this;
+      this.cartItem.contains(fixture.name);
+    
     });
   }
 

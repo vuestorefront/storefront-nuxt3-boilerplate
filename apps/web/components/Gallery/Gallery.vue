@@ -1,6 +1,9 @@
 <template>
   <div class="flex-col md:flex-row h-full flex relative scroll-smooth md:gap-4" data-testid="gallery">
-    <div class="after:block after:pt-[100%] flex-1 relative overflow-hidden w-full max-h-[600px]">
+    <div
+      class="after:block after:pt-[100%] flex-1 relative overflow-hidden w-full max-h-[600px]"
+      data-testid="gallery-images"
+    >
       <SfScrollable
         class="items-center flex snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none'] w-full h-full"
         wrapper-class="!absolute top-0 left-0 w-full h-full"
@@ -24,6 +27,8 @@
             :src="url"
             sizes="2xs:100vw, xs:100vw, sm:100vw, md:700px"
             draggable="false"
+            :loading="index !== 0 ? 'lazy' : undefined"
+            :fetchpriority="index === 0 ? 'high' : undefined"
           />
         </div>
       </SfScrollable>
@@ -66,7 +71,7 @@
           @mouseover="onChangeIndex(index)"
           @focus="onChangeIndex(index)"
         >
-          <NuxtImg alt="" class="object-contain" width="80" height="80" :src="url" :quality="80" />
+          <NuxtImg alt="" class="object-contain" width="80" height="80" :src="url" :quality="80" loading="lazy" />
         </button>
 
         <template #nextButton>

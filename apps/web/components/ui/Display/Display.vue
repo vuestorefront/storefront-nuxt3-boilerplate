@@ -35,6 +35,7 @@
           class="w-full md:w-1/2 self-end object-contain flex-1"
           width="300"
           height="300"
+          loading="lazy"
         />
       </div>
     </div>

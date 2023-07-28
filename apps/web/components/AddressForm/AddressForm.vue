@@ -87,7 +87,7 @@ const isCartUpdateLoading = false;
 
 const { savedAddress } = toRefs(props);
 
-const defaultValues = {
+const defaultValues = ref({
   firstName: savedAddress?.value?.firstName ?? '',
   lastName: savedAddress?.value?.lastName ?? '',
   phone: savedAddress?.value?.phoneNumber ?? '',
@@ -97,7 +97,7 @@ const defaultValues = {
   city: savedAddress?.value?.city ?? '',
   state: savedAddress?.value?.state ?? '',
   postalCode: savedAddress?.value?.postalCode ?? '',
-};
+});
 const countries = ['US'];
 const states = ['California'];
 defineEmits(['on-save', 'on-close']);

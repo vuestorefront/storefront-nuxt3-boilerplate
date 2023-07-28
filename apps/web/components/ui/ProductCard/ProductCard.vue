@@ -1,19 +1,21 @@
 <template>
   <div class="border border-neutral-200 rounded-md hover:shadow-lg flex-auto flex-shrink-0" data-testid="product-card">
     <div class="relative">
-      <SfLink :tag="NuxtLink" :href="`/product/${slug}`">
+      <SfLink :tag="NuxtLink" :to="`${paths.product}${slug}`">
         <NuxtImg
           :src="imageUrl"
-          :alt="imageAlt || ''"
+          :alt="imageAlt"
           class="object-cover rounded-md aspect-square w-full h-full"
           data-testid="image-slot"
           width="190"
           height="190"
+          :loading="lazy && !priority ? 'lazy' : undefined"
+          :fetchpriority="priority ? 'high' : undefined"
         />
       </SfLink>
     </div>
     <div class="p-2 border-t border-neutral-200 typography-text-sm">
-      <SfLink :tag="NuxtLink" :href="`/product/${slug}`" class="no-underline" variant="secondary">
+      <SfLink :tag="NuxtLink" :to="`${paths.product}${slug}`" class="no-underline" variant="secondary">
         {{ name }}
       </SfLink>
       <div class="flex items-center pt-1">
@@ -42,7 +44,10 @@
 import { SfLink, SfRating, SfCounter, SfButton, SfIconShoppingCart } from '@storefront-ui/vue';
 import type { ProductCardProps } from '~/components/ui/ProductCard/types';
 
-defineProps<ProductCardProps>();
+withDefaults(defineProps<ProductCardProps>(), {
+  lazy: true,
+  imageAlt: '',
+});
 
 const NuxtLink = resolveComponent('NuxtLink');
 </script>

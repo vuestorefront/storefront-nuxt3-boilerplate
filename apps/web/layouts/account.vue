@@ -1,0 +1,111 @@
+<template>
+  <NuxtLayout name="default" :breadcrumbs="breadcrumbs">
+    <NarrowContainer>
+      <div class="mb-20 px-4 md:px-0" data-testid="account-layout">
+        <h1 class="my-10 font-bold typography-headline-3 md:typography-headline-2">{{ $t('account.heading') }}</h1>
+        <div class="md:flex gap-6" data-testid="account-page-sidebar">
+          <div class="border border-neutral-200 p-4 rounded-md min-w-[300px]">
+            <ul class="[&:not(:last-child)]:mb-4" v-for="{ title, icon, subsections } in sections" :key="title">
+              <SfListItem class="hover:!bg-transparent font-medium !cursor-auto">
+                <template #prefix><component :is="icon" /></template>
+                {{ title }}
+              </SfListItem>
+              <li v-for="{ label, link } in subsections" :key="label">
+                <SfListItem
+                  :tag="NuxtLink"
+                  :href="link"
+                  :class="[
+                    'first-of-type:mt-2 rounded-md active:bg-primary-100 !text-neutral-900',
+                    {
+                      'font-medium bg-primary-100': router.currentRoute.value.path === link,
+                    },
+                  ]"
+                >
+                  <template #prefix><SfIconBase /></template>
+                  {{ label }}
+                </SfListItem>
+              </li>
+            </ul>
+            <UiDivider />
+            <ul>
+              <SfListItem
+                :tag="NuxtLink"
+                href="/logout"
+                class="mt-4 rounded-md active:bg-primary-100 !text-neutral-900"
+              >
+                <template #prefix><SfIconBase /></template>
+                {{ $t('account.logout') }}
+              </SfListItem>
+            </ul>
+          </div>
+          <div class="flex-1">
+            <section
+              class="grid grid-cols-1 2xs:grid-cols-2 gap-4 md:gap-6 md:grid-cols-2 lg:grid-cols-3 3xl:grid-cols-4 mb-10 md:mb-5"
+              data-testid="category-grid"
+            >
+              <slot />
+            </section>
+          </div>
+        </div>
+      </div>
+    </NarrowContainer>
+  </NuxtLayout>
+</template>
+
+<script setup lang="ts">
+import { SfIconBase, SfIconPerson, SfIconShoppingCart, SfListItem } from '@storefront-ui/vue';
+
+
+const { t } = useI18n();
+const router = useRouter();
+const sections = [
+  {
+    title: t('account.accountSettings.heading'),
+    icon: SfIconPerson,
+    subsections: [
+      {
+        label: t('account.accountSettings.section.personalData'),
+        link: paths.accountPersonalData,
+      },
+      {
+        label: t('account.accountSettings.section.billingDetails'),
+        link: paths.accountBillingDetails,
+      },
+      {
+        label: t('account.accountSettings.section.shippingDetails'),
+        link: paths.accountShippingDetails,
+      },
+    ],
+  },
+  {
+    title: t('account.ordersAndReturns.heading'),
+    icon: SfIconShoppingCart,
+    subsections: [
+      {
+        label: t('account.ordersAndReturns.section.myOrders'),
+        link: paths.accountMyOrders,
+      },
+      {
+        label: t('account.ordersAndReturns.section.returns'),
+        link: paths.accountReturns,
+      },
+    ],
+  },
+];
+
+const currentPath = computed(() => router.currentRoute.value.path);
+// eslint-disable-next-line prettier/prettier
+const rootPathRegex = new RegExp(`^${paths.account}/?$`);
+const isRoot = computed(() => rootPathRegex.test(currentPath.value));
+const findCurrentPage = computed(() =>
+  sections.flatMap(({ subsections }) => subsections).find(({ link }) => link === currentPath.value),
+);
+
+const breadcrumbs = computed(() => [
+  { name: t('home'), link: paths.home },
+  { name: t('account.heading'), link: paths.account },
+  ...(isRoot.value ? [] : [{ name: findCurrentPage.value?.label, link: currentPath.value }]),
+]);
+
+const NuxtLink = resolveComponent('NuxtLink');
+</script>

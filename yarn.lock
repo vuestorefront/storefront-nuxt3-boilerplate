@@ -4519,6 +4519,7 @@ __metadata:
     commitizen: ^4.2.5
     cross-env: ^7.0.3
     cypress: ^12.12.0
+    cypress-wait-until: ^2.0.0
     dotenv: ^16.0.3
     eslint: ^8.38.0
     husky: ^7.0.4
@@ -7397,6 +7398,13 @@ __metadata:
   version: 0.2.2
   resolution: "cuint@npm:0.2.2"
   checksum: b8127a93a7f16ce120ffcb22108014327c9808b258ee20e7dbb4c6740d7cb0f0c12d18a054eb716b0f2470090666abaae8a082d3cd5ef0e94fa447dd155842c4
+  languageName: node
+  linkType: hard
+
+"cypress-wait-until@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "cypress-wait-until@npm:2.0.0"
+  checksum: 38021f688bde01e7944a5e6ca6e6380a8a4a8a677a4277854ab0df0b08d41df148965ea5360fda63e4299356d59eeb2fec61d1ef20f10d17fc2acdaeae73d8a5
   languageName: node
   linkType: hard
 

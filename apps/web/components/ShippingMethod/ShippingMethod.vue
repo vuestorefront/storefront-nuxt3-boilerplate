@@ -4,11 +4,7 @@
       <h3 class="text-neutral-900 text-lg font-bold">{{ $t('shippingMethod.heading') }}</h3>
     </div>
     <div class="mt-4">
-      <ul
-        v-if="shippingMethods && shippingMethods.methods"
-        class="grid gap-y-4 md:grid-cols-2 md:gap-x-4"
-        role="radiogroup"
-      >
+      <ul v-if="shippingMethods?.methods" class="grid gap-y-4 md:grid-cols-2 md:gap-x-4" role="radiogroup">
         <SfListItem
           v-for="{ id, name, estimatedDelivery, price: { amount } } in shippingMethods.methods"
           as="label"
@@ -36,7 +32,7 @@
 </template>
 <script lang="ts" setup>
 import { SfIconBlock, SfListItem, SfRadio } from '@storefront-ui/vue';
-import { ShippingMethodProps } from './types';
+import type { ShippingMethodProps } from '~/components/ShippingMethod/types';
 
 defineProps<ShippingMethodProps>();
 

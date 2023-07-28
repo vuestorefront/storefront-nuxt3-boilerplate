@@ -1,6 +1,10 @@
 import { toRefs } from '@vueuse/shared';
+import type {
+  useCartShippingMethodsState,
+  useCartShippingMethodsReturn,
+  GetShippingMethods,
+} from '~/composables/useCartShippingMethods/types';
 import { sdk } from '~/sdk';
-import type { useCartShippingMethodsState, useCartShippingMethodsReturn, GetShippingMethods } from './types';
 
 /**
  * @description Composable for getting shipping methods.

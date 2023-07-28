@@ -6,12 +6,12 @@ export interface UseCartState {
   loading: boolean;
 }
 
-export type GetCart = () => Promise<Ref<Maybe<SfCart>>>;
+export type FetchCard = () => Promise<Ref<Maybe<SfCart>>>;
 
 export interface UseCart {
   data: Readonly<Ref<UseCartState['data']>>;
   loading: Readonly<Ref<boolean>>;
-  getCart: GetCart;
+  fetchCard: FetchCard;
 }
 
 export type UseCartReturn = () => UseCart;

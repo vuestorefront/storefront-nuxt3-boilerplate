@@ -250,7 +250,8 @@
   },
   "account": {
     "heading": "My Account",
-    "logout": "Log out",
+    "navBarBottomHeading": "Account",
+    "logout": "Logout",
     "accountSettings": {
       "heading": "Account Settings",
       "section": {

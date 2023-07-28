@@ -1,14 +1,16 @@
 <template>
   <nav class="z-50 w-full fixed bottom-0 left-0 flex flex-row items-stretch md:hidden" data-testid="navbar-bottom">
     <SfButton
-      v-for="{ label, icon, path } in items"
+      v-for="{ label, icon, link } in items"
       :key="label"
       variant="tertiary"
       :class="[
-        'py-1 flex flex-col h-full w-full rounded-none bg-primary-700 text-white hover:text-white hover:bg-primary-800 active:text-white active:bg-primary-900',
-        { 'text-white bg-primary-900': $route.path === path },
+        '!p-1 !pt-3 flex flex-col h-full w-full rounded-none bg-primary-700 text-white hover:text-white hover:bg-primary-800 active:text-white active:bg-primary-900 !text-xs !font-base',
+        { 'text-white bg-primary-900': $route.path === link },
       ]"
-      @click="handleClick(path)"
+      size="sm"
+      :tag="NuxtLink"
+      :href="link"
     >
       <template #prefix>
         <div class="relative">
@@ -23,66 +25,39 @@
       {{ $t(label) }}
     </SfButton>
   </nav>
-  <SfModal v-model="isOpen" class="w-full h-full z-50" as="section" role="dialog" aria-labelledby="search-modal-title">
-    <header class="mb-4">
-      <SfButton square variant="tertiary" class="absolute right-4 top-2" @click="close">
-        <SfIconClose class="text-neutral-500" />
-      </SfButton>
-      <h3 id="search-modal-title" class="absolute left-6 top-4 font-bold typography-headline-4 mb-4">
-        {{ $t('search') }}
-      </h3>
-    </header>
-    <UiSearch :close="close" />
-  </SfModal>
 </template>
 
 <script setup lang="ts">
-import {
-  SfButton,
-  SfBadge,
-  SfIconShoppingCart,
-  SfIconHome,
-  SfIconMenu,
-  SfIconSearch,
-  SfModal,
-  SfIconClose,
-  useDisclosure,
-} from '@storefront-ui/vue';
+import { SfButton, SfBadge, SfIconShoppingCart, SfIconHome, SfIconMenu, SfIconPerson } from '@storefront-ui/vue';
 
-const router = useRouter();
-const { isOpen, open, close } = useDisclosure({ initialValue: false });
+const { t } = useI18n();
 const { data: cart } = useCart();
 
 const items = [
   {
-    label: 'home',
+    label: t('home'),
     icon: SfIconHome,
-    path: paths.home,
+    link: paths.home,
   },
   {
-    label: 'products',
+    label: t('products'),
     icon: SfIconMenu,
-    path: paths.category,
+    link: paths.category,
   },
   {
-    label: 'search',
-    icon: SfIconSearch,
-    path: paths.search,
-  },
-  {
-    label: 'cart',
+    label: t('cart'),
     icon: SfIconShoppingCart,
-    path: paths.cart,
+    link: paths.cart,
+  },
+  {
+    label: t('account.navBarBottomHeading'),
+    icon: SfIconPerson,
+    link: paths.account,
   },
 ];
+
 const cartLineItemsCount = computed(
   () => cart.value?.lineItems.reduce((total, { quantity }) => total + quantity, 0) ?? 0,
 );
-const handleClick = (path: string) => {
-  if (path === paths.search) {
-    open();
-  } else {
-    router.push(path);
-  }
-};
+const NuxtLink = resolveComponent('NuxtLink');
 </script>

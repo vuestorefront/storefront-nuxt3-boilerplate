@@ -1,16 +1,16 @@
 import { SfShippingMethods, Maybe } from '@vue-storefront/unified-data-model';
 
-export interface useCartShippingMethodsState {
+export interface UseCartShippingMethodsState {
   data: Maybe<SfShippingMethods>;
   loading: boolean;
 }
 
 export type GetShippingMethods = () => Promise<Ref<Maybe<SfShippingMethods>>>;
 
-export interface useCartShippingMethods {
-  data: Readonly<Ref<useCartShippingMethodsState['data']>>;
+export interface UseCartShippingMethods {
+  data: Readonly<Ref<UseCartShippingMethodsState['data']>>;
   loading: Readonly<Ref<boolean>>;
   getShippingMethods: GetShippingMethods;
 }
 
-export type useCartShippingMethodsReturn = () => useCartShippingMethods;
+export type UseCartShippingMethodsReturn = () => UseCartShippingMethods;

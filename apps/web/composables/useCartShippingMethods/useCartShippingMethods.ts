@@ -1,7 +1,7 @@
 import { toRefs } from '@vueuse/shared';
 import type {
-  useCartShippingMethodsState,
-  useCartShippingMethodsReturn,
+  UseCartShippingMethodsState,
+  UseCartShippingMethodsReturn,
   GetShippingMethods,
 } from '~/composables/useCartShippingMethods/types';
 import { sdk } from '~/sdk';
@@ -12,8 +12,8 @@ import { sdk } from '~/sdk';
  * const { data, loading, getShippingMethods } = useCartShippingMethods();
  */
 
-export const useCartShippingMethods: useCartShippingMethodsReturn = () => {
-  const state = useState<useCartShippingMethodsState>('useCartSippingMethods', () => ({
+export const useCartShippingMethods: UseCartShippingMethodsReturn = () => {
+  const state = useState<UseCartShippingMethodsState>('useCartSippingMethods', () => ({
     data: null,
     loading: false,
   }));

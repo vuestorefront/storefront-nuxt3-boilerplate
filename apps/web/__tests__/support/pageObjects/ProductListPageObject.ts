@@ -74,5 +74,4 @@ export class ProductListPageObject {
     });
     return this;
   }
-  
 }

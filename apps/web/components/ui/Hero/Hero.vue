@@ -9,6 +9,7 @@
           width="764"
           height="600"
           fetchpriority="high"
+          format="webp"
         />
       </div>
       <div class="p-4 md:p-10 md:flex md:flex-col md:justify-center md:items-start md:basis-2/4">

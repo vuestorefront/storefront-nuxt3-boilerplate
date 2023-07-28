@@ -34,5 +34,5 @@ const options = ref([
     value: 'relevant',
   },
 ]);
-const selected = ref('latest');
+const selected = ref(options.value[0].value);
 </script>

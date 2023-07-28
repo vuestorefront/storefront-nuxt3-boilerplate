@@ -7,9 +7,13 @@ const cart = new CartPageObject();
 describe('Smoke: Checkout Page', () => {
   it('[smoke] Display checkout and place order', () => {
     cy.visit('/');
+
     cart.openCart();
-    checkout.goToCheckout().addContactInformation()
-    checkout.fillContactInformationForm();
+    checkout
+      .goToCheckout()
+      .addContactInformation()
+      .fillContactInformationForm();
+
     //.addBillingAddress()
     //.fillBillingAddressForm()
     //.addShippingAddress()

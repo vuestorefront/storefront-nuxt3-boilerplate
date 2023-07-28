@@ -3,7 +3,12 @@
     <div
       class="border border-1 border-neutral-200 mt-10 mb-20 rounded p-4 md:p-6 flex flex-col items-center max-w-2xl mx-auto"
     >
-      <NuxtImg src="/images/something-went-wrong.svg" :alt="$t('somethingWentWrongImageAlt')" width="192" />
+      <NuxtImg
+        src="/images/something-went-wrong.svg"
+        :alt="$t('somethingWentWrongImageAlt')"
+        width="192"
+        height="192"
+      />
       <h1 class="mt-6 mb-1 text-2xl">{{ $t('failedInfoHeader') }}</h1>
       <span class="font-medium">{{ $t('failedInfoMessage') }}</span>
       <div class="border border-1 border-neutral-200 rounded bg-neutral-100 p-4 w-full my-4 text-sm">

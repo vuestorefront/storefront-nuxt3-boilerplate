@@ -2,21 +2,27 @@ export class HomePageObject {
   get header() {
     return cy.getByTestId('header');
   }
+
   get primaryButton() {
     return cy.getByTestId('button').contains('Order now');
   }
+
   get secondaryButton() {
     return cy.getByTestId('button').contains('Show more');
   }
+
   get categoryCard() {
     return cy.getByTestId('render-content');
   }
+
   get banners() {
     return cy.getByComponent('Display');
   }
+
   get productCard() {
     return cy.getByTestId('product-card');
   }
+
   get headerButton() {
     return cy.getByTestId('button').contains('Browse products');
   }
@@ -29,17 +35,8 @@ export class HomePageObject {
     this.header.should('be.visible');
   }
 
-  visit() {
-    cy.visit('/');
-    return this;
-  }
-
   checkPrimaryButton() {
     this.primaryButton.should('have.text', 'Order now').click();
-    cy.waitUntilElementInDOM(() => {
-      this.primaryButton.click();
-      return this.primaryButton;
-    });
     cy.url().should('eq', `${this.baseUrl}/product/athletic-mens-walking-sneakers`);
     return this;
   }
@@ -57,7 +54,7 @@ export class HomePageObject {
 
   checkBanners() {
     this.banners.should('be.visible');
-
+    return this;
   }
 
   checkProductCard() {

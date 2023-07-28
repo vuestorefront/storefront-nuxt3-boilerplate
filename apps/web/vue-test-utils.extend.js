@@ -1,3 +1,4 @@
+import { createI18n } from 'vue-i18n';
 import { config } from '@vue/test-utils';
 
 const FindTestIdPlugin = (wrapper) => {
@@ -23,6 +24,12 @@ const GetTestIdPlugin = (wrapper) => {
 config.plugins.VueWrapper.install(FindTestIdPlugin);
 config.plugins.VueWrapper.install(GetTestIdPlugin);
 
+const i18n = createI18n({
+  legacy: false,
+  fallbackWarn: false,
+  missing: (_locale, key) => key,
+});
+config.global.plugins = [i18n];
 config.global.mocks = {
   $t: (key) => key,
   $d: (date) => date.toLocaleDateString(),

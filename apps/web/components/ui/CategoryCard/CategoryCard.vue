@@ -12,7 +12,7 @@
         <div
           class="relative h-[240px] w-[240px] rounded-full bg-neutral-100 group-hover:shadow-xl group-active:shadow-none"
         >
-          <NuxtImg :src="item.image" :alt="item.name" width="240" height="240" loading="lazy" />
+          <NuxtImg :src="item.image" :alt="item.name" width="240" height="240" loading="lazy" format="webp" />
         </div>
         <div class="flex justify-center">
           <p

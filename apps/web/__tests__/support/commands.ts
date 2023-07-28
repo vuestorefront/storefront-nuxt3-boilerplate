@@ -26,7 +26,6 @@ Cypress.Commands.add('getFixture', (fixtureName: string) => {
   });
 })
 
-
 Cypress.Commands.add('waitUntilElementInDOM', (actionToWaitOn: () => Cypress.Chainable) =>
   cy.waitUntil(() =>
     actionToWaitOn()

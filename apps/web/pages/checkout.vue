@@ -18,7 +18,7 @@
           :saved-address="cart.billingAddress"
           type="billingAddress"
         />
-        <UiDivider class-name="w-screen md:w-auto -mx-4 md:mx-0" />
+        <UiDivider class="w-screen md:w-auto -mx-4 md:mx-0" />
         <CheckoutAddress
           :heading="$t('shipping.heading')"
           :description="$t('shipping.description')"
@@ -26,7 +26,7 @@
           :saved-address="cart.shippingAddress"
           type="shippingAddress"
         />
-        <UiDivider class-name="w-screen md:w-auto -mx-4 md:mx-0" />
+        <UiDivider class="w-screen md:w-auto -mx-4 md:mx-0" />
         <CheckoutPayment :active-payment="activePayment" @update:active-payment="activePayment = $event" />
         <UiDivider class="w-screen md:w-auto -mx-4 md:mx-0 mb-10" />
       </div>

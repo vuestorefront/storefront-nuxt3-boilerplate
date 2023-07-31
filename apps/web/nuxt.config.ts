@@ -71,8 +71,9 @@ export default defineNuxtConfig({
   ],
   nitro: {
     prerender: {
-      routes: ['/'],
+      crawlLinks: true,
     },
+    compressPublicAssets: true,
   },
   routeRules: {
     '/_ipx/**': { headers: { 'cache-control': `public, max-age=31536000, immutable` } },

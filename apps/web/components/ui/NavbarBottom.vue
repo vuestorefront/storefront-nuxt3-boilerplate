@@ -22,7 +22,7 @@
           />
         </div>
       </template>
-      {{ $t(label) }}
+      {{ label }}
     </SfButton>
   </nav>
 </template>

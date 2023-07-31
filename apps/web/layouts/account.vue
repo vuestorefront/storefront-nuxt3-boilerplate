@@ -13,7 +13,7 @@
               <li v-for="{ label, link } in subsections" :key="label">
                 <SfListItem
                   :tag="NuxtLink"
-                  :href="link"
+                  :to="link"
                   :class="[
                     'first-of-type:mt-2 rounded-md active:bg-primary-100 !text-neutral-900',
                     {

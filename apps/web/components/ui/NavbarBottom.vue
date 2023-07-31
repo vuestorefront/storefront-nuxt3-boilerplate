@@ -10,7 +10,7 @@
       ]"
       size="sm"
       :tag="NuxtLink"
-      :href="link"
+      :to="link"
     >
       <template #prefix>
         <div class="relative">

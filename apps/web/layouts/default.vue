@@ -49,7 +49,7 @@
               <UiDivider class="my-2" />
               <SfListItem @click="accountDropdownToggle()">{{ label }}</SfListItem>
             </template>
-            <SfListItem v-else :tag="NuxtLink" :href="link" :class="{ 'bg-neutral-200': $route.path === link }">
+            <SfListItem v-else :tag="NuxtLink" :to="link" :class="{ 'bg-neutral-200': $route.path === link }">
               {{ label }}
             </SfListItem>
           </li>

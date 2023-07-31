@@ -7,7 +7,7 @@
           <h1 class="font-bold typography-headline-3 md:typography-headline-2">{{ heading }}</h1>
           <SfButton
             :tag="NuxtLink"
-            :href="backHref"
+            :to="backHref"
             class="flex md:hidden whitespace-nowrap"
             size="sm"
             variant="tertiary"
@@ -17,7 +17,7 @@
             </template>
             {{ backLabelMobile }}
           </SfButton>
-          <SfButton :tag="NuxtLink" :href="backHref" class="hidden md:flex" variant="tertiary">
+          <SfButton :tag="NuxtLink" :to="backHref" class="hidden md:flex" variant="tertiary">
             <template #prefix>
               <SfIconArrowBack />
             </template>

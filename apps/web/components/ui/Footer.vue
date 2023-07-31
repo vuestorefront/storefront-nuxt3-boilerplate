@@ -50,7 +50,7 @@
             v-for="{ label, link, icon } in socialMedia"
             :key="label"
             :tag="NuxtLink"
-            :href="link"
+            :to="link"
             :title="$t('socialLabel', { label })"
             square
             variant="tertiary"

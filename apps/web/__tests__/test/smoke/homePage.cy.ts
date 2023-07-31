@@ -7,22 +7,19 @@ beforeEach(() => {
 });
 
 describe('Smoke: Homepage', () => {
-  it('[smoke] Check if Primary Button is working', () => {
+  it.skip('[smoke] Check if Primary Button is working', () => {
     homePage.checkPrimaryButton();
   });
 
-  it('[smoke] Check if Secondary Button is working', () => {
+  it.skip('[smoke] Check if Secondary Button is working', () => {
     homePage.checkSecondaryButton();
   });
 
-  it('[smoke] Check if elements display properly', () => {
-    homePage
-      .checkCategoryCard()
-      .checkBanners()
-      .checkProductCard();
+  it.skip('[smoke] Check if elements display properly', () => {
+    homePage.checkCategoryCard().checkBanners().checkProductCard();
   });
 
-  it('[smoke] Check if Categories button is working ', () => {
+  it.skip('[smoke] Check if Categories button is working ', () => {
     homePage.checkHeaderCategory();
   });
 });

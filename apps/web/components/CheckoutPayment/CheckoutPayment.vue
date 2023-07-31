@@ -45,6 +45,7 @@ const paymentMethods = [
     value: PaymentMethod.PayPal,
     imgSrc: '/images/paypal.svg',
     imgAlt: t('checkoutPayment.paypalIconAlt'),
+    disabled: true,
   },
   {
     value: PaymentMethod.ApplePay,

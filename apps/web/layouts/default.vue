@@ -45,12 +45,12 @@
         </template>
         <ul class="rounded bg-white shadow-md border border-neutral-100 text-neutral-900 min-w-[152px] py-2">
           <li v-for="{ label, link } in accountDropdown" :key="label">
-            <template v-if="label === $t('account.logout')">
+            <template v-if="$t(label) === $t('account.logout')">
               <UiDivider class="my-2" />
               <SfListItem @click="accountDropdownToggle()">{{ label }}</SfListItem>
             </template>
             <SfListItem v-else :tag="NuxtLink" :to="link" :class="{ 'bg-neutral-200': $route.path === link }">
-              {{ label }}
+              {{ $t(label) }}
             </SfListItem>
           </li>
         </ul>
@@ -110,7 +110,6 @@ import {
 } from '@storefront-ui/vue';
 import { DefaultLayoutProps } from '~/layouts/types';
 
-const { t } = useI18n();
 const { isOpen: isAccountDropdownOpen, toggle: accountDropdownToggle } = useDisclosure();
 const { isOpen: isSearchModalOpen, open: searchModalOpen, close: searchModalClose } = useDisclosure();
 
@@ -130,19 +129,19 @@ const cartLineItemsCount = computed(
 
 const accountDropdown = [
   {
-    label: t('account.heading'),
+    label: 'account.heading',
     link: paths.account,
   },
   {
-    label: t('account.ordersAndReturns.section.myOrders'),
+    label: 'account.ordersAndReturns.section.myOrders',
     link: paths.accountMyOrders,
   },
   {
-    label: t('account.ordersAndReturns.section.returns'),
+    label: 'account.ordersAndReturns.section.returns',
     link: paths.accountReturns,
   },
   {
-    label: t('account.logout'),
+    label: 'account.logout',
     link: '/',
   },
 ];

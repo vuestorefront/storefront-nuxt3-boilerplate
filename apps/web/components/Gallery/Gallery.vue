@@ -29,6 +29,7 @@
             draggable="false"
             :loading="index !== 0 ? 'lazy' : undefined"
             :fetchpriority="index === 0 ? 'high' : undefined"
+            :preload="index === 0"
             format="webp"
             width="600"
             height="600"

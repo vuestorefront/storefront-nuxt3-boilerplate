@@ -62,7 +62,7 @@
       square
       @click="searchModalOpen"
     >
-      <template #prefix><SfIconSearch /></template>
+      <SfIconSearch />
     </SfButton>
   </UiNavbarTop>
   <NarrowContainer v-if="breadcrumbs">

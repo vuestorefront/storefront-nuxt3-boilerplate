@@ -1,12 +1,5 @@
 import type { Ref } from 'vue';
-import type { Maybe, SfId } from '@vue-storefront/unified-data-model';
-
-export interface SfCustomer {
-  id: SfId;
-  email: string;
-  firstName: string;
-  lastName: string;
-}
+import type { Maybe, SfCustomer } from '@vue-storefront/unified-data-model';
 
 export interface UseAccountState {
   data: Maybe<SfCustomer>;

@@ -5774,7 +5774,7 @@ __metadata:
   dependencies:
     "@types/node": ^18
     nuxt: ^3.6.2
-    sf-docs-base: 1.0.0-rc.3
+    sf-docs-base: 1.0.0-rc.5
   languageName: unknown
   linkType: soft
 
@@ -18963,9 +18963,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sf-docs-base@npm:1.0.0-rc.3":
-  version: 1.0.0-rc.3
-  resolution: "sf-docs-base@npm:1.0.0-rc.3"
+"sf-docs-base@npm:1.0.0-rc.5":
+  version: 1.0.0-rc.5
+  resolution: "sf-docs-base@npm:1.0.0-rc.5"
   dependencies:
     "@microsoft/api-extractor-model": ^7.26.5
     "@microsoft/tsdoc": ^0.14.2
@@ -18990,7 +18990,7 @@ __metadata:
     vite-svg-loader: ^4.0.0
     vue-instantsearch: ^4.8.10
     vue-virtual-scroller: ^2.0.0-beta.8
-  checksum: 5182a52e2d346c2cc10380df09fe9f9200012b0469692403b8f430c6657bb6bf0edd08a1d528dd56728eeac047e51ffcdf467cf58b9947f05caa1e747d31303c
+  checksum: 11e80274f731cba52c24ab998cd925de280c04916dfa67a251c1dc6dfdc6cdb9ccd67ba6ae10219571317c3190c608eea6fd254b2b56f0b2a5ab754930195fc8
   languageName: node
   linkType: hard
 

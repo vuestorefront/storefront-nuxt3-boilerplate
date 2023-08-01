@@ -50,9 +50,9 @@
           </template>
           <ul class="rounded bg-white shadow-md border border-neutral-100 text-neutral-900 min-w-[152px] py-2">
             <li v-for="{ label, link } in accountDropdown" :key="label">
-              <template v-if="$t(label) === $t('account.logout')">
+              <template v-if="label === 'account.logout'">
                 <UiDivider class="my-2" />
-                <SfListItem @click="accountDropdownToggle()">{{ label }}</SfListItem>
+                <SfListItem tag="button" class="text-left" @click="accountDropdownToggle()">{{ $t(label) }}</SfListItem>
               </template>
               <SfListItem v-else :tag="NuxtLink" :to="link" :class="{ 'bg-neutral-200': $route.path === link }">
                 {{ $t(label) }}
@@ -138,6 +138,7 @@ const NuxtLink = resolveComponent('NuxtLink');
 const cartLineItemsCount = computed(
   () => cart.value?.lineItems.reduce((total, { quantity }) => total + quantity, 0) ?? 0,
 );
+
 const accountDropdown = [
   {
     label: 'account.heading',

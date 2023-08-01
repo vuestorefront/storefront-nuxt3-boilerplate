@@ -252,12 +252,37 @@
     "heading": "My Account",
     "navBarBottomHeading": "Account",
     "logout": "Logout",
+    "back": "Back",
     "accountSettings": {
       "heading": "Account Settings",
       "section": {
         "personalData": "Personal Data",
         "billingDetails": "Billing Details",
         "shippingDetails": "Shipping Details"
+      },
+      "personalData": {
+        "yourName": "Your name",
+        "firstName": "First name",
+        "lastName": "Last name",
+        "edit": "Edit",
+        "change": "Change",
+        "contactInformation": "Contact information",
+        "yourPassword": "Your password",
+        "passwordChange": "Password change",
+        "newPassword": "New password",
+        "newPasswordAgain": "Repeat new password",
+        "changePassword": "Change password",
+        "currentPassword": "Current password",
+        "passwordHelp": "Use 8 or more characters with a mix of letters, numbers and symbols."
+      },
+      "billingDetails": {
+        "billingAddress": "Billing address",
+        "edit": "Edit",
+        "shippingAddress": "Shipping address"
+      },
+      "shippingDetails": {
+        "edit": "Edit",
+        "shippingAddress": "Shipping address"
       }
     },
     "ordersAndReturns": {

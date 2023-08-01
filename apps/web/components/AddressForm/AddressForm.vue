@@ -64,11 +64,11 @@
       {{ $t('form.useAsShippingLabel') }}
     </label>
 
-    <div class="md:col-span-3 flex justify-end gap-4">
-      <SfButton type="reset" class="max-md:w-1/2" variant="secondary" @click="$emit('on-close')">
+    <div class="md:col-span-3 flex flex-col-reverse md:flex-row justify-end mt-6 gap-4">
+      <SfButton type="reset" class="" variant="secondary" @click="$emit('on-close')">
         {{ $t('contactInfo.cancel') }}
       </SfButton>
-      <SfButton type="submit" class="w-1/2 md:w-1/6" :disabled="isCartUpdateLoading">
+      <SfButton type="submit" class="min-w-[120px]" :disabled="isCartUpdateLoading">
         <SfLoaderCircular v-if="isCartUpdateLoading" class="flex justify-center items-center" size="sm" />
         <span v-else>
           {{ $t('contactInfo.save') }}

@@ -20,6 +20,7 @@
   "dependencies": {
     "@vue-storefront/sdk": "^1.0.1",
     "@vue-storefront/storefront-boilerplate-sdk": "~0.1.0",
+    "@vueuse/core": "^10.3.0",
     "lodash-es": "^4.17.21"
   },
   "devDependencies": {

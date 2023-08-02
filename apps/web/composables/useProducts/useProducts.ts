@@ -1,5 +1,5 @@
 import { FetchProducts, UseProductsReturn, UseProductsState } from '~/composables/useProducts/types';
-import { sdk } from '~/sdk';
+import { useSdk } from '~/sdk';
 
 /**
  * @description Composable for managing products.
@@ -20,7 +20,7 @@ export const useProducts: UseProductsReturn = () => {
    */
   const fetchProducts: FetchProducts = async () => {
     state.value.loading = true;
-    const { data, error } = await useAsyncData(sdk.commerce.getProducts);
+    const { data, error } = await useAsyncData(useSdk().commerce.getProducts);
     useHandleError(error.value);
     state.value.data = data.value;
     state.value.loading = false;

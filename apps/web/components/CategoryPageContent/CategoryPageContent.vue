@@ -4,9 +4,9 @@
       <h1 class="my-10 font-bold typography-headline-3 md:typography-headline-2">{{ title }}</h1>
       <div class="md:flex gap-6" data-testid="category-page-content">
         <CategorySidebar :is-open="isOpen" @close="close">
-          <LazyHydrate when-visible>
+          <NuxtLazyHydrate when-visible>
             <slot name="sidebar" />
-          </LazyHydrate>
+          </NuxtLazyHydrate>
         </CategorySidebar>
         <div class="flex-1">
           <div class="flex justify-between items-center mb-6">
@@ -25,7 +25,7 @@
             class="grid grid-cols-1 2xs:grid-cols-2 gap-4 md:gap-6 md:grid-cols-2 lg:grid-cols-3 3xl:grid-cols-4 mb-10 md:mb-5"
             data-testid="category-grid"
           >
-            <LazyHydrate
+            <NuxtLazyHydrate
               when-visible
               v-for="({ id, name, rating, price, primaryImage, slug }, index) in products"
               :key="id"
@@ -40,10 +40,10 @@
                 :slug="slug"
                 :priority="index === 0"
               />
-            </LazyHydrate>
+            </NuxtLazyHydrate>
           </section>
           <LazyCategoryEmptyState v-else />
-          <LazyHydrate when-visible>
+          <NuxtLazyHydrate when-visible>
             <UiPagination
               v-if="totalProducts > itemsPerPage"
               :current-page="1"
@@ -51,7 +51,7 @@
               :page-size="itemsPerPage"
               :max-visible-pages="maxVisiblePages"
             />
-          </LazyHydrate>
+          </NuxtLazyHydrate>
         </div>
       </div>
     </div>

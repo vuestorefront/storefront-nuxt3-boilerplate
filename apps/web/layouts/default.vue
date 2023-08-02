@@ -12,11 +12,11 @@
       </template>
       <span class="hidden lg:flex whitespace-nowrap">{{ $t('allProductsLinkText') }}</span>
     </SfButton>
-    <LazyHydrate when-visible>
+    <NuxtLazyHydrate when-visible>
       <UiSearch class="hidden md:block flex-1" />
-    </LazyHydrate>
+    </NuxtLazyHydrate>
     <nav class="hidden md:flex md:flex-row md:flex-nowrap">
-      <LazyHydrate when-visible>
+      <NuxtLazyHydrate when-visible>
         <SfButton
           class="group relative text-white hover:text-white active:text-white hover:bg-primary-800 active:bg-primary-900 mr-1 -ml-0.5 rounded-md"
           :tag="NuxtLink"
@@ -34,8 +34,8 @@
             />
           </template>
         </SfButton>
-      </LazyHydrate>
-      <LazyHydrate when-visible>
+      </NuxtLazyHydrate>
+      <NuxtLazyHydrate when-visible>
         <SfDropdown v-model="isAccountDropdownOpen" placement="bottom-end">
           <template #trigger>
             <SfButton
@@ -60,7 +60,7 @@
             </li>
           </ul>
         </SfDropdown>
-      </LazyHydrate>
+      </NuxtLazyHydrate>
     </nav>
     <SfButton
       variant="tertiary"
@@ -79,13 +79,13 @@
   <main>
     <slot />
   </main>
-  <LazyHydrate when-idle>
+  <NuxtLazyHydrate when-idle>
     <UiNavbarBottom />
-  </LazyHydrate>
-  <LazyHydrate when-visible>
+  </NuxtLazyHydrate>
+  <NuxtLazyHydrate when-visible>
     <UiFooter />
-  </LazyHydrate>
-  <LazyHydrate when-idle>
+  </NuxtLazyHydrate>
+  <NuxtLazyHydrate when-idle>
     <SfModal
       v-model="isSearchModalOpen"
       class="w-full h-full z-50"
@@ -103,7 +103,7 @@
       </header>
       <UiSearch :close="searchModalClose" />
     </SfModal>
-  </LazyHydrate>
+  </NuxtLazyHydrate>
 </template>
 
 <script setup lang="ts">

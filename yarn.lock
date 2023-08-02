@@ -3216,7 +3216,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/kit@npm:3.6.5, @nuxt/kit@npm:^3.0.0-rc.13, @nuxt/kit@npm:^3.6.5":
+"@nuxt/kit@npm:3.6.5, @nuxt/kit@npm:^3.3.2, @nuxt/kit@npm:^3.6.5":
   version: 3.6.5
   resolution: "@nuxt/kit@npm:3.6.5"
   dependencies:
@@ -13728,13 +13728,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nuxt-lazy-hydrate@npm:^0.1.0":
-  version: 0.1.0
-  resolution: "nuxt-lazy-hydrate@npm:0.1.0"
+"nuxt-lazy-hydrate@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "nuxt-lazy-hydrate@npm:1.0.0"
   dependencies:
-    "@nuxt/kit": ^3.0.0-rc.13
+    "@nuxt/kit": ^3.3.2
     vue3-lazy-hydration: ^1.2.1
-  checksum: 8cc554d058607d299e3c821b5df6878a0466699b6ab687f60d844f7d921564ee3cd005791480d19f8bcb503d3c83213c955338f820a355247beea19214f5359e
+  checksum: d69f27eec2e406d8b92862fdb49a067ea7ded52e434b586661e1c0eecd20c3d97349c9c83d1c39d35fde613ddfa67485e16822f0fd4ace0451f1419989194f2f
   languageName: node
   linkType: hard
 
@@ -19012,7 +19012,7 @@ __metadata:
     happy-dom: ^9.20.3
     lodash-es: ^4.17.21
     nuxt: ^3.6.5
-    nuxt-lazy-hydrate: ^0.1.0
+    nuxt-lazy-hydrate: ^1.0.0
     nuxt-vitest: ^0.10.1
     sass: ^1.64.1
     vitest: ^0.33.0

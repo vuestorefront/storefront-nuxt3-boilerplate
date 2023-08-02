@@ -1,5 +1,5 @@
 <template>
-  <LazyHydrate when-visible>
+  <NuxtLazyHydrate when-visible>
     <div
       class="flex flex-col md:flex-row flex-wrap gap-6 max-w-screen-3xl mx-auto px-4 md:px-10 mb-10"
       data-testid="display"
@@ -42,7 +42,7 @@
         </div>
       </div>
     </div>
-  </LazyHydrate>
+  </NuxtLazyHydrate>
 </template>
 
 <script setup lang="ts">

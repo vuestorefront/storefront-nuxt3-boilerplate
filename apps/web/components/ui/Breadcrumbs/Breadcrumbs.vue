@@ -2,7 +2,7 @@
   <nav data-testid="breadcrumbs" class="inline-flex items-center text-sm font-normal font-body">
     <ol class="flex w-auto leading-none group md:flex-wrap">
       <li class="flex items-center sm:hidden text-neutral-500 z-10">
-        <LazyHydrate :on-interaction="['click', 'touchstart']">
+        <NuxtLazyHydrate :on-interaction="['click', 'touchstart']">
           <SfDropdown v-model="dropdownOpened" strategy="absolute" placement="bottom-start" @update:model-value="close">
             <template #trigger>
               <SfButton
@@ -35,7 +35,7 @@
               </li>
             </ol>
           </SfDropdown>
-        </LazyHydrate>
+        </NuxtLazyHydrate>
       </li>
       <li
         v-for="(item, index) in breadcrumbs"

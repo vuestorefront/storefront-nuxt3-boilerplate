@@ -1,5 +1,5 @@
 <template>
-  <span class="text-sm font-medium" data-testid="form-label">
+  <div class="text-sm font-medium pb-0.5" data-testid="form-label">
     <slot />
-  </span>
+  </div>
 </template>

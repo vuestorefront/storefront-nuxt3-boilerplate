@@ -17,7 +17,7 @@
       </label>
 
       <SfButton type="submit" class="mt-2" :disabled="isLoading">
-        <SfLoaderCircular v-if="isLoading" class="flex justify-center items-center" size="sm" />
+        <SfLoaderCircular v-if="isLoading" class="flex justify-center items-center" size="base" />
         <span v-else>
           {{ $t('auth.login.submitLabel') }}
         </span>
@@ -52,6 +52,11 @@ const rememberMe = ref(false);
 const isLoading = ref(false);
 
 const login = () => {
-  router.push('/');
+  isLoading.value = true;
+  // mimics waiting an async api call
+  setTimeout(async () => {
+    await router.push('/');
+    isLoading.value = false;
+  }, 4000);
 };
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <NuxtLayout name="auth" :heading="$t('auth.loginHeading')">
+  <NuxtLayout name="auth" :heading="$t('auth.login.heading')">
     <form @submit.prevent="login" class="border-neutral-200 md:border flex flex-col gap-4 md:p-6 rounded-md">
       <label>
         <UiFormLabel>{{ $t('form.emailLabel') }}</UiFormLabel>
@@ -13,26 +13,24 @@
 
       <label class="mt-2 flex items-center gap-2">
         <SfCheckbox name="rememberMe" v-model="rememberMe" />
-        {{ $t('auth.rememberMeLabel') }}
+        {{ $t('auth.login.rememberMeLabel') }}
       </label>
 
       <SfButton type="submit" class="mt-2" :disabled="isLoading">
         <SfLoaderCircular v-if="isLoading" class="flex justify-center items-center" size="sm" />
         <span v-else>
-          {{ $t('auth.loginAction') }}
+          {{ $t('auth.login.submitLabel') }}
         </span>
       </SfButton>
       <SfButton :tag="NuxtLink" to="/reset-password" variant="tertiary">
-        {{ $t('auth.forgotPasswordLabel') }}
+        {{ $t('auth.login.forgotPasswordLabel') }}
       </SfButton>
     </form>
 
     <UiAlert class="mt-6 w-full p-4 md:p-6 !justify-start typography-text-base" variant="neutral">
-      <span>
-        <i18n-t keypath="auth.createAccountBanner">
-          <SfLink :tag="NuxtLink" to="/signup" variant="primary">{{ $t('auth.createAccountLinkLabel') }}</SfLink>
-        </i18n-t>
-      </span>
+      <i18n-t tag="span" keypath="auth.login.createAccountBanner">
+        <SfLink :tag="NuxtLink" to="/signup" variant="primary">{{ $t('auth.login.createAccountLinkLabel') }}</SfLink>
+      </i18n-t>
     </UiAlert>
   </NuxtLayout>
 </template>

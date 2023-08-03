@@ -296,11 +296,13 @@
     }
   },
   "auth": {
-    "loginHeading": "Log in",
-    "loginAction": "Log in",
-    "forgotPasswordLabel": "Forgot your password?",
-    "rememberMeLabel": "Remember me",
-    "createAccountBanner": "First time here? {0}.",
-    "createAccountLinkLabel": "Create Account"
+    "login": {
+      "heading": "Log in",
+      "submitLabel": "Log in",
+      "forgotPasswordLabel": "Forgot your password?",
+      "rememberMeLabel": "Remember me",
+      "createAccountBanner": "First time here? {0}.",
+      "createAccountLinkLabel": "Create Account"
+    }
   }
 }

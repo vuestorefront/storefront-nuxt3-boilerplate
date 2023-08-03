@@ -1,32 +1,32 @@
 <template>
-  <UiDivider class="col-span-3 w-screen md:w-auto -mx-4 md:mx-0" />
+  <UiDivider class="w-screen -mx-4 md:col-span-3 md:w-auto md:mx-0" />
   <AccountData
     class="col-span-3"
     :header="$t('account.accountSettings.personalData.yourName')"
     :button-text="$t('account.accountSettings.personalData.edit')"
-    @on-click="openModal('name')"
+    @on-click="openModal('yourName')"
   >
     {{ userData.firstName }} {{ userData.lastName }}
   </AccountData>
-  <UiDivider class="col-span-3 w-screen md:w-auto -mx-4 md:mx-0" />
+  <UiDivider class="w-screen -mx-4 md:col-span-3 md:w-auto md:mx-0" />
   <AccountData
     class="col-span-3"
     :header="$t('account.accountSettings.personalData.contactInformation')"
     :button-text="$t('account.accountSettings.personalData.edit')"
-    @on-click="openModal('mail')"
+    @on-click="openModal('contactInformation')"
   >
     {{ userData.email }}
   </AccountData>
-  <UiDivider class="col-span-3 w-screen md:w-auto -mx-4 md:mx-0" />
+  <UiDivider class="w-screen -mx-4 md:col-span-3 md:w-auto md:mx-0" />
   <AccountData
     class="col-span-3"
     :header="$t('account.accountSettings.personalData.yourPassword')"
     :button-text="$t('account.accountSettings.personalData.change')"
-    @on-click="openModal('password')"
+    @on-click="openModal('passwordChange')"
   >
-    {{ userData.password }}
+    ******
   </AccountData>
-  <UiDivider class="col-span-3 w-screen md:w-auto -mx-4 md:mx-0" />
+  <UiDivider class="w-screen -mx-4 md:col-span-3 md:w-auto md:mx-0" />
   <UiOverlay v-if="isOpen" :visible="isOpen">
     <SfModal
       v-model="isOpen"
@@ -36,22 +36,16 @@
       aria-labelledby="address-modal-title"
     >
       <header>
-        <SfButton square variant="tertiary" class="absolute right-2 top-2" @click="close">
+        <SfButton type="button" square variant="tertiary" class="absolute right-2 top-2" @click="close">
           <SfIconClose />
         </SfButton>
         <h3 id="address-modal-title" class="text-neutral-900 text-lg md:text-2xl font-bold mb-6">
-          {{
-            openedForm === 'name'
-              ? $t('account.accountSettings.personalData.yourName')
-              : openedForm === 'mail'
-              ? $t('account.accountSettings.personalData.contactInformation')
-              : $t('account.accountSettings.personalData.passwordChange')
-          }}
+          {{ $t(`account.accountSettings.personalData.${openedForm}`) }}
         </h3>
       </header>
-      <AccountFormsName v-if="openedForm === 'name'" @on-save="close" @on-cancel="close" />
-      <ContactInformationForm v-else-if="openedForm === 'mail'" @on-save="close" @on-cancel="close" />
-      <AccountFormsPassword v-else-if="openedForm === 'password'" @on-save="close" @on-cancel="close" />
+      <AccountFormsName v-if="openedForm === 'yourName'" @on-save="close" @on-cancel="close" />
+      <ContactInformationForm v-else-if="openedForm === 'contactInformation'" @on-save="close" @on-cancel="close" />
+      <AccountFormsPassword v-else-if="openedForm === 'passwordChange'" @on-save="close" @on-cancel="close" />
     </SfModal>
   </UiOverlay>
 </template>
@@ -74,6 +68,5 @@ const userData = ref({
   firstName: 'Hieronim',
   lastName: 'Anonim',
   email: 'hieronim.anonim@gmail.com',
-  password: '*******',
 });
 </script>

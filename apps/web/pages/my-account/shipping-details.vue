@@ -1,5 +1,5 @@
 <template>
-  <UiDivider class="col-span-3 w-screen md:w-auto -mx-4 md:mx-0" />
+  <UiDivider class="w-screen -mx-4 md:col-span-3 md:w-auto md:mx-0" />
   <AccountData
     class="col-span-3"
     :header="$t('account.accountSettings.shippingDetails.shippingAddress')"
@@ -11,7 +11,7 @@
     <p>{{ userShippingAddress.address1 }} {{ userShippingAddress.address2 }}</p>
     <p>{{ userShippingAddress.city }}, {{ userShippingAddress.state }} {{ userShippingAddress.postalCode }}</p>
   </AccountData>
-  <UiDivider class="col-span-3 w-screen md:w-auto -mx-4 md:mx-0" />
+  <UiDivider class="w-screen -mx-4 md:col-span-3 md:w-auto md:mx-0" />
   <UiOverlay v-if="isOpen" :visible="isOpen">
     <SfModal
       v-model="isOpen"
@@ -35,14 +35,14 @@
 
 <script setup lang="ts">
 import { SfButton, SfIconClose, SfModal, useDisclosure } from '@storefront-ui/vue';
-import { SfAddress } from '@vue-storefront/unified-data-model';
+import type { SfAddress } from '@vue-storefront/unified-data-model';
 
 definePageMeta({
   layout: 'account',
 });
 const { isOpen, open, close } = useDisclosure();
 
-const userShippingAddress: Ref<SfAddress> = ref({
+const userShippingAddress = ref<SfAddress>({
   firstName: 'Hieronim',
   lastName: 'Anonim',
   address1: 'Oak Drive',

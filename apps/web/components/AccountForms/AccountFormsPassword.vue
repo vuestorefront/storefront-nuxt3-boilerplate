@@ -64,9 +64,9 @@ const props = defineProps<AccountFormsPasswordProps>();
 const { oldPassword, firstNewPassword, secondNewPassword } = toRefs(props);
 defineEmits(['on-save', 'on-cancel']);
 const userPasswords = ref({
-  oldPassword: oldPassword ?? '',
-  firstNewPassword: firstNewPassword ?? '',
-  secondNewPassword: secondNewPassword ?? '',
+  oldPassword: oldPassword?.value ?? '',
+  firstNewPassword: firstNewPassword?.value ?? '',
+  secondNewPassword: secondNewPassword?.value ?? '',
 });
 
 const passwordVisible = ref(false);

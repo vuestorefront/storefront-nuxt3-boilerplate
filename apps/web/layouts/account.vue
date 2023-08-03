@@ -2,7 +2,7 @@
   <NuxtLayout name="default" :breadcrumbs="breadcrumbs">
     <NarrowContainer>
       <div class="mb-20 px-4 md:px-0" data-testid="account-layout">
-        <h1 v-if="isRoot || width >= 768" class="my-10 font-bold typography-headline-3 md:typography-headline-2">
+        <h1 v-if="isRoot || isTabletScreen" class="my-10 font-bold typography-headline-3 md:typography-headline-2">
           {{ $t('account.heading') }}
         </h1>
         <div v-else class="flex justify-between items-center mb-10 mt-4">
@@ -13,7 +13,7 @@
           </div>
           <SfButton
             :tag="NuxtLink"
-            href="/my-account"
+            :to="paths.account"
             class="flex md:hidden whitespace-nowrap"
             size="sm"
             variant="tertiary"
@@ -24,7 +24,7 @@
             {{ $t('account.back') }}
           </SfButton>
         </div>
-        <div class="md:flex gap-6" data-testid="account-page-sidebar">
+        <div class="md:flex gap-10" data-testid="account-page-sidebar">
           <div :class="['border border-neutral-200 p-4 rounded-md min-w-[300px] md:block', { hidden: !isRoot }]">
             <ul class="[&:not(:last-child)]:mb-4" v-for="{ title, icon, subsections } in sections" :key="title">
               <SfListItem class="hover:!bg-transparent font-medium !cursor-auto">
@@ -75,10 +75,10 @@
 
 <script setup lang="ts">
 import { SfIconBase, SfIconPerson, SfIconShoppingCart, SfListItem, SfButton, SfIconArrowBack } from '@storefront-ui/vue';
-import { useWindowSize } from '@vueuse/core';
+import { useMediaQuery } from '@vueuse/core';
 
 
-const { width } = useWindowSize()
+const isTabletScreen = useMediaQuery(mediaQueries.tablet);
 const { t } = useI18n();
 const router = useRouter();
 const sections = [

@@ -26,7 +26,7 @@ const props = defineProps<AccountFormsNameProps>();
 const { firstName, lastName } = toRefs(props);
 defineEmits(['on-save', 'on-cancel']);
 const userData = ref({
-  firstName: firstName ?? '',
-  lastName: lastName ?? '',
+  firstName: firstName?.value ?? '',
+  lastName: lastName?.value ?? '',
 });
 </script>

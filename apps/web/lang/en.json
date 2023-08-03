@@ -22,7 +22,9 @@
     "stateLabel": "State",
     "postalCodeLabel": "ZIP Code",
     "useAsShippingLabel": "Use as shipping address",
-    "selectPlaceholder": "-- Select --"
+    "selectPlaceholder": "-- Select --",
+    "emailLabel": "Email",
+    "passwordLabel": "Password"
   },
   "myCart": "My Cart",
   "orderSummary": "Order Summary",
@@ -292,5 +294,13 @@
         "returns": "Returns"
       }
     }
+  },
+  "auth": {
+    "loginHeading": "Log in",
+    "loginAction": "Log in",
+    "forgotPasswordLabel": "Forgot your password?",
+    "rememberMeLabel": "Remember me",
+    "createAccountBanner": "First time here? {0}.",
+    "createAccountLinkLabel": "Create Account"
   }
 }

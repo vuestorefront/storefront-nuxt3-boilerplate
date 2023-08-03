@@ -21,7 +21,7 @@
       </SfButton>
     </div>
 
-    <UiOverlay v-if="isOpen" :visible="isOpen">
+    <UiOverlay :visible="isOpen">
       <SfModal
         v-model="isOpen"
         as="section"

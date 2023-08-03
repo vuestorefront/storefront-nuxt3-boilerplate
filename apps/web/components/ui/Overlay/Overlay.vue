@@ -8,7 +8,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-import type { OverlayProps } from './types';
+import type { OverlayProps } from '~/components/ui/Overlay/types';
 
 defineProps<OverlayProps>();
 </script>

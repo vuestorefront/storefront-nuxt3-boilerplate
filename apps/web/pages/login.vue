@@ -29,7 +29,9 @@
 
     <UiAlert class="mt-6 w-full p-4 md:p-6 !justify-start typography-text-base" variant="neutral">
       <i18n-t tag="span" keypath="auth.login.createAccountBanner">
-        <SfLink :tag="NuxtLink" to="/signup" variant="primary">{{ $t('auth.login.createAccountLinkLabel') }}</SfLink>
+        <SfLink :tag="NuxtLink" :to="paths.authSignup" variant="primary">
+          {{ $t('auth.login.createAccountLinkLabel') }}
+        </SfLink>
       </i18n-t>
     </UiAlert>
   </NuxtLayout>

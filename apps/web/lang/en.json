@@ -24,7 +24,11 @@
     "useAsShippingLabel": "Use as shipping address",
     "selectPlaceholder": "-- Select --",
     "emailLabel": "Email",
-    "passwordLabel": "Password"
+    "passwordLabel": "Password",
+    "passwordHint": "8 or more characters with a mix of letters, numbers and symbols.",
+    "termsAndConditionsLabel": "I declare that I have read and accept the {terms}",
+    "subscriptionLabel": "I wish to receive occasional emails about special offers, new products and exclusive promotions. I can cancel my subscription at any time. (Optional)",
+    "asterixHint": "* marked consents are required"
   },
   "myCart": "My Cart",
   "orderSummary": "Order Summary",
@@ -303,6 +307,18 @@
       "rememberMeLabel": "Remember me",
       "createAccountBanner": "First time here? {0}.",
       "createAccountLinkLabel": "Create Account"
+    },
+    "signup": {
+      "heading": "Create Account",
+      "createButton": "Create Account",
+      "bannerText": "Already have an account? Switch to {login}",
+      "modal": {
+        "heading": "Welcome",
+        "description": "Your account has been created. You can {information} to your account now, so you do not have to do this later during your purchase.",
+        "information": "add information",
+        "button": "Go Shopping",
+        "imageAlt": "Signup successful"
+      }
     }
   }
 }

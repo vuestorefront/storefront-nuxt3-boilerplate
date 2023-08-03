@@ -15,7 +15,7 @@
   <UiOverlay v-if="isOpen" :visible="isOpen">
     <SfModal
       v-model="isOpen"
-      as="section"
+      tag="section"
       role="dialog"
       class="h-full w-full overflow-auto md:w-[600px] md:h-fit"
       aria-labelledby="address-modal-title"

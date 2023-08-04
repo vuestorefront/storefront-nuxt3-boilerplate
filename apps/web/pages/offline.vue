@@ -114,3 +114,12 @@
     <p class="mt-8 text-center">{{ $t('youAreOfflineText') }}</p>
   </section>
 </template>
+
+<script lang="ts" setup>
+import { useOnline, whenever } from '@vueuse/core';
+
+const router = useRouter();
+const isOnline = useOnline();
+
+whenever(isOnline, () => router.push('/'), { immediate: true });
+</script>

@@ -1,12 +1,3 @@
-import { createHash } from 'node:crypto';
-import { readFileSync } from 'node:fs';
-import path from 'node:path';
-
-const getFileHash = (filepath: string, length = 8) => {
-  const fileContent = readFileSync(path.resolve(__dirname, filepath));
-  return createHash('sha256').update(fileContent).digest('hex').slice(0, Math.max(0, length));
-};
-
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
@@ -92,13 +83,25 @@ export default defineNuxtConfig({
   pwa: {
     registerType: 'autoUpdate',
     workbox: {
-      navigateFallback: '/offline',
+      navigateFallback: null,
       globPatterns: ['**/*.{js,json,css,html,ico,svg,png,webp,ico,woff,woff2,ttf,eit,otf}', 'icons/*'],
       globIgnores: ['manifest**.webmanifest'],
       additionalManifestEntries: [
         {
           url: '/offline',
-          revision: getFileHash('pages/offline.vue'),
+          revision: Math.random().toString(32),
+        },
+      ],
+      navigationPreload: true,
+      runtimeCaching: [
+        {
+          urlPattern: ({ request }) => request.mode === 'navigate',
+          handler: 'NetworkOnly',
+          options: {
+            precacheFallback: {
+              fallbackURL: '/offline',
+            },
+          },
         },
       ],
       cleanupOutdatedCaches: true,

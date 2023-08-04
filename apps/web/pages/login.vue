@@ -48,15 +48,14 @@ const router = useRouter();
 
 const email = ref('');
 const password = ref('');
-const rememberMe = ref(false);
-const isLoading = ref(false);
+const rememberMe = ref<boolean>();
+const isLoading = ref<boolean>();
 
 const login = () => {
   isLoading.value = true;
   // mimics waiting an async api call
-  setTimeout(async () => {
-    await router.push('/');
-    isLoading.value = false;
+  setTimeout(() => {
+    void router.push('/').then(() => (isLoading.value = false));
   }, 4000);
 };
 </script>

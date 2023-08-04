@@ -38,15 +38,9 @@ export class ProductListPageObject {
 
       cy.get('@product')
         .find(`[data-testid="link"]`)
-        .then((productLink) => {
-          productLink.text().trim().replace(/\\n/g, ' ');
-        })
         .then(() => {
           cy.get('@product')
             .find(`[data-testid="product-card-vertical-price"]`)
-            .then((productPrice) => {
-             productPrice.text().trim().replace(/\\n/g, ' ');
-            })
             .then(() => {
               cy.get('@product').click();
             });

@@ -129,13 +129,14 @@ export class CheckoutPageObject {
   }
 
   fillBillingAddressForm() {
-    cy.getFixture('addressForm').then((fixture) => {
-      this.fillForm(fixture);
-    });
-    return this;
+    return this.fillAddressForm();
   }
 
   fillShippingAddressForm() {
+    return this.fillAddressForm();
+  }
+
+  fillAddressForm() {
     cy.getFixture('addressForm').then((fixture) => {
       this.fillForm(fixture);
     });

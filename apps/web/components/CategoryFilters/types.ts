@@ -10,6 +10,4 @@ export type FilterProps = {
   type: 'size' | 'color';
 };
 
-export type FilterEmits = {
-  (event: 'update:selected', parameter: FilterProps['selected']): void;
-};
+export type FilterEmits = (event: 'update:selected', parameter: FilterProps['selected']) => void;

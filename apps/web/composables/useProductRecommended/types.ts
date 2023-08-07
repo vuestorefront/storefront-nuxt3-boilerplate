@@ -8,10 +8,10 @@ export interface UseProductRecommendedState {
 
 export type FetchProductRecommended = (slug: string) => Promise<Ref<Maybe<SfProduct[]>>>;
 
-export interface useProductRecommended {
+export interface UseProductRecommended {
   data: Readonly<Ref<UseProductRecommendedState['data']>>;
   loading: Readonly<Ref<boolean>>;
   fetchProductRecommended: FetchProductRecommended;
 }
 
-export type UseProductRecommendedReturn = (slug: string) => useProductRecommended;
+export type UseProductRecommendedReturn = (slug: string) => UseProductRecommended;

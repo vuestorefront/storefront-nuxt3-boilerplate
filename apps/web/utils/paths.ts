@@ -16,4 +16,6 @@ export const paths = {
   resetPassword: '/reset-password',
   resetPasswordSuccess: '/reset-password-success',
   setNewPassword: '/set-new-password',
+  authLogin: '/login',
+  authSignup: '/signup',
 };

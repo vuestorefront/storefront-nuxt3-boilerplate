@@ -10,7 +10,7 @@
     "lint:fix": "eslint . --ext .ts --fix"
   },
   "dependencies": {
-    "@vue-storefront/middleware": "3.3.1",
+    "@vue-storefront/middleware": "3.4.0",
     "consola": "^2.15.3",
     "nodemon": "^2.0.19",
     "ts-node-dev": "^2.0.0"

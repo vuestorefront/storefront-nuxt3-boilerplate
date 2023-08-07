@@ -42,7 +42,7 @@ const handleReset = () => {
   handleInputFocus();
 };
 const handleSubmit = () => {
-  props.close && props.close();
+  props.close?.();
   router.push({ path: paths.search, query: { search: inputModel.value } });
   handleReset();
 };

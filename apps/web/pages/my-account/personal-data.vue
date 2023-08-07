@@ -6,7 +6,7 @@
     :button-text="$t('account.accountSettings.personalData.edit')"
     @on-click="openModal('yourName')"
   >
-    {{ userData.firstName }} {{ userData.lastName }}
+    {{ userData?.firstName }} {{ userData?.lastName }}
   </AccountData>
   <UiDivider class="w-screen -mx-4 md:col-span-3 md:w-auto md:mx-0" />
   <AccountData
@@ -15,7 +15,7 @@
     :button-text="$t('account.accountSettings.personalData.edit')"
     @on-click="openModal('contactInformation')"
   >
-    {{ userData.email }}
+    {{ userData?.email }}
   </AccountData>
   <UiDivider class="w-screen -mx-4 md:col-span-3 md:w-auto md:mx-0" />
   <AccountData
@@ -79,9 +79,6 @@ const closeModal = () => {
   lastActiveElement.value.focus();
 };
 
-const userData = ref({
-  firstName: 'Hieronim',
-  lastName: 'Anonim',
-  email: 'hieronim.anonim@gmail.com',
-});
+const { fetchCustomer, data: userData } = useCustomer();
+fetchCustomer();
 </script>

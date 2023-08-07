@@ -94,7 +94,7 @@
             height="192"
             class="my-6"
           />
-          <h2 id="signUpModalTitle" class="mt-6 mb-4 font-bold typography-headline-4 md:typography-headline-3">
+          <h2 id="signUpModalTitle" class="mt-6 mb-4 font-bold typography-headline-3">
             {{ $t('auth.signup.modal.heading') }}
           </h2>
         </header>

@@ -79,7 +79,7 @@
     <UiOverlay :visible="isOpen">
       <SfModal
         v-model="isOpen"
-        class="max-w-[480px]"
+        class="max-w-[480px] inset-x-4 md:inset-x-0"
         tag="section"
         role="alertdialog"
         disable-click-away

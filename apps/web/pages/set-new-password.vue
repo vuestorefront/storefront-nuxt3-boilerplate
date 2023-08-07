@@ -1,7 +1,7 @@
 <template>
   <NuxtLayout name="auth" :heading="$t('auth.setNewPassword.heading')">
-    <form class="pb-4 px-4 md:p-6 mt-10 md:border md:border-neutral-200 rounded-md" @submit.prevent>
-      <p class="mb-6 md:my-6">
+    <form class="pb-4 md:p-6 mt-10 md:border md:border-neutral-200 rounded-md" @submit.prevent>
+      <p class="mb-6">
         {{ $t('auth.setNewPassword.description') }}
       </p>
       <label class="block mb-4">

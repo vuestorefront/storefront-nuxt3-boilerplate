@@ -1,6 +1,6 @@
 <template>
   <NuxtLayout name="auth" :heading="$t('auth.resetPassword.heading')">
-    <form class="pb-4 px-4 md:p-6 mt-10 md:border md:border-neutral-200 rounded-md" @submit.prevent="resetPassword">
+    <form class="pb-4 md:p-6 mt-10 md:border md:border-neutral-200 rounded-md" @submit.prevent="resetPassword">
       <p class="mb-6">
         {{ $t('auth.resetPassword.info') }}
       </p>
@@ -28,5 +28,5 @@ definePageMeta({
 const NuxtLink = resolveComponent('NuxtLink');
 const router = useRouter();
 const customerEmail = ref('');
-const resetPassword = () => router.push(paths.resetPasswordSuccess);
+const resetPassword = () => router.push(paths.authResetPasswordSuccess);
 </script>

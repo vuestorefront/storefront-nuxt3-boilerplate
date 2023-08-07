@@ -16,7 +16,7 @@
       >
         <span class="font-medium">{{ email }}</span>
       </i18n-t>
-      <SfButton :to="paths.resetPassword" :tag="NuxtLink" variant="tertiary">{{
+      <SfButton :to="paths.authResetPassword" :tag="NuxtLink" variant="tertiary">{{
         $t('auth.resetPassword.anotherEmail')
       }}</SfButton>
     </div>

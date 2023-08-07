@@ -1,14 +1,18 @@
 import { toRefs } from '@vueuse/shared';
-import type { UseAddressReturn, UseAddressState, FetchAddress } from '~/composables/useAddress/types';
+import type {
+  UseCustomerAddressReturn,
+  UseCustomerAddressState,
+  FetchAddress,
+} from '~/composables/useCustomerAddress/types';
 
 /**
  * @description Composable managing address data
- * @returns {@link UseAddressReturn}
+ * @returns {@link UseCustomerAddressReturn}
  * @example
- * const { data, loading, fetchAddress } = useAddress();
+ * const { data, loading, fetchAddress } = useCustomerAddress();
  */
-export const useAddress: UseAddressReturn = () => {
-  const state = useState<UseAddressState>(`useAddress`, () => ({
+export const useCustomerAddress: UseCustomerAddressReturn = () => {
+  const state = useState<UseCustomerAddressState>(`useCustomerAddress`, () => ({
     data: null,
     loading: false,
   }));

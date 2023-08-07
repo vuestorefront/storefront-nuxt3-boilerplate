@@ -1,6 +1,6 @@
 <template>
   <NuxtLayout name="auth">
-    <div class="max-w-[677px] mx-auto text-center rounded-md border border-neutral-200 p-6 mt-2">
+    <div class="mx-auto text-center rounded-md border border-neutral-200 p-4 md:p-6 mt-2">
       <NuxtImg
         src="/images/email-sent.png"
         :alt="$t('auth.resetPassword.emailSent')"
@@ -12,11 +12,11 @@
       <i18n-t
         tag="p"
         keypath="auth.resetPassword.thankYou"
-        class="bg-neutral-100 border border-neutral-200 p-4 rounded-md my-4"
+        class="bg-neutral-100 text-left border border-neutral-200 p-4 rounded-md my-4"
       >
         <span class="font-medium">{{ email }}</span>
       </i18n-t>
-      <SfButton to="/reset-password" :tag="NuxtLink" variant="tertiary">{{
+      <SfButton :to="paths.resetPassword" :tag="NuxtLink" variant="tertiary">{{
         $t('auth.resetPassword.anotherEmail')
       }}</SfButton>
     </div>

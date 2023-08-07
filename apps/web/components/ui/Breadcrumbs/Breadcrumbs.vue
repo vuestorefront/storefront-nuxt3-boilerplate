@@ -21,7 +21,7 @@
               </template>
             </SfButton>
           </template>
-          <ol class="px-4 py-2 rounded-md shadow-md border-neutral-100" data-testid="breadcrumbs-dropdown">
+          <ol class="px-4 py-2 rounded-md shadow-md border-neutral-100 bg-white" data-testid="breadcrumbs-dropdown">
             <li v-for="item in breadcrumbs" :key="item.name" class="py-2 last-of-type:hidden">
               <SfLink
                 :tag="NuxtLink"

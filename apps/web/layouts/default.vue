@@ -116,10 +116,10 @@ const { isOpen: isSearchModalOpen, open: searchModalOpen, close: searchModalClos
 defineProps<DefaultLayoutProps>();
 
 const { fetchCard, data: cart } = useCart();
-const { fetchAccount, data: account } = useAccount();
+const { fetchCustomer, data: account } = useCustomer();
 
 fetchCard();
-fetchAccount();
+fetchCustomer();
 usePageTitle();
 
 const NuxtLink = resolveComponent('NuxtLink');

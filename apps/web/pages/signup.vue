@@ -29,14 +29,14 @@
       </label>
       <label>
         <UiFormLabel>{{ $t('form.emailLabel') }}</UiFormLabel>
-        <SfInput name="email" autocomplete="off" v-model="emailModel" required />
+        <SfInput name="email" type="email" autocomplete="email" v-model="emailModel" required />
       </label>
       <div>
         <label>
           <UiFormLabel>{{ $t('form.passwordLabel') }}</UiFormLabel>
           <UiFormPasswordInput name="password" autocomplete="current-password" v-model="passwordModel" required />
+          <UiFormHelperText class="mb-2">{{ $t('form.passwordHint') }}</UiFormHelperText>
         </label>
-        <p class="text-xs text-neutral-500 mt-0.5 mb-2">{{ $t('form.passwordHint') }}</p>
       </div>
 
       <div class="flex items-center">
@@ -69,9 +69,7 @@
         </label>
       </div>
 
-      <div class="flex justify-between mb-2">
-        <p class="text-sm text-neutral-500 mt-0.5">{{ $t('form.asterixHint') }}</p>
-      </div>
+      <p class="text-sm text-neutral-500 mt-0.5 mb-2">{{ $t('form.asterixHint') }}</p>
 
       <SfButton type="submit" size="lg" class="w-full">
         {{ $t('auth.signup.createButton') }}
@@ -101,18 +99,16 @@
           </h2>
         </header>
         <UiAlert class="w-full p-4 mb-6 !justify-start typography-text-base" variant="neutral">
-          <p id="signUpModalDesc">
-            <i18n-t keypath="auth.signup.modal.description">
-              <template #information>
-                <SfLink
-                  href="#"
-                  class="focus:outline focus:outline-offset-2 focus:outline-2 outline-secondary-600 rounded"
-                >
-                  {{ $t('auth.signup.modal.information') }}
-                </SfLink>
-              </template>
-            </i18n-t>
-          </p>
+          <i18n-t keypath="auth.signup.modal.description" tag="p" id="signUpModalDesc">
+            <template #information>
+              <SfLink
+                href="#"
+                class="focus:outline focus:outline-offset-2 focus:outline-2 outline-secondary-600 rounded"
+              >
+                {{ $t('auth.signup.modal.information') }}
+              </SfLink>
+            </template>
+          </i18n-t>
         </UiAlert>
 
         <footer class="flex justify-end">

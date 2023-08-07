@@ -2,7 +2,7 @@ import { toRefs } from '@vueuse/shared';
 import type {
   UseCustomerAddressReturn,
   UseCustomerAddressState,
-  FetchAddress,
+  FetchCustomerAddress,
 } from '~/composables/useCustomerAddress/types';
 
 /**
@@ -21,7 +21,7 @@ export const useCustomerAddress: UseCustomerAddressReturn = () => {
    * @example
    * fetchAddress();
    */
-  const fetchAddress: FetchAddress = async () => {
+  const fetchCustomerAddress: FetchCustomerAddress = async () => {
     state.value.loading = true;
     const { data, error } = await useAsyncData(() =>
       Promise.resolve({
@@ -44,7 +44,7 @@ export const useCustomerAddress: UseCustomerAddressReturn = () => {
   };
 
   return {
-    fetchAddress,
+    fetchCustomerAddress,
     ...toRefs(state.value),
   };
 };

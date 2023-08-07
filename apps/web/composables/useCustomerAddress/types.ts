@@ -6,12 +6,12 @@ export interface UseCustomerAddressState {
   loading: boolean;
 }
 
-export type FetchAddress = () => Promise<Ref<Maybe<SfAddress>>>;
+export type FetchCustomerAddress = () => Promise<Ref<Maybe<SfAddress>>>;
 
 export interface UseCustomerAddress {
   data: Readonly<Ref<UseCustomerAddressState['data']>>;
   loading: Readonly<Ref<boolean>>;
-  fetchAddress: FetchAddress;
+  fetchCustomerAddress: FetchCustomerAddress;
 }
 
 export type UseCustomerAddressReturn = () => UseCustomerAddress;

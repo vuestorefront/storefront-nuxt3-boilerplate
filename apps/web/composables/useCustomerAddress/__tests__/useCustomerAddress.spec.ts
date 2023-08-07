@@ -2,9 +2,9 @@ import { useCustomerAddress } from '~/composables/useCustomerAddress/useCustomer
 
 describe('useCustomerAddress', () => {
   it('should return account data', async () => {
-    const { fetchAddress, data } = useCustomerAddress();
+    const { fetchCustomerAddress, data } = useCustomerAddress();
 
-    await fetchAddress();
+    await fetchCustomerAddress();
 
     expect(data.value).not.toBeUndefined();
   });

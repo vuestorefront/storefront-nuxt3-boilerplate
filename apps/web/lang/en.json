@@ -303,6 +303,24 @@
       "rememberMeLabel": "Remember me",
       "createAccountBanner": "First time here? {0}.",
       "createAccountLinkLabel": "Create Account"
+    },
+    "resetPassword": {
+      "heading":  "Reset password",
+      "info": "Enter the email address you used to sign up. We will send you a password reset link, that you’ll be able to use to set a new password for your account.",
+      "email":"Email",
+      "continue": "Continue",
+      "backToLogin": "Back to Login",
+      "thankYou": "Thank you, if there is an account registered with {0}, you should receive the password reset link in your inbox right away.",
+      "anotherEmail": "I need to try another email address",
+      "emailSent": "Email sent"
+    },
+    "setNewPassword": {
+      "heading":  "Set new password",
+      "button":  "Set new password",
+      "password":  "New password",
+      "repeatPassword":  "Repeat new password",
+      "help": "8 or more characters with a mix of letters, numbers and symbols.",
+      "description": "Create the new password you want to use to log in to your account."
     }
   }
 }

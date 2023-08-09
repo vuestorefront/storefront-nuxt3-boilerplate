@@ -5,7 +5,7 @@
         <h1 v-if="isRoot || isTabletScreen" class="my-10 font-bold typography-headline-3 md:typography-headline-2">
           {{ $t('account.heading') }}
         </h1>
-        <div v-else class="flex justify-between items-center mb-10 mt-4">
+        <div v-else class="flex justify-start items-center mb-10 mt-4">
           <div v-for="({ subsections }, i) in sections" :key="i">
             <div v-for="{ label, link } in subsections" :key="label" class="font-bold typography-headline-3">
               <h1 v-if="currentPath === link">{{ label }}</h1>
@@ -14,7 +14,7 @@
           <SfButton
             :tag="NuxtLink"
             :to="paths.account"
-            class="flex md:hidden whitespace-nowrap"
+            class="flex md:hidden whitespace-nowrap justify-self-end ml-auto"
             size="sm"
             variant="tertiary"
           >

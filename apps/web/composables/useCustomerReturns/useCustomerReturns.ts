@@ -6,7 +6,7 @@ import type {
 } from '~/composables/useCustomerReturns/types';
 
 /**
- * @description Composable managing address data
+ * @description Composable managing returns data
  * @returns {@link UseCustomerReturnsReturn}
  * @example
  * const { data, loading, fetchCustomerReturns } = useCustomerReturns();
@@ -17,7 +17,7 @@ export const useCustomerReturns: UseCustomerReturnsReturn = () => {
     loading: false,
   }));
 
-  /** Function for fetching address data
+  /** Function for fetching returns data
    * @example
    * fetchCustomerReturns();
    */

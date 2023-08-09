@@ -3,7 +3,7 @@
   <h2 class="hidden md:block col-span-3 typography-headline-4 mb-4 font-bold mx-4 capitalize">
     {{ $t('account.ordersAndReturns.returnsHeading') }}
   </h2>
-  <div v-if="data?.length < 1" class="col-span-3 text-center">
+  <div v-if="data?.length === 0" class="col-span-3 text-center">
     <NuxtImg
       src="/images/returns.png"
       :alt="$t('account.ordersAndReturns.returnsAltText')"
@@ -22,5 +22,7 @@ definePageMeta({
   layout: 'account',
 });
 
-const data: any = [];
+const { data, fetchCustomerReturns } = useCustomerReturns();
+
+await fetchCustomerReturns();
 </script>

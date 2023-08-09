@@ -121,7 +121,7 @@ const currentPath = computed(() => router.currentRoute.value.path);
 const rootPathRegex = new RegExp(`^${paths.account}/?$`);
 const isRoot = computed(() => rootPathRegex.test(currentPath.value));
 const findCurrentPage = computed(() =>
-  sections.flatMap(({ subsections }) => subsections).find(({ link }) => link === currentPath.value),
+  sections.flatMap(({ subsections }) => subsections).find(({ link }) => currentPath.value.includes(link)),
 );
 
 const breadcrumbs = computed(() => [

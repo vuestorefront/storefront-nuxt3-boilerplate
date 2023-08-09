@@ -35,7 +35,9 @@
           {{ $t('account.ordersAndReturns.status') }}
         </p>
         <span class="block typography-text-sm flex-1">{{ status }}</span>
-        <SfButton size="sm" variant="tertiary"> {{ $t('account.ordersAndReturns.details') }}</SfButton>
+        <SfButton :tag="NuxtLink" size="sm" variant="tertiary" :to="`${paths.accountMyOrders}/${id}`">
+          {{ $t('account.ordersAndReturns.details') }}</SfButton
+        >
       </li>
       <UiDivider class="w-screen -mx-4 md:col-span-3 md:w-auto md:mx-0" />
     </ul>
@@ -59,7 +61,9 @@
           <td class="py-4 px-4">{{ paymentAmount }}</td>
           <td class="py-4 px-4">{{ status }}</td>
           <td class="py-4 pl-4 text-right w-full">
-            <SfButton size="sm" variant="tertiary"> {{ $t('account.ordersAndReturns.details') }}</SfButton>
+            <SfButton :tag="NuxtLink" size="sm" variant="tertiary" :to="`${paths.accountMyOrders}/${id}`">
+              {{ $t('account.ordersAndReturns.details') }}</SfButton
+            >
           </td>
         </tr>
       </tbody>
@@ -73,6 +77,8 @@ import { SfButton } from '@storefront-ui/vue';
 definePageMeta({
   layout: 'account',
 });
-const { fetchCustomerOrder, data } = useCustomerOrder();
-fetchCustomerOrder();
+const { fetchCustomerOrders, data } = useCustomerOrders();
+await fetchCustomerOrders();
+
+const NuxtLink = resolveComponent('NuxtLink');
 </script>

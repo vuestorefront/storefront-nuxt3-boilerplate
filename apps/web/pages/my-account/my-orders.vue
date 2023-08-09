@@ -40,6 +40,9 @@
       <UiDivider class="w-screen -mx-4 md:col-span-3 md:w-auto md:mx-0" />
     </ul>
     <table class="hidden md:block text-left typography-text-sm mx-4">
+      <caption class="hidden">
+        List of orders
+      </caption>
       <thead class="border-b-2 border-neutral-200">
         <tr>
           <th class="py-4 pr-4 font-medium">{{ $t('account.ordersAndReturns.orderId') }}</th>

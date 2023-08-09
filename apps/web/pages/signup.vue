@@ -76,54 +76,52 @@
       </SfButton>
     </form>
 
-    <UiOverlay :visible="isOpen">
-      <SfModal
-        v-model="isOpen"
-        class="max-w-[480px] inset-x-4 md:inset-x-0"
-        tag="section"
-        role="alertdialog"
-        disable-click-away
-        aria-labelledby="signUpModalTitle"
-        aria-describedby="signUpModalDesc"
-      >
-        <header class="flex items-center flex-col">
-          <NuxtImg
-            src="/images/signup-success.svg"
-            :alt="$t('auth.signup.modal.imageAlt')"
-            width="192"
-            height="192"
-            class="my-6"
-          />
-          <h2 id="signUpModalTitle" class="mt-6 mb-4 font-bold typography-headline-3">
-            {{ $t('auth.signup.modal.heading') }}
-          </h2>
-        </header>
-        <UiAlert class="w-full p-4 mb-6 !justify-start typography-text-base" variant="neutral">
-          <i18n-t keypath="auth.signup.modal.description" tag="p" id="signUpModalDesc">
-            <template #information>
-              <SfLink
-                :tag="NuxtLink"
-                :to="paths.account"
-                class="focus:outline focus:outline-offset-2 focus:outline-2 outline-secondary-600 rounded"
-              >
-                {{ $t('auth.signup.modal.information') }}
-              </SfLink>
-            </template>
-          </i18n-t>
-        </UiAlert>
+    <UiModal
+      v-model="isOpen"
+      class="max-w-[480px] inset-x-4 md:inset-x-0"
+      tag="section"
+      role="alertdialog"
+      disable-click-away
+      aria-labelledby="signUpModalTitle"
+      aria-describedby="signUpModalDesc"
+    >
+      <header class="flex items-center flex-col">
+        <NuxtImg
+          src="/images/signup-success.svg"
+          :alt="$t('auth.signup.modal.imageAlt')"
+          width="192"
+          height="192"
+          class="my-6"
+        />
+        <h2 id="signUpModalTitle" class="mt-6 mb-4 font-bold typography-headline-3">
+          {{ $t('auth.signup.modal.heading') }}
+        </h2>
+      </header>
+      <UiAlert class="w-full p-4 mb-6 !justify-start typography-text-base" variant="neutral">
+        <i18n-t keypath="auth.signup.modal.description" tag="p" id="signUpModalDesc">
+          <template #information>
+            <SfLink
+              :tag="NuxtLink"
+              :to="paths.account"
+              class="focus:outline focus:outline-offset-2 focus:outline-2 outline-secondary-600 rounded"
+            >
+              {{ $t('auth.signup.modal.information') }}
+            </SfLink>
+          </template>
+        </i18n-t>
+      </UiAlert>
 
-        <footer class="flex justify-end">
-          <SfButton type="button" :tag="NuxtLink" :to="paths.home" class="w-full">
-            {{ $t('auth.signup.modal.button') }}
-          </SfButton>
-        </footer>
-      </SfModal>
-    </UiOverlay>
+      <footer class="flex justify-end">
+        <SfButton type="button" :tag="NuxtLink" :to="paths.home" class="w-full">
+          {{ $t('auth.signup.modal.button') }}
+        </SfButton>
+      </footer>
+    </UiModal>
   </NuxtLayout>
 </template>
 
 <script setup lang="ts">
-import { SfButton, SfInput, SfCheckbox, SfLink, SfModal, useDisclosure } from '@storefront-ui/vue';
+import { SfButton, SfInput, SfCheckbox, SfLink, useDisclosure } from '@storefront-ui/vue';
 
 definePageMeta({
   layout: false,

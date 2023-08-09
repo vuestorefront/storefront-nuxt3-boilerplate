@@ -78,7 +78,7 @@
   <SfModal
     v-model="isSearchModalOpen"
     class="w-full h-full z-50"
-    as="section"
+    tag="section"
     role="dialog"
     aria-labelledby="search-modal-title"
   >

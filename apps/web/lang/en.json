@@ -308,6 +308,25 @@
       "section": {
         "myOrders": "My Orders",
         "returns": "Returns"
+      },
+      "orderDetails": {
+        "heading": "Order details",
+        "orderId": "Order ID",
+        "orderDate": "Order date",
+        "paymentAmount": "Payment amount",
+        "status": "Status",
+        "price": "Price",
+        "quantity": "Quantity",
+        "subtotal": "Subtotal",
+        "tableCaption": "Order details",
+        "product": "Product",
+        "itemsSubtotal": "Items Subtotal",
+        "delivery": "Delivery",
+        "estimatedTax": "Estimated Sales Tax",
+        "total": "Total", 
+        "billingAddress": "Billing address",
+        "paymentMethod": "Payment method",
+        "shippingAddress": "Shipping address"
       }
     }
   },

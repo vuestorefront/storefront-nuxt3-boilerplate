@@ -1,5 +1,8 @@
 <template>
-  <div class="flex border-t-[1px] border-neutral-200 md:border-0 min-w-[320px] max-w-[470px] pt-4">
+  <div
+    class="flex border-t-[1px] border-neutral-200 md:border-0 min-w-[320px] max-w-[470px] pt-4"
+    data-testid="product-card-vertical"
+  >
     <div class="relative overflow-hidden rounded-md w-[100px]">
       <NuxtImg
         class="w-full h-auto border rounded-md border-neutral-200"

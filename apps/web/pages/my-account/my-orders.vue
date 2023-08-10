@@ -28,7 +28,7 @@
       </li>
       <li>
         <p class="block typography-text-sm font-medium">{{ $t('account.ordersAndReturns.amount') }}</p>
-        <span class="block typography-text-sm mb-2">{{ paymentAmount }}</span>
+        <span class="block typography-text-sm mb-2">${{ paymentAmount }}</span>
       </li>
       <li class="flex flex-wrap items-center mb-2">
         <p class="block typography-text-sm -mb-1.5 font-medium flex-[100%]">
@@ -57,10 +57,10 @@
       <tbody>
         <tr v-for="{ id, date, paymentAmount, status } in data" :key="id" class="border-b border-neutral-200">
           <td class="py-4 pr-4 lg:whitespace-nowrap">{{ id }}</td>
-          <td class="py-4 px-4 lg:whitespace-nowrap">{{ date }}</td>
-          <td class="py-4 px-4">{{ paymentAmount }}</td>
-          <td class="py-4 px-4">{{ status }}</td>
-          <td class="py-4 pl-4 text-right w-full">
+          <td class="p-4 lg:whitespace-nowrap">{{ date }}</td>
+          <td class="p-4">${{ paymentAmount }}</td>
+          <td :class="['p-4', { 'text-negative-700': status === 'Cancelled' }]">{{ status }}</td>
+          <td class="py-1.5 pl-4 text-right w-full">
             <SfButton :tag="NuxtLink" size="sm" variant="tertiary" :to="`${paths.accountMyOrders}/${id}`">
               {{ $t('account.ordersAndReturns.details') }}</SfButton
             >

@@ -69,6 +69,7 @@
       </tbody>
     </table>
   </div>
+  <NuxtPage />
 </template>
 
 <script setup lang="ts">

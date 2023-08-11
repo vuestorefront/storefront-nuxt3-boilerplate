@@ -107,7 +107,7 @@
             </p>
             <span>{{ data?.billingAddress.firstName }} {{ data?.billingAddress.lastName }}</span>
             <span class="block">{{ data?.billingAddress.phoneNumber }}</span>
-            <span></span>
+            <span>{{ data?.billingAddress.address1 }} {{ data?.billingAddress.address2 }}</span>
             <span class="block"
               >{{ data?.billingAddress.city }}, {{ data?.billingAddress.state }}
               {{ data?.billingAddress.postalCode }}</span
@@ -125,7 +125,7 @@
             </p>
             <span>{{ data?.shippingAddress.firstName }} {{ data?.shippingAddress.lastName }}</span>
             <span class="block">{{ data?.shippingAddress.phoneNumber }}</span>
-            <span></span>
+            <span>{{ data?.shippingAddress.address1 }} {{ data?.shippingAddress.address2 }}</span>
             <span class="block"
               >{{ data?.shippingAddress.city }}, {{ data?.shippingAddress.state }}
               {{ data?.shippingAddress.postalCode }}</span

@@ -110,8 +110,8 @@
             <span>{{ data?.billingAddress.address1 }} {{ data?.billingAddress.address2 }}</span>
             <span class="block"
               >{{ data?.billingAddress.city }}, {{ data?.billingAddress.state }}
-              {{ data?.billingAddress.postalCode }}</span
-            >
+              {{ data?.billingAddress.postalCode }}
+            </span>
           </li>
           <li class="mb-4 md:mb-0">
             <p class="typography-text-sm font-medium mb-2">
@@ -128,8 +128,8 @@
             <span>{{ data?.shippingAddress.address1 }} {{ data?.shippingAddress.address2 }}</span>
             <span class="block"
               >{{ data?.shippingAddress.city }}, {{ data?.shippingAddress.state }}
-              {{ data?.shippingAddress.postalCode }}</span
-            >
+              {{ data?.shippingAddress.postalCode }}
+            </span>
           </li>
           <li class="mb-4 md:mb-0">
             <p class="typography-text-sm font-medium mb-2">

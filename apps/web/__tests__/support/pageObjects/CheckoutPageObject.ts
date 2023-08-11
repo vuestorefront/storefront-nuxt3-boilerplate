@@ -115,7 +115,6 @@ export class CheckoutPageObject {
 
   displaySuccessPage() {
     this.displaySuccessPages.should('be.visible');
-    this.thankYouBanner;
     return this;
   }
 

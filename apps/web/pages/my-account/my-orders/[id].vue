@@ -1,10 +1,10 @@
 <template>
   <UiOverlay visible>
-    <SfModal
+    <UiModal
       v-model="isOpen"
       as="section"
       role="dialog"
-      class="h-full w-full overflow-hidden md:h-fit max-h-[100%] md:max-w-[770px] min-w-650px !relative !p-4 md:!p-10"
+      class="h-full w-full overflow-auto !p-4 md:!p-10 md:max-w-[770px] md:h-fit"
     >
       <header
         class="flex justify-between bg-white items-center typography-headline-4 md:typography-headline-3 font-bold"
@@ -20,7 +20,7 @@
           <SfIconClose class="text-neutral-500" />
         </SfButton>
       </header>
-      <main class="mt-6 max-h-[591px] overflow-auto">
+      <main class="mt-6">
         <ul class="bg-neutral-100 p-4 rounded-md md:columns-2 mb-6">
           <li>
             <p class="font-medium">{{ $t('account.ordersAndReturns.orderDetails.orderId') }}</p>
@@ -113,7 +113,7 @@
               {{ data?.billingAddress.postalCode }}</span
             >
           </li>
-          <li class="mb-4">
+          <li class="mb-4 md:mb-0">
             <p class="typography-text-sm font-medium mb-2">
               {{ $t('account.ordersAndReturns.orderDetails.paymentMethod') }}
             </p>
@@ -131,7 +131,7 @@
               {{ data?.shippingAddress.postalCode }}</span
             >
           </li>
-          <li class="mb-4">
+          <li class="mb-4 md:mb-0">
             <p class="typography-text-sm font-medium mb-2">
               {{ $t('account.ordersAndReturns.orderDetails.paymentMethod') }}
             </p>
@@ -139,12 +139,13 @@
           </li>
         </ul>
       </main>
-    </SfModal>
+    </UiModal>
   </UiOverlay>
+  <NuxtPage />
 </template>
 
 <script setup lang="ts">
-import { SfButton, SfIconClose, SfModal, useDisclosure } from '@storefront-ui/vue';
+import { SfButton, SfIconClose, useDisclosure } from '@storefront-ui/vue';
 
 const route = useRoute();
 const router = useRouter();

@@ -1,9 +1,9 @@
 import { mount } from '@vue/test-utils';
-import ProductCardVertical from '~/components/ui/ProductCardVertical/ProductCardVertical.vue';
+import ProductCardHorizontal from '~/components/ui/ProductCardHorizontal/ProductCardHorizontal.vue';
 
-describe('<ProductCardVertical />', () => {
+describe('<ProductCardHorizontal />', () => {
   it('should render component', () => {
-    const { getByTestId } = mount(ProductCardVertical, {
+    const { getByTestId } = mount(ProductCardHorizontal, {
       props: {
         product: {
           name: 'Smartwatch Fitness Tracker',
@@ -31,6 +31,6 @@ describe('<ProductCardVertical />', () => {
       },
     });
 
-    expect(getByTestId('product-card-vertical'));    
+    expect(getByTestId('product-card-horizontal'));    
   });
 });

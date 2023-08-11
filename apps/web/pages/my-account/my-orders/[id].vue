@@ -40,18 +40,18 @@
           </li>
         </ul>
         <div v-for="(product, i) in data?.products" :key="i" class="md:hidden border-t border-neutral-200">
-          <UiProductCardVertical :product="product" />
+          <UiProductCardHorizontal :product="product" />
           <ul class="flex">
             <li class="flex-grow pr-4 py-4">
-              <p class="font-medium">{{ $t('account.ordersAndReturns.orderDetails.price') }}</p>
+              <p class="font-medium typography-text-sm">{{ $t('account.ordersAndReturns.orderDetails.price') }}</p>
               <span>${{ product.price?.regularPrice.amount }}</span>
             </li>
             <li class="flex-grow p-4">
-              <p class="font-medium">{{ $t('account.ordersAndReturns.orderDetails.quantity') }}</p>
+              <p class="font-medium typography-text-sm">{{ $t('account.ordersAndReturns.orderDetails.quantity') }}</p>
               <span>{{ product.quantity }}</span>
             </li>
             <li class="flex-[50%] justify-self-end text-right pl-4 py-4">
-              <p class="font-medium">{{ $t('account.ordersAndReturns.orderDetails.subtotal') }}</p>
+              <p class="font-medium typography-text-sm">{{ $t('account.ordersAndReturns.orderDetails.subtotal') }}</p>
               <span>${{ product.price?.regularPrice.precisionAmount }}</span>
             </li>
           </ul>
@@ -75,7 +75,7 @@
           <tbody>
             <tr v-for="(product, i) in data?.products" :key="i" class="border-b border-neutral-200 align-top">
               <td class="pb-4 pr-4 lg:whitespace-nowrap typography-text-base">
-                <UiProductCardVertical :product="product" />
+                <UiProductCardHorizontal :product="product" />
               </td>
               <td class="p-4 lg:whitespace-nowrap typography-text-base">${{ product.price?.regularPrice.amount }}</td>
               <td class="p-4 typography-text-base">{{ product.quantity }}</td>

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex min-w-[320px] max-w-[470px] pt-4" data-testid="product-card-vertical">
+  <div class="flex min-w-[320px] max-w-[470px] pt-4" data-testid="product-card-horizontal">
     <div class="relative overflow-hidden rounded-md w-[100px]">
       <NuxtImg
         class="w-full h-auto border rounded-md border-neutral-200"
@@ -28,7 +28,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { ProductVerticalProps } from './types';
+import type { ProductHorizontalProps } from './types';
 
-defineProps<ProductVerticalProps>();
+defineProps<ProductHorizontalProps>();
 </script>

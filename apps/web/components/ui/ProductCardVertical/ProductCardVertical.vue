@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="flex border-t-[1px] border-neutral-200 md:border-0 min-w-[320px] max-w-[470px] pt-4"
-    data-testid="product-card-vertical"
-  >
+  <div class="flex min-w-[320px] max-w-[470px] pt-4" data-testid="product-card-vertical">
     <div class="relative overflow-hidden rounded-md w-[100px]">
       <NuxtImg
         class="w-full h-auto border rounded-md border-neutral-200"
@@ -12,7 +9,7 @@
         height="100"
       />
     </div>
-    <div class="flex flex-col pl-4 min-w-[180px] flex-1">
+    <div class="flex flex-col pl-4 min-w-[180px] flex-1 typography-text-base">
       {{ product.name }}
       <div class="my-2 sm:mb-0">
         <ul class="font-normal leading-5 typography-text-xs sm:typography-text-sm text-neutral-700">

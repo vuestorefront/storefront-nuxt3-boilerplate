@@ -1,12 +1,17 @@
 import type { Ref } from 'vue';
-import type { Maybe, SfAddress } from '@vue-storefront/unified-data-model';
+import type { Maybe, SfAddress, SfProduct } from '@vue-storefront/unified-data-model';
 
 export type OrderData = {
   id: string;
   date: string; //probably should be number in ms
   paymentAmount: number;
   status: 'Completed' | 'Shipped' | 'Open' | 'Cancelled';
-  products: string[]; //id
+  products: Array<
+    Omit<
+      SfProduct,
+      'id' | 'sku' | 'slug' | 'description' | 'primaryImage' | 'rating' | 'variants' | 'quantityLimit'
+    > & { quantity: number }
+  >;
   summary: {
     subtotal: number;
     delivery: number;

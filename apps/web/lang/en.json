@@ -293,18 +293,19 @@
     },
     "ordersAndReturns": {
       "heading": "Orders & Returns",
-      "orderId":"Order ID",
-      "orderDate":"Order date",
-      "amount":"Amount",
-      "status":"Status",
-      "details":"Details",
-      "myOrders":"My orders",
+      "orderId": "Order ID",
+      "orderDate": "Order date",
+      "amount": "Amount",
+      "status": "Status",
+      "details": "Details",
+      "myOrders": "My orders",
       "noOrders": "You haven’t shopped with us yet",
       "continue": "Continue shopping",
       "noOrdersAltText": "No orders",
       "returnsHeading": "Returns",
       "returnsAltText": "No returns",
       "returnsDescription": "You haven't returned products yet",
+      "listOfOrders": "List of orders",
       "section": {
         "myOrders": "My Orders",
         "returns": "Returns"
@@ -323,7 +324,7 @@
         "itemsSubtotal": "Items Subtotal",
         "delivery": "Delivery",
         "estimatedTax": "Estimated Sales Tax",
-        "total": "Total", 
+        "total": "Total",
         "billingAddress": "Billing address",
         "paymentMethod": "Payment method",
         "shippingAddress": "Shipping address"
@@ -352,9 +353,9 @@
       }
     },
     "resetPassword": {
-      "heading":  "Reset password",
+      "heading": "Reset password",
       "info": "Enter the email address you used to sign up. We will send you a password reset link, that you’ll be able to use to set a new password for your account.",
-      "email":"Email",
+      "email": "Email",
       "continue": "Continue",
       "backToLogin": "Back to Login",
       "thankYou": "Thank you, if there is an account registered with {0}, you should receive the password reset link in your inbox right away.",
@@ -362,10 +363,10 @@
       "emailSent": "Email sent"
     },
     "setNewPassword": {
-      "heading":  "Set new password",
-      "button":  "Set new password",
-      "password":  "New password",
-      "repeatPassword":  "Repeat new password",
+      "heading": "Set new password",
+      "button": "Set new password",
+      "password": "New password",
+      "repeatPassword": "Repeat new password",
       "help": "8 or more characters with a mix of letters, numbers and symbols.",
       "description": "Create the new password you want to use to log in to your account."
     }

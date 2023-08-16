@@ -28,45 +28,47 @@
           </SfButton>
         </div>
         <div class="md:flex gap-10" data-testid="account-page-sidebar">
-          <div
-            :class="[
-              'border-t md:border border-neutral-200 pt-4 pb-4 md:p-4 md:rounded-md min-w-[300px] md:block',
-              { hidden: !isRoot },
-            ]"
-          >
-            <ul class="[&:not(:last-child)]:mb-4" v-for="{ title, icon, subsections } in sections" :key="title">
-              <SfListItem class="py-4 md:py-2 hover:!bg-transparent font-medium !cursor-auto">
-                <template #prefix><component :is="icon" /></template>
-                {{ title }}
-              </SfListItem>
-              <li v-for="{ label, link } in subsections" :key="label">
+          <div>
+            <div
+              :class="[
+                'border-t md:border border-neutral-200 pt-4 pb-4 md:p-4 md:rounded-md min-w-[300px] md:block',
+                { hidden: !isRoot },
+              ]"
+            >
+              <ul class="[&:not(:last-child)]:mb-4" v-for="{ title, icon, subsections } in sections" :key="title">
+                <SfListItem class="py-4 md:py-2 hover:!bg-transparent font-medium !cursor-auto">
+                  <template #prefix><component :is="icon" /></template>
+                  {{ title }}
+                </SfListItem>
+                <li v-for="{ label, link } in subsections" :key="label">
+                  <SfListItem
+                    :tag="NuxtLink"
+                    :to="link"
+                    :class="[
+                      'first-of-type:py-4 md:first-of-type:px-4 md:first-of-type:py-2 rounded-md active:bg-primary-100 !text-neutral-900',
+                      {
+                        'font-medium bg-primary-100': router.currentRoute.value.path === link,
+                      },
+                    ]"
+                  >
+                    <template #prefix><SfIconBase /></template>
+                    {{ label }}
+                    <template v-if="!isTabletScreen" #suffix><SfIconChevronRight /></template>
+                  </SfListItem>
+                </li>
+              </ul>
+              <UiDivider />
+              <ul>
                 <SfListItem
                   :tag="NuxtLink"
-                  :to="link"
-                  :class="[
-                    'first-of-type:py-4 md:first-of-type:px-4 md:first-of-type:py-2 rounded-md active:bg-primary-100 !text-neutral-900',
-                    {
-                      'font-medium bg-primary-100': router.currentRoute.value.path === link,
-                    },
-                  ]"
+                  :to="paths.home"
+                  class="py-4 md:py-2 mt-4 rounded-md active:bg-primary-100 !text-neutral-900"
                 >
                   <template #prefix><SfIconBase /></template>
-                  {{ label }}
-                  <template v-if="!isTabletScreen" #suffix><SfIconChevronRight /></template>
+                  {{ $t('account.logout') }}
                 </SfListItem>
-              </li>
-            </ul>
-            <UiDivider />
-            <ul>
-              <SfListItem
-                :tag="NuxtLink"
-                :to="paths.home"
-                class="py-4 md:py-2 mt-4 rounded-md active:bg-primary-100 !text-neutral-900"
-              >
-                <template #prefix><SfIconBase /></template>
-                {{ $t('account.logout') }}
-              </SfListItem>
-            </ul>
+              </ul>
+            </div>
           </div>
           <div class="flex-1">
             <section

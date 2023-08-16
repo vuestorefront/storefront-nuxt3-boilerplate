@@ -1,5 +1,5 @@
 <template>
-  <UiDivider class="w-screen -mx-4 md:col-span-3 md:w-auto md:mx-0" />
+  <UiDivider class="col-span-3 -mx-4 !w-auto md:mx-0" />
   <h2 class="hidden md:block col-span-3 typography-headline-4 mb-4 font-bold mx-4 capitalize">
     {{ $t('account.ordersAndReturns.returnsHeading') }}
   </h2>

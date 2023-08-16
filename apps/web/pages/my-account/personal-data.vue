@@ -1,5 +1,5 @@
 <template>
-  <UiDivider class="w-screen -mx-4 md:col-span-3 md:w-auto md:mx-0" />
+  <UiDivider class="col-span-3 -mx-4 !w-auto md:mx-0" />
   <AccountData
     class="col-span-3"
     :header="$t('account.accountSettings.personalData.yourName')"
@@ -8,7 +8,7 @@
   >
     {{ userData?.firstName }} {{ userData?.lastName }}
   </AccountData>
-  <UiDivider class="w-screen -mx-4 md:col-span-3 md:w-auto md:mx-0" />
+  <UiDivider class="col-span-3 -mx-4 !w-auto md:mx-0" />
   <AccountData
     class="col-span-3"
     :header="$t('account.accountSettings.personalData.contactInformation')"
@@ -17,7 +17,7 @@
   >
     {{ userData?.email }}
   </AccountData>
-  <UiDivider class="w-screen -mx-4 md:col-span-3 md:w-auto md:mx-0" />
+  <UiDivider class="col-span-3 -mx-4 !w-auto md:mx-0" />
   <AccountData
     class="col-span-3"
     :header="$t('account.accountSettings.personalData.yourPassword')"
@@ -26,7 +26,7 @@
   >
     ******
   </AccountData>
-  <UiDivider class="w-screen -mx-4 md:col-span-3 md:w-auto md:mx-0" />
+  <UiDivider class="col-span-3 -mx-4 !w-auto md:mx-0" />
   <UiModal
     v-model="isOpen"
     ref="modalElement"

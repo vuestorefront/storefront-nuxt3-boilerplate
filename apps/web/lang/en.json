@@ -22,7 +22,13 @@
     "stateLabel": "State",
     "postalCodeLabel": "ZIP Code",
     "useAsShippingLabel": "Use as shipping address",
-    "selectPlaceholder": "-- Select --"
+    "selectPlaceholder": "-- Select --",
+    "emailLabel": "Email",
+    "passwordLabel": "Password",
+    "passwordHint": "8 or more characters with a mix of letters, numbers and symbols.",
+    "termsAndConditionsLabel": "I declare that I have read and accept the {terms}",
+    "subscriptionLabel": "I wish to receive occasional emails about special offers, new products and exclusive promotions. I can cancel my subscription at any time. (Optional)",
+    "asterixHint": "* marked consents are required"
   },
   "myCart": "My Cart",
   "orderSummary": "Order Summary",
@@ -252,20 +258,116 @@
     "heading": "My Account",
     "navBarBottomHeading": "Account",
     "logout": "Logout",
+    "back": "Back",
     "accountSettings": {
       "heading": "Account Settings",
       "section": {
         "personalData": "Personal Data",
         "billingDetails": "Billing Details",
         "shippingDetails": "Shipping Details"
+      },
+      "personalData": {
+        "yourName": "Your name",
+        "firstName": "First name",
+        "lastName": "Last name",
+        "edit": "Edit",
+        "change": "Change",
+        "contactInformation": "Contact information",
+        "yourPassword": "Your password",
+        "passwordChange": "Password change",
+        "newPassword": "New password",
+        "newPasswordAgain": "Repeat new password",
+        "changePassword": "Change password",
+        "currentPassword": "Current password",
+        "passwordHelp": "Use 8 or more characters with a mix of letters, numbers and symbols."
+      },
+      "billingDetails": {
+        "billingAddress": "Billing address",
+        "edit": "Edit",
+        "shippingAddress": "Shipping address"
+      },
+      "shippingDetails": {
+        "edit": "Edit",
+        "shippingAddress": "Shipping address"
       }
     },
     "ordersAndReturns": {
       "heading": "Orders & Returns",
+      "orderId":"Order ID",
+      "orderDate":"Order date",
+      "amount":"Amount",
+      "status":"Status",
+      "details":"Details",
+      "myOrders":"My orders",
+      "noOrders": "You haven’t shopped with us yet",
+      "continue": "Continue shopping",
+      "noOrdersAltText": "No orders",
+      "returnsHeading": "Returns",
+      "returnsAltText": "No returns",
+      "returnsDescription": "You haven't returned products yet",
       "section": {
         "myOrders": "My Orders",
         "returns": "Returns"
+      },
+      "orderDetails": {
+        "heading": "Order details",
+        "orderId": "Order ID",
+        "orderDate": "Order date",
+        "paymentAmount": "Payment amount",
+        "status": "Status",
+        "price": "Price",
+        "quantity": "Quantity",
+        "subtotal": "Subtotal",
+        "tableCaption": "Order details",
+        "product": "Product",
+        "itemsSubtotal": "Items Subtotal",
+        "delivery": "Delivery",
+        "estimatedTax": "Estimated Sales Tax",
+        "total": "Total", 
+        "billingAddress": "Billing address",
+        "paymentMethod": "Payment method",
+        "shippingAddress": "Shipping address"
       }
+    }
+  },
+  "auth": {
+    "login": {
+      "heading": "Log in",
+      "submitLabel": "Log in",
+      "forgotPasswordLabel": "Forgot your password?",
+      "rememberMeLabel": "Remember me",
+      "createAccountBanner": "First time here? {0}.",
+      "createAccountLinkLabel": "Create Account"
+    },
+    "signup": {
+      "heading": "Create Account",
+      "createButton": "Create Account",
+      "bannerText": "Already have an account? Switch to {login}",
+      "modal": {
+        "heading": "Welcome",
+        "description": "Your account has been created. You can {information} to your account now, so you do not have to do this later during your purchase.",
+        "information": "add information",
+        "button": "Go Shopping",
+        "imageAlt": "Signup successful"
+      }
+    },
+    "resetPassword": {
+      "heading":  "Reset password",
+      "info": "Enter the email address you used to sign up. We will send you a password reset link, that you’ll be able to use to set a new password for your account.",
+      "email":"Email",
+      "continue": "Continue",
+      "backToLogin": "Back to Login",
+      "thankYou": "Thank you, if there is an account registered with {0}, you should receive the password reset link in your inbox right away.",
+      "anotherEmail": "I need to try another email address",
+      "emailSent": "Email sent"
+    },
+    "setNewPassword": {
+      "heading":  "Set new password",
+      "button":  "Set new password",
+      "password":  "New password",
+      "repeatPassword":  "Repeat new password",
+      "help": "8 or more characters with a mix of letters, numbers and symbols.",
+      "description": "Create the new password you want to use to log in to your account."
     }
   }
 }

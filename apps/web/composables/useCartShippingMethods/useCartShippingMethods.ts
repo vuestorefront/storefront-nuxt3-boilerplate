@@ -4,7 +4,7 @@ import type {
   UseCartShippingMethodsReturn,
   GetShippingMethods,
 } from '~/composables/useCartShippingMethods/types';
-import { sdk } from '~/sdk';
+import { useSdk } from '~/sdk';
 
 /**
  * @description Composable for getting shipping methods.
@@ -26,7 +26,7 @@ export const useCartShippingMethods: UseCartShippingMethodsReturn = () => {
 
   const getShippingMethods: GetShippingMethods = async () => {
     state.value.loading = true;
-    const { data, error } = await useAsyncData(() => sdk.commerce.getShippingMethods());
+    const { data, error } = await useAsyncData(() => useSdk().commerce.getShippingMethods());
     useHandleError(error.value);
     state.value.data = data.value;
     state.value.loading = false;

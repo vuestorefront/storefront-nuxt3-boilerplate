@@ -4,11 +4,11 @@
       <UiFormLabel>{{ $t('contactInfo.email') }}</UiFormLabel>
       <SfInput name="email" type="email" v-model="cart.customerEmail" required />
     </label>
-    <div class="mt-4 flex md:justify-end">
-      <SfButton type="reset" class="max-md:w-1/2 mr-4" variant="secondary" @click="$emit('on-cancel')">
+    <div class="mt-4 flex flex-col-reverse md:flex-row md:justify-end">
+      <SfButton type="reset" class="md:mr-4" variant="secondary" @click="$emit('on-cancel')">
         {{ $t('contactInfo.cancel') }}
       </SfButton>
-      <SfButton type="submit" class="max-md:w-1/2"> {{ $t('contactInfo.save') }} </SfButton>
+      <SfButton type="submit" class="min-w-[120px] mb-4 md:mb-0"> {{ $t('contactInfo.save') }} </SfButton>
     </div>
   </form>
 </template>

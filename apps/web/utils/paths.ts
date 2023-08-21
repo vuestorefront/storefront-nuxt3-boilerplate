@@ -13,4 +13,9 @@ export const paths = {
   accountShippingDetails: '/my-account/shipping-details',
   accountMyOrders: '/my-account/my-orders',
   accountReturns: '/my-account/returns',
+  authResetPassword: '/reset-password',
+  authResetPasswordSuccess: '/reset-password-success',
+  authSetNewPassword: '/set-new-password',
+  authLogin: '/login',
+  authSignup: '/signup',
 };

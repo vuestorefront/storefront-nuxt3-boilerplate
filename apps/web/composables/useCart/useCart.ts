@@ -1,7 +1,7 @@
 import type { SfCart } from '@vue-storefront/unified-data-model';
 import { toRefs } from '@vueuse/shared';
 import type { UseCartReturn, UseCartState, FetchCard } from '~/composables/useCart/types';
-import { sdk } from '~/sdk';
+import { useSdk } from '~/sdk';
 
 /**
  * @description Composable for managing cart.
@@ -23,7 +23,7 @@ export const useCart: UseCartReturn = () => {
   const fetchCard: FetchCard = async () => {
     state.value.loading = true;
     try {
-      const { data, error } = await useAsyncData<SfCart>(() => sdk.commerce.getCart());
+      const { data, error } = await useAsyncData<SfCart>(() => useSdk().commerce.getCart());
       useHandleError(error.value);
       state.value.data = data.value;
       return data;

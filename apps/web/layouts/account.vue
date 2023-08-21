@@ -1,12 +1,41 @@
 <template>
   <NuxtLayout name="default" :breadcrumbs="breadcrumbs">
     <NarrowContainer>
-      <div class="mb-20 px-4 md:px-0" data-testid="account-layout">
-        <h1 class="my-10 font-bold typography-headline-3 md:typography-headline-2">{{ $t('account.heading') }}</h1>
-        <div class="md:flex gap-6" data-testid="account-page-sidebar">
-          <div class="border border-neutral-200 p-4 rounded-md min-w-[300px]">
+      <div :class="['mb-20 md:px-0', { 'px-4': !isRoot }]" data-testid="account-layout">
+        <h1
+          v-if="isRoot || isTabletScreen"
+          class="mt-4 mb-10 md:my-10 mx-4 md:mx-0 font-bold typography-headline-3 md:typography-headline-2"
+        >
+          {{ $t('account.heading') }}
+        </h1>
+        <div v-else class="flex justify-start items-center mb-10 mt-4">
+          <div v-for="({ subsections }, i) in sections" :key="i">
+            <div v-for="{ label, link } in subsections" :key="label" class="font-bold typography-headline-3">
+              <h1 v-if="currentPath === link">{{ label }}</h1>
+            </div>
+          </div>
+          <SfButton
+            :tag="NuxtLink"
+            :to="paths.account"
+            class="flex md:hidden whitespace-nowrap justify-self-end ml-auto"
+            size="sm"
+            variant="tertiary"
+          >
+            <template #prefix>
+              <SfIconArrowBack />
+            </template>
+            {{ $t('account.back') }}
+          </SfButton>
+        </div>
+        <div class="md:flex gap-10" data-testid="account-page-sidebar">
+          <div
+            :class="[
+              'border-t md:border border-neutral-200 pt-4 pb-4 md:p-4 md:rounded-md min-w-[300px] md:block',
+              { hidden: !isRoot },
+            ]"
+          >
             <ul class="[&:not(:last-child)]:mb-4" v-for="{ title, icon, subsections } in sections" :key="title">
-              <SfListItem class="hover:!bg-transparent font-medium !cursor-auto">
+              <SfListItem class="py-4 md:py-2 hover:!bg-transparent font-medium !cursor-auto">
                 <template #prefix><component :is="icon" /></template>
                 {{ title }}
               </SfListItem>
@@ -15,7 +44,7 @@
                   :tag="NuxtLink"
                   :to="link"
                   :class="[
-                    'first-of-type:mt-2 rounded-md active:bg-primary-100 !text-neutral-900',
+                    'first-of-type:py-4 md:first-of-type:px-4 md:first-of-type:py-2 rounded-md active:bg-primary-100 !text-neutral-900',
                     {
                       'font-medium bg-primary-100': router.currentRoute.value.path === link,
                     },
@@ -23,6 +52,7 @@
                 >
                   <template #prefix><SfIconBase /></template>
                   {{ label }}
+                  <template v-if="!isTabletScreen" #suffix><SfIconChevronRight /></template>
                 </SfListItem>
               </li>
             </ul>
@@ -31,7 +61,7 @@
               <SfListItem
                 :tag="NuxtLink"
                 :to="paths.home"
-                class="mt-4 rounded-md active:bg-primary-100 !text-neutral-900"
+                class="py-4 md:py-2 mt-4 rounded-md active:bg-primary-100 !text-neutral-900"
               >
                 <template #prefix><SfIconBase /></template>
                 {{ $t('account.logout') }}
@@ -53,9 +83,11 @@
 </template>
 
 <script setup lang="ts">
-import { SfIconBase, SfIconPerson, SfIconShoppingCart, SfListItem } from '@storefront-ui/vue';
+import { SfIconBase, SfIconPerson, SfIconShoppingCart, SfListItem, SfButton, SfIconArrowBack, SfIconChevronRight } from '@storefront-ui/vue';
+import { useMediaQuery } from '@vueuse/core';
 
 
+const isTabletScreen = useMediaQuery(mediaQueries.tablet);
 const { t } = useI18n();
 const router = useRouter();
 const sections = [
@@ -98,7 +130,7 @@ const currentPath = computed(() => router.currentRoute.value.path);
 const rootPathRegex = new RegExp(`^${paths.account}/?$`);
 const isRoot = computed(() => rootPathRegex.test(currentPath.value));
 const findCurrentPage = computed(() =>
-  sections.flatMap(({ subsections }) => subsections).find(({ link }) => link === currentPath.value),
+  sections.flatMap(({ subsections }) => subsections).find(({ link }) => currentPath.value.includes(link)),
 );
 
 const breadcrumbs = computed(() => [

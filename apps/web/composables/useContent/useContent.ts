@@ -1,4 +1,4 @@
-import { sdk } from '~/sdk';
+import { useSdk } from '~/sdk';
 import type { UseContentReturn, UseContentState, GetContent } from './types';
 
 /**
@@ -22,7 +22,7 @@ export const useContent: UseContentReturn = (url) => {
   const getContent: GetContent = async () => {
     state.value.loading = true;
     try {
-      const { data, error } = await useAsyncData(() => sdk.commerce.getContent({ url }));
+      const { data, error } = await useAsyncData(() => useSdk().commerce.getContent({ url }));
       useHandleError(error.value);
       state.value.data = data.value;
       return data;

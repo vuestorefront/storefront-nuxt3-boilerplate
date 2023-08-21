@@ -89,7 +89,7 @@
     <SfModal
       v-model="isSearchModalOpen"
       class="w-full h-full z-50"
-      as="section"
+      tag="section"
       role="dialog"
       aria-labelledby="search-modal-title"
     >
@@ -128,10 +128,10 @@ const { isOpen: isSearchModalOpen, open: searchModalOpen, close: searchModalClos
 defineProps<DefaultLayoutProps>();
 
 const { fetchCard, data: cart } = useCart();
-const { fetchAccount, data: account } = useAccount();
+const { fetchCustomer, data: account } = useCustomer();
 
 fetchCard();
-fetchAccount();
+fetchCustomer();
 usePageTitle();
 
 const NuxtLink = resolveComponent('NuxtLink');

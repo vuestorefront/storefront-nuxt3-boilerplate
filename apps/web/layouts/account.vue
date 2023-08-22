@@ -53,7 +53,7 @@
                   >
                     <template #prefix><SfIconBase /></template>
                     {{ label }}
-                    <template v-if="!isTabletScreen" #suffix><SfIconChevronRight /></template>
+                    <template #suffix><SfIconChevronRight class="md:hidden" /></template>
                   </SfListItem>
                 </li>
               </ul>

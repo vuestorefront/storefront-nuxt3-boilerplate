@@ -6,10 +6,10 @@
     :button-text="$t('account.accountSettings.billingDetails.edit')"
     @on-click="open"
   >
-    <p>{{ userShippingAddress.firstName }} {{ userShippingAddress.lastName }}</p>
-    <p>{{ userShippingAddress.phoneNumber }}</p>
-    <p>{{ userShippingAddress.address1 }} {{ userShippingAddress.address2 }}</p>
-    <p>{{ userShippingAddress.city }}, {{ userShippingAddress.state }} {{ userShippingAddress.postalCode }}</p>
+    <p>{{ userBillingAddress.firstName }} {{ userBillingAddress.lastName }}</p>
+    <p>{{ userBillingAddress.phoneNumber }}</p>
+    <p>{{ userBillingAddress.address1 }} {{ userBillingAddress.address2 }}</p>
+    <p>{{ userBillingAddress.city }}, {{ userBillingAddress.state }} {{ userBillingAddress.postalCode }}</p>
   </AccountData>
   <UiDivider class="w-screen -mx-4 md:col-span-3 md:w-auto md:mx-0" />
 
@@ -28,7 +28,7 @@
         {{ $t('account.accountSettings.billingDetails.billingAddress') }}
       </h3>
     </header>
-    <AddressForm :saved-address="userShippingAddress" type="billingAddress" @on-save="close" @on-close="close" />
+    <AddressForm :saved-address="userBillingAddress" type="shippingAddress" @on-save="close" @on-close="close" />
   </UiModal>
 </template>
 
@@ -41,7 +41,7 @@ definePageMeta({
 });
 const { isOpen, open, close } = useDisclosure();
 
-const userShippingAddress = ref<SfAddress>({
+const userBillingAddress = ref<SfAddress>({
   firstName: 'Hieronim',
   lastName: 'Anonim',
   address1: 'Oak Drive',

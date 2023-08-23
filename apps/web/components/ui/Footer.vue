@@ -8,20 +8,22 @@
         <div class="ml-4 text-lg font-medium leading-7 text-neutral-900 font-body">
           {{ $t(`categories.${key}.label`) }}
         </div>
-        <SfListItem
-          v-for="{ key: subcategoryKey, link } in subcategories"
-          :key="subcategoryKey"
-          class="py-2 !bg-transparent typography-text-sm font-body"
-        >
-          <SfLink
-            :tag="NuxtLink"
-            class="no-underline text-neutral-600 hover:underline hover:!text-neutral-900 active:underline active:!text-neutral-900"
-            variant="secondary"
-            :to="link"
+        <ul>
+          <SfListItem
+            v-for="{ key: subcategoryKey, link } in subcategories"
+            :key="subcategoryKey"
+            class="py-2 !bg-transparent typography-text-sm font-body"
           >
-            {{ $t(`categories.${key}.subcategories.${subcategoryKey}`) }}
-          </SfLink>
-        </SfListItem>
+            <SfLink
+              :tag="NuxtLink"
+              class="no-underline text-neutral-600 hover:underline hover:!text-neutral-900 active:underline active:!text-neutral-900"
+              variant="secondary"
+              :to="link"
+            >
+              {{ $t(`categories.${key}.subcategories.${subcategoryKey}`) }}
+            </SfLink>
+          </SfListItem>
+        </ul>
       </div>
     </div>
     <hr />

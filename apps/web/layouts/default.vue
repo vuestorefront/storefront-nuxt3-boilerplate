@@ -67,6 +67,7 @@
       class="relative text-white hover:text-white active:text-white hover:bg-primary-800 active:bg-primary-900 rounded-md md:hidden"
       square
       @click="searchModalOpen"
+      :aria-label="$t('openSearchModalButtonLabel')"
     >
       <SfIconSearch />
     </SfButton>

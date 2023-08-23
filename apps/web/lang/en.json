@@ -121,6 +121,7 @@
   "addToCart": "Add to cart",
   "addToCartShort": "Add",
   "search": "Search",
+  "openSearchModalButtonLabel": "Click to open search modal",
   "vsfHomepage": "VSF Homepage",
   "home": "Home",
   "products": "Products",
@@ -142,6 +143,7 @@
   "compare": "Compare",
   "addToList": "Add to list",
   "category": "Category",
+  "imageOfSth": "Image of {name}",
   "categories": {
     "howToBuy": {
       "label": "How to buy",

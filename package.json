@@ -20,7 +20,8 @@
     "test": "turbo run test",
     "test:watch": "turbo run test:watch",
     "test:coverage": "npx turbo run test:coverage",
-    "test:cypress": "concurrently -k -s=first \"yarn wait-on http://localhost:3000 && turbo run test:cypress\" \"yarn start\"",
+    "test:cypress": "concurrently -k -s=first \"yarn wait-on http-get://localhost:3000 && turbo run test:cypress\" \"yarn start\"",
+    "test:cypress-dev": "concurrently -k -s=first \"yarn wait-on http-get://localhost:3000 && turbo run test:cypress-dev\" \"yarn dev\"",
     "lhci:mobile": "lhci autorun"
   },
   "dependencies": {
@@ -36,8 +37,6 @@
     "babel-preset-node": "^5.1.1",
     "commitizen": "^4.2.5",
     "concurrently": "^8.2.0",
-    "cypress": "^12.12.0",
-    "cypress-wait-until": "^2.0.0",
     "eslint": "^8.38.0",
     "husky": "^7.0.4",
     "is-ci": "^1.0.0",

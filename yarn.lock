@@ -4754,8 +4754,6 @@ __metadata:
     commitizen: ^4.2.5
     concurrently: ^8.2.0
     cross-env: ^7.0.3
-    cypress: ^12.12.0
-    cypress-wait-until: ^2.0.0
     dotenv: ^16.0.3
     eslint: ^8.38.0
     husky: ^7.0.4
@@ -7774,6 +7772,17 @@ __metadata:
   version: 0.2.2
   resolution: "cuint@npm:0.2.2"
   checksum: b8127a93a7f16ce120ffcb22108014327c9808b258ee20e7dbb4c6740d7cb0f0c12d18a054eb716b0f2470090666abaae8a082d3cd5ef0e94fa447dd155842c4
+  languageName: node
+  linkType: hard
+
+"cypress-real-events@npm:^1.10.0":
+  version: 1.10.0
+  resolution: "cypress-real-events@npm:1.10.0"
+  dependencies:
+    prettier: ^3.0.0
+  peerDependencies:
+    cypress: ^4.x || ^5.x || ^6.x || ^7.x || ^8.x || ^9.x || ^10.x || ^11.x || ^12.x
+  checksum: 917cf0458f0073452462bd1468ea3e9d77382c0c7991555314cec9e1e39a82668f8185e6fbbd4e0303576ddf3cbe410fcdb1dec8237f68e1ef18d05e41d7d537
   languageName: node
   linkType: hard
 
@@ -15178,6 +15187,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"prettier@npm:^3.0.0":
+  version: 3.0.2
+  resolution: "prettier@npm:3.0.2"
+  bin:
+    prettier: bin/prettier.cjs
+  checksum: 118b59ddb6c80abe2315ab6d0f4dd1b253be5cfdb20622fa5b65bb1573dcd362e6dd3dcf2711dd3ebfe64aecf7bdc75de8a69dc2422dcd35bdde7610586b677a
+  languageName: node
+  linkType: hard
+
 "pretty-bytes@npm:^5.3.0, pretty-bytes@npm:^5.6.0":
   version: 5.6.0
   resolution: "pretty-bytes@npm:5.6.0"
@@ -19113,6 +19131,9 @@ __metadata:
     "@vue-storefront/unified-data-model": ^0.6.0
     "@vue/test-utils": ^2.4.0
     "@vueuse/core": ^10.3.0
+    cypress: ^12.12.0
+    cypress-real-events: ^1.10.0
+    cypress-wait-until: ^2.0.0
     happy-dom: ^9.20.3
     lodash-es: ^4.17.21
     nuxt: ^3.6.5

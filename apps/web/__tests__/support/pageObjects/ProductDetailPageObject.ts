@@ -27,7 +27,7 @@ export class ProductDetailPageObject {
 
   displayCheck() {
     cy.getFixture('products').then((fixture) => {
-      cy.visit(fixture.url);
+      cy.visitAndHydrate(fixture.url);
       this.assertProductDetailPageElements(fixture);
     });
     return this;

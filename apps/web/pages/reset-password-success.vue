@@ -16,9 +16,14 @@
       >
         <span class="font-medium">{{ email }}</span>
       </i18n-t>
-      <SfButton :to="paths.authResetPassword" :tag="NuxtLink" variant="tertiary">{{
-        $t('auth.resetPassword.anotherEmail')
-      }}</SfButton>
+      <SfButton
+        :to="paths.authResetPassword"
+        :tag="NuxtLink"
+        variant="tertiary"
+        data-testid="reset-password-page-reset-button"
+      >
+        {{ $t('auth.resetPassword.anotherEmail') }}
+      </SfButton>
     </div>
   </NuxtLayout>
 </template>

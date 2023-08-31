@@ -2,7 +2,7 @@
   "extends": ".././.nuxt/tsconfig.json",
   "compilerOptions": {
     "isolatedModules": false,
-    "types": ["cypress"]
+    "types": ["cypress", "node", "cypress-real-events"]
   },
   "include": ["**/*.ts", "**/*.tsx", "../cypress.config.ts"]
 }

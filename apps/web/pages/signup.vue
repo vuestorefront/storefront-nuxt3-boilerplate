@@ -7,6 +7,7 @@
             :tag="NuxtLink"
             :to="paths.authLogin"
             class="focus:outline focus:outline-offset-2 focus:outline-2 outline-secondary-600 rounded"
+            data-testid="signup-page-login-button"
           >
             {{ $t('auth.login.heading') }}
           </SfLink>

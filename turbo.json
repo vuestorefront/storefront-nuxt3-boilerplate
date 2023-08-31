@@ -2,13 +2,21 @@
   "$schema": "https://turborepo.org/schema.json",
   "pipeline": {
     "build": {
-      "dependsOn": ["^build"],
-      "outputs": ["dist/**"],
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "dist/**"
+      ],
       "cache": false
     },
     "build:analyze": {
-      "dependsOn": ["^build"],
-      "outputs": ["dist/**"],
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "dist/**"
+      ],
       "cache": false
     },
     "start": {
@@ -34,6 +42,9 @@
       "cache": false
     },
     "test:cypress": {
+      "cache": false
+    },
+    "test:cypress-dev": {
       "cache": false
     }
   }

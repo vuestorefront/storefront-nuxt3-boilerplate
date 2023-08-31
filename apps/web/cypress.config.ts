@@ -4,6 +4,7 @@ export default defineConfig({
   fixturesFolder: '__tests__/fixtures',
   viewportHeight: 1080,
   viewportWidth: 1920,
+  pageLoadTimeout: 70000,
   defaultCommandTimeout: 20_000,
   screenshotOnRunFailure: true,
   screenshotsFolder: '__tests__/report/screenshots',
@@ -15,5 +16,8 @@ export default defineConfig({
     baseUrl: 'http://localhost:3000',
     specPattern: '__tests__/test/**/*.cy.{js,jsx,ts,tsx}',
     supportFile: '__tests__/support/e2e.ts',
+    retries: {
+      runMode: 2,
+    },
   },
 });

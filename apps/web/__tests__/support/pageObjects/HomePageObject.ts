@@ -16,7 +16,7 @@ export class HomePageObject {
   }
 
   get banners() {
-    return cy.getByComponent('Display');
+    return cy.getByTestId('display');
   }
 
   get productCard() {

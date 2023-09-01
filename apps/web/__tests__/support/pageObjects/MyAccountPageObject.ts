@@ -2,7 +2,8 @@ import { paths } from "../../../utils/paths";
 
 export class MyAccountPageObject {
   get accountDropdownListItem () {
-    return cy.getByTestId('account-dropdown-list-item');
+    return  cy.get('a[href="/my-account"]')
+    //cy.getByTestId('account-dropdown-list-item');
   }
 
   clickTopBarMyAccountLink() {

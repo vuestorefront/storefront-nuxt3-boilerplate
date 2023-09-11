@@ -58,6 +58,7 @@ export class MyAccountPageObject {
   myOrdersSection() {
     cy.get('a').contains('My Orders').click();
     cy.url().should('contain', paths.accountMyOrders);
+    cy.contains("Details").should('exist');
 
     return this;
   }
@@ -65,6 +66,7 @@ export class MyAccountPageObject {
   returnsSection() {
     cy.get('a').contains('Returns').click();
     cy.url().should('contain', paths.accountReturns);
+    cy.contains("You haven’t shopped with us yet").should('exist');
 
     return this;
   }

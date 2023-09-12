@@ -7,7 +7,7 @@ export class MyAccountPageObject {
   }
 
   clickTopBarMyAccountLink() {
-    cy.getByTestId('account-dropdown-button').focus().should('exist').click();
+    cy.getByTestId('account-dropdown-button').should('exist').focus().click();
 
     this.accountDropdownListItem
       .should('exist')

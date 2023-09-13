@@ -4,6 +4,9 @@ on:
   workflow_dispatch:
   pull_request:
     types: [opened, synchronize, reopened, ready_for_review]
+  push:
+    branches:
+      - develop
 
 jobs:
   e2e-tests:

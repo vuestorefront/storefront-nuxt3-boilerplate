@@ -35,7 +35,7 @@
                 { hidden: !isRoot },
               ]"
             >
-              <ul class="[&:not(:last-child)]:mb-4" v-for="{ title, icon, subsections } in sections" :key="title">
+              <ul class="[&:not(:first-child)]:mt-4" v-for="{ title, icon, subsections } in sections" :key="title">
                 <SfListItem class="py-4 md:py-2 hover:!bg-transparent font-medium !cursor-auto">
                   <template #prefix><component :is="icon" /></template>
                   {{ title }}
@@ -57,8 +57,8 @@
                   </SfListItem>
                 </li>
               </ul>
-              <UiDivider />
-              <ul>
+              <UiDivider class="mt-4 md:hidden" />
+              <ul class="md:hidden">
                 <SfListItem
                   :tag="NuxtLink"
                   :to="paths.home"

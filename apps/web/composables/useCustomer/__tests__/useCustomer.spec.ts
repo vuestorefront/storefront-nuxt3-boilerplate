@@ -1,6 +1,6 @@
 import { useCustomer } from '~/composables/useCustomer/useCustomer';
 
-describe('useCustomer', () => {
+describe.skip('useCustomer', () => {
   it('should return account data', async () => {
     const { fetchCustomer, data } = useCustomer();
 

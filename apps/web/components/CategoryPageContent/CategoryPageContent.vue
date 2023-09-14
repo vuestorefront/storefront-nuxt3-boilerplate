@@ -43,15 +43,13 @@
             </NuxtLazyHydrate>
           </section>
           <LazyCategoryEmptyState v-else />
-          <NuxtLazyHydrate when-visible>
-            <UiPagination
-              v-if="totalProducts > itemsPerPage"
-              :current-page="1"
-              :total-items="totalProducts"
-              :page-size="itemsPerPage"
-              :max-visible-pages="maxVisiblePages"
-            />
-          </NuxtLazyHydrate>
+          <UiPagination
+            v-if="totalProducts > itemsPerPage"
+            :current-page="1"
+            :total-items="totalProducts"
+            :page-size="itemsPerPage"
+            :max-visible-pages="maxVisiblePages"
+          />
         </div>
       </div>
     </div>
@@ -60,7 +58,7 @@
 
 <script setup lang="ts">
 import { SfButton, SfIconTune, useDisclosure } from '@storefront-ui/vue';
-import { useMediaQuery } from '@vueuse/core';
+import { whenever } from '@vueuse/core';
 import type { CategoryPageContentProps } from '~/components/CategoryPageContent/types';
 
 withDefaults(defineProps<CategoryPageContentProps>(), {
@@ -68,17 +66,8 @@ withDefaults(defineProps<CategoryPageContentProps>(), {
 });
 
 const { isOpen, open, close } = useDisclosure();
-const isTabletScreen = useMediaQuery(mediaQueries.tablet);
-const isWideScreen = useMediaQuery(mediaQueries.desktop);
-const maxVisiblePages = ref(1);
+const { isTablet, isDesktop } = useBreakpoints();
+const maxVisiblePages = computed(() => (isDesktop.value ? 5 : 1));
 
-const setMaxVisiblePages = (isWide: boolean) => (maxVisiblePages.value = isWide ? 5 : 1);
-
-watch(isWideScreen, (value) => setMaxVisiblePages(value));
-onMounted(() => setMaxVisiblePages(isWideScreen.value));
-watch(isTabletScreen, (value) => {
-  if (value && isOpen.value) {
-    close();
-  }
-});
+whenever(isTablet, close);
 </script>

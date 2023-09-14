@@ -3,11 +3,11 @@ import { useProductReviews } from '~/composables/useProductReviews';
 import { mockProductReviews } from './productReviews.mock';
 
 vi.mock('~/sdk', () => ({
-  sdk: {
+  useSdk: () => ({
     commerce: {
       getProductReviews: vi.fn(() => mockProductReviews),
     },
-  },
+  }),
 }));
 
 describe('useProductReview', () => {

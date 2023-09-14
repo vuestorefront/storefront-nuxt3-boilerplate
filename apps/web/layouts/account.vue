@@ -3,7 +3,7 @@
     <NarrowContainer>
       <div :class="['mb-20 md:px-0', { 'px-4': !isRoot }]" data-testid="account-layout">
         <h1
-          v-if="isRoot || isTabletScreen"
+          v-if="isRoot || isTablet"
           class="mt-4 mb-10 md:my-10 mx-4 md:mx-0 font-bold typography-headline-3 md:typography-headline-2"
         >
           {{ $t('account.heading') }}
@@ -86,10 +86,9 @@
 
 <script setup lang="ts">
 import { SfIconBase, SfIconPerson, SfIconShoppingCart, SfListItem, SfButton, SfIconArrowBack, SfIconChevronRight } from '@storefront-ui/vue';
-import { useMediaQuery } from '@vueuse/core';
 
 
-const isTabletScreen = useMediaQuery(mediaQueries.tablet);
+const { isTablet } = useBreakpoints();
 const { t } = useI18n();
 const router = useRouter();
 const sections = [

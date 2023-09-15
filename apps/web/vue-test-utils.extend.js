@@ -36,4 +36,6 @@ config.global.mocks = {
 };
 config.global.stubs = {
   RouterLink: true,
+  NuxtImg: true,
+  'i18n-t': true,
 };

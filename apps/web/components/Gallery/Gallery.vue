@@ -13,6 +13,8 @@
         :drag="{ containerWidth: true }"
         @on-scroll="onScroll"
       >
+        <!-- adsd -->
+
         <div
           v-for="({ url, alt }, index) in images"
           :key="`${alt}-${index}-thumbnail`"

@@ -1,6 +1,5 @@
 import { mount } from '@vue/test-utils';
 import Gallery from '~/components/Gallery/Gallery.vue';
-import NuxtImg from '@nuxt/image';
 
 describe('<Gallery />', () => {
   it('should render component', () => {

@@ -33,7 +33,7 @@
       </UiTag>
       <div class="flex flex-col md:flex-row flex-wrap gap-4">
         <UiQuantitySelector :value="quantitySelectorValue" class="min-w-[145px] flex-grow flex-shrink-0 basis-0" />
-        <SfButton type="button" size="lg" class="flex-grow-[2] flex-shrink basis-auto whitespace-nowrap">
+        <SfButton size="lg" class="flex-grow-[2] flex-shrink basis-auto whitespace-nowrap">
           <template #prefix>
             <SfIconShoppingCart size="sm" />
           </template>
@@ -41,13 +41,13 @@
         </SfButton>
       </div>
       <div class="flex justify-center mt-4 gap-x-4">
-        <SfButton type="button" size="sm" variant="tertiary">
+        <SfButton size="sm" variant="tertiary">
           <template #prefix>
             <SfIconCompareArrows size="sm" />
           </template>
           {{ $t('compare') }}
         </SfButton>
-        <SfButton type="button" size="sm" variant="tertiary">
+        <SfButton size="sm" variant="tertiary">
           <SfIconFavorite size="sm" />
           {{ $t('addToList') }}
         </SfButton>
@@ -86,7 +86,7 @@
   </section>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 import {
   SfButton,
   SfCounter,

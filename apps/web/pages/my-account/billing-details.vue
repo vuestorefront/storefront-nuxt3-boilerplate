@@ -39,6 +39,7 @@ import type { SfAddress } from '@vue-storefront/unified-data-model';
 definePageMeta({
   layout: 'account',
 });
+
 const { isOpen, open, close } = useDisclosure();
 
 const userBillingAddress = ref<SfAddress>({

@@ -30,9 +30,9 @@
 <script setup lang="ts">
 import { SfButton, SfIconArrowBack } from '@storefront-ui/vue';
 
-const NuxtLink = resolveComponent('NuxtLink');
-
 definePageMeta({
   layout: 'order',
 });
+
+const NuxtLink = resolveComponent('NuxtLink');
 </script>

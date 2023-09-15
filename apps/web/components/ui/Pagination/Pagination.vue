@@ -6,7 +6,6 @@
     data-testid="pagination"
   >
     <SfButton
-      type="button"
       size="lg"
       :aria-label="$t('prevAriaLabel')"
       :disabled="pagination.selectedPage <= 1"
@@ -117,7 +116,6 @@
       </li>
     </ul>
     <SfButton
-      type="button"
       size="lg"
       :aria-label="$t('nextAriaLabel')"
       :disabled="pagination.selectedPage >= pagination.totalPages"
@@ -135,11 +133,11 @@
 
 <script setup lang="ts">
 import { SfButton, SfIconChevronLeft, SfIconChevronRight, usePagination } from '@storefront-ui/vue';
-import { PaginationProps } from '~/components/ui/Pagination/types';
+import type { PaginationProps } from '~/components/ui/Pagination/types';
 
 const props = defineProps<PaginationProps>();
-const { currentPage, pageSize, totalItems, maxVisiblePages: maxVisiblePagesProperty } = toRefs(props);
 
+const { currentPage, pageSize, totalItems, maxVisiblePages: maxVisiblePagesProperty } = toRefs(props);
 const pagination = computed(() =>
   reactive(
     usePagination({

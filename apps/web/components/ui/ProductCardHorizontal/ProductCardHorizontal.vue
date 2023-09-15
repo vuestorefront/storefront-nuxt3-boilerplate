@@ -27,8 +27,8 @@
   </div>
 </template>
 
-<script lang="ts" setup>
-import type { ProductHorizontalProps } from './types';
+<script setup lang="ts">
+import type { ProductHorizontalProps } from '~/components/ui/ProductCardHorizontal/types';
 
 defineProps<ProductHorizontalProps>();
 </script>

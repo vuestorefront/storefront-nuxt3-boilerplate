@@ -2,7 +2,6 @@
   <UiNavbarTop filled>
     <SfButton
       class="!px-2 mr-auto hidden lg:flex text-white hover:text-white active:text-white hover:bg-primary-800 active:bg-primary-900"
-      type="button"
       variant="tertiary"
       :tag="NuxtLink"
       :to="paths.category"
@@ -58,8 +57,8 @@
                   class="text-left"
                   @click="accountDropdownToggle()"
                   data-testid="account-dropdown-list-item"
-                  >{{ $t(label) }}</SfListItem
-                >
+                  >{{ $t(label) }}
+                </SfListItem>
               </template>
               <SfListItem
                 v-else
@@ -136,11 +135,10 @@ import {
 } from '@storefront-ui/vue';
 import { DefaultLayoutProps } from '~/layouts/types';
 
-const { isOpen: isAccountDropdownOpen, toggle: accountDropdownToggle } = useDisclosure();
-const { isOpen: isSearchModalOpen, open: searchModalOpen, close: searchModalClose } = useDisclosure();
-
 defineProps<DefaultLayoutProps>();
 
+const { isOpen: isAccountDropdownOpen, toggle: accountDropdownToggle } = useDisclosure();
+const { isOpen: isSearchModalOpen, open: searchModalOpen, close: searchModalClose } = useDisclosure();
 const { fetchCard, data: cart } = useCart();
 const { fetchCustomer, data: account } = useCustomer();
 
@@ -148,11 +146,9 @@ fetchCard();
 fetchCustomer();
 usePageTitle();
 
-const NuxtLink = resolveComponent('NuxtLink');
 const cartLineItemsCount = computed(
   () => cart.value?.lineItems.reduce((total, { quantity }) => total + quantity, 0) ?? 0,
 );
-
 const accountDropdown = [
   {
     label: 'account.heading',
@@ -171,4 +167,5 @@ const accountDropdown = [
     link: '/',
   },
 ];
+const NuxtLink = resolveComponent('NuxtLink');
 </script>

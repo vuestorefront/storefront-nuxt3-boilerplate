@@ -42,6 +42,5 @@ import { SfDrawer, SfButton, SfIconClose } from '@storefront-ui/vue';
 import type { CategorySidebarEmits, CategorySidebarProps } from '~/components/CategorySidebar/types';
 
 defineProps<CategorySidebarProps>();
-
 defineEmits<CategorySidebarEmits>();
 </script>

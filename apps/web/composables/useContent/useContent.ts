@@ -1,5 +1,5 @@
+import type { UseContentReturn, UseContentState, GetContent } from '~/composables/useContent/types';
 import { useSdk } from '~/sdk';
-import type { UseContentReturn, UseContentState, GetContent } from './types';
 
 /**
  * @description Composable for managing content from CMS.

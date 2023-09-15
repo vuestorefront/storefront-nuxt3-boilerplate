@@ -10,6 +10,7 @@
 usePageTitle();
 
 const bodyClass = ref('');
+
 onMounted(() => {
   // Need this class for cypress testing
   bodyClass.value = 'hydrated';

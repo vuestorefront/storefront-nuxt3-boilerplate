@@ -8,7 +8,7 @@
   </SfInput>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 import { SfInput, SfIconVisibility, SfIconVisibilityOff } from '@storefront-ui/vue';
 
 const isPasswordVisible = ref<boolean>();

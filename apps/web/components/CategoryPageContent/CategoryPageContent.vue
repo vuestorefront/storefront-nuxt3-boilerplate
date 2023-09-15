@@ -67,6 +67,7 @@ withDefaults(defineProps<CategoryPageContentProps>(), {
 
 const { isOpen, open, close } = useDisclosure();
 const { isTablet, isDesktop } = useBreakpoints();
+
 const maxVisiblePages = computed(() => (isDesktop.value ? 5 : 1));
 
 whenever(isTablet, close);

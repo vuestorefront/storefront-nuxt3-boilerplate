@@ -82,7 +82,9 @@ import { SfButton } from '@storefront-ui/vue';
 definePageMeta({
   layout: 'account',
 });
+
 const { fetchCustomerOrders, data } = useCustomerOrders();
+
 await fetchCustomerOrders();
 
 const NuxtLink = resolveComponent('NuxtLink');

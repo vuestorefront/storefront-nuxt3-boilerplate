@@ -11,8 +11,7 @@
     <slot />
   </div>
 </template>
-<script lang="ts" setup>
-import { computed } from 'vue';
+<script setup lang="ts">
 import { type TagProps, TagSize } from '~/components/ui/Tag/types';
 
 const props = withDefaults(defineProps<TagProps>(), {

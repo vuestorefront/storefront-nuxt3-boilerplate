@@ -37,14 +37,12 @@
   </NuxtLayout>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 import { SfButton, SfLink, SfCheckbox, SfInput, SfLoaderCircular } from '@storefront-ui/vue';
 
 definePageMeta({
   layout: false,
 });
-
-const NuxtLink = resolveComponent('NuxtLink');
 
 const router = useRouter();
 
@@ -60,4 +58,5 @@ const login = () => {
     void router.push('/').then(() => (isLoading.value = false));
   }, 4000);
 };
+const NuxtLink = resolveComponent('NuxtLink');
 </script>

@@ -28,7 +28,7 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 import { SfButton } from '@storefront-ui/vue';
 
 const { data: cart } = useCart();

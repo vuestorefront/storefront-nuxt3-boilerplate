@@ -56,19 +56,19 @@
     </div>
   </form>
 </template>
-<script lang="ts" setup>
+<script setup lang="ts">
 import { SfButton, SfInput, SfIconVisibility } from '@storefront-ui/vue';
 import type { AccountFormsPasswordProps } from '~/components/AccountForms/types';
 
 const props = defineProps<AccountFormsPasswordProps>();
-const { oldPassword, firstNewPassword, secondNewPassword } = toRefs(props);
 defineEmits(['on-save', 'on-cancel']);
+
+const { oldPassword, firstNewPassword, secondNewPassword } = toRefs(props);
 const userPasswords = ref({
   oldPassword: oldPassword?.value ?? '',
   firstNewPassword: firstNewPassword?.value ?? '',
   secondNewPassword: secondNewPassword?.value ?? '',
 });
-
 const passwordVisible = ref(false);
 const firstNewPasswordVisible = ref(false);
 const secondNewPasswordVisible = ref(false);

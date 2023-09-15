@@ -18,13 +18,14 @@
     </div>
   </form>
 </template>
-<script lang="ts" setup>
+<script setup lang="ts">
 import { SfButton, SfInput } from '@storefront-ui/vue';
 import type { AccountFormsNameProps } from '~/components/AccountForms/types';
 
 const props = defineProps<AccountFormsNameProps>();
-const { firstName, lastName } = toRefs(props);
 defineEmits(['on-save', 'on-cancel']);
+
+const { firstName, lastName } = toRefs(props);
 const userData = ref({
   firstName: firstName?.value ?? '',
   lastName: lastName?.value ?? '',

@@ -113,7 +113,7 @@
       </UiAlert>
 
       <footer class="flex justify-end">
-        <SfButton type="button" :tag="NuxtLink" :to="paths.home" class="w-full">
+        <SfButton :tag="NuxtLink" :to="paths.home" class="w-full">
           {{ $t('auth.signup.modal.button') }}
         </SfButton>
       </footer>
@@ -128,13 +128,13 @@ definePageMeta({
   layout: false,
 });
 
+const { isOpen, open } = useDisclosure();
+
 const firstNameModel = ref('');
 const lastNameModel = ref('');
 const emailModel = ref('');
 const passwordModel = ref('');
 const termsAndConditionsModel = ref<boolean>();
 const subscriptionsModel = ref<boolean>();
-
 const NuxtLink = resolveComponent('NuxtLink');
-const { isOpen, open } = useDisclosure();
 </script>

@@ -119,17 +119,17 @@
 </template>
 
 <script setup lang="ts">
-import { type ComponentPublicInstance } from 'vue';
+import type { ComponentPublicInstance } from 'vue';
 import { clamp, type SfScrollableOnScrollData } from '@storefront-ui/shared';
 import { SfScrollable, SfButton, SfIconChevronLeft, SfIconChevronRight } from '@storefront-ui/vue';
-import { SfImage } from '@vue-storefront/unified-data-model';
+import type { SfImage } from '@vue-storefront/unified-data-model';
 import { unrefElement, useIntersectionObserver, useTimeoutFn } from '@vueuse/core';
-
-const { isPending, start, stop } = useTimeoutFn(() => {}, 50);
 
 const props = defineProps<{
   images: SfImage[];
 }>();
+
+const { isPending, start, stop } = useTimeoutFn(() => {}, 50);
 
 const thumbsReference = ref<HTMLElement>();
 const firstThumbReference = ref<HTMLButtonElement>();
@@ -171,13 +171,11 @@ const onChangeIndex = (index: number) => {
   activeIndex.value = clamp(index, 0, props.images.length - 1);
   start();
 };
-
 const onScroll = ({ left, scrollWidth }: SfScrollableOnScrollData) => {
   if (!isPending.value) {
     onChangeIndex(Math.round(left / (scrollWidth / props.images.length)));
   }
 };
-
 const assignReference = (element: Element | ComponentPublicInstance | null, index: number) => {
   if (!element) return;
   if (index === props.images.length - 1) {

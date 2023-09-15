@@ -77,16 +77,14 @@
     </div>
   </form>
 </template>
-<script lang="ts" setup>
+<script setup lang="ts">
 import { SfButton, SfCheckbox, SfInput, SfLoaderCircular, SfSelect } from '@storefront-ui/vue';
-import type { AddressFormProps } from './types';
+import type { AddressFormProps } from '~/components/AddressForm/types';
 
 const props = defineProps<AddressFormProps>();
-
-const isCartUpdateLoading = false;
+defineEmits(['on-save', 'on-close']);
 
 const { savedAddress } = toRefs(props);
-
 const defaultValues = ref({
   firstName: savedAddress?.value?.firstName ?? '',
   lastName: savedAddress?.value?.lastName ?? '',
@@ -98,7 +96,7 @@ const defaultValues = ref({
   state: savedAddress?.value?.state ?? '',
   postalCode: savedAddress?.value?.postalCode ?? '',
 });
+const isCartUpdateLoading = false;
 const countries = ['US'];
 const states = ['California'];
-defineEmits(['on-save', 'on-close']);
 </script>

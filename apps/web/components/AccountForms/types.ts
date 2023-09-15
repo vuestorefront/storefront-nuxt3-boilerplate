@@ -1,4 +1,4 @@
-import { SfCustomer } from '@vue-storefront/unified-data-model';
+import type { SfCustomer } from '@vue-storefront/unified-data-model';
 
 export type AccountFormsNameProps = {
   firstName?: SfCustomer['firstName'];

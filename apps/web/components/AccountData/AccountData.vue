@@ -9,9 +9,9 @@
     </div>
   </div>
 </template>
-<script lang="ts" setup>
+<script setup lang="ts">
 import { SfButton } from '@storefront-ui/vue';
-import { AccountDataProps } from './types';
+import type { AccountDataProps } from '~/components/AccountData/types';
 
 defineProps<AccountDataProps>();
 defineEmits(['on-click']);

@@ -31,12 +31,17 @@
 
 <script setup lang="ts">
 import { SfIconCreditCard } from '@storefront-ui/vue';
-import { CheckoutPaymentEmits, CheckoutPaymentProps, PaymentMethod } from '~/components/CheckoutPayment/types';
+import {
+  type CheckoutPaymentEmits,
+  type CheckoutPaymentProps,
+  PaymentMethod,
+} from '~/components/CheckoutPayment/types';
 
 defineProps<CheckoutPaymentProps>();
 defineEmits<CheckoutPaymentEmits>();
 
 const { t } = useI18n();
+
 const paymentMethods = [
   {
     value: PaymentMethod.CreditCard,

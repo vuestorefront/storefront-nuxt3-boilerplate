@@ -17,6 +17,8 @@ import CategoryCard from '~/components/ui/CategoryCard/CategoryCard.vue';
 import Display from '~/components/ui/Display/Display.vue';
 import Hero from '~/components/ui/Hero/Hero.vue';
 
+defineProps<RenderContentProps>();
+
 const componentsMap = computed(() => ({
   Hero,
   Card: CategoryCard,
@@ -24,6 +26,4 @@ const componentsMap = computed(() => ({
   Display,
   ProductSlider: RenderContentProductSlider,
 }));
-
-defineProps<RenderContentProps>();
 </script>

@@ -47,7 +47,6 @@ const props = defineProps<FilterProps>();
 const emit = defineEmits<FilterEmits>();
 
 const open = ref(true);
-
 const selectedProxy = computed({
   get: () => props.selected,
   set: (value: FilterProps['selected']) => emit('update:selected', value),

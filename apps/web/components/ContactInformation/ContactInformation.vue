@@ -39,7 +39,6 @@
 import { SfButton, SfIconClose, useDisclosure } from '@storefront-ui/vue';
 
 const { isOpen, open, close } = useDisclosure();
-
 const cart = ref({
   customerEmail: '',
 });

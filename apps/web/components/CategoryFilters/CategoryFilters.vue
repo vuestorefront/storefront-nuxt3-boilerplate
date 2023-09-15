@@ -15,6 +15,7 @@
 import type { CategoryFiltersProps } from '~/components/CategoryFilters/types';
 
 const props = defineProps<CategoryFiltersProps>();
+
 const { facets } = toRefs(props);
 const selectedFilters = ref<string[]>([]);
 const colorFacets = computed(() => facets.value.find(({ name }) => name === 'color'));

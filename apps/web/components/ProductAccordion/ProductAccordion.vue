@@ -25,15 +25,15 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 import type { ProductAccordionPropsType } from '~/components/ProductAccordion/types';
 
 const props = defineProps<ProductAccordionPropsType>();
 
 const { product } = toRefs(props);
-
 const { data: productReviews, fetchProductReviews } = useProductReviews(product.value.slug);
-fetchProductReviews(product.value.slug);
 
 const productDetailsOpen = ref(true);
+
+fetchProductReviews(product.value.slug);
 </script>

@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils';
 import OrderSummary from '~/components/OrderSummary/OrderSummary.vue';
-import { SfCart } from '@vue-storefront/unified-data-model';
+import type { SfCart } from '@vue-storefront/unified-data-model';
 
 const cart: SfCart = {
   appliedCoupons: [],
@@ -47,6 +47,6 @@ describe('<OrderSummary />', () => {
       }
     });
 
-    expect(wrapper.getByTestId('order-summary'));    
+    expect(wrapper.getByTestId('order-summary'));
   });
 });

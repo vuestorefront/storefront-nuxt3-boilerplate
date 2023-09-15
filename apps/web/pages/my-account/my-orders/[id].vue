@@ -149,10 +149,9 @@ import { SfButton, SfIconClose, useDisclosure } from '@storefront-ui/vue';
 
 const route = useRoute();
 const router = useRouter();
-
 const { isOpen } = useDisclosure({ initialValue: true });
-
 const { fetchCustomerOrder, data } = useCustomerOrder(route.params.id as string);
+
 onMounted(async () => {
   // without nextTick data on first click does not load data
   await nextTick();

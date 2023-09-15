@@ -39,14 +39,13 @@
   </article>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 import { SfRating, SfIconCheck, SfIconThumbUp, SfIconThumbDown, SfCounter } from '@storefront-ui/vue';
 import type { ReviewProps } from '~/components/ui/Review/types';
 
 const props = defineProps<ReviewProps>();
 
 const { review } = toRefs(props);
-
 const charLimit = 400;
 const isCollapsed = ref(true);
 const isButtonVisible = computed(() => review.value.text?.length || 0 > charLimit);

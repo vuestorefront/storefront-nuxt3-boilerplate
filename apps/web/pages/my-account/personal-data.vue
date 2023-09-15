@@ -36,7 +36,7 @@
     aria-labelledby="address-modal-title"
   >
     <header>
-      <SfButton type="button" square variant="tertiary" class="absolute right-2 top-2" @click="closeModal">
+      <SfButton square variant="tertiary" class="absolute right-2 top-2" @click="closeModal">
         <SfIconClose />
       </SfButton>
       <h3 id="address-modal-title" class="text-neutral-900 text-lg md:text-2xl font-bold mb-6">
@@ -60,10 +60,16 @@ import { unrefElement } from '@vueuse/core';
 definePageMeta({
   layout: 'account',
 });
+
 const { isOpen, open, close } = useDisclosure();
+const { fetchCustomer, data: userData } = useCustomer();
+
+fetchCustomer();
+
 const lastActiveElement = ref();
 const modalElement = ref();
 const openedForm = ref('');
+
 const openModal = async (modalName: string) => {
   openedForm.value = modalName;
   lastActiveElement.value = document.activeElement;
@@ -71,12 +77,8 @@ const openModal = async (modalName: string) => {
   await nextTick();
   unrefElement(modalElement).focus();
 };
-
 const closeModal = () => {
   close();
   lastActiveElement.value.focus();
 };
-
-const { fetchCustomer, data: userData } = useCustomer();
-fetchCustomer();
 </script>

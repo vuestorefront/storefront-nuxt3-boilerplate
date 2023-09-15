@@ -37,15 +37,18 @@
 import { useI18n } from 'vue-i18n';
 import type { Breadcrumb } from '~/components/ui/Breadcrumbs/types';
 
+definePageMeta({
+  layout: false,
+});
+
 const route = useRoute();
 const slug = route.params.slug as string;
 const { data: product, fetchProduct } = useProduct(slug);
 const { data: recommendedProducts, fetchProductRecommended } = useProductRecommended(slug);
+const { t } = useI18n();
 
 await fetchProduct(slug);
 await fetchProductRecommended(slug);
-
-const { t } = useI18n();
 
 const breadcrumbs: Breadcrumb[] = [
   { name: t('home'), link: '/' },
@@ -57,8 +60,5 @@ const title = computed(() => product.value?.name ?? '');
 
 useHead({
   title,
-});
-definePageMeta({
-  layout: false,
 });
 </script>

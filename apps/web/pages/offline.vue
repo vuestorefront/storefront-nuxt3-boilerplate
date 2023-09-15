@@ -115,7 +115,7 @@
   </section>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 import { useOnline, whenever } from '@vueuse/core';
 
 const router = useRouter();

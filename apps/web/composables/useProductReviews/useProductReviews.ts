@@ -1,6 +1,10 @@
 import { toRefs } from '@vueuse/shared';
+import type {
+  UseProductReviews,
+  UseProductReviewsState,
+  FetchProductReviews,
+} from '~/composables/useProductReviews/types';
 import { useSdk } from '~/sdk';
-import type { UseProductReviews, UseProductReviewsState, FetchProductReviews } from './types';
 
 /**
  * @description Composable managing product reviews data

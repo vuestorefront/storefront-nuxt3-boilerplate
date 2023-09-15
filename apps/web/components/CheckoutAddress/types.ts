@@ -1,4 +1,4 @@
-import { SfAddress, Maybe } from '@vue-storefront/unified-data-model';
+import type { SfAddress, Maybe } from '@vue-storefront/unified-data-model';
 
 export interface Address extends SfAddress {
   streetNumber: Maybe<string>;

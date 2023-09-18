@@ -9,4 +9,5 @@ export type AccountFormsPasswordProps = {
   oldPassword?: string;
   firstNewPassword?: string;
   secondNewPassword?: string;
+  username?: string;
 };

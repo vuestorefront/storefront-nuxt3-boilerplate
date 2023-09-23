@@ -16,8 +16,8 @@
 
 To get started, see the following guides:
 
-- [Introduction](https://docs.vuestorefront.io/v2/getting-started/introduction.html) to learn what is Vue Storefront.
-
+- [Introduction]([https://docs.vuestorefront.io/v2/getting-started/introduction.html](https://docs.vuestorefront.io/general)) to learn what is Vue Storefront.
+- [Storefronts in Vue Storefront ecosystem](https://docs.vuestorefront.io/storefronts)
 ## Prerequisites:
 
 - `Node.js` 20+

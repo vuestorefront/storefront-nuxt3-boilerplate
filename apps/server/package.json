@@ -11,8 +11,8 @@
   },
   "dependencies": {
     "@vue-storefront/middleware": "3.5.1",
-    "consola": "^2.15.3",
-    "nodemon": "^2.0.19",
+    "consola": "^3.0.0",
+    "nodemon": "^3.0.0",
     "ts-node-dev": "^2.0.0"
   },
   "devDependencies": {

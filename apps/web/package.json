@@ -43,6 +43,8 @@
     "cypress": "^12.12.0",
     "cypress-real-events": "^1.10.0",
     "cypress-wait-until": "^2.0.0",
+    "eslint": "^8.50.0",
+    "eslint-plugin-prettier": "5.0.0",
     "happy-dom": "^9.20.3",
     "nuxt": "^3.6.5",
     "nuxt-vitest": "^0.10.1",

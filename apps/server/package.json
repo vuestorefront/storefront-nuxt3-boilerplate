@@ -16,6 +16,8 @@
     "ts-node-dev": "^2.0.0"
   },
   "devDependencies": {
-    "@types/express": "^4.17.13"
+    "@types/express": "^4.17.13",
+    "eslint": "^8.50.0",
+    "eslint-plugin-prettier": "5.0.0"
   }
 }

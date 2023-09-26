@@ -85,8 +85,15 @@
 </template>
 
 <script setup lang="ts">
-import { SfIconBase, SfIconPerson, SfIconShoppingCart, SfListItem, SfButton, SfIconArrowBack, SfIconChevronRight } from '@storefront-ui/vue';
-
+import {
+  SfIconBase,
+  SfIconPerson,
+  SfIconShoppingCart,
+  SfListItem,
+  SfButton,
+  SfIconArrowBack,
+  SfIconChevronRight,
+} from '@storefront-ui/vue';
 
 const { isTablet } = useBreakpoints();
 const { t } = useI18n();

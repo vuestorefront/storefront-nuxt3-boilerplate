@@ -2,12 +2,11 @@ import { paths } from "../../../utils/paths";
 
 export class MyAccountPageObject {
   get accountDropdownListItem () {
-    return  cy.get(`a[href="${paths.account}"]`)
-    //cy.getByTestId('account-dropdown-list-item');
+    return cy.get(`a[href="${paths.account}"]`)
   }
 
   clickTopBarMyAccountLink() {
-    cy.getByTestId('account-dropdown-button').should('exist').focus().click();
+    cy.getByTestId('account-dropdown-button').should('exist').click();
 
     this.accountDropdownListItem
       .should('exist')

@@ -1,6 +1,6 @@
 import type { SfCart } from '@vue-storefront/unified-data-model';
 import { toRefs } from '@vueuse/shared';
-import type { UseCartReturn, UseCartState, FetchCard } from '~/composables/useCart/types';
+import type { UseCartReturn, UseCartState, FetchCart } from '~/composables/useCart/types';
 import { useSdk } from '~/sdk';
 
 /**
@@ -20,7 +20,7 @@ export const useCart: UseCartReturn = () => {
    * @example
    * getCart();
    */
-  const fetchCard: FetchCard = async () => {
+  const fetchCart: FetchCart = async () => {
     state.value.loading = true;
     try {
       const { data, error } = await useAsyncData<SfCart>(() => useSdk().commerce.getCart());
@@ -35,7 +35,7 @@ export const useCart: UseCartReturn = () => {
   };
 
   return {
-    fetchCard,
+    fetchCart: fetchCart,
     ...toRefs(state.value),
   };
 };

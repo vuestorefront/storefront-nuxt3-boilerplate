@@ -44,9 +44,9 @@ defineProps<{
   heading: string;
 }>();
 
-const { fetchCard, data: cart, loading: isLoading } = useCart();
+const { fetchCart, data: cart, loading: isLoading } = useCart();
 
-fetchCard();
+fetchCart();
 
 const NuxtLink = resolveComponent('NuxtLink');
 </script>

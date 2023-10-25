@@ -139,10 +139,10 @@ defineProps<DefaultLayoutProps>();
 
 const { isOpen: isAccountDropdownOpen, toggle: accountDropdownToggle } = useDisclosure();
 const { isOpen: isSearchModalOpen, open: searchModalOpen, close: searchModalClose } = useDisclosure();
-const { fetchCard, data: cart } = useCart();
+const { fetchCart, data: cart } = useCart();
 const { fetchCustomer, data: account } = useCustomer();
 
-fetchCard();
+fetchCart();
 fetchCustomer();
 usePageTitle();
 

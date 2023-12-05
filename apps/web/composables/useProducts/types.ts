@@ -1,4 +1,4 @@
-import { Ref } from 'vue';
+import type { Ref } from 'vue';
 import type { GetProducts } from '@vue-storefront/storefront-boilerplate-sdk';
 import type { Maybe } from '@vue-storefront/unified-data-model';
 

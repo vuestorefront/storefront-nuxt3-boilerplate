@@ -1,5 +1,5 @@
 import type { Ref } from 'vue';
-import { Maybe } from '@vue-storefront/unified-data-model';
+import type { Maybe } from '@vue-storefront/unified-data-model';
 
 export interface UseCustomerReturnsState {
   data: Maybe<unknown[]>;

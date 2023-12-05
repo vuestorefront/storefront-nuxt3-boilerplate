@@ -1,5 +1,5 @@
 import { ref } from 'vue';
-import { SfAttribute, SfProduct } from '@vue-storefront/unified-data-model';
+import type { SfAttribute, SfProduct } from '@vue-storefront/unified-data-model';
 import { groupBy, uniqBy } from 'lodash-es';
 
 /**

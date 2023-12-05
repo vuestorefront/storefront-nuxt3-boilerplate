@@ -1,4 +1,4 @@
-import { SfProductCatalogItem } from '@vue-storefront/unified-data-model';
+import type { SfProductCatalogItem } from '@vue-storefront/unified-data-model';
 
 export type CategoryPageContentProps = {
   title: string;

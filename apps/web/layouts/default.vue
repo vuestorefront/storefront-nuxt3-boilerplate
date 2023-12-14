@@ -133,7 +133,7 @@ import {
   SfModal,
   useDisclosure,
 } from '@storefront-ui/vue';
-import { DefaultLayoutProps } from '~/layouts/types';
+import type { DefaultLayoutProps } from '~/layouts/types';
 
 defineProps<DefaultLayoutProps>();
 

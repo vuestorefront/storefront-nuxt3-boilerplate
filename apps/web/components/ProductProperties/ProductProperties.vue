@@ -38,7 +38,7 @@
 
 <script setup lang="ts">
 import { SfChip, SfThumbnail } from '@storefront-ui/vue';
-import { ProductPropertiesProps } from '~/components/ProductProperties/types';
+import type { ProductPropertiesProps } from '~/components/ProductProperties/types';
 
 const props = defineProps<ProductPropertiesProps>();
 

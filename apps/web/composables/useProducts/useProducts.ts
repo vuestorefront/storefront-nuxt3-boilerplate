@@ -1,4 +1,4 @@
-import { FetchProducts, UseProductsReturn, UseProductsState } from '~/composables/useProducts/types';
+import type { FetchProducts, UseProductsReturn, UseProductsState } from '~/composables/useProducts/types';
 import { useSdk } from '~/sdk';
 
 /**

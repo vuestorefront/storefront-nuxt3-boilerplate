@@ -69,6 +69,7 @@ export default defineNuxtConfig({
     '@vite-pwa/nuxt',
     'nuxt-vitest',
     'nuxt-lazy-hydrate',
+    '@vue-storefront/nuxt',
   ],
   nitro: {
     prerender: {
@@ -131,5 +132,10 @@ export default defineNuxtConfig({
       ],
     },
     registerWebManifestInRouteRules: true,
+  },
+  vsf: {
+    middleware: {
+      apiUrl: 'http://localhost:4000',
+    },
   },
 });

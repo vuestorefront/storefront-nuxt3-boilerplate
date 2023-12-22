@@ -4,7 +4,6 @@ import type {
   UseCartShippingMethodsReturn,
   GetShippingMethods,
 } from '~/composables/useCartShippingMethods/types';
-import { useSdk } from '~/sdk';
 
 /**
  * @description Composable for getting shipping methods.

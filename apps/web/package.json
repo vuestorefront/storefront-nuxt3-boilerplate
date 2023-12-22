@@ -19,6 +19,7 @@
     "test:cypress-dev": "cypress open --e2e"
   },
   "dependencies": {
+    "@vue-storefront/nuxt": "~3.0.0",
     "@vue-storefront/sdk": "^1.0.1",
     "@vue-storefront/storefront-boilerplate-sdk": "~0.2.0",
     "@vueuse/core": "^10.3.0",

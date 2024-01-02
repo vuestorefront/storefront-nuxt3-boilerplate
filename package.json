@@ -29,8 +29,8 @@
     "dotenv": "^16.0.3"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.0.0",
-    "@commitlint/config-conventional": "^17.0.0",
+    "@commitlint/cli": "^18.0.0",
+    "@commitlint/config-conventional": "^18.0.0",
     "@lhci/cli": "^0.12.0",
     "@trivago/prettier-plugin-sort-imports": "^4.1.1",
     "@vue-storefront/eslint-config": "~2.0.0-rc.7",
@@ -39,10 +39,10 @@
     "concurrently": "^8.2.0",
     "husky": "^8.0.0",
     "is-ci": "^3.0.0",
-    "lint-staged": "^14.0.0",
+    "lint-staged": "^15.0.0",
     "prettier": "^3.0.0",
     "rimraf": "^5.0.0",
-    "rollup": "^3.0.0",
+    "rollup": "^4.0.0",
     "turbo": "1.10.13",
     "typescript": "5.2.2",
     "wait-on": "^7.0.1"
@@ -51,7 +51,7 @@
     "yarn": ">=3.6.1",
     "node": ">=20.0.0"
   },
-  "packageManager": "yarn@3.6.4",
+  "packageManager": "yarn@4.0.2",
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog",

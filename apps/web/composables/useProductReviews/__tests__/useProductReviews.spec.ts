@@ -1,6 +1,4 @@
-import { vi } from 'vitest';
 import { useProductReviews } from '~/composables/useProductReviews';
-import { mockProductReviews } from './productReviews.mock';
 
 describe('useProductReview', () => {
   it('should return product reviews', async () => {

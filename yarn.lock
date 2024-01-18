@@ -5116,19 +5116,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue-storefront/nuxt@npm:~3.0.0":
-  version: 3.0.0
-  resolution: "@vue-storefront/nuxt@npm:3.0.0"
+"@vue-storefront/nuxt@npm:~3.0.1":
+  version: 3.0.1
+  resolution: "@vue-storefront/nuxt@npm:3.0.1"
   dependencies:
     "@nuxt/kit": 3.7.4
-    knitwork: ^1.0.0
-  peerDependencies:
     "@vue-storefront/sdk": ^1.0.0
-  checksum: 1ecf9909620377f703a3fdf379a2a367086db9a84da5b7b66c87970a628d41bc0fde5801396fb30ad2dc7b306c48e14e28bffa4366ad4b5107ac63f33e14b6ae
+    knitwork: ^1.0.0
+  checksum: c01511e60132bcdb46b2ef6a3f7f8e4341e03ae6ec89f041ccee7bc085d084767c37dd06ff4a202606f7218effff14fde62685464ae0447aa3efb853c41469d3
   languageName: node
   linkType: hard
 
-"@vue-storefront/sdk@npm:^1.0.1, @vue-storefront/sdk@npm:~1.1.2":
+"@vue-storefront/sdk@npm:^1.0.0":
+  version: 1.2.0
+  resolution: "@vue-storefront/sdk@npm:1.2.0"
+  checksum: 9c9f799603110390934c21191030c7ef4002e8667d88f08c1ab39ac10ad986e497b49f342048699930db9514881a182538a998c28ed5f062bfac34bac6294ab6
+  languageName: node
+  linkType: hard
+
+"@vue-storefront/sdk@npm:~1.1.2":
   version: 1.1.2
   resolution: "@vue-storefront/sdk@npm:1.1.2"
   dependencies:
@@ -19683,8 +19689,7 @@ __metadata:
     "@types/node": ^20.0.0
     "@vite-pwa/nuxt": ^0.1.0
     "@vitest/coverage-v8": ^0.33.0
-    "@vue-storefront/nuxt": ~3.0.0
-    "@vue-storefront/sdk": ^1.0.1
+    "@vue-storefront/nuxt": ~3.0.1
     "@vue-storefront/storefront-boilerplate-sdk": ~0.2.0
     "@vue-storefront/unified-data-model": ^0.6.0
     "@vue/test-utils": ^2.4.0

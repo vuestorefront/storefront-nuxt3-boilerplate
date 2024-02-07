@@ -41,6 +41,13 @@
             </NuxtLazyHydrate>
           </section>
         </div>
+        <UiPagination
+          v-if="wishlist?.length"
+          :current-page="1"
+          :total-items="wishlist?.length"
+          :page-size="5"
+          :max-visible-pages="2"
+        />
       </div>
       <div v-else class="flex items-center justify-center flex-col pt-24 pb-32" data-testid="wishlist-page-content">
         <NuxtImg
@@ -54,14 +61,6 @@
           {{ $t('emptyWishlist') }}
         </h2>
       </div>
-
-      <UiPagination
-        v-if="wishlist?.length"
-        :current-page="1"
-        :total-items="wishlist?.length"
-        :page-size="5"
-        :max-visible-pages="2"
-      />
     </div>
   </NarrowContainer>
 </template>

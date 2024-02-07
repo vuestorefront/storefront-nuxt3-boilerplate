@@ -1,12 +1,12 @@
 <template>
   <NarrowContainer>
     <div class="mb-20 px-4 md:px-0" data-testid="wishlist-layout">
-      <div v-if="wishlist?.lineItems.length" data-testid="wishlist-page-content">
+      <div v-if="wishlist?.length" data-testid="wishlist-page-content">
         <div class="flex-1">
           <section class="mb-4" data-testid="wishlist-grid">
             <NuxtLazyHydrate
               when-visible
-              v-for="{ id, attributes, image, name, totalPrice, unitPrice, quantity, slug } in wishlist.lineItems"
+              v-for="{ id, attributes, image, name, totalPrice, unitPrice, quantity, slug } in wishlist"
               :key="id"
             >
               <UiCartProductCard
@@ -56,9 +56,9 @@
       </div>
 
       <UiPagination
-        v-if="wishlist?.lineItems.length"
+        v-if="wishlist?.length"
         :current-page="1"
-        :total-items="wishlist?.lineItems.length"
+        :total-items="wishlist?.length"
         :page-size="5"
         :max-visible-pages="2"
       />

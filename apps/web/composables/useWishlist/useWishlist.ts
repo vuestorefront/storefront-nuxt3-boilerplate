@@ -10,7 +10,7 @@ import { SfCart } from '@vue-storefront/unified-data-model';
  */
 export const useWishlist: UseWishlistReturn = () => {
   const state = useState<UseWishlistState>('useWishlist', () => ({
-    data: null,
+    data: [],
     loading: false,
   }));
 
@@ -24,8 +24,9 @@ export const useWishlist: UseWishlistReturn = () => {
     try {
       const { data, error } = await useAsyncData<SfCart>(() => useSdk().commerce.getCart());
       useHandleError(error.value);
-      state.value.data = data.value;
-      return data;
+      const items = data.value?.lineItems || [];
+      state.value.data = items;
+      return items;
     } catch (error) {
       throw new Error(error as string);
     } finally {

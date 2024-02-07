@@ -173,7 +173,7 @@ const cartLineItemsCount = computed(
   () => cart.value?.lineItems.reduce((total, { quantity }) => total + quantity, 0) ?? 0,
 );
 
-const wishlistItemsCount = computed(() => wishlist?.value?.lineItems?.length || 0);
+const wishlistItemsCount = computed(() => wishlist?.value?.length || 0);
 
 const accountDropdown = [
   {

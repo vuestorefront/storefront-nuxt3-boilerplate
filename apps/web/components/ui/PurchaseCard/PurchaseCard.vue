@@ -50,7 +50,7 @@
         <WishlistButton>
           <template #content="{ active }">
             <span v-if="!active">
-              {{ $t('addToList') }}
+              {{ $t('addToWishlist') }}
             </span>
             <span v-else>
               {{ $t('removeFromWishlist') }}

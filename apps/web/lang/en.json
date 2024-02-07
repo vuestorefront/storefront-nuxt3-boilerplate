@@ -47,6 +47,7 @@
   "remove": "Remove",
   "emptyCart": "Your cart is empty",
   "emptyCartImgAlt": "empty cart image",
+  "emptyWishlistImgAlt": "empty wishlist image",
   "backToShopping": "Back To Shopping",
   "allFromCategory": "All {name}",
   "listSettings": "List settings",

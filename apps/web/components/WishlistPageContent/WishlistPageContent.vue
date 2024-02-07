@@ -45,8 +45,8 @@
       <div v-else class="flex items-center justify-center flex-col pt-24 pb-32" data-testid="wishlist-page-content">
         <NuxtImg
           data-testid="empty-wishlist-image"
-          src="/images/empty-cart.svg"
-          :alt="$t('emptyCartImgAlt')"
+          src="/images/empty-wishlist.svg"
+          :alt="$t('emptyWishlistImgAlt')"
           width="192"
           height="192"
         />

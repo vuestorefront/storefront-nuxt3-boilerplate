@@ -35,6 +35,25 @@
         </SfButton>
       </NuxtLazyHydrate>
       <NuxtLazyHydrate when-visible>
+        <SfButton
+          class="group relative text-white hover:text-white active:text-white hover:bg-primary-800 active:bg-primary-900 mr-1 -ml-0.5 rounded-md"
+          :tag="NuxtLink"
+          :to="paths.wishlist"
+          :aria-label="$t('numberInWishlist', wishlistItemsCount)"
+          variant="tertiary"
+          square
+        >
+          <template #prefix>
+            <SfIconFavorite />
+            <SfBadge
+              :content="wishlistItemsCount"
+              class="outline outline-primary-700 bg-white !text-neutral-900 group-hover:outline-primary-800 group-active:outline-primary-900 flex justify-center"
+              data-testid="wishlist-badge"
+            />
+          </template>
+        </SfButton>
+      </NuxtLazyHydrate>
+      <NuxtLazyHydrate when-visible>
         <SfDropdown v-model="isAccountDropdownOpen" placement="bottom-end">
           <template #trigger>
             <SfButton
@@ -131,6 +150,7 @@ import {
   SfDropdown,
   SfListItem,
   SfModal,
+  SfIconFavorite,
   useDisclosure,
 } from '@storefront-ui/vue';
 import { DefaultLayoutProps } from '~/layouts/types';
@@ -140,15 +160,20 @@ defineProps<DefaultLayoutProps>();
 const { isOpen: isAccountDropdownOpen, toggle: accountDropdownToggle } = useDisclosure();
 const { isOpen: isSearchModalOpen, open: searchModalOpen, close: searchModalClose } = useDisclosure();
 const { fetchCart, data: cart } = useCart();
+const { fetchWishlist, data: wishlist } = useWishlist();
 const { fetchCustomer, data: account } = useCustomer();
 
 fetchCart();
+fetchWishlist();
+
 fetchCustomer();
 usePageTitle();
 
 const cartLineItemsCount = computed(
   () => cart.value?.lineItems.reduce((total, { quantity }) => total + quantity, 0) ?? 0,
 );
+
+const wishlistItemsCount = computed(() => wishlist?.value?.lineItems?.length || 0);
 
 const accountDropdown = [
   {

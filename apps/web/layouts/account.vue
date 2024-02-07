@@ -93,6 +93,7 @@ import {
   SfButton,
   SfIconArrowBack,
   SfIconChevronRight,
+  SfIconFavorite,
 } from '@storefront-ui/vue';
 
 const { isTablet } = useBreakpoints();
@@ -129,6 +130,16 @@ const sections = [
       {
         label: t('account.ordersAndReturns.section.returns'),
         link: paths.accountReturns,
+      },
+    ],
+  },
+  {
+    title: t('account.wishlist.heading'),
+    icon: SfIconFavorite,
+    subsections: [
+      {
+        label: t('account.wishlist.section.myWishlist'),
+        link: paths.accountMyWishlist,
       },
     ],
   },

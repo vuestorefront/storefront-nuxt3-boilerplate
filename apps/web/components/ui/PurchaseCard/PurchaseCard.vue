@@ -47,10 +47,16 @@
           </template>
           {{ $t('compare') }}
         </SfButton>
-        <SfButton size="sm" variant="tertiary">
-          <SfIconFavorite size="sm" />
-          {{ $t('addToList') }}
-        </SfButton>
+        <WishlistButton>
+          <template #content="{ active }">
+            <span v-if="!active">
+              {{ $t('addToList') }}
+            </span>
+            <span v-else>
+              {{ $t('removeFromWishlist') }}
+            </span>
+          </template>
+        </WishlistButton>
       </div>
     </div>
     <div class="flex first:mt-4">
@@ -96,7 +102,6 @@ import {
   SfIconCompareArrows,
   SfIconWarehouse,
   SfIconPackage,
-  SfIconFavorite,
   SfIconSell,
   SfIconShoppingCartCheckout,
   SfIconShoppingCart,

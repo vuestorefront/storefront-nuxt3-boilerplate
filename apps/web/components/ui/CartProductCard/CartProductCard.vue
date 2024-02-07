@@ -29,6 +29,7 @@
       >
         {{ name }}
       </SfLink>
+      <slot name="removeBtn" />
       <div class="my-2 sm:mb-0">
         <ul class="text-xs font-normal leading-5 sm:typography-text-sm text-neutral-700">
           <li v-for="attribute in attributes" :key="attribute.name">
@@ -50,7 +51,10 @@
         <span v-else class="font-bold sm:ml-auto sm:order-1 typography-text-sm sm:typography-text-lg">
           ${{ price }}
         </span>
-        <UiQuantitySelector :min-value="minValue" :max-value="maxValue" class="mt-4 sm:mt-0" />
+        <div class="flex items-center mt-4 sm:mt-0">
+          <UiQuantitySelector :min-value="minValue" :max-value="maxValue" />
+          <slot name="additionalBtn" />
+        </div>
       </div>
     </div>
   </div>

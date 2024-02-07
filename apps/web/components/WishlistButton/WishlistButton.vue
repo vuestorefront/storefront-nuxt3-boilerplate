@@ -3,7 +3,7 @@
     variant="tertiary"
     size="sm"
     :aria-label="isWishlistItem ? t('removeProductFromWishlist') : t('addProductToWishlist')"
-    @click="triggerWishlist()"
+    @click="toggleIsOnWishlist()"
     data-testid="wishlist-trigger"
   >
     <SfLoaderCircular v-if="wishlistLoading" class="flex justify-center items-center" size="sm" />
@@ -23,7 +23,7 @@ const wishlistLoading = ref(false);
 
 const { t } = useI18n();
 
-const triggerWishlist = () => {
+const toggleIsOnWishlist = () => {
   wishlistLoading.value = true;
   isWishlistItem.value = !isWishlistItem.value;
   wishlistLoading.value = false;

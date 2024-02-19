@@ -13,7 +13,6 @@ definePageMeta({
   layout: false,
 });
 
-const localePath = useLocalePath();
 const { t } = useI18n();
 const { fetchWishlist, loading } = useWishlist();
 

@@ -1,7 +1,7 @@
 <p align="center">
   <a href="https://https://vuestorefront.io/">
   <picture>
-    <img src="./_readme/Logo.png" width="400px" height="auto"/>
+    <img src="./_readme/Logo.png" width="400px" height="auto" alt="Alokai" />
   </picture>
   </a>
   <h1 align="center">Alokai for Vue (Nuxt 3) Boilerplate</h1>

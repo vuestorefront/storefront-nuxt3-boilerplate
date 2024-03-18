@@ -1,11 +1,6 @@
-<p align="center">
-  <a href="https://https://vuestorefront.io/">
-  <picture>
-    <img src="./_readme/Logo.png" width="400px" height="auto" alt="Alokai" />
-  </picture>
-  </a>
-  <h1 align="center">Alokai for Vue (Nuxt 3) Boilerplate</h1>
-</p>
+![Alokai](https://res.cloudinary.com/vue-storefront/image/upload/v1710754524/Logo_green_2x_z4vmhz.png)
+
+<h1 align="center">Alokai for Vue (Nuxt 3) Boilerplate</h1>
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/vuestorefront/vue-storefront?style=social)](https://github.com/vuestorefront/vue-storefront)
 [![Twitter Follow](https://img.shields.io/twitter/follow/vuestorefront?style=social)](https://twitter.com/vuestorefront)

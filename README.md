@@ -11,8 +11,8 @@
 
 To get started, see the following guides:
 
-- [Introduction]([https://docs.vuestorefront.io/v2/getting-started/introduction.html](https://docs.vuestorefront.io/general)) to learn what is Alokai.
-- [Storefronts in Alokai ecosystem](https://docs.vuestorefront.io/storefronts)
+- [Introduction](https://docs.alokai.com/v2/getting-started/introduction.html) to learn what is Alokai.
+- [Storefront in Alokai ecosystem](https://docs.alokai.com/storefront)
 ## Prerequisites:
 
 - `Node.js` 20+
@@ -52,8 +52,8 @@ $ yarn dev
 - Staged code linting with [lint-staged](https://github.com/okonet/lint-staged).
 - [Progressive Web App](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/What_is_a_progressive_web_app) features with [Vite PWA for Nuxt](https://vite-pwa-org.netlify.app/).
 - `i18n` localisation powered by [Nuxt-i18n](https://i18n.nuxtjs.org).
-- [Alokai SDK](https://docs.vuestorefront.io/sdk/) ready - integrate headless E-commerce platform with your project easily.
-- [Alokai Middleware](https://docs.vuestorefront.io/v2/architecture/server-middleware.html).
+- [Alokai SDK](https://docs.alokai.com/sdk/) ready - integrate headless E-commerce platform with your project easily.
+- [Alokai Middleware](https://docs.alokai.com/v2/architecture/server-middleware.html).
 - Maximize lighthouse score.
 
 ## Guide
@@ -70,8 +70,8 @@ Please see our [contributing.md](contributing.md) for more information.
 
 ## Resources
 
-- [Alokai Documentation](https://docs.vuestorefront.io/v2/)
-- [Alokai Enterprise Documentation](https://docs.vuestorefront.io/v2/general/enterprise.html)
+- [Alokai Documentation](https://docs.alokai.com)
+- [Alokai Enterprise Documentation](https://docs.alokai.com/v2/general/enterprise.html)
 - [Storefront UI 2 Documentation](https://docs.storefrontui.io/v2/)
 - [Community Chat](http://discord.vuestorefront.io)
 

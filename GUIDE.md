@@ -37,18 +37,18 @@ The most important files of the `Server Middleware` app are:
 - `src/index.ts` - Express server entry point that handles all requests to the third-party platforms from the SDK
 - `middleware.config.ts` - Alokai Middleware configuration
 
-For more info about `Server Middleware` refer to the [documentation](https://docs.vuestorefront.io/v2/architecture/server-middleware.html).
+For more info about `Server Middleware` refer to the [documentation](https://docs.alokai.com/v2/architecture/server-middleware.html).
 
 > **Warning**
 > This project does not come with pre-packaged integrations for the sake of simplicity. However, you have the flexibility to develop custom integrations or utilize our official integrations to connect the Middleware with actual data sources.
 >
 > You can choose from our official integrations, which provide pre-built connectors for various data sources and services. These integrations are designed and maintained by the Alokai team as well as partners, ensuring a seamless integration experience.
 >
-> Check out [official Alokai Middleware integrations](https://docs.vuestorefront.io/v2/integrations/) to get started quickly.
+> Check out [official Alokai Middleware integrations](https://docs.alokai.com/v2/integrations/) to get started quickly.
 >
 > If your project requires custom integrations tailored to specific data sources or services, our project offers a flexible framework and comprehensive documentation to guide you through the process. By following our guidelines and leveraging the capabilities of the Middleware, you can effortlessly develop custom integrations that meet your unique requirements.
 >
-> For more information on developing custom integrations, please refer to the [Integrating e-commerce platform documentation](https://docs.vuestorefront.io/v2/integrate/integration-guide.html).
+> For more information on developing custom integrations, please refer to the [Integrating e-commerce platform documentation](https://docs.alokai.com/v2/integrate/integration-guide.html).
 
 > **Note**
 > If you are migrating your project from Nuxt 2, the `src/index.ts` file serves as the equivalent of the Server's Middleware `middleware.js` entry point.
@@ -92,7 +92,7 @@ apps/
 
 List of essential directories:
 
-- `sdk` [Alokai SDK](https://docs.vuestorefront.io/sdk/) module configuration
+- `sdk` [Alokai SDK](https://docs.alokai.com/sdk/) module configuration
 - `components/ui` Storefront UI Block components, like `ProductCard` or `Review`
 - `composables` reusable composition functions, e.g. data fetching and UI composables
 - `mocks` mock data used across the application, e.g. footer links
@@ -200,9 +200,9 @@ By combining Alokai SDK with Nuxt's composables, this project ensures a reliable
 >
 > In a production scenario, is necessary to connect connectors to interface with actual data sources. The `@vue-storefront/[integration]-sdk` library serves as a foundation and offers the necessary abstractions and guidelines to facilitate the development of custom connectors.
 >
-> Check out [Alokai SDK official integration modules](https://docs.vuestorefront.io/sdk/modules/).
+> Check out [Alokai SDK official integration modules](https://docs.alokai.com/sdk/modules/).
 
-For detailed information on how to get started, configure, and use this project built with Alokai SDK, please refer to the [Alokai SDK official documentation](https://docs.vuestorefront.io/sdk/sdk/) and [Nuxt.js](https://nuxt.com).
+For detailed information on how to get started, configure, and use this project built with Alokai SDK, please refer to the [Alokai SDK official documentation](https://docs.alokai.com/sdk/) and [Nuxt.js](https://nuxt.com).
 
 ### Localization
 
@@ -290,4 +290,4 @@ You can configure your LHCI tests to block the merging of a Pull Request if the 
 
 #### More about performance
 
-Additional performance good practices and information can be found [HERE](https://docs.vuestorefront.io/v2/performance/intro.html).
+Additional performance good practices and information can be found [HERE](https://docs.alokai.com/v2/performance/intro.html).

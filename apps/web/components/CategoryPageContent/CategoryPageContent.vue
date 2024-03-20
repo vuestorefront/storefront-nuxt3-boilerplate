@@ -39,7 +39,14 @@
                 :image-alt="primaryImage?.alt ?? ''"
                 :slug="slug"
                 :priority="index === 0"
-              />
+              >
+                <template #wishlistButton>
+                  <WishlistButton
+                    square
+                    class="absolute bottom-0 right-0 mr-2 mb-2 bg-white ring-1 ring-inset ring-neutral-200 !rounded-full"
+                  />
+                </template>
+              </UiProductCard>
             </NuxtLazyHydrate>
           </section>
           <LazyCategoryEmptyState v-else />

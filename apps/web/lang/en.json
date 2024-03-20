@@ -47,6 +47,7 @@
   "remove": "Remove",
   "emptyCart": "Your cart is empty",
   "emptyCartImgAlt": "empty cart image",
+  "emptyWishlistImgAlt": "empty wishlist image",
   "backToShopping": "Back To Shopping",
   "allFromCategory": "All {name}",
   "listSettings": "List settings",
@@ -331,6 +332,12 @@
         "paymentMethod": "Payment method",
         "shippingAddress": "Shipping address"
       }
+    },
+    "wishlist": {
+      "heading": "Wishlist",
+      "section": {
+        "myWishlist": "My wishlist"
+      }
     }
   },
   "auth": {
@@ -372,5 +379,10 @@
       "help": "8 or more characters with a mix of letters, numbers and symbols.",
       "description": "Create the new password you want to use to log in to your account."
     }
-  }
+  },
+  "addToWishlist": "Add to wishlist",
+  "removeFromWishlist": "Remove from wishlist",
+  "numberInWishlist": "{count} products in wishlist",
+  "removeProductFromWishlist": "Remove {label} from wishlist",
+  "emptyWishlist": "Your wishlist is empty"
 }

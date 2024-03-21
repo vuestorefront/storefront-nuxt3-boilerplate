@@ -36,7 +36,7 @@ jobs:
           rm -rf .vuestorefrontcloud
 
       - name: Commit changed files
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: initial setup of repository"
         env:
